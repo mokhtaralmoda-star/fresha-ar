@@ -116,7 +116,7 @@ var RVN=['نورة','ريم','هند','منى','خالد','عمر','ليان','�
 var PHO=['photo-1560066984-138dadb4c035','photo-1522337360788-8b13dee7a37e','photo-1580618672591-eb180b1a973f','photo-1600948836101-f9ffda59d250','photo-1503951914875-452162b0f3f1','photo-1596704017254-9b121068fb31','photo-1633681926022-84c23e8cb2d6','photo-1540555700478-4be289fbecef','photo-1526947425960-945c6e72858f','photo-1519415943484-9fa1873496d4'];
 function H(s){var h=0;for(var i=0;i<s.length;i++)h=(h*31+s.charCodeAt(i))>>>0;return h}
 function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
-var S=JSON.parse(localStorage.getItem('fr2')||'null')||{cc:'sa',ck:'riyadh',cur:'SAR',fav:[],bk:[],b:null,gift:0};
+var S=JSON.parse(localStorage.getItem('fr2')||'null')||{};S.cc=S.cc||'sa';S.ck=S.ck||'riyadh';S.cur=S.cur||'SAR';S.fav=S.fav||[];S.bk=S.bk||[];S.gift=S.gift||0;
 function save(){localStorage.setItem('fr2',JSON.stringify(S))}
 function money(v,cc){var c=cc||S.cur;var r=RATE[c]||1;return Math.round(v*r)+' '+(SYM[c]||'')}
 function co(o){return CO.filter(function(x){return x[0]===o})[0]}
@@ -157,7 +157,7 @@ if(g[0]==='biz')return biz();
 if(g[0]==='terms')return stat('الشروط والأحكام','باستخدامك المنصة أنت توافق على الشروط.');
 if(g[0]==='privacy')return stat('سياسة الخصوصية','نستخدم بياناتك لتحسين الخدمة فقط.');
 return home()}
-function home(){var c=cityOf(S.cc,S.ck);var n=all(S.cc,S.ck).sort(function(a,b){return b.r-a.r}).slice(0,8);
+function home(){var c=cityOf(S.cc,S.ck)||cityOf("sa","riyadh");var n=all(S.cc,S.ck).sort(function(a,b){return b.r-a.r}).slice(0,8);
 shell('<div class="hero"><h1>احجز موعدك في دقائق</h1><p>'+CO.length+' دولة · '+CAT.length+' تصنيف · تأكيد فوري</p><div class="sb"><input id="q" placeholder="ابحث عن صالون أو خدمة" onkeydown="if(event.key===\'Enter\')go(\'s?q=\'+encodeURIComponent(this.value))"><button onclick="go(\'s?q=\'+encodeURIComponent(document.getElementById(\'q\').value))">ابحث</button></div></div><div class="chips">'+CAT.map(function(x){return A('c/'+x[0],x[2]+' '+x[1],'chip')}).join('')+'</div><div class="sct"><h2>الأعلى تقييماً في '+c.n+'</h2>'+A('t/'+S.cc+'-'+S.ck,'عرض الكل')+'</div><div class="grid">'+n.map(card).join('')+'</div><div class="sct"><h2>تصفح الدول</h2>'+A('city','الكل')+'</div><div class="grid">'+CO.slice(0,8).map(function(o){return '<div class="card">'+A('ct/'+o[0],'<div class="cb"><div class="nm">'+o[1]+'</div><div class="mt">'+o[3].length+' مدينة</div></div>')+'</div>'}).join('')+'</div>')}
 function cat(k){var r=[];CO.forEach(function(o){o[3].forEach(function(z){r=r.concat(vs(o[0],z[0],k))})});r.sort(function(a,b){return b.r-a.r});
 var per=24,pg=1;var pages=Math.ceil(r.length/per);
