@@ -159,3 +159,7 @@ function search(){var q=(location.search?new URLSearchParams(location.search).ge
  if(q){CO.forEach(function(o){o[4].forEach(function(z){all(o[0],z[0]).forEach(function(v){if(v.n.indexOf(q)>-1||z[1].indexOf(q)>-1)r.push(v)})})})}
  shell('<div class="sct"><h2>بحث</h2><span class="pl">'+r.length+'</span></div><div class="sb" style="margin-bottom:12px"><input id="q2" value="'+esc(q)+'" placeholder="ابحث"><button onclick="go(\'s?q=\'+encodeURIComponent(document.getElementById(\'q2\').value))">ابحث</button></div><div class="grid">'+(r.map(card).join('')||'<div class="empty">لا نتائج</div>')+'</div>')}
 render();
+
+</script>
+</body>
+</html>
