@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>fresha — احجز صالون وسبا</title>
+<meta name="description" content="احجز موعدك في أفضل الصالونات والسبا.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='7' fill='%23001e1b'/%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Almarai:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Almarai,system-ui;background:#fff;color:#001e1b;font-size:15px;line-height:1.55}
+a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
+button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit}
+input,select,textarea{font-family:inherit;font-size:15px;width:100%;padding:11px;border:1px solid #e7e9e8;border-radius:9px}
+.w{max-width:1100px;margin:0 auto;padding:0 16px}
+header{position:sticky;top:0;background:#fff;border-bottom:1px solid #e7e9e8;z-index:9}
+.hi{display:flex;gap:8px;align-items:center;padding:10px 16px;max-width:1100px;margin:0 auto}
+.lg{font-size:22px;font-weight:700;letter-spacing:-1px}
+.sp{flex:1}
+.ib{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;font-size:15px}
+.ib:hover{background:#f6f8f7}
+.hero{background:#f6f8f7;padding:36px 16px;text-align:center;margin:0 -16px}
+.hero h1{margin:0 0 6px;font-size:clamp(22px,4vw,34px);letter-spacing:-1px}
+.hero p{margin:0 0 16px;color:#5f6f6b;font-size:14px}
+.sb{display:flex;gap:6px;max-width:560px;margin:0 auto;background:#fff;border:1px solid #e7e9e8;border-radius:999px;padding:5px}
+.sb input{border:0;border-radius:999px}
+.sb button{background:#001e1b;color:#fff;border-radius:999px;padding:0 20px;font-weight:700}
+.chips{display:flex;gap:8px;overflow-x:auto;padding:12px 0}
+.chip{white-space:nowrap;border:1px solid #e7e9e8;border-radius:999px;padding:7px 14px;font-size:13px;background:#fff}
+.chip.on{background:#001e1b;color:#fff}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px;padding:14px 0 30px}
+.card{border:1px solid #e7e9e8;border-radius:12px;overflow:hidden}
+.card:hover{box-shadow:0 4px 14px rgba(0,30,27,.08)}
+.th{position:relative;aspect-ratio:16/10;background:#f6f8f7}
+.th img{width:100%;height:100%;object-fit:cover}
+.bd{position:absolute;top:8px;inset-inline-start:8px;background:#ff5a5f;color:#fff;font-size:11px;padding:3px 8px;border-radius:5px;font-weight:700}
+.fv{position:absolute;top:8px;inset-inline-end:8px;width:28px;height:28px;border-radius:50%;background:#fff;display:grid;place-items:center}
+.cb{padding:10px 12px 12px}
+.nm{font-weight:700;font-size:14.5px}
+.mt{font-size:12.5px;color:#5f6f6b;display:flex;gap:5px;flex-wrap:wrap}
+.st{color:#f5a623;font-weight:700}
+.pl{background:#f6f8f7;border:1px solid #e7e9e8;border-radius:999px;padding:2px 9px;font-size:11.5px;color:#5f6f6b}
+.sct{display:flex;justify-content:space-between;align-items:baseline;margin:24px 0 4px}
+.sct h2{margin:0;font-size:18px}
+.sct a{font-size:13px;font-weight:700;text-decoration:underline}
+#map{height:300px;border-radius:12px;border:1px solid #e7e9e8}
+.gal{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:100px 100px;gap:4px;border-radius:12px;overflow:hidden}
+.gal img{width:100%;height:100%;object-fit:cover}
+.gal img:first-child{grid-row:span 2;height:204px}
+.vh{padding:14px 0}
+.vh h1{margin:0 0 5px;font-size:23px}
+.vr{display:grid;grid-template-columns:1fr 300px;gap:22px}
+@media(max-width:800px){.vr{grid-template-columns:1fr}.gal img:first-child{grid-row:span 1;height:100px}}
+.sv{display:flex;justify-content:space-between;align-items:center;border:1px solid #e7e9e8;border-radius:10px;padding:11px 13px;margin-bottom:8px;width:100%;text-align:start}
+.sv:hover{border-color:#001e1b;background:#f6f8f7}
+.sv b{font-size:14px}
+.pn{border:1px solid #e7e9e8;border-radius:12px;padding:14px}
+.btn{display:block;width:100%;text-align:center;background:#001e1b;color:#fff;padding:12px;border-radius:10px;font-weight:700}
+.btn.o{background:#fff;color:#001e1b;border:1px solid #e7e9e8}
+.panel{border:1px solid #e7e9e8;border-radius:12px;padding:14px;margin:10px 0}
+.row{display:flex;gap:8px;flex-wrap:wrap}
+.ck{display:flex;gap:8px;align-items:center;padding:8px 0;border-bottom:1px solid #e7e9e8;font-size:14px}
+.ck input{width:auto}
+.days{display:flex;gap:6px;overflow-x:auto;padding:6px 0}
+.day{flex:none;width:54px;text-align:center;border:1px solid #e7e9e8;border-radius:9px;padding:7px 2px;font-size:12px}
+.day.on{background:#001e1b;color:#fff}
+.day b{display:block;font-size:15px}
+.slots{display:grid;grid-template-columns:repeat(auto-fill,minmax(70px,1fr));gap:7px;margin-top:8px}
+.slot{border:1px solid #e7e9e8;border-radius:8px;padding:8px 3px;text-align:center;font-size:13px}
+.slot.on{background:#001e1b;color:#fff}
+.steps{display:flex;gap:5px;margin:12px 0 16px}
+.stp{flex:1;height:4px;background:#e7e9e8;border-radius:2px}
+.stp.on{background:#001e1b}
+.empty{text-align:center;padding:44px 16px;color:#5f6f6b}
+.ft{background:#f6f8f7;border-top:1px solid #e7e9e8;margin-top:36px;padding:26px 0;font-size:13px}
+.ft a{display:block;padding:2px 0}
+.fc{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:18px}
+.cp{border-top:1px solid #e7e9e8;margin-top:18px;padding-top:12px;color:#5f6f6b;font-size:12px}
+.oc{font-size:12px;font-weight:700;padding:2px 8px;border-radius:999px}
+.oc.y{background:#e6f5ef;color:#0b7a63}.oc.n{background:#fdecec;color:#c0392b}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<script>
+var C={AED:3.67,SAR:3.75,QAR:3.64,GBP:.79,EUR:.92,USD:1,JOD:.709,EGP:48.5,MAD:9.9,TRY:34.2,ILS:3.72,TND:3.1,LBP:89500};
+var CATS=[['hair','شعر'],['barber','حلاقة رجالية'],['nails','أظافر'],['skin','عناية بالبشرة'],['massage','مساج'],['spa','سبا'],['makeup','مكياج'],['dental','أسنان']];
+var CO=[['ae','الإمارات','AED','+971',[['dubai','دبي',25.2048,55.2708],['abu-dhabi','أبو ظبي',24.4539,54.3773],['sharjah','الشارقة',25.3463,55.4209]]],['sa','السعودية','SAR','+966',[['riyadh','الرياض',24.7136,46.6753],['jeddah','جدة',21.4858,39.1925]]],['qa','قطر','QAR','+974',[['doha','الدوحة',25.2854,51.531]]],['kw','الكويت','KWD','+965',[['kuwait-city','الكويت',29.3759,47.9774]]],['bh','البحرين','BHD','+973',[['manama','المنامة',26.2285,50.586]]],['om','عُمان','OMR','+968',[['muscat','مسقط',23.588,58.3829]]],['jo','الأردن','JOD','+962',[['amman','عمّان',31.9454,35.9284]]],['eg','مصر','EGP','+20',[['cairo','القاهرة',30.0444,31.2357]]],['ma','المغرب','MAD','+212',[['casablanca','الدار البيضاء',33.5731,-7.5898]]],['lb','لبنان','LBP','+961',[['beirut','بيروت',33.8938,35.5018]]],['tr','تركيا','TRY','+90',[['istanbul','إسطنبول',41.0082,28.9784]]],['uk','بريطانيا','GBP','+44',[['london','لندن',51.5074,-.1278]]]];
+var FI=['https://images.fresha.com/locations/location-profile-images/3338/5534506/d42e86b0-60e3-4a64-8cf6-1d9f80070e32-LaParisienneBeautySalonLLC-AE-Dubai-Dubai-BusinessBay-Fresha.jpg','https://images.fresha.com/locations/location-profile-images/66100/1918735/11ac84ef-9133-486c-8c25-c0e4cc4bfaca.jpg','https://images.fresha.com/locations/location-profile-images/903/4590237/53015e4d-4870-4e03-92b5-d9bb25d0aad4.jpg','https://images.fresha.com/locations/location-profile-images/7677/2097269/d186a1c2-ea6b-4ad8-975e-caba0c846931-unnamed-2.jpg','https://images.fresha.com/locations/location-profile-images/7233/1990724/a8fffe3f-e776-4b0e-8af5-e4c5a6285a9e.jpg'];
+var PH=['photo-1560066984-138dadb4c035','photo-1522337360788-8b13dee7a37e','photo-1580618672591-eb180b1a973f','photo-1600948836101-f9ffda59d250','photo-1503951914875-452162b0f3f1','photo-1596704017254-9b121068fb31','photo-1633681926022-84c23e8cb2d6','photo-1540555700478-4be289fbecef'];
+var NM=['لمسة','أريج','نور','لمار','أناقة','روز','ياسمين','سحر','رقي','غلا'];
+var STN=['شارع الملك فهد','شارع التحلية','شارع الوصل','شارع الجميرا','شارع الحمرا','شارع الاستقلال','شارع النيل','شارع السلام'];
+var SV={hair:[['قص وتصفيف',90],['صبغة',320],['هايلايت',420],['علاج بروتين',280]],barber:[['حلاقة شعر',70],['حلاقة ذقن',45],['حلاقة بموس',80]],nails:[['مانيكير',85],['بديكير',110],['جل أظافر',150]],skin:[['تنظيف بشرة',250],['هيدرافيشل',380]],massage:[['مساج سويدي',220],['مساج عميق',280]],spa:[['باقة سبا',650],['سكراب جسم',250]],makeup:[['مكياج ناعم',300],['مكياج عروس',900]],dental:[['فحص وتنظيف',200],['حشوة',350]]};
+function H(s){var h=0;for(var i=0;i<s.length;i++)h=(h*31+s.charCodeAt(i))>>>0;return h}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+var S=JSON.parse(localStorage.getItem('fr')||'null')||{cur:'AED',cc:'ae',ck:'dubai',fav:[],bk:[],b:null};
+function save(){localStorage.setItem('fr',JSON.stringify(S))}
+function money(v){var r=C[S.cur]||1;return Math.round(v*r)+' '+S.cur}
+function cityOf(cc,ck){var c=CO.filter(function(x){return x[0]===cc})[0];if(!c)return null;var z=c[4].filter(function(y){return y[0]===ck})[0];return z?{k:z[0],n:z[1],lat:z[2],lng:z[3],cc:cc,cn:c[1],dial:c[3]}:null}
+function catN(k){var c=CATS.filter(function(x){return x[0]===k})[0];return c?c[1]:k}
+function vs(cc,ck,cat){var c=cityOf(cc,ck);if(!c)return [];var out=[];for(var i=0;i<3;i++){var s=H(ck+cat+i);out.push({id:ck+'__'+cat+'__'+i,n:NM[s%NM.length]+' '+c.n,a:STN[s%STN.length]+'، '+c.n,p:c.dial+' '+(2+s%7)+' '+(100+s%800)+' '+(1000+s%8999),r:(4.3+(s%7)/10).toFixed(1),rc:60+s%400,cat:cat,cc:cc,ck:ck,lat:c.lat+((s%200)-100)/2600,lng:c.lng+((s%200)-100)/2600,real:i===0})}return out}
+function all(cc,ck){var o=[];CATS.forEach(function(x){o=o.concat(vs(cc,ck,x[0]))});return o}
+function byId(id){var p=id.split('__');return vs(S.cc,p[0],p[1]).filter(function(v){return v.id===id})[0]}
+function ph(v,i){if(v.real)return FI[(H(v.id)+i)%FI.length];return 'https://images.unsplash.com/'+PH[(H(v.id)+i)%PH.length]+'?auto=format&fit=crop&w=700&q=65'}
+function off(v){return H(v.id)%3===0}
+function svc(v){var b=SV[v.cat]||SV.hair;var s=H(v.id);return b.map(function(x){return {n:x[0],p:Math.round(x[1]*(0.85+(s%30)/100))}})}
+function hours(v){var s=H(v.id);var o=[];for(var d=0;d<7;d++){if(d===6&&s%2)o.push(null);else o.push([9+s%3,20+s%3])}return o}
+function open(v){var h=new Date().getHours();var t=hours(v)[new Date().getDay()];return t&&h>=t[0]&&h<t[1]}
+var app=document.getElementById('app');
+function go(p){history.pushState({},'','/'+p.replace(/^\/+/,''));render()}
+window.onpopstate=render;
+function A(p,inner,cls,lbl){return '<a href="/'+p+'"'+(cls?' class="'+cls+'"':'')+(lbl?' aria-label="'+lbl+'"':'')+' onclick="go(\''+p+'\');return false">'+inner+'</a>'}
+function shell(x){app.innerHTML='<header><div class="hi"><a class="lg" href="/" onclick="go(\'\');return false">fresha</a><div class="sp"></div><a class="ib" href="/s" onclick="go(\'s\');return false">🔍</a><a class="ib" href="/fav" onclick="go(\'fav\');return false">♡'+(S.fav.length?'<sup>'+S.fav.length+'</sup>':'')+'</a><a class="ib" href="/bk" onclick="go(\'bk\');return false">📅</a></div></header><main class="w">'+x+'</main><footer class="ft"><div class="w"><div class="fc"><div><b>fresha</b>'+A('','الرئيسية')+A('s','بحث')+A('bk','حجوزاتي')+A('fav','المفضلة')+'</div><div><b>العملة</b><a href="#" onclick="pickCur();return false">'+S.cur+'</a></div></div><div class="cp">© 2026 fresha clone</div></div></footer>'}
+function pickCur(){var v=prompt('العملة',S.cur);if(v&&C[v.toUpperCase()]){S.cur=v.toUpperCase();save();render()}}
+function card(v){var f=S.fav.indexOf(v.id)>-1;var u='v/'+v.cc+'-'+v.ck+'/'+v.id;
+ return '<div class="card"><div class="th">'+A(u,'<img loading="lazy" src="'+ph(v,0)+'" alt="'+esc(v.n)+'">')+(off(v)?'<span class="bd">خصم 20%</span>':'')+'<button class="fv" onclick="fav(\''+v.id+'\');return false">'+(f?'♥':'♡')+'</button></div><div class="cb"><div class="nm">'+A(u,esc(v.n))+'</div><div class="mt"><span class="st">★ '+v.r+'</span><span>('+v.rc+')</span><span>·</span><span>'+esc(v.a)+'</span></div><div style="margin-top:5px"><span class="pl">'+catN(v.cat)+'</span></div></div></div>'}
+function fav(id){var i=S.fav.indexOf(id);if(i<0)S.fav.push(id);else S.fav.splice(i,1);save();render()}
+function render(){var p=location.pathname.replace(/^\/+/,'').split('?')[0];var seg=p.split('/').filter(Boolean);app.innerHTML='';
+ if(!seg.length)return home();
+ if(seg[0]==='c'&&seg[1])return cat(seg[1]);
+ if(seg[0]==='ct'&&seg[1])return country(seg[1]);
+ if(seg[0]==='t'&&seg[1]){var q=seg[1].split('-');return city(q[0],seg[1].slice(q[0].length+1))}
+ if(seg[0]==='v'&&seg[1]&&seg[2]){var q2=seg[1].split('-');return venue(q2[0],seg[1].slice(q2[0].length+1),seg[2])}
+ if(seg[0]==='s')return search();
+ if(seg[0]==='fav')return favs();
+ if(seg[0]==='bk')return bks();
+ if(seg[0]==='b')return book();
+ return home()}
+function home(){var c=cityOf(S.cc,S.ck);var n=all(S.cc,S.ck).sort(function(a,b){return b.r-a.r}).slice(0,6);
+ shell('<div class="hero" style="margin:0 -16px"><h1>احجز موعدك في دقائق</h1><p>'+CO.length+' دولة · '+CATS.length+' تصنيف</p><div class="sb"><input id="q" placeholder="ابحث عن صالون أو مدينة" onkeydown="if(event.key===\'Enter\')go(\'s?q=\'+encodeURIComponent(this.value))"><button onclick="go(\'s?q=\'+encodeURIComponent(document.getElementById(\'q\').value))">ابحث</button></div></div><div class="chips">'+CATS.map(function(x){return A('c/'+x[0],x[1],'chip')}).join('')+'</div><div class="sct"><h2>قريب منك · '+c.n+'</h2>'+A('t/'+S.cc+'-'+S.ck,'عرض الكل')+'</div><div class="grid">'+n.map(card).join('')+'</div><div class="sct"><h2>الدول</h2></div><div class="grid">'+CO.map(function(o){return '<div class="card">'+A('ct/'+o[0],'<div class="cb"><div class="nm">'+o[1]+'</div><div class="mt">'+o[4].length+' مدينة</div></div>')+'</div>'}).join('')+'</div>')}
+function cat(k){var r=[];CO.forEach(function(o){o[4].forEach(function(z){r=r.concat(vs(o[0],z[0],k))})});r.sort(function(a,b){return b.r-a.r});
+ shell('<div class="sct"><h2>'+catN(k)+'</h2><span class="pl">'+r.length+' نتيجة</span></div><div class="grid">'+r.map(card).join('')+'</div>')}
+function country(cc){var o=CO.filter(function(x){return x[0]===cc})[0];if(!o)return home();
+ shell('<div class="sct"><h2>'+o[1]+'</h2></div><div class="grid">'+o[4].map(function(z){return '<div class="card">'+A('t/'+cc+'-'+z[0],'<div class="cb"><div class="nm">'+z[1]+'</div><div class="mt">'+all(cc,z[0]).length+' مكان</div></div>')+'</div>'}).join('')+'</div>')}
+function city(cc,ck){var c=cityOf(cc,ck);if(!c)return home();S.cc=cc;S.ck=ck;save();
+ var r=all(cc,ck).sort(function(a,b){return b.r-a.r});
+ shell('<div class="sct"><h2>'+c.n+'</h2><span class="pl">'+r.length+' مكان</span></div><div class="chips">'+CATS.map(function(x){return A('c/'+x[0],x[1],'chip')}).join('')+'</div><div class="grid">'+r.map(card).join('')+'</div>')}
+function venue(cc,ck,id){var v=byId(id);if(!v)return home();
+ var sv=svc(v),h=hours(v);
+ shell('<div class="gal">'+[0,1,2,3,4].map(function(i){return '<img src="'+ph(v,i)+'" alt="'+esc(v.n)+'">'}).join('')+'</div><div class="vh"><h1>'+esc(v.n)+'</h1><div class="mt"><span class="st">★ '+v.r+'</span><span>('+v.rc+')</span><span>·</span><span>'+esc(v.a)+'</span><span class="oc '+(open(v)?'y':'n')+'">'+(open(v)?'مفتوح':'مغلق')+'</span></div></div><div class="vr"><div><div class="sct"><h2>الخدمات</h2></div>'+sv.map(function(s,i){return '<button class="sv" onclick="start(\''+v.id+'\','+i+')"><b>'+s.n+'</b><span>'+money(off(v)?s.p*.8:s.p)+'</span></button>'}).join('')+'<div class="sct"><h2>ساعات العمل</h2></div><div class="panel">'+['الأحد','الاثنين','الثلاثاء','الأربعاء','الخميس','الجمعة','السبت'].map(function(d,i){return '<div class="ck"><span style="flex:1">'+d+'</span><span>'+(h[i]?h[i][0]+':00 – '+h[i][1]+':00':'مغلق')+'</span></div>'}).join('')+'</div></div><div><div class="pn"><div class="mt">يبدأ من</div><div style="font-size:20px;font-weight:700;margin:4px 0 10px">'+money(sv[0].p)+'</div><button class="btn" onclick="start(\''+v.id+'\',0)">احجز الآن</button><a class="btn o" style="margin-top:7px" href="tel:'+v.p.replace(/\s/g,'')+'">'+v.p+'</a></div></div></div>')}
+function start(id,i){S.b={id:id,i:i,step:1,d:null,t:null};save();go('b')}
+function book(){var b=S.b;if(!b)return home();var v=byId(b.id);if(!v)return home();
+ var sv=svc(v),s=sv[b.i],h=hours(v);if(!b.d)b.d=new Date().toISOString().slice(0,10);
+ var dayH=h[new Date(b.d).getDay()];var slots=[];if(dayH)for(var m=dayH[0]*60;m<dayH[1]*60;m+=30)slots.push(('0'+Math.floor(m/60)).slice(-2)+':'+('0'+m%60).slice(-2));
+ var days=[];for(var i=0;i<14;i++){var d=new Date();d.setDate(d.getDate()+i);days.push(d)}
+ shell('<div style="max-width:620px;margin:0 auto"><div class="steps"><div class="stp on"></div><div class="stp '+(b.step>1?'on':'')+'"></div><div class="stp '+(b.step>2?'on':'')+'"></div></div><div class="panel"><b>'+esc(v.n)+'</b><div class="mt">'+esc(v.a)+'</div><div style="margin-top:8px">'+s.n+' · <b>'+money(off(v)?s.p*.8:s.p)+'</b></div></div>'
+ +(b.step===1?'<div class="sct"><h2>التاريخ</h2></div><div class="days">'+days.map(function(d){var k=d.toISOString().slice(0,10);return '<div class="day '+(b.d===k?'on':'')+'" onclick="setD(\''+k+'\')"><b>'+d.getDate()+'</b>'+d.toLocaleDateString('ar-EG',{weekday:'short'})+'</div>'}).join('')+'</div><div class="sct"><h2>الوقت</h2></div>'+(slots.length?'<div class="slots">'+slots.map(function(x){return '<div class="slot '+(b.t===x?'on':'')+'" onclick="setT(\''+x+'\')">'+x+'</div>'}).join('')+'</div>':'<p>مغلق</p>')+'<button class="btn" style="margin-top:12px" '+(b.t?'':'disabled')+' onclick="S.b.step=2;save();render()">متابعة</button>'
+ :b.step===2?'<div class="panel"><label>الاسم</label><input id="n"><label style="display:block;margin-top:8px">الجوال</label><input id="p" dir="ltr"><button class="btn" style="margin-top:12px" onclick="done()">تأكيد الحجز</button></div>'
+ :'<div class="panel" style="text-align:center"><div style="font-size:34px">✅</div><h3>تم الحجز</h3><div class="mt" style="justify-content:center">مرجع '+b.ref+'</div><a class="btn o" style="margin-top:12px" href="/bk" onclick="go(\'bk\');return false">حجوزاتي</a></div>')+'</div>')}
+function setD(k){S.b.d=k;S.b.t=null;save();render()}
+function setT(x){S.b.t=x;save();render()}
+function done(){var b=S.b;var v=byId(b.id);var sv=svc(v);var s=sv[b.i];b.name=document.getElementById('n').value;b.phone=document.getElementById('p').value;
+ b.ref='FR'+H(b.id+b.d+b.t)%900000;b.when=b.d+' '+b.t;b.vn=v.n;b.sn=s.n;b.total=money(off(v)?s.p*.8:s.p);b.step=3;S.bk.unshift(JSON.parse(JSON.stringify(b)));save();render()}
+function bks(){shell('<div class="sct"><h2>حجوزاتي</h2></div>'+(S.bk.length?S.bk.map(function(b){return '<div class="panel"><b>'+esc(b.vn)+'</b><div class="mt">'+esc(b.sn)+' · '+b.when+'</div><div class="mt">مرجع '+b.ref+' · '+b.total+'</div><button class="btn o" style="margin-top:8px" onclick="cancel(\''+b.ref+'\')">إلغاء</button></div>'}).join(''):'<div class="empty">لا حجوزات</div>'))}
+function cancel(r){S.bk=S.bk.filter(function(x){return x.ref!==r});save();render()}
+function favs(){shell('<div class="sct"><h2>المفضلة</h2></div><div class="grid">'+(S.fav.map(function(id){var v=byId(id);return v?card(v):''}).join('')||'<div class="empty">لا مفضلات</div>')+'</div>')}
+function search(){var q=(location.search?new URLSearchParams(location.search).get('q'):'')||'';var r=[];
+ if(q){CO.forEach(function(o){o[4].forEach(function(z){all(o[0],z[0]).forEach(function(v){if(v.n.indexOf(q)>-1||z[1].indexOf(q)>-1)r.push(v)})})})}
+ shell('<div class="sct"><h2>بحث</h2><span class="pl">'+r.length+'</span></div><div class="sb" style="margin-bottom:12px"><input id="q2" value="'+esc(q)+'" placeholder="ابحث"><button onclick="go(\'s?q=\'+encodeURIComponent(document.getElementById(\'q2\').value))">ابحث</button></div><div class="grid">'+(r.map(card).join('')||'<div class="empty">لا نتائج</div>')+'</div>')}
+render();
