@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://iridescent-cranachan-8c4f66.netlify.app/sitemap.xml
