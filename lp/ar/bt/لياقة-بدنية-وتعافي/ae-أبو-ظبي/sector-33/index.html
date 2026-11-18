@@ -1,0 +1,1220 @@
+<!doctype html>
+      <html lang="ar" dir="rtl">
+      <head>
+        
+    <script>
+      window.setLocalStorageValWithExpiry = function (key, value, ttl) {
+        var setValNow = new Date();
+
+        var setValItem = {
+          value: value,
+          expiry: setValNow.getTime() + ttl,
+        };
+
+        try {
+          localStorage.setItem(key, JSON.stringify(setValItem));
+        } catch (e) {
+          // Do nothing
+        }
+      };
+
+      window.getLocaleStorageValWithExpiry = function (key) {
+        try {
+          var getValItemStr = localStorage.getItem(key);
+
+          if (!getValItemStr) {
+            return null;
+          }
+
+          var parsedItem = JSON.parse(getValItemStr);
+          var getValNow = new Date();
+
+          if (getValNow.getTime() > parsedItem.expiry) {
+            localStorage.removeItem(key);
+            return null;
+          }
+          return parsedItem.value;
+        } catch (e) {
+          // Do nothing
+        }
+      };
+    </script>
+  
+        
+    <script>
+      (function() {
+        var SESSION_REFERRER_KEY = 'referrer';
+
+        function getUtmSourceReferrer() {
+          var url = new URL(window.location.href);
+          var source = url.searchParams.get('utm_source');
+          if (source === 'facebook' || source === 'fb') {
+            return 'https://www.facebook.com';
+          }
+          if (source === 'instagram' || source === 'ig') {
+            return 'https://www.instagram.com';
+          }
+          return '';
+        }
+
+        function getSessionReferrer() {
+          try {
+            return window.sessionStorage.getItem(SESSION_REFERRER_KEY) || '';
+          } catch (e) {
+            return '';
+          }
+        }
+
+        function getDocumentReferrer() {
+          return window.document.referrer || '';
+        }
+
+        function getReferrer() {
+          return getDocumentReferrer() || getSessionReferrer() || getUtmSourceReferrer() || '';
+        }
+
+        // Don't overwrite existing referrer value
+        var existingReferrer = getSessionReferrer();
+        if (existingReferrer) {
+          return;
+        }
+
+        var referrer = getReferrer();
+        try {
+          window.sessionStorage.setItem(SESSION_REFERRER_KEY, referrer);
+        } catch (e) {
+          // sessionStorage might not be available (e.g., in private browsing mode)
+          // Silently fail - the tracking will just not work in this case
+        }
+      })();
+    </script>
+  
+        
+    <script>
+      document.cookie = 'freshaLocale=ar; path=/; domain=fresha.com'
+    </script>
+  
+        <meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="robots" content="index,follow"/><link rel="canonical" href="https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ae-أبو-ظبي/sector-33"/><title>‎أفضل لياقة بدنية وتعافي بالقرب مني في Sector 33, أبو ظبي | ‎Fresha‎</title><meta name="description" content="‎احجزوا مواعيدكم عبر الإنترنت مع أفضل اللياقة والتعافي بالقرب منك في Sector 33. عروض وخصومات رائعة! يمكنكم قراءة تعليقات العملاء والمقارنة بين خدمات اللياقة البدنية والتعافي الأعلى تقييمًا بالقرب منكم على فريشا."/><meta property="og:type" content="website"/><meta property="og:locale" content="ar"/><meta property="og:title" content="‎أفضل لياقة بدنية وتعافي بالقرب مني في Sector 33, أبو ظبي | ‎Fresha‎"/><meta property="og:description" content="‎احجزوا مواعيدكم عبر الإنترنت مع أفضل اللياقة والتعافي بالقرب منك في Sector 33. عروض وخصومات رائعة! يمكنكم قراءة تعليقات العملاء والمقارنة بين خدمات اللياقة البدنية والتعافي الأعلى تقييمًا بالقرب منكم على فريشا."/><meta property="og:image" content="https://images.fresha.com/lead-images/placeholders/gym-and-fitness-12.jpg"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="‎أفضل لياقة بدنية وتعافي بالقرب مني في Sector 33, أبو ظبي | ‎Fresha‎"/><meta name="twitter:description" content="‎احجزوا مواعيدكم عبر الإنترنت مع أفضل اللياقة والتعافي بالقرب منك في Sector 33. عروض وخصومات رائعة! يمكنكم قراءة تعليقات العملاء والمقارنة بين خدمات اللياقة البدنية والتعافي الأعلى تقييمًا بالقرب منكم على فريشا."/><meta name="twitter:image" content="https://images.fresha.com/lead-images/placeholders/gym-and-fitness-12.jpg"/><meta name="apple-mobile-web-app-title" content="‎أفضل لياقة بدنية وتعافي بالقرب مني في Sector 33, أبو ظبي | ‎Fresha‎"/><meta name="format-detection" content="telephone=no"/><link rel="apple-touch-icon" sizes="57x57" href="/lp/assets/ea21aa5494afb5de453f.png"/><link rel="apple-touch-icon" sizes="60x60" href="/lp/assets/2a6c26590eace0efc001.png"/><link rel="apple-touch-icon" sizes="72x72" href="/lp/assets/4223931fddacbdb71061.png"/><link rel="apple-touch-icon" sizes="76x76" href="/lp/assets/ea232d3b179523196199.png"/><link rel="apple-touch-icon" sizes="114x114" href="/lp/assets/8785c58c327751b15df6.png"/><link rel="apple-touch-icon" sizes="120x120" href="/lp/assets/aba6a0aaee4f44a49b4a.png"/><link rel="apple-touch-icon" sizes="144x144" href="/lp/assets/fad67048f4679225fd83.png"/><link rel="apple-touch-icon" sizes="152x152" href="/lp/assets/b67d7cd8a75fa98ce42c.png"/><link rel="apple-touch-icon" sizes="180x180" href="/lp/assets/2dcd68e80c220eda4361.png"/><link rel="icon" type="image/png" sizes="192x192" href="/lp/assets/a4a1765801cf342709e9.png"/><link rel="icon" type="image/png" sizes="16x16" href="/lp/assets/2eccb60d40a3fb7e47be.png"/><link rel="icon" type="image/png" sizes="32x32" href="/lp/assets/dfda749997c10bd9329f.png"/><link rel="icon" type="image/png" sizes="96x96" href="/lp/assets/b8da8f524da9cafea0bd.png"/><link rel="icon" type="image/x-icon" href="/lp/assets/6f1f53623245a591df2c.ico"/><link rel="shortcut icon" href="/lp/assets/6f1f53623245a591df2c.ico"/><meta name="theme-color" content="#ffffff"/>
+        <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://www.fresha.com/#website","url":"https://www.fresha.com/","name":"Fresha","publisher":{"@id":"https://www.fresha.com/#organization"},"potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.fresha.com/search?query={search_term_string}"},"query-input":"required name=search_term_string"}},{"@type":"Organization","@id":"https://www.fresha.com/#organization","url":"https://www.fresha.com/","name":"Fresha","logo":{"@type":"ImageObject","url":"https://www.fresha.com/assets/website/fresha-logo.png"},"sameAs":["https://www.facebook.com/TeamFresha/","https://www.instagram.com/fresha/?hl=en","https://www.linkedin.com/company/heyfresha/","https://www.youtube.com/channel/UCV8KMYuFnmEE0GVLZdhJUcg","https://x.com/heyfresha"],"contactPoint":{"@type":"ContactPoint","contactType":"customer service","areaServed":"AE"}},{"@type":["HealthAndBeautyBusiness","HealthClub"],"name":"Olompio Fit EMS","address":{"@type":"PostalAddress","streetAddress":"A - 13 - 33 As Sunnaʹ St - Khalifa City - Sector 33 - Abu Dhabi - United Arab Emirates","addressCountry":"AE"},"@id":"https://www.fresha.com/ar/lvp/olompio-fit-ems-al-saray-street-abu-dhabi-A8nRry#business","url":"https://www.fresha.com/ar/lvp/olompio-fit-ems-al-saray-street-abu-dhabi-A8nRry","image":"https://images.fresha.com/lead-images/placeholders/gym-and-fitness-12.jpg","telephone":"+971 52 671 1449","sameAs":["https://olompiofitems.com/"],"geo":{"@type":"GeoCoordinates","latitude":24.3971704,"longitude":54.5579389}},{"@type":["HealthAndBeautyBusiness","BeautySalon"],"name":"NERO GYM","address":{"@type":"PostalAddress","streetAddress":"33 As Sunnaʹ St - Khalifa City - Sector 33 - Abu Dhabi - United Arab Emirates","addressCountry":"AE"},"@id":"https://www.fresha.com/ar/lvp/nero-gym-al-saray-street-abu-dhabi-QvbjP8#business","url":"https://www.fresha.com/ar/lvp/nero-gym-al-saray-street-abu-dhabi-QvbjP8","image":"https://images.fresha.com/lead-images/placeholders/gym-and-fitness-2.jpg","telephone":"+971 56 163 4662","sameAs":["http://gymnero.com/"],"geo":{"@type":"GeoCoordinates","latitude":24.3971472,"longitude":54.5578646}},{"@type":["HealthAndBeautyBusiness","HealthClub"],"name":"LUANA FITNESS (LADIES ONLY)","address":{"@type":"PostalAddress","streetAddress":"31 As Sunnaʹ St - Khalifa City - Sector 33 - Abu Dhabi - United Arab Emirates","addressCountry":"AE"},"@id":"https://www.fresha.com/ar/lvp/luana-fitness-ladies-only-al-saray-street-abu-dhabi-jbN8Ml#business","url":"https://www.fresha.com/ar/lvp/luana-fitness-ladies-only-al-saray-street-abu-dhabi-jbN8Ml","image":"https://images.fresha.com/lead-images/placeholders/gym-and-fitness-14.jpg","telephone":"+971 55 217 7987","sameAs":["https://www.luanafitness.com/"],"geo":{"@type":"GeoCoordinates","latitude":24.3983931,"longitude":54.5608121}},{"@type":["HealthAndBeautyBusiness","HealthClub"],"name":"EMS LIFESTYLE ABU DHABI HOME EMS TRAINING","address":{"@type":"PostalAddress","streetAddress":"Chi, The Spa at Shangri-La، Qaryat al Beri - Khor, Al Maqta' St, Rabdan - Abu Dhabi, United Arab Emirates","addressCountry":"AE"},"@id":"https://www.fresha.com/ar/lvp/ems-lifestyle-abu-dhabi-ems-training-al-maqta-street-abu-dhabi-ZDb3xk#business","url":"https://www.fresha.com/ar/lvp/ems-lifestyle-abu-dhabi-ems-training-al-maqta-street-abu-dhabi-ZDb3xk","image":"https://images.fresha.com/lead-images/placeholders/gym-and-fitness-27.jpg","telephone":"+971 50 558 1244","sameAs":["https://www.emslifestyle.net/"],"geo":{"@type":"GeoCoordinates","latitude":24.3868306,"longitude":54.5586204}},{"@type":["HealthAndBeautyBusiness","BeautySalon"],"name":"C FOUR GYM","address":{"@type":"PostalAddress","streetAddress":"A - 78 شارع الياس العَالي - opposite to Etihad School - Khalifa City - SE16 - Abu Dhabi - United Arab Emirates","addressCountry":"AE"},"@id":"https://www.fresha.com/ar/lvp/c-four-gym-shraa-lys-laaaly-abu-dhabi-9QLE1x#business","url":"https://www.fresha.com/ar/lvp/c-four-gym-shraa-lys-laaaly-abu-dhabi-9QLE1x","image":"https://images.fresha.com/lead-images/placeholders/gym-and-fitness-8.jpg","telephone":"+971 56 987 8748","geo":{"@type":"GeoCoordinates","latitude":24.4023007,"longitude":54.5845831}},{"@type":["HealthAndBeautyBusiness","DaySpa"],"name":"BodyFit GYM","address":{"@type":"PostalAddress","streetAddress":"شارع ١١ - Khalifa City - SE4 - Abu Dhabi - United Arab Emirates","addressCountry":"AE"},"@id":"https://www.fresha.com/ar/lvp/bodyfit-gym-khalifa-city-11th-street-abu-dhabi-8Jl9YW#business","url":"https://www.fresha.com/ar/lvp/bodyfit-gym-khalifa-city-11th-street-abu-dhabi-8Jl9YW","image":"https://images.fresha.com/lead-images/placeholders/gym-and-fitness-24.jpg","telephone":"+971 56 141 4133","sameAs":["https://instagram.com/bodyfitclubae?igshid=YmMyMTA2M2Y="],"geo":{"@type":"GeoCoordinates","latitude":24.4101734,"longitude":54.571228}},{"@type":["HealthAndBeautyBusiness","HealthClub"],"name":"LIFT Gym","address":{"@type":"PostalAddress","streetAddress":"Zayed City - MZ39 - Abu Dhabi - United Arab Emirates","addressLocality":"Abu Dhabi","addressRegion":"Abu Dhabi","addressCountry":"AE"},"@id":"https://www.fresha.com/ar/lvp/lift-gym-abu-dhabi-q84DqR#business","url":"https://www.fresha.com/ar/lvp/lift-gym-abu-dhabi-q84DqR","image":"https://images.fresha.com/lead-images/placeholders/gym-and-fitness-26.jpg","telephone":"+971 56 123 3773","sameAs":["https://www.google.com/maps/place/?q=place_id:ChIJy9A4wkpHXj4RXh0HSHkz4Uw","http://www.liftuae.com/"],"geo":{"@type":"GeoCoordinates","latitude":24.3704054,"longitude":54.562419}},{"@type":["HealthAndBeautyBusiness","BeautySalon"],"name":"Ruby Fitness - Khalifa City Central Mall Abu Dhabi","address":{"@type":"PostalAddress","streetAddress":"Central Mall - Khalifa City - Sector 13 - Abu Dhabi - United Arab Emirates","addressCountry":"AE"},"@id":"https://www.fresha.com/ar/lvp/ruby-fitness-khalifa-city-abu-dhabi-zn4Prb#business","url":"https://www.fresha.com/ar/lvp/ruby-fitness-khalifa-city-abu-dhabi-zn4Prb","image":"https://images.fresha.com/lead-images/placeholders/gym-and-fitness-3.jpg","telephone":"+971 58 101 3367","sameAs":["http://www.happyandrubygroup.com/"],"geo":{"@type":"GeoCoordinates","latitude":24.4117537,"longitude":54.5902747}},{"@type":["HealthAndBeautyBusiness","HealthClub"],"name":"ENERGY GYM EMS","address":{"@type":"PostalAddress","streetAddress":"6 Az Zawaya 1 St - Khalifa City - SW6 - Abu Dhabi - United Arab Emirates","addressCountry":"AE"},"@id":"https://www.fresha.com/ar/lvp/energy-gym-ems-saeed-bin-ablan-al-mazrouei-street-abu-dhabi-Kzb6W1#business","url":"https://www.fresha.com/ar/lvp/energy-gym-ems-saeed-bin-ablan-al-mazrouei-street-abu-dhabi-Kzb6W1","image":"https://images.fresha.com/lead-images/placeholders/gym-and-fitness-22.jpg","telephone":"+971 50 318 7574","sameAs":["https://www.energygymems.com/"],"geo":{"@type":"GeoCoordinates","latitude":24.3995362,"longitude":54.5702013}},{"@type":["HealthAndBeautyBusiness","BeautySalon"],"name":"Muscle Up Fitness","address":{"@type":"PostalAddress","streetAddress":"Khalifa City - SW17 01 - Abu Dhabi - United Arab Emirates","addressCountry":"AE"},"@id":"https://www.fresha.com/ar/lvp/muscle-up-fitness-abu-dhabi-a2bQr2#business","url":"https://www.fresha.com/ar/lvp/muscle-up-fitness-abu-dhabi-a2bQr2","image":"https://images.fresha.com/lead-images/placeholders/gym-and-fitness-28.jpg","telephone":"+971 2 628 0857","sameAs":["https://muscleup.ae/"],"geo":{"@type":"GeoCoordinates","latitude":24.4100377,"longitude":54.5162238}},{"@type":["HealthAndBeautyBusiness","HealthClub"],"name":"DOWN TOWN FITNESS GYM","address":{"@type":"PostalAddress","streetAddress":"market c10 - Khalifa City - Sector 32 - Abu Dhabi - United Arab Emirates","addressCountry":"AE"},"@id":"https://www.fresha.com/ar/lvp/down-town-fitness-gym-abu-dhabi-yX4Mnl#business","url":"https://www.fresha.com/ar/lvp/down-town-fitness-gym-abu-dhabi-yX4Mnl","image":"https://images.fresha.com/lead-images/placeholders/gym-and-fitness-15.jpg","telephone":"+971 56 909 4590","geo":{"@type":"GeoCoordinates","latitude":24.4216889,"longitude":54.5653126}},{"@type":["HealthAndBeautyBusiness","BeautySalon"],"name":"Bodyline Gym","address":{"@type":"PostalAddress","streetAddress":"Cricket \u0026 Sports Hub - A - Khalifa City - SW17 01 - Abu Dhabi - United Arab Emirates","addressCountry":"AE"},"@id":"https://www.fresha.com/ar/lvp/bodyline-gym-bw-zby-BoA6B2#business","url":"https://www.fresha.com/ar/lvp/bodyline-gym-bw-zby-BoA6B2","image":"https://images.fresha.com/lead-images/placeholders/gym-and-fitness-13.jpg","telephone":"+971 50 238 2309","sameAs":["https://www.abudhabicricket.ae/the-bodyline-gym/"],"geo":{"@type":"GeoCoordinates","latitude":24.3955028,"longitude":54.5409543}},{"@type":["HealthAndBeautyBusiness","DaySpa"],"name":"EMS Revolution UAE","address":{"@type":"PostalAddress","streetAddress":"Mall - Channel St - Al Rahah - Al Raha Gardens - Abu Dhabi - United Arab Emirates","addressCountry":"AE"},"@id":"https://www.fresha.com/ar/lvp/ems-revolution-uae-channel-st-abu-dhabi-WqbDMX#business","url":"https://www.fresha.com/ar/lvp/ems-revolution-uae-channel-st-abu-dhabi-WqbDMX","image":"https://images.fresha.com/lead-images/placeholders/gym-and-fitness-3.jpg","telephone":"+971 54 232 0000","geo":{"@type":"GeoCoordinates","latitude":24.4392769,"longitude":54.5747472}},{"@type":["HealthAndBeautyBusiness","HealthClub"],"name":"Future Fit EMS (Mazyad mall - Abu Dhabi Branch)","address":{"@type":"PostalAddress","streetAddress":"2nd floor, Mazyad mall - 28th St - near Mussaffah - Musaffah - Abu Dhabi - United Arab Emirates","addressCountry":"AE"},"@id":"https://www.fresha.com/ar/lvp/future-fit-ems-mazyad-mall-abu-dhabi-branch-28th-street-bw-zby-Nobkjx#business","url":"https://www.fresha.com/ar/lvp/future-fit-ems-mazyad-mall-abu-dhabi-branch-28th-street-bw-zby-Nobkjx","image":"https://images.fresha.com/lead-images/placeholders/gym-and-fitness-19.jpg","telephone":"+971 52 721 3402","sameAs":["https://www.futurefit.ae/"],"geo":{"@type":"GeoCoordinates","latitude":24.3731844,"longitude":54.5378601}},{"@type":["HealthAndBeautyBusiness","DaySpa"],"name":"Body Abs Fitness Center","address":{"@type":"PostalAddress","streetAddress":"Liwa Residency Building Al Yas Al 'Ali Street - A - Khalifa City - Abu Dhabi - United Arab Emirates","addressCountry":"AE"},"@id":"https://www.fresha.com/ar/lvp/body-abs-fitness-center-a-bw-zby-q843oD#business","url":"https://www.fresha.com/ar/lvp/body-abs-fitness-center-a-bw-zby-q843oD","image":"https://images.fresha.com/lead-images/placeholders/gym-and-fitness-15.jpg","telephone":"+971 2 565 6606","sameAs":["https://bodyabs.ae/"],"geo":{"@type":"GeoCoordinates","latitude":24.4038026,"longitude":54.5926554}},{"@type":["HealthAndBeautyBusiness","HealthClub"],"name":"Nest Martial Arts","address":{"@type":"PostalAddress","streetAddress":"36 Al Ard Street","addressLocality":"Abu Dhabi","addressRegion":"Abu Dhabi","addressCountry":"AE"},"@id":"https://www.fresha.com/ar/lvp/nest-martial-arts-al-saray-street-abu-dhabi-Lyb6rQ#business","url":"https://www.fresha.com/ar/lvp/nest-martial-arts-al-saray-street-abu-dhabi-Lyb6rQ","image":"https://images.fresha.com/lead-images/placeholders/gym-and-fitness-14.jpg","telephone":"+971 52 776 5231","sameAs":["http://nestmartialartsstudio.com/"],"geo":{"@type":"GeoCoordinates","latitude":24.4086717,"longitude":54.5191536}},{"@type":["HealthAndBeautyBusiness","BeautySalon"],"name":"Oriental Beauty Lounge - Khalifa City","address":{"@type":"PostalAddress","streetAddress":"شارع 32","addressLocality":"Abu Dhabi","addressRegion":"Abu Dhabi","addressCountry":"AE"},"@id":"https://www.fresha.com/ar/lvp/oriental-beauty-lounge-khalifa-city-shraa-32-abu-dhabi-n641XK#business","url":"https://www.fresha.com/ar/lvp/oriental-beauty-lounge-khalifa-city-shraa-32-abu-dhabi-n641XK","image":"https://images.fresha.com/lead-images/placeholders/beauty-salon-89.jpg","telephone":"+971 2 555 6999","sameAs":["https://www.google.com/maps/place/?q=place_id:ChIJ2VqDUCdEXj4RjIdyKQc4abk","https://www.instagram.com/OrientalSpaAe/","https://www.facebook.com/OrientalBeautyLounge","https://orientalbeautylounge.ae/"],"geo":{"@type":"GeoCoordinates","latitude":24.425487,"longitude":54.55012}},{"@type":["HealthAndBeautyBusiness","HealthClub"],"name":"Energy Plus Gym Abu Dhabi","address":{"@type":"PostalAddress","streetAddress":"First Floor, Al Forsan Village, Above Spinneys Khalifa City A - Abu Dhabi - United Arab Emirates","addressCountry":"AE"},"@id":"https://www.fresha.com/ar/lvp/energy-plus-gym-abu-dhabi-bw-zby-Rvb6bb#business","url":"https://www.fresha.com/ar/lvp/energy-plus-gym-abu-dhabi-bw-zby-Rvb6bb","image":"https://images.fresha.com/lead-images/placeholders/gym-and-fitness-4.jpg","telephone":"+971 2 666 8998","sameAs":["https://energyplus.ae/"],"geo":{"@type":"GeoCoordinates","latitude":24.4045842,"longitude":54.5496172}},{"@type":["HealthAndBeautyBusiness","HealthClub"],"name":"Aphrodite Fitness And Gym Ladies","address":{"@type":"PostalAddress","streetAddress":"Khalifa City - Sector 13 - Abu Dhabi - United Arab Emirates","addressCountry":"AE"},"@id":"https://www.fresha.com/ar/lvp/aphrodite-ladies-fitness-and-gym-abu-dhabi-kqbb0n#business","url":"https://www.fresha.com/ar/lvp/aphrodite-ladies-fitness-and-gym-abu-dhabi-kqbb0n","image":"https://images.fresha.com/lead-images/placeholders/gym-and-fitness-11.jpg","telephone":"+971 50 803 0842","sameAs":["http://wa.me/message/T35PCLEFP7TGM1"],"geo":{"@type":"GeoCoordinates","latitude":24.405605,"longitude":54.5841889}},{"@type":["HealthAndBeautyBusiness","HealthClub"],"name":"Golf Gardens Club House","address":{"@type":"PostalAddress","streetAddress":"CGFM+366 N 54° - 24°25'13.3 - 31'53 4th St - Khalifa City - Golf Gardens - Abu Dhabi - United Arab Emirates","addressCountry":"AE"},"@id":"https://www.fresha.com/ar/lvp/golf-garden-club-house-4th-street-bw-zby-6Qro41#business","url":"https://www.fresha.com/ar/lvp/golf-garden-club-house-4th-street-bw-zby-6Qro41","image":"https://images.fresha.com/lead-images/placeholders/gym-and-fitness-23.jpg","telephone":"+971 800 544362","geo":{"@type":"GeoCoordinates","latitude":24.420357,"longitude":54.531503}},{"@type":["HealthAndBeautyBusiness","HealthClub"],"name":"Al Raha Gardens Plaza Gym","address":{"@type":"PostalAddress","streetAddress":"Gardens Plaza - Khalifa City - SW18 - Abu Dhabi - United Arab Emirates","addressLocality":"Abu Dhabi","addressRegion":"Abu Dhabi","addressCountry":"AE"},"@id":"https://www.fresha.com/ar/lvp/al-raha-gardens-plaza-gym-abu-dhabi-lo4re7#business","url":"https://www.fresha.com/ar/lvp/al-raha-gardens-plaza-gym-abu-dhabi-lo4re7","image":"https://images.fresha.com/lead-images/placeholders/gym-and-fitness-19.jpg","telephone":"+971 2 464 5164","sameAs":["https://www.google.com/maps/place/?q=place_id:ChIJMR7SJtVFXj4RDUj5NfVoMZc"],"geo":{"@type":"GeoCoordinates","latitude":24.4315618,"longitude":54.566646}},{"@type":["HealthAndBeautyBusiness","BeautySalon"],"name":"Sas Al Nakhl Clubhouse","address":{"@type":"PostalAddress","streetAddress":"Gate 2 - Village - Sas Al Nakhl Village - Abu Dhabi - United Arab Emirates","addressCountry":"AE"},"@id":"https://www.fresha.com/ar/lvp/sas-al-nakhl-clubhouse-bw-zby-QvbzZW#business","url":"https://www.fresha.com/ar/lvp/sas-al-nakhl-clubhouse-bw-zby-QvbzZW","image":"https://images.fresha.com/lead-images/placeholders/gym-and-fitness-1.jpg","telephone":"+971 2 447 4054","geo":{"@type":"GeoCoordinates","latitude":24.4074191,"longitude":54.5262616}},{"@type":["HealthAndBeautyBusiness","DaySpa"],"name":"RUSH Ladies Fitness Center","address":{"@type":"PostalAddress","streetAddress":"Villa #183 - Khalifa City - SE13 - Abu Dhabi - United Arab Emirates","addressCountry":"AE"},"@id":"https://www.fresha.com/ar/lvp/rush-ladies-fitness-center-bw-zby-rwWWQG#business","url":"https://www.fresha.com/ar/lvp/rush-ladies-fitness-center-bw-zby-rwWWQG","image":"https://images.fresha.com/lead-images/placeholders/gym-and-fitness-6.jpg","telephone":"+971 2 556 2660","geo":{"@type":"GeoCoordinates","latitude":24.4175897,"longitude":54.5805504}},{"@type":"ItemList","@id":"https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ae-أبو-ظبي/sector-33#itemlist","numberOfItems":23,"itemListOrder":"https://schema.org/ItemListUnordered","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://www.fresha.com/ar/lvp/olompio-fit-ems-al-saray-street-abu-dhabi-A8nRry#business"}},{"@type":"ListItem","position":2,"item":{"@id":"https://www.fresha.com/ar/lvp/nero-gym-al-saray-street-abu-dhabi-QvbjP8#business"}},{"@type":"ListItem","position":3,"item":{"@id":"https://www.fresha.com/ar/lvp/luana-fitness-ladies-only-al-saray-street-abu-dhabi-jbN8Ml#business"}},{"@type":"ListItem","position":4,"item":{"@id":"https://www.fresha.com/ar/lvp/ems-lifestyle-abu-dhabi-ems-training-al-maqta-street-abu-dhabi-ZDb3xk#business"}},{"@type":"ListItem","position":5,"item":{"@id":"https://www.fresha.com/ar/lvp/c-four-gym-shraa-lys-laaaly-abu-dhabi-9QLE1x#business"}},{"@type":"ListItem","position":6,"item":{"@id":"https://www.fresha.com/ar/lvp/bodyfit-gym-khalifa-city-11th-street-abu-dhabi-8Jl9YW#business"}},{"@type":"ListItem","position":7,"item":{"@id":"https://www.fresha.com/ar/lvp/lift-gym-abu-dhabi-q84DqR#business"}},{"@type":"ListItem","position":8,"item":{"@id":"https://www.fresha.com/ar/lvp/ruby-fitness-khalifa-city-abu-dhabi-zn4Prb#business"}},{"@type":"ListItem","position":9,"item":{"@id":"https://www.fresha.com/ar/lvp/energy-gym-ems-saeed-bin-ablan-al-mazrouei-street-abu-dhabi-Kzb6W1#business"}},{"@type":"ListItem","position":10,"item":{"@id":"https://www.fresha.com/ar/lvp/muscle-up-fitness-abu-dhabi-a2bQr2#business"}},{"@type":"ListItem","position":11,"item":{"@id":"https://www.fresha.com/ar/lvp/down-town-fitness-gym-abu-dhabi-yX4Mnl#business"}},{"@type":"ListItem","position":12,"item":{"@id":"https://www.fresha.com/ar/lvp/bodyline-gym-bw-zby-BoA6B2#business"}},{"@type":"ListItem","position":13,"item":{"@id":"https://www.fresha.com/ar/lvp/ems-revolution-uae-channel-st-abu-dhabi-WqbDMX#business"}},{"@type":"ListItem","position":14,"item":{"@id":"https://www.fresha.com/ar/lvp/future-fit-ems-mazyad-mall-abu-dhabi-branch-28th-street-bw-zby-Nobkjx#business"}},{"@type":"ListItem","position":15,"item":{"@id":"https://www.fresha.com/ar/lvp/body-abs-fitness-center-a-bw-zby-q843oD#business"}},{"@type":"ListItem","position":16,"item":{"@id":"https://www.fresha.com/ar/lvp/nest-martial-arts-al-saray-street-abu-dhabi-Lyb6rQ#business"}},{"@type":"ListItem","position":17,"item":{"@id":"https://www.fresha.com/ar/lvp/oriental-beauty-lounge-khalifa-city-shraa-32-abu-dhabi-n641XK#business"}},{"@type":"ListItem","position":18,"item":{"@id":"https://www.fresha.com/ar/lvp/energy-plus-gym-abu-dhabi-bw-zby-Rvb6bb#business"}},{"@type":"ListItem","position":19,"item":{"@id":"https://www.fresha.com/ar/lvp/aphrodite-ladies-fitness-and-gym-abu-dhabi-kqbb0n#business"}},{"@type":"ListItem","position":20,"item":{"@id":"https://www.fresha.com/ar/lvp/golf-garden-club-house-4th-street-bw-zby-6Qro41#business"}},{"@type":"ListItem","position":21,"item":{"@id":"https://www.fresha.com/ar/lvp/al-raha-gardens-plaza-gym-abu-dhabi-lo4re7#business"}},{"@type":"ListItem","position":22,"item":{"@id":"https://www.fresha.com/ar/lvp/sas-al-nakhl-clubhouse-bw-zby-QvbzZW#business"}},{"@type":"ListItem","position":23,"item":{"@id":"https://www.fresha.com/ar/lvp/rush-ladies-fitness-center-bw-zby-rwWWQG#business"}}]},{"@type":"BreadcrumbList","@id":"https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ae-أبو-ظبي/sector-33#breadcrumbs","itemListElement":[{"@type":"ListItem","position":1,"name":"الصفحة الرئيسية","item":"https://www.fresha.com/ar"},{"@type":"ListItem","position":2,"name":"لياقة بدنية وتعافي","item":"https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي"},{"@type":"ListItem","position":3,"name":"الإمارات العربية المتحدة","item":"https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/الإمارات-العربية-المتحدة"},{"@type":"ListItem","position":4,"name":"أبو ظبي","item":"https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ae-أبو-ظبي"},{"@type":"ListItem","position":5,"name":"Sector 33","item":"https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ae-أبو-ظبي/sector-33"}]},{"@type":"City","@id":"https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ae-أبو-ظبي/sector-33#geo","name":"Sector 33","containedInPlace":{"@type":"AdministrativeArea","name":"Abu Dhabi","containedInPlace":{"@type":"Country","name":"الإمارات العربية المتحدة","identifier":"AE"}}},{"@type":"CollectionPage","@id":"https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ae-أبو-ظبي/sector-33#page","url":"https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ae-أبو-ظبي/sector-33","name":"أفضل لياقة بدنية وتعافي بالقرب مني في Sector 33, أبو ظبي","headline":"‎أفضل لياقة بدنية وتعافي بالقرب مني في Sector 33, أبو ظبي","inLanguage":"ar-AE","isPartOf":{"@id":"https://www.fresha.com/#website"},"mainEntity":{"@id":"https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ae-أبو-ظبي/sector-33#itemlist"},"dateModified":"2026-11-13T01:46:58.391Z","breadcrumb":{"@id":"https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ae-أبو-ظبي/sector-33#breadcrumbs"},"contentLocation":{"@id":"https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ae-أبو-ظبي/sector-33#geo"},"about":[{"@type":"Thing","name":"لياقة بدنية وتعافي"}]},{"@type":"FAQPage","@id":"https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ae-أبو-ظبي/sector-33#faq","isPartOf":{"@id":"https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ae-أبو-ظبي/sector-33#page"},"mainEntity":[{"@type":"Question","name":"أين يمكنني العثور على صالات كروس فيت بالقرب مني في Sector 33؟","acceptedAnswer":{"@type":"Answer","text":"تتمتع Sector 33 بمجتمع قوي لرياضة كروس فيت مع العديد من الصالات في المدينة وضواحيها. تصفح واحجز أفضل صالات كروس فيت القريبة منك في Sector 33."}},{"@type":"Question","name":"أين أجد صالات ملاكمة قريبة مني في Sector 33؟","acceptedAnswer":{"@type":"Answer","text":"تضم Sector 33 مجموعة واسعة من صالات الملاكمة التي تقدم تدريبات اللياقة البدنية، والملاكمة التنافسية، وبرامج التدريب المتخصصة. تصفح واحجز أفضل صالات الملاكمة القريبة منك في Sector 33."}},{"@type":"Question","name":"هل توجد صالات رياضية أو دروس لياقة بدنية متاحة يوم الأحد في Sector 33?","acceptedAnswer":{"@type":"Answer","text":"نعم، العديد من صالات الرياضة والاستوديوهات في Sector 33 تفتح أبوابها يوم الأحد. تصفح Fresha للعثور على أماكن قريبة منك متاحة يوم الأحد واحجز موعدك خلال ثوانٍ."}},{"@type":"Question","name":"هل توجد صالات رياضية أو دروس لياقة بدنية متاحة يوم السبت في Sector 33?","acceptedAnswer":{"@type":"Answer","text":"نعم، معظم صالات الرياضة واستوديوهات اللياقة في Sector 33 تفتح أبوابها يوم السبت، وغالبًا ما تقدم جدول حصص كامل. استخدم Fresha للتحقق من التوافر الفوري يوم السبت وحجز حصتك أو جلستك مسبقًا."}},{"@type":"Question","name":"هل توجد صالات رياضية بأسعار مناسبة أو اقتصادية بالقرب مني في Sector 33؟","acceptedAnswer":{"@type":"Answer","text":"نعم، Sector 33 تضم صالات رياضية تناسب جميع الميزانيات، من مرافق اقتصادية تعمل على مدار الساعة إلى استوديوهات بوتيكية فاخرة. تقدم Fresha أسعار واضحة ومباشرة لتتمكن من العثور على الخيار المناسب لك بالقرب منك بسهولة."}},{"@type":"Question","name":"كيف أجد صالات رياضية ومراكز لياقة بدنية بالقرب مني في Sector 33؟","acceptedAnswer":{"@type":"Answer","text":"أسهل طريقة للعثور على صالات الرياضة ومراكز اللياقة القريبة في Sector 33 هي استخدام Fresha. أدخل اسم منطقتك أو فعّل خاصية تحديد الموقع لتشاهد خريطة بأقرب الصالات واستوديوهات اللياقة، مع تقييمات، حصص تدريب، وتوفر المواعيد مباشرةً."}},{"@type":"Question","name":"هل يمكنني حجز دروس الجيم وجلسات اللياقة البدنية في Sector 33 عبر الإنترنت؟","acceptedAnswer":{"@type":"Answer","text":"نعم، مع Fresha يمكنك حجز حصص الجيم وجلسات اللياقة البدنية في Sector 33 عبر الإنترنت على مدار الساعة طوال أيام الأسبوع. تصفح الأماكن القريبة منك، اختر نوع الحصة أو الجلسة، حدد الوقت المناسب، وأكد حجزك فوراً."}}]}]}</script>
+        
+    <script>
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl+ '&gtm_auth=I3dLwNFiDu7j5z-Gbm8FTQ&gtm_preview=env-1&gtm_cookies_win=x';f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-WZVW87Z');
+      </script>
+      
+        
+    <script type="text/javascript">
+      !function(){"use strict";!function(e,t){var r=e.amplitude||{_q:[],_iq:{}};if(r.invoked)e.console&&console.error&&console.error("Amplitude snippet has been loaded.");else{var n=function(e,t){e.prototype[t]=function(){return this._q.push({name:t,args:Array.prototype.slice.call(arguments,0)}),this}},s=function(e,t,r){return function(n){e._q.push({name:t,args:Array.prototype.slice.call(r,0),resolve:n})}},o=function(e,t,r){e[t]=function(){if(r)return{promise:new Promise(s(e,t,Array.prototype.slice.call(arguments)))};!function(e,t,r){e._q.push({name:t,args:Array.prototype.slice.call(r,0)})}(e,t,Array.prototype.slice.call(arguments))}},i=function(e){for(var t=0;t<v.length;t++)o(e,v[t],!1);for(var r=0;r<g.length;r++)o(e,g[r],!0)};r.invoked=!0;var c=t.createElement("script");c.type="text/javascript",c.integrity="sha384-4O8lKNFNgd/jP8qyPyPo+hGxkbqZ9dQ/DUufAi9GWr0ZryDdHu+46n/uC5ZmwffP",c.crossOrigin="anonymous",c.async=!0,c.src="https://cdn.amplitude.com/libs/analytics-browser-2.40.0-min.js.gz",c.onload=function(){e.amplitude.runQueuedFunctions||console.log("[Amplitude] Error: could not load SDK")};var a=t.getElementsByTagName("script")[0];a.parentNode.insertBefore(c,a);for(var u=function(){return this._q=[],this},l=["add","append","clearAll","prepend","set","setOnce","unset","preInsert","postInsert","remove","getUserProperties"],p=0;p<l.length;p++)n(u,l[p]);r.Identify=u;for(var d=function(){return this._q=[],this},f=["getEventProperties","setProductId","setQuantity","setPrice","setRevenue","setRevenueType","setReceipt","setReceiptSig","setCurrency","setEventProperties"],y=0;y<f.length;y++)n(d,f[y]);r.Revenue=d;var v=["getDeviceId","setDeviceId","getSessionId","setSessionId","getUserId","setUserId","setOptOut","setTransport","reset","extendSession"],g=["init","add","remove","track","logEvent","identify","groupIdentify","setGroup","revenue","flush"];i(r),r.createInstance=function(e){return r._iq[e]={_q:[]},i(r._iq[e]),r._iq[e]},e.amplitude=r}}(window,document)}();
+      (function () {
+        var apiKey = "29e2cb5b7d55e4c4dcfa427e0f9fc784";
+        var serverUrl = "https://www.fresha.com/plumbus/2/httpapi";
+        var appVersion = "e1bd9b2b32d5ba8bad5c90482cbe6af616c2039b";
+        var userId = undefined;
+        try {
+          var raw = localStorage.getItem('trackingStorage');
+          if (raw) {
+            var trackingStorage = JSON.parse(raw);
+            if (trackingStorage != null && trackingStorage.uid != null) {
+              userId = String(trackingStorage.uid);
+            }
+          }
+        } catch (e) {}
+        var options = {
+          serverUrl: serverUrl,
+          remoteConfig: {
+            fetchRemoteConfig: false,
+          },
+          minIdLength: 1,
+          logLevel: 0,
+          autocapture: {
+            attribution: true,
+            pageViews: true,
+            sessions: true,
+            formInteractions: false,
+            fileDownloads: false,
+            elementInteractions: false,
+          },
+        };
+        if (appVersion) {
+          options.appVersion = appVersion;
+        }
+        if (userId) {
+          amplitude.init(apiKey, userId, options);
+        } else {
+          amplitude.init(apiKey, options);
+        }
+      })();
+    </script>
+  
+        
+    <link rel="alternate" hreflang="ar" href="https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ae-أبو-ظبي/sector-33" />
+<link rel="alternate" hreflang="en" href="https://www.fresha.com/lp/en/bt/gym-and-fitness/in/ae-abu-dhabi/sector-33" />
+    <link rel="alternate" hreflang="x-default" href="https://www.fresha.com/lp/en/bt/gym-and-fitness/in/ae-abu-dhabi/sector-33" />
+  
+        
+    <script>
+      function getUtmSourceReferrer() {
+        var url = new URL(window.location.href);
+        var source = url.searchParams.get('utm_source');
+        if (source === 'facebook' || source === 'fb') {
+          return 'https://www.facebook.com';
+        }
+        if (source === 'instagram' || source === 'ig') {
+          return 'https://www.instagram.com';
+        }
+        return '';
+      }
+
+      function getReferrer() {
+        return document.referrer || getUtmSourceReferrer() || '';
+      }
+
+      (function(){
+        var externalReferrerUrl = window.getLocaleStorageValWithExpiry('externalReferrerUrl');
+        var userLandedFirstUrl = window.getLocaleStorageValWithExpiry('userLandedFirstUrl');
+        if (!externalReferrerUrl && externalReferrerUrl !== "") {
+          window.setLocalStorageValWithExpiry('externalReferrerUrl', getReferrer(), 1000 * 60 * 60 * 24);
+        }
+        if (!userLandedFirstUrl && userLandedFirstUrl !== "") {
+          window.setLocalStorageValWithExpiry('userLandedFirstUrl', window.location.href, 1000 * 60 * 60 * 24);
+        }
+      })();
+    </script>
+  
+        <link href="/lp/assets/main-91659a18986f51525692.min.css" rel="stylesheet">
+        
+      </head>
+      <body>
+        
+      <noscript>
+        <iframe
+          title="Google Tag Manager for GA4"
+          src="https://www.googletagmanager.com/ns.html?id=GTM-WZVW87Z&gtm_auth=I3dLwNFiDu7j5z-Gbm8FTQ&gtm_preview=env-1&gtm_cookies_win=x"
+          height="0"
+          width="0"
+          style={{ display: 'none', visibility: 'hidden' }}
+        ></iframe>
+      </noscript>
+    
+        <link rel="preload" as="image" href="/lp/assets/29cca8f59ebf28b19ef8.webp"/><link rel="preload" as="image" href="/lp/assets/27b35cba37648e74203b.png"/><link rel="preload" as="image" href="/lp/assets/7ff297abde57431f1abe.png"/><link rel="preload" as="image" href="/lp/assets/3e5dbe843af4ec105879.webp"/><div dir="rtl"><div class="cvV1n9" data-lp-navigation="true"><nav class="siTBQ1"><div class="Zp_cMo HrIGgh"><a class="OP1nBW QdYpnI" href="https://www.fresha.com/ar" data-qa="logo" aria-label="Fresha"><span class="v_Dfni veiqTU xUeY0V"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81.8 24"><path d="M51.5 2.1h3.9v8.1c1.3-1.9 4-2.5 6.2-1.6 2.2.9 2.9 2.5 3 2.7.2.5.4 1 .5 1.5.6 3.6-.6 7.2.5 10.7h-3.8c-1-2.5-.4-5.3-.4-7.9 0-.7 0-1.5-.4-2.2-.5-.9-1.5-1.6-2.5-1.6-1.1 0-2.1.6-2.6 1.5-.4.8-.4 1.8-.4 2.7v7.5h-3.9l-.1-21.4zM36 15.7c.1-4.3-2.6-7.5-6.8-7.5-2.8 0-5.2 1.4-6.5 3.8-1.4 2.6-1.3 6.3.4 8.8 2.5 3.4 7.6 4.2 12.5 1.9l-1.2-3.1c-4.1 1.8-8.5 1.3-8.8-2.4H36v-1.5zm-10.3-1.5c.3-.8.7-1.4 1.3-1.9 1.2-.9 3.3-1 4.4-.1.5.4.9 1.1 1.2 1.9h-6.9zM13.1 13.9s0-2.3-1.9-2.3H6.9v12.1H3V11.6H0V8.3h3V5.7C3 3.4 5.1 0 9.7 0s6.4 3.9 6.4 3.9l-3 2.1s-.8-2.5-3.3-2.5C8.7 3.5 7 4.4 7 6.2v2h6.1c2.7 0 3.4 2 3.4 2 1-2.4 4.6-2.1 5.3-2v3.1c-2.5-.2-4.8 1.2-4.8 4.1v8h-3.9v-9.5zM48.9 16.2c-1.2-1.2-4.3-1.6-6.3-2-1-.2-1.8-.4-1.8-1.4 0-1.2 1.2-1.5 2.4-1.5s2.4.5 3.1 1.5l3-1.6c-1.7-3-6.2-3.6-9.1-2.4-.9.4-1.6 1-2.1 1.7-1.1 1.5-1 4.1.3 5.3.7.7 1.9 1.2 3.4 1.5l2.8.5c1 .2 1.9.4 1.9 1.5 0 1.3-1.4 1.6-2.6 1.6-3.2 0-3.8-3-3.8-3L36.4 19c.2 1 1.5 5 7.4 5 3.3 0 6.2-1.3 6.3-4.8-.1-1.3-.5-2.3-1.2-3zM81.2 20.8c-.7 0-1.3-.4-1.3-1.4 0-.5-.1-2.2-.1-2.6 0-2.6.1-5.1-1.7-6.9-2-2-6.6-2.2-9-.6-.9.5-1.7 1.2-2.3 2.1l2.3 2.4c.9-1.5 2.2-2.2 3.7-2.2 1.4-.1 2.6.6 3.1 2-3.1.8-7.1 1.1-8.8 4.3-.8 1.5-.6 3.4.6 4.7.9 1 2.4 1.3 3.8 1.3 2.2 0 4.3-.5 5.6-2.5.7 1.7 2.2 2.5 4 2.5.3 0 .6-.1.8-.2v-3c-.2.1-.4.1-.7.1zm-5.3-3.1c.1 2.2-1.7 3.4-3.7 3.4-1.1 0-1.8-.5-1.8-1.6 0-1.2 1-1.6 2.1-1.9l3.4-1v1.1z"/></svg>
+</span></a></div><div class="Zp_cMo Ix7DRq"><a class="OP1nBW QdYpnI" href="https://www.fresha.com/ar" data-qa="logo" aria-label="Fresha"><span class="v_Dfni veiqTU xUeY0V"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81.8 24"><path d="M51.5 2.1h3.9v8.1c1.3-1.9 4-2.5 6.2-1.6 2.2.9 2.9 2.5 3 2.7.2.5.4 1 .5 1.5.6 3.6-.6 7.2.5 10.7h-3.8c-1-2.5-.4-5.3-.4-7.9 0-.7 0-1.5-.4-2.2-.5-.9-1.5-1.6-2.5-1.6-1.1 0-2.1.6-2.6 1.5-.4.8-.4 1.8-.4 2.7v7.5h-3.9l-.1-21.4zM36 15.7c.1-4.3-2.6-7.5-6.8-7.5-2.8 0-5.2 1.4-6.5 3.8-1.4 2.6-1.3 6.3.4 8.8 2.5 3.4 7.6 4.2 12.5 1.9l-1.2-3.1c-4.1 1.8-8.5 1.3-8.8-2.4H36v-1.5zm-10.3-1.5c.3-.8.7-1.4 1.3-1.9 1.2-.9 3.3-1 4.4-.1.5.4.9 1.1 1.2 1.9h-6.9zM13.1 13.9s0-2.3-1.9-2.3H6.9v12.1H3V11.6H0V8.3h3V5.7C3 3.4 5.1 0 9.7 0s6.4 3.9 6.4 3.9l-3 2.1s-.8-2.5-3.3-2.5C8.7 3.5 7 4.4 7 6.2v2h6.1c2.7 0 3.4 2 3.4 2 1-2.4 4.6-2.1 5.3-2v3.1c-2.5-.2-4.8 1.2-4.8 4.1v8h-3.9v-9.5zM48.9 16.2c-1.2-1.2-4.3-1.6-6.3-2-1-.2-1.8-.4-1.8-1.4 0-1.2 1.2-1.5 2.4-1.5s2.4.5 3.1 1.5l3-1.6c-1.7-3-6.2-3.6-9.1-2.4-.9.4-1.6 1-2.1 1.7-1.1 1.5-1 4.1.3 5.3.7.7 1.9 1.2 3.4 1.5l2.8.5c1 .2 1.9.4 1.9 1.5 0 1.3-1.4 1.6-2.6 1.6-3.2 0-3.8-3-3.8-3L36.4 19c.2 1 1.5 5 7.4 5 3.3 0 6.2-1.3 6.3-4.8-.1-1.3-.5-2.3-1.2-3zM81.2 20.8c-.7 0-1.3-.4-1.3-1.4 0-.5-.1-2.2-.1-2.6 0-2.6.1-5.1-1.7-6.9-2-2-6.6-2.2-9-.6-.9.5-1.7 1.2-2.3 2.1l2.3 2.4c.9-1.5 2.2-2.2 3.7-2.2 1.4-.1 2.6.6 3.1 2-3.1.8-7.1 1.1-8.8 4.3-.8 1.5-.6 3.4.6 4.7.9 1 2.4 1.3 3.8 1.3 2.2 0 4.3-.5 5.6-2.5.7 1.7 2.2 2.5 4 2.5.3 0 .6-.1.8-.2v-3c-.2.1-.4.1-.7.1zm-5.3-3.1c.1 2.2-1.7 3.4-3.7 3.4-1.1 0-1.8-.5-1.8-1.6 0-1.2 1-1.6 2.1-1.9l3.4-1v1.1z"/></svg>
+</span></a></div><div class="zeLhfM KUb747"><a class="OP1nBW _aj4fe jhHtJg" href="https://www.fresha.com/ar/search?center=24.39944532666667,54.560048173333335&amp;distance=1.372&amp;business-type-id=9&amp;sort=recommended" data-qa="search-box" rel="nofollow"><div class="axDOAG FkLavb qLhAks RYhd_E T2Ht61" title="لياقة بدنية وتعافي">لياقة بدنية وتعافي</div></a><a class="OP1nBW _aj4fe" href="https://www.fresha.com/ar/search?center=24.39944532666667,54.560048173333335&amp;distance=1.372&amp;business-type-id=9&amp;sort=recommended" data-qa="search-box-location" rel="nofollow"><div class="axDOAG FkLavb qLhAks RYhd_E T2Ht61" title="‎Sector 33, أبو ظبي">‎Sector 33, أبو ظبي</div></a><a class="OP1nBW _aj4fe" href="https://www.fresha.com/ar/search?center=24.39944532666667,54.560048173333335&amp;distance=1.372&amp;business-type-id=9&amp;sort=recommended" data-qa="search-box-time" rel="nofollow"><div class="axDOAG FkLavb qLhAks RYhd_E T2Ht61" title="أي وقت">أي وقت</div></a><a class="OP1nBW lae5d6" title="بحث" href="https://www.fresha.com/ar/search?center=24.39944532666667,54.560048173333335&amp;distance=1.372&amp;business-type-id=9&amp;sort=recommended" data-qa="search-box-submit" rel="nofollow"><span class="jxuPik"><span class="v_Dfni CpPDl7 SF7BiT"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.875 3.75a7.125 7.125 0 1 0 0 14.25 7.125 7.125 0 0 0 0-14.25ZM2.25 10.875a8.625 8.625 0 1 1 15.231 5.546l4.05 4.049a.75.75 0 1 1-1.061 1.06l-4.05-4.049a8.625 8.625 0 0 1-14.17-6.606Z"></path></svg></span></span></a></div><div class="lVX8vr"><a href="#" class="q1Jkfo Ix7DRq" data-modal="modal-search" aria-label="للبحث عن مركز أو خدمة"><span class="v_Dfni vSYAhk veiqTU"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.875 3.75a7.125 7.125 0 1 0 0 14.25 7.125 7.125 0 0 0 0-14.25ZM2.25 10.875a8.625 8.625 0 1 1 15.231 5.546l4.05 4.049a.75.75 0 1 1-1.061 1.06l-4.05-4.049a8.625 8.625 0 0 1-14.17-6.606Z"></path></svg></span></a><a href="#" class="q1Jkfo Ix7DRq" data-modal="modal-menu" data-lp-mobile-menu-trigger="true" aria-label="القائمة"><span data-lp-mobile-menu-icon="true"><span class="v_Dfni vSYAhk veiqTU"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 6a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6Zm0 6a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 6a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 18Z"></path></svg></span></span></a><div class="zjRND1 teEzkc" id="modal-search"><div class="cswpPv Rou8CE"><button aria-label="إغلاق" type="button" class="ziPrKd modal-exit"><span class="v_Dfni VqDAZf veiqTU"><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M4.293 4.293a1 1 0 011.414 0L12 10.585l6.293-6.292a1 1 0 011.32-.083l.094.083a1 1 0 010 1.414L13.415 12l6.292 6.293a1 1 0 01.083 1.32l-.083.094a1 1 0 01-1.414 0L12 13.415l-6.293 6.292a1 1 0 01-1.32.083l-.094-.083a1 1 0 010-1.414L10.585 12 4.293 5.707a1 1 0 01-.083-1.32z" />
+                  </svg></span></button></div><div class="kIGviM"><p class="axDOAG N7z9vs meyZbf">بحث</p><a class="OP1nBW zQcZFo" href="https://www.fresha.com/ar/search?center=24.39944532666667,54.560048173333335&amp;distance=1.372&amp;business-type-id=9&amp;sort=recommended" data-tracking="Search"><div class="QguCgd"><span class="v_Dfni CpPDl7 Rh6zLx"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.875 3.75a7.125 7.125 0 1 0 0 14.25 7.125 7.125 0 0 0 0-14.25ZM2.25 10.875a8.625 8.625 0 1 1 15.231 5.546l4.05 4.049a.75.75 0 1 1-1.061 1.06l-4.05-4.049a8.625 8.625 0 0 1-14.17-6.606Z"></path></svg></span></div><p class="axDOAG TE8kwS">لياقة بدنية وتعافي</p></a><a class="OP1nBW zQcZFo" href="https://www.fresha.com/ar/search?center=24.39944532666667,54.560048173333335&amp;distance=1.372&amp;business-type-id=9&amp;sort=recommended" data-tracking="Search"><div class="QguCgd"><span class="v_Dfni CpPDl7 Rh6zLx">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.543 22.345a.84.84 0 0 0 .983-.05 21.987 21.987 0 0 0 1.131-.9 25.156 25.156 0 0 0 2.659-2.622c1.918-2.205 3.934-5.378 3.934-9.023a8.25 8.25 0 1 0-16.5 0c0 3.645 2.016 6.818 3.934 9.023a25.146 25.146 0 0 0 3.538 3.334 14.102 14.102 0 0 0 .32.238ZM12 3a6.75 6.75 0 0 0-6.75 6.75c0 3.105 1.734 5.932 3.566 8.04A23.64 23.64 0 0 0 12 20.812a23.633 23.633 0 0 0 3.184-3.023c1.832-2.108 3.566-4.935 3.566-8.04A6.75 6.75 0 0 0 12 3Z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M12 6a3.75 3.75 0 1 0 0 7.5A3.75 3.75 0 0 0 12 6Zm0 1.5a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5Z"></path></svg></span></div><p class="axDOAG TE8kwS">‎Sector 33, أبو ظبي</p></a><a class="OP1nBW iSiUSy xc6EHb QblrHl dBIRgx" href="https://www.fresha.com/ar/search?center=24.39944532666667,54.560048173333335&amp;distance=1.372&amp;business-type-id=9&amp;sort=recommended" data-tracking="Search"><p class="axDOAG zL1l9a">بحث</p></a></div></div><div class="zjRND1 vs4sBU OmmbzA" id="modal-menu"><div class="cswpPv"><a class="OP1nBW QdYpnI" href="https://www.fresha.com/ar" data-qa="logo-mobile" aria-label="Fresha"><span class="v_Dfni veiqTU xUeY0V"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81.8 24"><path d="M51.5 2.1h3.9v8.1c1.3-1.9 4-2.5 6.2-1.6 2.2.9 2.9 2.5 3 2.7.2.5.4 1 .5 1.5.6 3.6-.6 7.2.5 10.7h-3.8c-1-2.5-.4-5.3-.4-7.9 0-.7 0-1.5-.4-2.2-.5-.9-1.5-1.6-2.5-1.6-1.1 0-2.1.6-2.6 1.5-.4.8-.4 1.8-.4 2.7v7.5h-3.9l-.1-21.4zM36 15.7c.1-4.3-2.6-7.5-6.8-7.5-2.8 0-5.2 1.4-6.5 3.8-1.4 2.6-1.3 6.3.4 8.8 2.5 3.4 7.6 4.2 12.5 1.9l-1.2-3.1c-4.1 1.8-8.5 1.3-8.8-2.4H36v-1.5zm-10.3-1.5c.3-.8.7-1.4 1.3-1.9 1.2-.9 3.3-1 4.4-.1.5.4.9 1.1 1.2 1.9h-6.9zM13.1 13.9s0-2.3-1.9-2.3H6.9v12.1H3V11.6H0V8.3h3V5.7C3 3.4 5.1 0 9.7 0s6.4 3.9 6.4 3.9l-3 2.1s-.8-2.5-3.3-2.5C8.7 3.5 7 4.4 7 6.2v2h6.1c2.7 0 3.4 2 3.4 2 1-2.4 4.6-2.1 5.3-2v3.1c-2.5-.2-4.8 1.2-4.8 4.1v8h-3.9v-9.5zM48.9 16.2c-1.2-1.2-4.3-1.6-6.3-2-1-.2-1.8-.4-1.8-1.4 0-1.2 1.2-1.5 2.4-1.5s2.4.5 3.1 1.5l3-1.6c-1.7-3-6.2-3.6-9.1-2.4-.9.4-1.6 1-2.1 1.7-1.1 1.5-1 4.1.3 5.3.7.7 1.9 1.2 3.4 1.5l2.8.5c1 .2 1.9.4 1.9 1.5 0 1.3-1.4 1.6-2.6 1.6-3.2 0-3.8-3-3.8-3L36.4 19c.2 1 1.5 5 7.4 5 3.3 0 6.2-1.3 6.3-4.8-.1-1.3-.5-2.3-1.2-3zM81.2 20.8c-.7 0-1.3-.4-1.3-1.4 0-.5-.1-2.2-.1-2.6 0-2.6.1-5.1-1.7-6.9-2-2-6.6-2.2-9-.6-.9.5-1.7 1.2-2.3 2.1l2.3 2.4c.9-1.5 2.2-2.2 3.7-2.2 1.4-.1 2.6.6 3.1 2-3.1.8-7.1 1.1-8.8 4.3-.8 1.5-.6 3.4.6 4.7.9 1 2.4 1.3 3.8 1.3 2.2 0 4.3-.5 5.6-2.5.7 1.7 2.2 2.5 4 2.5.3 0 .6-.1.8-.2v-3c-.2.1-.4.1-.7.1zm-5.3-3.1c.1 2.2-1.7 3.4-3.7 3.4-1.1 0-1.8-.5-1.8-1.6 0-1.2 1-1.6 2.1-1.9l3.4-1v1.1z"/></svg>
+</span></a><button aria-label="إغلاق" type="button" class="KYbtY2 modal-exit"><span class="v_Dfni VqDAZf veiqTU"><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M4.293 4.293a1 1 0 011.414 0L12 10.585l6.293-6.292a1 1 0 011.32-.083l.094.083a1 1 0 010 1.414L13.415 12l6.292 6.293a1 1 0 01.083 1.32l-.083.094a1 1 0 01-1.414 0L12 13.415l-6.293 6.292a1 1 0 01-1.32.083l-.094-.083a1 1 0 010-1.414L10.585 12 4.293 5.707a1 1 0 01-.083-1.32z" />
+                  </svg></span></button></div><div class="WEULBK"><div class="OGFmDZ"><div class="_Cwzfx">للعملاء</div><ul class="yXnLyK" id="lp-mobile-menu-list"><li><a class="OP1nBW JwHcK0 pBtIbo" href="https://www.fresha.com/ar/auth?type=socials-login" data-qa="menu-item-log-in" rel="nofollow" data-tracking="Log in or sign up">تسجيل الدخول أو إنشاء حساب جديد<span class="v_Dfni vSYAhk veiqTU N_YrF7"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" iconColor="#101928" class="Icon__StyledInlineSVG-sc-c98r68-0 cxRwTg Icon-sc-c98r68-1 styled__ListItemArrow-sc-3phtig-8 kMfJYW UjZKy" width="24" height="24"><path d="M14.481 12l-7.14 6.247a1 1 0 001.318 1.506l8-7a1 1 0 000-1.506l-8-7a1 1 0 10-1.317 1.506L14.482 12z"></path></svg></span></a></li><li><a class="OP1nBW JwHcK0" href="https://www.fresha.com/ar/buy-fresha-gift-card" rel="nofollow" data-tracking="Send a gift card">إرسال بطاقة هدايا<span class="v_Dfni vSYAhk veiqTU N_YrF7"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" iconColor="#101928" class="Icon__StyledInlineSVG-sc-c98r68-0 cxRwTg Icon-sc-c98r68-1 styled__ListItemArrow-sc-3phtig-8 kMfJYW UjZKy" width="24" height="24"><path d="M14.481 12l-7.14 6.247a1 1 0 001.318 1.506l8-7a1 1 0 000-1.506l-8-7a1 1 0 10-1.317 1.506L14.482 12z"></path></svg></span></a></li><li><button type="button" class="Ka0K5G JwHcK0" data-redirect-url="https://www.fresha.com/app-store-redirect" data-qa="menu-item-download-app" data-tracking="Download the app">تنزيل التطبيق<span class="v_Dfni vSYAhk veiqTU N_YrF7"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" iconColor="#101928" class="Icon__StyledInlineSVG-sc-c98r68-0 cxRwTg Icon-sc-c98r68-1 styled__ListItemArrow-sc-3phtig-8 kMfJYW UjZKy" width="24" height="24"><path d="M14.481 12l-7.14 6.247a1 1 0 001.318 1.506l8-7a1 1 0 000-1.506l-8-7a1 1 0 10-1.317 1.506L14.482 12z"></path></svg></span></button></li><li><details class="ZNrok3 Oj0AUi" data-lp-mobile-explore="true"><summary class="ufPgNB" data-tracking="Explore" data-qa="menu-item-explore"><span>استكشف</span><span aria-hidden="true"><span class="v_Dfni vSYAhk veiqTU A8ofiB"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" iconColor="#101928" class="Icon__StyledInlineSVG-sc-c98r68-0 cxRwTg Icon-sc-c98r68-1 styled__ListItemArrow-sc-3phtig-8 kMfJYW UjZKy" width="24" height="24"><path d="M14.481 12l-7.14 6.247a1 1 0 001.318 1.506l8-7a1 1 0 000-1.506l-8-7a1 1 0 10-1.317 1.506L14.482 12z"></path></svg></span></span></summary><div class="dRU03m"><ul class="zFSyjT"><li class="_6vbXdg"><input class="CNtQXc" id="lp-explore-mobile-toggle-0" type="checkbox" aria-controls="lp-explore-mobile-panel-0" aria-label="مركز رعاية صحية في أبو ظبي"/><div class="tQomTA"><a class="OP1nBW kqLo3w" href="https://www.fresha.com/lp/ar/bt/مراكز-رعاية-صحية/ae-أبو-ظبي" data-tracking="مركز رعاية صحية في أبو ظبي">مركز رعاية صحية في أبو ظبي</a><label class="NZ650s" for="lp-explore-mobile-toggle-0"><span aria-hidden="true"><span class="v_Dfni vSYAhk veiqTU A8ofiB"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" iconColor="#101928" class="Icon__StyledInlineSVG-sc-c98r68-0 cxRwTg Icon-sc-c98r68-1 styled__ListItemArrow-sc-3phtig-8 kMfJYW UjZKy" width="24" height="24"><path d="M14.481 12l-7.14 6.247a1 1 0 001.318 1.506l8-7a1 1 0 000-1.506l-8-7a1 1 0 10-1.317 1.506L14.482 12z"></path></svg></span></span></label></div><ul class="Wvy1RE" id="lp-explore-mobile-panel-0"><li><a class="OP1nBW kqLo3w" href="https://www.fresha.com/lp/ar/tt/حقن-إذابة-الدهون/ae-أبو-ظبي" data-tracking="حقن إذابة الدهون في أبو ظبي">حقن إذابة الدهون في أبو ظبي</a></li><li><a class="OP1nBW kqLo3w" href="https://www.fresha.com/lp/ar/tt/استشارات-التغذية/ae-أبو-ظبي" data-tracking="استشارات التغذية في أبو ظبي">استشارات التغذية في أبو ظبي</a></li><li><a class="OP1nBW kqLo3w" href="https://www.fresha.com/lp/ar/tt/شفط-الدهون-بالليزر/ae-أبو-ظبي" data-tracking="شفط الدهون بالليزر في أبو ظبي">شفط الدهون بالليزر في أبو ظبي</a></li></ul></li></ul></div></details></li><li><a class="OP1nBW JwHcK0" href="https://www.fresha.com/ar/help-center" data-qa="menu-item-support" rel="nofollow" data-tracking="Help and support">المساعدة والدعم<span class="v_Dfni vSYAhk veiqTU N_YrF7"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" iconColor="#101928" class="Icon__StyledInlineSVG-sc-c98r68-0 cxRwTg Icon-sc-c98r68-1 styled__ListItemArrow-sc-3phtig-8 kMfJYW UjZKy" width="24" height="24"><path d="M14.481 12l-7.14 6.247a1 1 0 001.318 1.506l8-7a1 1 0 000-1.506l-8-7a1 1 0 10-1.317 1.506L14.482 12z"></path></svg></span></a></li></ul></div><div class="OGFmDZ"><ul class="yXnLyK"><li><a class="OP1nBW JwHcK0 bsH7DV" href="https://www.fresha.com/ar/for-business" data-qa="menu-item-for-business" rel="nofollow" data-business-tracking="For business">للأعمال<span class="v_Dfni CpPDl7 veiqTU N_YrF7"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.97 4.72a.75.75 0 0 1 1.06 0l6.75 6.75a.75.75 0 0 1 0 1.06l-6.75 6.75a.75.75 0 1 1-1.06-1.06l5.47-5.47H3.75a.75.75 0 0 1 0-1.5h14.69l-5.47-5.47a.75.75 0 0 1 0-1.06Z"></path></svg></span></a></li></ul></div></div></div><div class="xSCh4e js-lp-user-menu" id="lp-user-menu" data-state="guest"><input id="lp-user-menu-trigger" type="checkbox"/><label for="lp-user-menu-trigger" class="vQxCMu" id="lp-user-menu-trigger-label"><span class="t1olRo" data-lp-menu-trigger-guest="true"><span class="LZfZ9o">القائمة</span><span class="v_Dfni vSYAhk veiqTU"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 6a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6Zm0 6a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 6a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 18Z"></path></svg></span></span><span class="ici0Y3" data-lp-menu-trigger-auth="true"><span class="khKXsb" id="lp-user-menu-avatar"><span class="l8BU0k" data-lp-avatar-guest="true" aria-hidden="true"></span><span class="E2J4Pv" data-lp-avatar-auth="true" aria-hidden="true"></span></span><span class="isMa3A"><span class="v_Dfni vSYAhk veiqTU N9Wbrw"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.22 8.345a.75.75 0 0 1 1.06 0l5.72 5.72 5.72-5.72a.75.75 0 1 1 1.06 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0l-6.25-6.25a.75.75 0 0 1 0-1.06Z"></path></svg></span><span class="v_Dfni vSYAhk veiqTU uLCUQ5"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.22 8.345a.75.75 0 0 1 1.06 0l5.72 5.72 5.72-5.72a.75.75 0 1 1 1.06 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0l-6.25-6.25a.75.75 0 0 1 0-1.06Z"></path></svg></span></span></span></label><div class="EMH71x" id="lp-user-menu-popup" role="menu"><div class="sX1tHA" data-lp-menu-panel="guest"><div class="GfU0bC">للعملاء</div><a class="OP1nBW VznW96 NbuBVO" href="https://www.fresha.com/ar/auth?type=socials-login" data-qa="menu-item-log-in" rel="nofollow" data-tracking="Log in or sign up">تسجيل الدخول أو إنشاء حساب جديد</a><a class="OP1nBW VznW96" href="https://www.fresha.com/ar/buy-fresha-gift-card" rel="nofollow" data-tracking="Send a gift card">إرسال بطاقة هدايا</a><button type="button" class="Ka0K5G VznW96" data-redirect-url="https://www.fresha.com/app-store-redirect" data-qa="menu-item-download-app" data-tracking="Download the app">تنزيل التطبيق</button><div class="k16qnz Oj0AUi" data-lp-explore-root="true"><button type="button" class="jUW1Ff" data-lp-explore-trigger="true" aria-expanded="false" aria-haspopup="true" aria-controls="lp-explore-guest-panel-root" data-tracking="Explore" data-qa="menu-item-explore"><span>استكشف</span><span aria-hidden="true"><span class="v_Dfni CpPDl7 veiqTU sGfpKb"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.97 4.72a.75.75 0 0 1 1.06 0l6.75 6.75a.75.75 0 0 1 0 1.06l-6.75 6.75a.75.75 0 1 1-1.06-1.06l5.47-5.47H3.75a.75.75 0 0 1 0-1.5h14.69l-5.47-5.47a.75.75 0 0 1 0-1.06Z"></path></svg></span></span></button><ul class="aJf4ng" id="lp-explore-guest-panel-root" data-lp-explore-panel="true"><li class="QkOT4l" data-lp-explore-item="true"><div class="LoMtCY"><a class="OP1nBW _9Vh5s" href="https://www.fresha.com/lp/ar/bt/مراكز-رعاية-صحية/ae-أبو-ظبي" data-tracking="مركز رعاية صحية في أبو ظبي">مركز رعاية صحية في أبو ظبي</a><button type="button" class="WH6kdE" data-lp-explore-toggle="true" aria-expanded="false" aria-haspopup="true" aria-controls="lp-explore-guest-panel-0" aria-label="مركز رعاية صحية في أبو ظبي"><span aria-hidden="true"><span class="v_Dfni CpPDl7 veiqTU sGfpKb"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.97 4.72a.75.75 0 0 1 1.06 0l6.75 6.75a.75.75 0 0 1 0 1.06l-6.75 6.75a.75.75 0 1 1-1.06-1.06l5.47-5.47H3.75a.75.75 0 0 1 0-1.5h14.69l-5.47-5.47a.75.75 0 0 1 0-1.06Z"></path></svg></span></span></button></div><ul class="aJf4ng" id="lp-explore-guest-panel-0" data-lp-explore-panel="true" data-lp-explore-leaf-panel="true"><li class="QkOT4l"><a class="OP1nBW _9Vh5s" href="https://www.fresha.com/lp/ar/tt/حقن-إذابة-الدهون/ae-أبو-ظبي" data-tracking="حقن إذابة الدهون في أبو ظبي">حقن إذابة الدهون في أبو ظبي</a></li><li class="QkOT4l"><a class="OP1nBW _9Vh5s" href="https://www.fresha.com/lp/ar/tt/استشارات-التغذية/ae-أبو-ظبي" data-tracking="استشارات التغذية في أبو ظبي">استشارات التغذية في أبو ظبي</a></li><li class="QkOT4l"><a class="OP1nBW _9Vh5s" href="https://www.fresha.com/lp/ar/tt/شفط-الدهون-بالليزر/ae-أبو-ظبي" data-tracking="شفط الدهون بالليزر في أبو ظبي">شفط الدهون بالليزر في أبو ظبي</a></li></ul></li></ul></div><a class="OP1nBW VznW96" href="https://www.fresha.com/ar/help-center" data-qa="menu-item-support" rel="nofollow" data-tracking="Help and support">المساعدة والدعم</a><div class="TDibjD"></div><a class="OP1nBW VznW96 OFLTnl" href="https://www.fresha.com/ar/for-business" data-qa="menu-item-for-business" rel="nofollow" data-business-tracking="For business">للأعمال<span class="v_Dfni CpPDl7 veiqTU MHdN0x"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.97 4.72a.75.75 0 0 1 1.06 0l6.75 6.75a.75.75 0 0 1 0 1.06l-6.75 6.75a.75.75 0 1 1-1.06-1.06l5.47-5.47H3.75a.75.75 0 0 1 0-1.5h14.69l-5.47-5.47a.75.75 0 0 1 0-1.06Z"></path></svg></span></a></div><div class="cCyfoB" data-lp-menu-panel="authenticated"><span class="GfU0bC" id="lp-user-menu-user-name"></span><a class="OP1nBW VznW96" href="https://www.fresha.com/ar/profile" rel="nofollow" data-tracking="Profile">الملف الشخصي</a><a class="OP1nBW VznW96" href="https://www.fresha.com/ar/activity" rel="nofollow" data-tracking="Activity">النشاط</a><a class="OP1nBW VznW96" href="https://www.fresha.com/ar/wallet" rel="nofollow" data-tracking="Wallet">المحفظة</a><a class="OP1nBW VznW96" href="https://www.fresha.com/ar/messages" rel="nofollow" data-tracking="Messages">الرسائل</a><a class="OP1nBW VznW96" href="https://www.fresha.com/ar/favorites" rel="nofollow" data-tracking="Favorites">المفضلة</a><a class="OP1nBW VznW96" href="https://www.fresha.com/ar/buy-fresha-gift-card" rel="nofollow" data-tracking="Send a gift card">إرسال بطاقة هدايا</a><a class="OP1nBW VznW96" href="https://www.fresha.com/ar/consultation-forms" rel="nofollow" data-tracking="Forms">نماذج</a><a class="OP1nBW VznW96" href="https://www.fresha.com/ar/settings" rel="nofollow" data-tracking="Settings">الإعدادات</a><a class="OP1nBW VznW96" href="https://www.fresha.com/ar?modal=logout-confirmation" rel="nofollow" data-tracking="Log out">تسجيل الخروج</a><div class="TDibjD"></div><button type="button" class="Ka0K5G VznW96" data-redirect-url="https://www.fresha.com/app-store-redirect" data-tracking="Download the app">تنزيل التطبيق</button><div class="k16qnz Oj0AUi" data-lp-explore-root="true"><button type="button" class="jUW1Ff" data-lp-explore-trigger="true" aria-expanded="false" aria-haspopup="true" aria-controls="lp-explore-auth-panel-root" data-tracking="Explore" data-qa="menu-item-explore"><span>استكشف</span><span aria-hidden="true"><span class="v_Dfni CpPDl7 veiqTU sGfpKb"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.97 4.72a.75.75 0 0 1 1.06 0l6.75 6.75a.75.75 0 0 1 0 1.06l-6.75 6.75a.75.75 0 1 1-1.06-1.06l5.47-5.47H3.75a.75.75 0 0 1 0-1.5h14.69l-5.47-5.47a.75.75 0 0 1 0-1.06Z"></path></svg></span></span></button><ul class="aJf4ng" id="lp-explore-auth-panel-root" data-lp-explore-panel="true"><li class="QkOT4l" data-lp-explore-item="true"><div class="LoMtCY"><a class="OP1nBW _9Vh5s" href="https://www.fresha.com/lp/ar/bt/مراكز-رعاية-صحية/ae-أبو-ظبي" data-tracking="مركز رعاية صحية في أبو ظبي">مركز رعاية صحية في أبو ظبي</a><button type="button" class="WH6kdE" data-lp-explore-toggle="true" aria-expanded="false" aria-haspopup="true" aria-controls="lp-explore-auth-panel-0" aria-label="مركز رعاية صحية في أبو ظبي"><span aria-hidden="true"><span class="v_Dfni CpPDl7 veiqTU sGfpKb"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.97 4.72a.75.75 0 0 1 1.06 0l6.75 6.75a.75.75 0 0 1 0 1.06l-6.75 6.75a.75.75 0 1 1-1.06-1.06l5.47-5.47H3.75a.75.75 0 0 1 0-1.5h14.69l-5.47-5.47a.75.75 0 0 1 0-1.06Z"></path></svg></span></span></button></div><ul class="aJf4ng" id="lp-explore-auth-panel-0" data-lp-explore-panel="true" data-lp-explore-leaf-panel="true"><li class="QkOT4l"><a class="OP1nBW _9Vh5s" href="https://www.fresha.com/lp/ar/tt/حقن-إذابة-الدهون/ae-أبو-ظبي" data-tracking="حقن إذابة الدهون في أبو ظبي">حقن إذابة الدهون في أبو ظبي</a></li><li class="QkOT4l"><a class="OP1nBW _9Vh5s" href="https://www.fresha.com/lp/ar/tt/استشارات-التغذية/ae-أبو-ظبي" data-tracking="استشارات التغذية في أبو ظبي">استشارات التغذية في أبو ظبي</a></li><li class="QkOT4l"><a class="OP1nBW _9Vh5s" href="https://www.fresha.com/lp/ar/tt/شفط-الدهون-بالليزر/ae-أبو-ظبي" data-tracking="شفط الدهون بالليزر في أبو ظبي">شفط الدهون بالليزر في أبو ظبي</a></li></ul></li></ul></div><a class="OP1nBW VznW96" href="https://www.fresha.com/ar/help-center" rel="nofollow" data-tracking="Help and support">المساعدة والدعم</a><div class="TDibjD"></div><a class="OP1nBW VznW96 OFLTnl" href="https://www.fresha.com/ar/for-business" rel="nofollow" data-business-tracking="For business">للأعمال</a></div></div></div></div><script>
+            
+(function () {
+  function openModal(modalId) {
+    var modal = document.getElementById(modalId);
+    if (!modal) {
+      return;
+    }
+    modal.setAttribute('data-open', 'true');
+  }
+
+  function closeModal(modal) {
+    modal.removeAttribute('data-open');
+  }
+
+  document.addEventListener('click', function (event) {
+    var trigger = event.target.closest('[data-modal]');
+    if (trigger) {
+      event.preventDefault();
+      openModal(trigger.getAttribute('data-modal'));
+      return;
+    }
+
+    var exit = event.target.closest('.modal-exit');
+    if (exit) {
+      var modal = exit.closest('[id^="modal-"]');
+      if (modal) {
+        event.preventDefault();
+        closeModal(modal);
+      }
+    }
+  });
+})();
+
+            
+(function () {
+  var nav = document.querySelector('[data-lp-navigation]');
+  if (!nav) {
+    return;
+  }
+
+  if (window.__navigationScrollShadowInit) {
+    return;
+  }
+
+  window.__navigationScrollShadowInit = true;
+
+  var SCROLL_THRESHOLD = 1;
+
+  function updateScrollState() {
+    nav.setAttribute('data-scrolled', window.scrollY > SCROLL_THRESHOLD ? 'true' : 'false');
+  }
+
+  updateScrollState();
+  window.addEventListener('scroll', updateScrollState, { passive: true });
+})();
+
+            
+(function () {
+  var menuRoot = document.getElementById('lp-user-menu');
+  if (!menuRoot) {
+    return;
+  }
+
+  var userNameEl = document.getElementById('lp-user-menu-user-name');
+  var avatarAuthSlot = document.querySelector('[data-lp-avatar-auth]');
+  var triggerLabel = document.getElementById('lp-user-menu-trigger-label');
+  var menuTrigger = document.getElementById('lp-user-menu-trigger');
+  var mobileMenuButton = document.querySelector('[data-lp-mobile-menu-trigger]');
+  var graphqlUrl = (window.location.hostname === 'fresha.com'
+  ? 'https://www.fresha.com/graphql'
+  : new URL('/graphql', window.location.origin).href);
+
+  function renderAvatar(user) {
+    if (!avatarAuthSlot) {
+      return;
+    }
+
+    avatarAuthSlot.textContent = '';
+
+    if (user.avatarThumb && user.avatarThumb.url) {
+      var img = document.createElement('img');
+      img.src = user.avatarThumb.url;
+      img.alt = user.fullName || '';
+      img.width = 40;
+      img.height = 40;
+      img.style.cssText =
+        'width:40px;height:40px;border-radius:999px;object-fit:cover;border:1px solid #f0f0ff;';
+      avatarAuthSlot.appendChild(img);
+      return;
+    }
+
+    var initials = document.createElement('span');
+    initials.style.cssText =
+      'display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:999px;border:1px solid #f0f0ff;background:#f0f0ff;color:#0d0d0d;font-size:14px;letter-spacing:-0.1px;font-weight:600;';
+    initials.textContent = user.initials || '';
+    avatarAuthSlot.appendChild(initials);
+  }
+
+  function applyAuthenticatedState(user) {
+    menuRoot.setAttribute('data-state', 'authenticated');
+
+    if (userNameEl) {
+      userNameEl.textContent = user.fullName || '';
+    }
+
+    renderAvatar(user);
+
+    if (mobileMenuButton) {
+      mobileMenuButton.setAttribute('href', '/menu');
+      mobileMenuButton.removeAttribute('data-modal');
+    }
+  }
+
+  function closeMenuOnOutsideClick() {
+    if (!menuTrigger) {
+      return;
+    }
+
+    window.addEventListener('click', function (event) {
+      if (!menuRoot.contains(event.target) && menuTrigger.checked) {
+        menuTrigger.checked = false;
+      }
+    });
+  }
+
+  closeMenuOnOutsideClick();
+
+  if (triggerLabel && menuTrigger) {
+    triggerLabel.addEventListener('click', function (event) {
+      if (
+        menuRoot.getAttribute('data-state') === 'authenticated' &&
+        window.matchMedia('(max-width: 1023px)').matches
+      ) {
+        event.preventDefault();
+        window.location.href = '/menu';
+      }
+    });
+  }
+
+  fetch(graphqlUrl, {
+    method: 'POST',
+    credentials: 'include',
+    headers: {
+      'Content-Type': 'application/json',
+      'accept-language': document.documentElement.lang || 'en',
+    },
+    body: JSON.stringify({ query: " query LibViewer_BasicProfile_Query { profile: user { id firstName lastName fullName initials avatarThumb: avatar(transformer: THUMB) { url } } } " }),
+  })
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (payload) {
+      var user = payload && payload.data && payload.data.profile;
+      if (!user || !user.id) {
+        return;
+      }
+      applyAuthenticatedState(user);
+    })
+    .catch(function () {
+      // Keep guest menu when profile cannot be loaded.
+    });
+})();
+
+            
+(function () {
+  try {
+    var params = new URLSearchParams(window.location.search);
+    if (params.get('explore') === '1') {
+      document.documentElement.setAttribute('data-lp-explore', '1');
+    }
+  } catch (e) {}
+
+  if (window.__lpExploreMenuInit) {
+    return;
+  }
+  window.__lpExploreMenuInit = true;
+
+  var HOSTS = '[data-lp-explore-root], [data-lp-explore-item]';
+  var VIEWPORT_MARGIN = 8;
+  var DEFAULT_PANEL_OFFSET = -24;
+  var scheduled = false;
+
+  function closestExplore(el, selector) {
+    return el && el.closest ? el.closest(selector) : null;
+  }
+
+  function getPanel(host) {
+    var children = host.children;
+    for (var i = 0; i < children.length; i++) {
+      if (children[i].hasAttribute && children[i].hasAttribute('data-lp-explore-panel')) {
+        return children[i];
+      }
+    }
+    return null;
+  }
+
+  function getToggle(host) {
+    var children = host.children;
+    for (var i = 0; i < children.length; i++) {
+      var child = children[i];
+      if (!child || !child.getAttribute) {
+        continue;
+      }
+      if (
+        child.getAttribute('data-lp-explore-trigger') !== null
+        || child.getAttribute('data-lp-explore-toggle') !== null
+      ) {
+        return child;
+      }
+      var nested = child.querySelector
+        ? child.querySelector('[data-lp-explore-trigger], [data-lp-explore-toggle]')
+        : null;
+      if (nested) {
+        return nested;
+      }
+    }
+    return host.querySelector('[data-lp-explore-trigger], [data-lp-explore-toggle]');
+  }
+
+  function positionPanel(host) {
+    var panel = getPanel(host);
+    if (!panel) {
+      return;
+    }
+
+    host.style.removeProperty('--lp-explore-panel-offset');
+    host.style.removeProperty('--lp-explore-panel-top-adjustment');
+    var rect = panel.getBoundingClientRect();
+    var adjustment = 0;
+    var topAdjustment = 0;
+    var isRtl = window.getComputedStyle(host).direction === 'rtl';
+
+    if (rect.right > window.innerWidth - VIEWPORT_MARGIN) {
+      var endOverflow = rect.right - (window.innerWidth - VIEWPORT_MARGIN);
+      adjustment = isRtl
+        ? -endOverflow
+        : endOverflow;
+    } else if (rect.left < VIEWPORT_MARGIN) {
+      var startOverflow = VIEWPORT_MARGIN - rect.left;
+      adjustment = isRtl
+        ? startOverflow
+        : -startOverflow;
+    }
+
+    if (adjustment !== 0) {
+      host.style.setProperty(
+        '--lp-explore-panel-offset',
+        String(DEFAULT_PANEL_OFFSET + adjustment) + 'px',
+      );
+    }
+
+    if (rect.bottom > window.innerHeight - VIEWPORT_MARGIN) {
+      topAdjustment = window.innerHeight - VIEWPORT_MARGIN - rect.bottom;
+    } else if (rect.top < VIEWPORT_MARGIN) {
+      topAdjustment = VIEWPORT_MARGIN - rect.top;
+    }
+
+    if (topAdjustment !== 0) {
+      host.style.setProperty(
+        '--lp-explore-panel-top-adjustment',
+        String(topAdjustment) + 'px',
+      );
+    }
+  }
+
+  function positionAllPanels() {
+    document.querySelectorAll(HOSTS).forEach(positionPanel);
+  }
+
+  function schedulePositioning() {
+    if (scheduled) {
+      return;
+    }
+    scheduled = true;
+    window.requestAnimationFrame(function () {
+      scheduled = false;
+      positionAllPanels();
+    });
+  }
+
+  function setOpen(el, open) {
+    if (!el) {
+      return;
+    }
+    if (open) {
+      el.setAttribute('data-open', 'true');
+    } else {
+      el.removeAttribute('data-open');
+    }
+    var toggle = getToggle(el);
+    if (toggle) {
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    }
+  }
+
+  function closeAll(except) {
+    document.querySelectorAll('[data-lp-explore-root][data-open="true"], [data-lp-explore-item][data-open="true"]').forEach(function (el) {
+      if (except && (el === except || el.contains(except) || (except.contains && except.contains(el)))) {
+        return;
+      }
+      setOpen(el, false);
+    });
+  }
+
+  function getFocusTargetAfterEscape() {
+    var openHosts = document.querySelectorAll(
+      '[data-lp-explore-root][data-open="true"], [data-lp-explore-item][data-open="true"]',
+    );
+    if (!openHosts.length) {
+      var host = closestExplore(document.activeElement, HOSTS);
+      return host ? getToggle(host) : null;
+    }
+
+    var innermost = openHosts[0];
+    for (var i = 1; i < openHosts.length; i++) {
+      if (innermost.contains(openHosts[i])) {
+        innermost = openHosts[i];
+      }
+    }
+    return getToggle(innermost);
+  }
+
+  document.addEventListener('click', function (event) {
+    var control = closestExplore(event.target, '[data-lp-explore-toggle]')
+      || closestExplore(event.target, '[data-lp-explore-trigger]');
+
+    if (control) {
+      event.preventDefault();
+      event.stopPropagation();
+      var host = closestExplore(control, HOSTS);
+      if (!host) {
+        return;
+      }
+      if (host.getAttribute('data-open') === 'true') {
+        setOpen(host, false);
+        return;
+      }
+      closeAll(host);
+      setOpen(host, true);
+      positionAllPanels();
+      return;
+    }
+
+    if (!closestExplore(event.target, '[data-lp-explore-root]')) {
+      closeAll();
+    }
+  });
+
+  document.addEventListener('keydown', function (event) {
+    if (event.key !== 'Escape') {
+      return;
+    }
+    var focusTarget = getFocusTargetAfterEscape();
+    closeAll();
+    if (focusTarget && typeof focusTarget.focus === 'function') {
+      focusTarget.focus();
+    }
+  });
+
+  document.addEventListener('mouseover', function (event) {
+    if (closestExplore(event.target, '[data-lp-explore-root]')) {
+      schedulePositioning();
+    }
+  });
+
+  document.addEventListener('focusin', function (event) {
+    if (closestExplore(event.target, '[data-lp-explore-root]')) {
+      schedulePositioning();
+    }
+  });
+
+  window.addEventListener('resize', schedulePositioning);
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', positionAllPanels);
+  } else {
+    positionAllPanels();
+  }
+})();
+
+            
+(function () {
+  if (window.__redirectButtonInit) {
+    return;
+  }
+
+  window.__redirectButtonInit = true;
+
+  document.addEventListener('click', function (event) {
+    var target = event.target;
+    var button = target && target.closest ? target.closest('[data-redirect-url]') : null;
+    var url = button && button.getAttribute('data-redirect-url');
+
+    if (url) {
+      window.location.assign(url);
+    }
+  });
+})();
+
+            </script></nav></div><main><div class="zs_ttC"><p class="LkYmOG"><a class="OP1nBW uUQ4ck ut_xFw" href="https://www.fresha.com/ar">الصفحة الرئيسية</a><span class="sNl9cF" aria-hidden="true">•</span><a class="OP1nBW uUQ4ck ut_xFw" href="https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي">لياقة بدنية وتعافي</a><span class="sNl9cF" aria-hidden="true">•</span><a class="OP1nBW uUQ4ck ut_xFw" href="https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/الإمارات-العربية-المتحدة">الإمارات العربية المتحدة</a><span class="sNl9cF" aria-hidden="true">•</span><a class="OP1nBW uUQ4ck ut_xFw" href="https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ae-أبو-ظبي">أبو ظبي</a><span class="sNl9cF" aria-hidden="true">•</span><span class="uUQ4ck cAZuqV">Sector 33</span></p></div><div class="Rzlv_b SAsCgI"><div><h1 class="axDOAG N7z9vs yPqIKn">أفضل لياقة بدنية وتعافي بالقرب مني في Sector 33, أبو ظبي</h1><div class="axDOAG C3RXjX o3HUQR zk7Hpq"><p>‎لياقة بدنية وتعافي في Sector 33، أبو ظبي <a class="OP1nBW" href="https://www.fresha.com/ar/search?center=24.39944532666667%2C54.560048173333335&amp;distance=1.372&amp;business-type-id=9&amp;sort=recommended#map" rel="nofollow">عرض الخريطة</a></p></div></div></div><div class="EqASg6"><section class="Rzlv_b" data-qa="litelocations-grid"><ul class="LRAjDL"><li class="OwChdp" data-id="lite-location-card-5917260"><div data-qa="location-card-Olompio Fit EMS" class="e02Wz5"><a href="https://www.fresha.com/ar/lvp/olompio-fit-ems-al-saray-street-abu-dhabi-A8nRry" class="iZ_Jua" aria-label="Olompio Fit EMS"></a><div class="HdNCnr"><img src="https://images.fresha.com/lead-images/placeholders/gym-and-fitness-12.jpg?class=width-small" class="afSlte ZvLHng" alt="صورة المدربون الشخصيون خاصة بـ Olompio Fit EMS" loading="lazy"/></div><div class="ABjWcU"><div class="lJcJhG"><div class="cnqJzJ"><p class="axDOAG C3RXjX eGBYyp RYhd_E T2Ht61" title="Olompio Fit EMS">Olompio Fit EMS</p><p class="axDOAG FkLavb o3HUQR T2Ht61 fTV3EB" title="A - 13 - 33 As Sunnaʹ St - Khalifa City - Sector 33 - Abu Dhabi - United Arab Emirates">A - 13 - 33 As Sunnaʹ St - Khalifa City - Sector 33 - Abu Dhabi - United Arab Emirates</p></div><p class="axDOAG TE8kwS DbgFmO T2Ht61 WXSovK"><button type="button" data-show-phone="show-phone" data-lead-id="5917260" class="pCIKui"><p class="axDOAG TE8kwS tv4uDl tpRZTm">إظهار الرقم</p></button></p><a class="OP1nBW tpRZTm QPjIt4 WXSovK dmJvlT" href="tel:+971 52 671 1449" data-desktop-number-revealed="desktop-show-number-revealed" data-lead-id="5917260">+971 52 671 1449</a><a class="OP1nBW tpRZTm QPjIt4 WXSovK Wyhe7t" href="tel:+971 52 671 1449" data-number-revealed="show-number-revealed" data-lead-id="5917260">+971 52 671 1449</a><a class="OP1nBW iSiUSy hQb42p kNK6vJ wIiwwv hqkplt" href="tel:+971 52 671 1449" data-phone-call="phone-call-button" data-lead-id="5917260">الاتصال للحجز</a><button data-desktop-show-phone="desktop-show-phone" data-lead-id="5917260" class="wIiwwv NxhrXa">إظهار الرقم</button></div><hr class="uc7fiG"/><div class="_Ya9oo"><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">التدريب الشخصي</p></div></div></div></li><li class="OwChdp" data-id="lite-location-card-5917255"><div data-qa="location-card-NERO GYM" class="e02Wz5"><a href="https://www.fresha.com/ar/lvp/nero-gym-al-saray-street-abu-dhabi-QvbjP8" class="iZ_Jua" aria-label="NERO GYM"></a><div class="HdNCnr"><img src="https://images.fresha.com/lead-images/placeholders/gym-and-fitness-2.jpg?class=width-small" class="afSlte ZvLHng" alt="صورة صالونات التجميل خاصة بـ NERO GYM" loading="lazy"/></div><div class="ABjWcU"><div class="lJcJhG"><div class="cnqJzJ"><p class="axDOAG C3RXjX eGBYyp RYhd_E T2Ht61" title="NERO GYM">NERO GYM</p><p class="axDOAG FkLavb o3HUQR T2Ht61 fTV3EB" title="33 As Sunnaʹ St - Khalifa City - Sector 33 - Abu Dhabi - United Arab Emirates">33 As Sunnaʹ St - Khalifa City - Sector 33 - Abu Dhabi - United Arab Emirates</p></div><p class="axDOAG TE8kwS DbgFmO T2Ht61 WXSovK"><button type="button" data-show-phone="show-phone" data-lead-id="5917255" class="pCIKui"><p class="axDOAG TE8kwS tv4uDl tpRZTm">إظهار الرقم</p></button></p><a class="OP1nBW tpRZTm QPjIt4 WXSovK dmJvlT" href="tel:+971 56 163 4662" data-desktop-number-revealed="desktop-show-number-revealed" data-lead-id="5917255">+971 56 163 4662</a><a class="OP1nBW tpRZTm QPjIt4 WXSovK Wyhe7t" href="tel:+971 56 163 4662" data-number-revealed="show-number-revealed" data-lead-id="5917255">+971 56 163 4662</a><a class="OP1nBW iSiUSy hQb42p kNK6vJ wIiwwv hqkplt" href="tel:+971 56 163 4662" data-phone-call="phone-call-button" data-lead-id="5917255">الاتصال للحجز</a><button data-desktop-show-phone="desktop-show-phone" data-lead-id="5917255" class="wIiwwv NxhrXa">إظهار الرقم</button></div><hr class="uc7fiG"/><div class="_Ya9oo"><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">نحت الجسم</p></div></div></div></li><li class="OwChdp" data-id="lite-location-card-5919352"><div data-qa="location-card-LUANA FITNESS (LADIES ONLY)" class="e02Wz5"><a href="https://www.fresha.com/ar/lvp/luana-fitness-ladies-only-al-saray-street-abu-dhabi-jbN8Ml" class="iZ_Jua" aria-label="LUANA FITNESS (LADIES ONLY)"></a><div class="HdNCnr"><img src="https://images.fresha.com/lead-images/placeholders/gym-and-fitness-14.jpg?class=width-small" class="afSlte ZvLHng" alt="صورة المدربون الشخصيون خاصة بـ LUANA FITNESS (LADIES ONLY)" loading="lazy"/></div><div class="ABjWcU"><div class="lJcJhG"><div class="cnqJzJ"><p class="axDOAG C3RXjX eGBYyp RYhd_E T2Ht61" title="LUANA FITNESS (LADIES ONLY)">LUANA FITNESS (LADIES ONLY)</p><p class="axDOAG FkLavb o3HUQR T2Ht61 fTV3EB" title="31 As Sunnaʹ St - Khalifa City - Sector 33 - Abu Dhabi - United Arab Emirates">31 As Sunnaʹ St - Khalifa City - Sector 33 - Abu Dhabi - United Arab Emirates</p></div><p class="axDOAG TE8kwS DbgFmO T2Ht61 WXSovK"><button type="button" data-show-phone="show-phone" data-lead-id="5919352" class="pCIKui"><p class="axDOAG TE8kwS tv4uDl tpRZTm">إظهار الرقم</p></button></p><a class="OP1nBW tpRZTm QPjIt4 WXSovK dmJvlT" href="tel:+971 55 217 7987" data-desktop-number-revealed="desktop-show-number-revealed" data-lead-id="5919352">+971 55 217 7987</a><a class="OP1nBW tpRZTm QPjIt4 WXSovK Wyhe7t" href="tel:+971 55 217 7987" data-number-revealed="show-number-revealed" data-lead-id="5919352">+971 55 217 7987</a><a class="OP1nBW iSiUSy hQb42p kNK6vJ wIiwwv hqkplt" href="tel:+971 55 217 7987" data-phone-call="phone-call-button" data-lead-id="5919352">الاتصال للحجز</a><button data-desktop-show-phone="desktop-show-phone" data-lead-id="5919352" class="wIiwwv NxhrXa">إظهار الرقم</button></div><hr class="uc7fiG"/><div class="_Ya9oo"><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">التدريب الشخصي</p></div></div></div></li><li class="OwChdp" data-id="lite-location-card-5918856"><div data-qa="location-card-EMS LIFESTYLE ABU DHABI HOME EMS TRAINING" class="e02Wz5"><a href="https://www.fresha.com/ar/lvp/ems-lifestyle-abu-dhabi-ems-training-al-maqta-street-abu-dhabi-ZDb3xk" class="iZ_Jua" aria-label="EMS LIFESTYLE ABU DHABI HOME EMS TRAINING"></a><div class="HdNCnr"><img src="https://images.fresha.com/lead-images/placeholders/gym-and-fitness-27.jpg?class=width-small" class="afSlte ZvLHng" alt="صورة المدربون الشخصيون خاصة بـ EMS LIFESTYLE ABU DHABI HOME EMS TRAINING" loading="lazy"/></div><div class="ABjWcU"><div class="lJcJhG"><div class="cnqJzJ"><p class="axDOAG C3RXjX eGBYyp RYhd_E T2Ht61" title="EMS LIFESTYLE ABU DHABI HOME EMS TRAINING">EMS LIFESTYLE ABU DHABI HOME EMS TRAINING</p><p class="axDOAG FkLavb o3HUQR T2Ht61 fTV3EB" title="Chi, The Spa at Shangri-La، Qaryat al Beri - Khor, Al Maqta&#x27; St, Rabdan - Abu Dhabi, United Arab Emirates">Chi, The Spa at Shangri-La، Qaryat al Beri - Khor, Al Maqta&#x27; St, Rabdan - Abu Dhabi, United Arab Emirates</p></div><p class="axDOAG TE8kwS DbgFmO T2Ht61 WXSovK"><button type="button" data-show-phone="show-phone" data-lead-id="5918856" class="pCIKui"><p class="axDOAG TE8kwS tv4uDl tpRZTm">إظهار الرقم</p></button></p><a class="OP1nBW tpRZTm QPjIt4 WXSovK dmJvlT" href="tel:+971 50 558 1244" data-desktop-number-revealed="desktop-show-number-revealed" data-lead-id="5918856">+971 50 558 1244</a><a class="OP1nBW tpRZTm QPjIt4 WXSovK Wyhe7t" href="tel:+971 50 558 1244" data-number-revealed="show-number-revealed" data-lead-id="5918856">+971 50 558 1244</a><a class="OP1nBW iSiUSy hQb42p kNK6vJ wIiwwv hqkplt" href="tel:+971 50 558 1244" data-phone-call="phone-call-button" data-lead-id="5918856">الاتصال للحجز</a><button data-desktop-show-phone="desktop-show-phone" data-lead-id="5918856" class="wIiwwv NxhrXa">إظهار الرقم</button></div><hr class="uc7fiG"/><div class="_Ya9oo"><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">التدريب الشخصي</p></div></div></div></li><li class="OwChdp" data-id="lite-location-card-5908067"><div data-qa="location-card-C FOUR GYM" class="e02Wz5"><a href="https://www.fresha.com/ar/lvp/c-four-gym-shraa-lys-laaaly-abu-dhabi-9QLE1x" class="iZ_Jua" aria-label="C FOUR GYM"></a><div class="HdNCnr"><img src="https://images.fresha.com/lead-images/placeholders/gym-and-fitness-8.jpg?class=width-small" class="afSlte ZvLHng" alt="صورة صالونات التجميل خاصة بـ C FOUR GYM" loading="lazy"/></div><div class="ABjWcU"><div class="lJcJhG"><div class="cnqJzJ"><p class="axDOAG C3RXjX eGBYyp RYhd_E T2Ht61" title="C FOUR GYM">C FOUR GYM</p><p class="axDOAG FkLavb o3HUQR T2Ht61 fTV3EB" title="A - 78 شارع الياس العَالي - opposite to Etihad School - Khalifa City - SE16 - Abu Dhabi - United Arab Emirates">A - 78 شارع الياس العَالي - opposite to Etihad School - Khalifa City - SE16 - Abu Dhabi - United Arab Emirates</p></div><p class="axDOAG TE8kwS DbgFmO T2Ht61 WXSovK"><button type="button" data-show-phone="show-phone" data-lead-id="5908067" class="pCIKui"><p class="axDOAG TE8kwS tv4uDl tpRZTm">إظهار الرقم</p></button></p><a class="OP1nBW tpRZTm QPjIt4 WXSovK dmJvlT" href="tel:+971 56 987 8748" data-desktop-number-revealed="desktop-show-number-revealed" data-lead-id="5908067">+971 56 987 8748</a><a class="OP1nBW tpRZTm QPjIt4 WXSovK Wyhe7t" href="tel:+971 56 987 8748" data-number-revealed="show-number-revealed" data-lead-id="5908067">+971 56 987 8748</a><a class="OP1nBW iSiUSy hQb42p kNK6vJ wIiwwv hqkplt" href="tel:+971 56 987 8748" data-phone-call="phone-call-button" data-lead-id="5908067">الاتصال للحجز</a><button data-desktop-show-phone="desktop-show-phone" data-lead-id="5908067" class="wIiwwv NxhrXa">إظهار الرقم</button></div><hr class="uc7fiG"/><div class="_Ya9oo"><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">نحت الجسم</p></div></div></div></li><li class="OwChdp" data-id="lite-location-card-5930946"><div data-qa="location-card-BodyFit GYM" class="e02Wz5"><a href="https://www.fresha.com/ar/lvp/bodyfit-gym-khalifa-city-11th-street-abu-dhabi-8Jl9YW" class="iZ_Jua" aria-label="BodyFit GYM"></a><div class="HdNCnr"><img src="https://images.fresha.com/lead-images/placeholders/gym-and-fitness-24.jpg?class=width-small" class="afSlte ZvLHng" alt="صورة منتجعات صحية وساونا خاصة بـ BodyFit GYM" loading="lazy"/></div><div class="ABjWcU"><div class="lJcJhG"><div class="cnqJzJ"><p class="axDOAG C3RXjX eGBYyp RYhd_E T2Ht61" title="BodyFit GYM">BodyFit GYM</p><p class="axDOAG FkLavb o3HUQR T2Ht61 fTV3EB" title="شارع ١١ - Khalifa City - SE4 - Abu Dhabi - United Arab Emirates">شارع ١١ - Khalifa City - SE4 - Abu Dhabi - United Arab Emirates</p></div><p class="axDOAG TE8kwS DbgFmO T2Ht61 WXSovK"><button type="button" data-show-phone="show-phone" data-lead-id="5930946" class="pCIKui"><p class="axDOAG TE8kwS tv4uDl tpRZTm">إظهار الرقم</p></button></p><a class="OP1nBW tpRZTm QPjIt4 WXSovK dmJvlT" href="tel:+971 56 141 4133" data-desktop-number-revealed="desktop-show-number-revealed" data-lead-id="5930946">+971 56 141 4133</a><a class="OP1nBW tpRZTm QPjIt4 WXSovK Wyhe7t" href="tel:+971 56 141 4133" data-number-revealed="show-number-revealed" data-lead-id="5930946">+971 56 141 4133</a><a class="OP1nBW iSiUSy hQb42p kNK6vJ wIiwwv hqkplt" href="tel:+971 56 141 4133" data-phone-call="phone-call-button" data-lead-id="5930946">الاتصال للحجز</a><button data-desktop-show-phone="desktop-show-phone" data-lead-id="5930946" class="wIiwwv NxhrXa">إظهار الرقم</button></div><hr class="uc7fiG"/><div class="_Ya9oo"><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">حمامات ساونا</p><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">لفائف الجسم</p></div></div></div></li><li class="OwChdp" data-id="lite-location-card-5916031"><div data-qa="location-card-LIFT Gym" class="e02Wz5"><a href="https://www.fresha.com/ar/lvp/lift-gym-abu-dhabi-q84DqR" class="iZ_Jua" aria-label="LIFT Gym"></a><div class="HdNCnr"><img src="https://images.fresha.com/lead-images/placeholders/gym-and-fitness-26.jpg?class=width-small" class="afSlte ZvLHng" alt="صورة المدربون الشخصيون خاصة بـ LIFT Gym" loading="lazy"/></div><div class="ABjWcU"><div class="lJcJhG"><div class="cnqJzJ"><p class="axDOAG C3RXjX eGBYyp RYhd_E T2Ht61" title="LIFT Gym">LIFT Gym</p><p class="axDOAG FkLavb o3HUQR T2Ht61 fTV3EB" title="Zayed City - MZ39 - Abu Dhabi - United Arab Emirates">Zayed City - MZ39 - Abu Dhabi - United Arab Emirates</p></div><p class="axDOAG TE8kwS DbgFmO T2Ht61 WXSovK"><button type="button" data-show-phone="show-phone" data-lead-id="5916031" class="pCIKui"><p class="axDOAG TE8kwS tv4uDl tpRZTm">إظهار الرقم</p></button></p><a class="OP1nBW tpRZTm QPjIt4 WXSovK dmJvlT" href="tel:+971 56 123 3773" data-desktop-number-revealed="desktop-show-number-revealed" data-lead-id="5916031">+971 56 123 3773</a><a class="OP1nBW tpRZTm QPjIt4 WXSovK Wyhe7t" href="tel:+971 56 123 3773" data-number-revealed="show-number-revealed" data-lead-id="5916031">+971 56 123 3773</a><a class="OP1nBW iSiUSy hQb42p kNK6vJ wIiwwv hqkplt" href="tel:+971 56 123 3773" data-phone-call="phone-call-button" data-lead-id="5916031">الاتصال للحجز</a><button data-desktop-show-phone="desktop-show-phone" data-lead-id="5916031" class="wIiwwv NxhrXa">إظهار الرقم</button></div><hr class="uc7fiG"/><div class="_Ya9oo"><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">التدريب الشخصي</p></div></div></div></li><li class="OwChdp" data-id="lite-location-card-5913409"><div data-qa="location-card-Ruby Fitness - Khalifa City Central Mall Abu Dhabi" class="e02Wz5"><a href="https://www.fresha.com/ar/lvp/ruby-fitness-khalifa-city-abu-dhabi-zn4Prb" class="iZ_Jua" aria-label="Ruby Fitness - Khalifa City Central Mall Abu Dhabi"></a><div class="HdNCnr"><img src="https://images.fresha.com/lead-images/placeholders/gym-and-fitness-3.jpg?class=width-small" class="afSlte ZvLHng" alt="صورة صالونات التجميل خاصة بـ Ruby Fitness - Khalifa City Central Mall Abu Dhabi" loading="lazy"/></div><div class="ABjWcU"><div class="lJcJhG"><div class="cnqJzJ"><p class="axDOAG C3RXjX eGBYyp RYhd_E T2Ht61" title="Ruby Fitness - Khalifa City Central Mall Abu Dhabi">Ruby Fitness - Khalifa City Central Mall Abu Dhabi</p><p class="axDOAG FkLavb o3HUQR T2Ht61 fTV3EB" title="Central Mall - Khalifa City - Sector 13 - Abu Dhabi - United Arab Emirates">Central Mall - Khalifa City - Sector 13 - Abu Dhabi - United Arab Emirates</p></div><p class="axDOAG TE8kwS DbgFmO T2Ht61 WXSovK"><button type="button" data-show-phone="show-phone" data-lead-id="5913409" class="pCIKui"><p class="axDOAG TE8kwS tv4uDl tpRZTm">إظهار الرقم</p></button></p><a class="OP1nBW tpRZTm QPjIt4 WXSovK dmJvlT" href="tel:+971 58 101 3367" data-desktop-number-revealed="desktop-show-number-revealed" data-lead-id="5913409">+971 58 101 3367</a><a class="OP1nBW tpRZTm QPjIt4 WXSovK Wyhe7t" href="tel:+971 58 101 3367" data-number-revealed="show-number-revealed" data-lead-id="5913409">+971 58 101 3367</a><a class="OP1nBW iSiUSy hQb42p kNK6vJ wIiwwv hqkplt" href="tel:+971 58 101 3367" data-phone-call="phone-call-button" data-lead-id="5913409">الاتصال للحجز</a><button data-desktop-show-phone="desktop-show-phone" data-lead-id="5913409" class="wIiwwv NxhrXa">إظهار الرقم</button></div><hr class="uc7fiG"/><div class="_Ya9oo"><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">نحت الجسم</p></div></div></div></li><li class="OwChdp" data-id="lite-location-card-5918584"><div data-qa="location-card-ENERGY GYM EMS" class="e02Wz5"><a href="https://www.fresha.com/ar/lvp/energy-gym-ems-saeed-bin-ablan-al-mazrouei-street-abu-dhabi-Kzb6W1" class="iZ_Jua" aria-label="ENERGY GYM EMS"></a><div class="HdNCnr"><img src="https://images.fresha.com/lead-images/placeholders/gym-and-fitness-22.jpg?class=width-small" class="afSlte ZvLHng" alt="صورة المدربون الشخصيون خاصة بـ ENERGY GYM EMS" loading="lazy"/></div><div class="ABjWcU"><div class="lJcJhG"><div class="cnqJzJ"><p class="axDOAG C3RXjX eGBYyp RYhd_E T2Ht61" title="ENERGY GYM EMS">ENERGY GYM EMS</p><p class="axDOAG FkLavb o3HUQR T2Ht61 fTV3EB" title="6 Az Zawaya 1 St - Khalifa City - SW6 - Abu Dhabi - United Arab Emirates">6 Az Zawaya 1 St - Khalifa City - SW6 - Abu Dhabi - United Arab Emirates</p></div><p class="axDOAG TE8kwS DbgFmO T2Ht61 WXSovK"><button type="button" data-show-phone="show-phone" data-lead-id="5918584" class="pCIKui"><p class="axDOAG TE8kwS tv4uDl tpRZTm">إظهار الرقم</p></button></p><a class="OP1nBW tpRZTm QPjIt4 WXSovK dmJvlT" href="tel:+971 50 318 7574" data-desktop-number-revealed="desktop-show-number-revealed" data-lead-id="5918584">+971 50 318 7574</a><a class="OP1nBW tpRZTm QPjIt4 WXSovK Wyhe7t" href="tel:+971 50 318 7574" data-number-revealed="show-number-revealed" data-lead-id="5918584">+971 50 318 7574</a><a class="OP1nBW iSiUSy hQb42p kNK6vJ wIiwwv hqkplt" href="tel:+971 50 318 7574" data-phone-call="phone-call-button" data-lead-id="5918584">الاتصال للحجز</a><button data-desktop-show-phone="desktop-show-phone" data-lead-id="5918584" class="wIiwwv NxhrXa">إظهار الرقم</button></div><hr class="uc7fiG"/><div class="_Ya9oo"><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">التدريب الشخصي</p></div></div></div></li><li class="OwChdp" data-id="lite-location-card-5925041"><div data-qa="location-card-Muscle Up Fitness" class="e02Wz5"><a href="https://www.fresha.com/ar/lvp/muscle-up-fitness-abu-dhabi-a2bQr2" class="iZ_Jua" aria-label="Muscle Up Fitness"></a><div class="HdNCnr"><img src="https://images.fresha.com/lead-images/placeholders/gym-and-fitness-28.jpg?class=width-small" class="afSlte ZvLHng" alt="صورة صالونات التجميل خاصة بـ Muscle Up Fitness" loading="lazy"/></div><div class="ABjWcU"><div class="lJcJhG"><div class="cnqJzJ"><p class="axDOAG C3RXjX eGBYyp RYhd_E T2Ht61" title="Muscle Up Fitness">Muscle Up Fitness</p><p class="axDOAG FkLavb o3HUQR T2Ht61 fTV3EB" title="Khalifa City - SW17 01 - Abu Dhabi - United Arab Emirates">Khalifa City - SW17 01 - Abu Dhabi - United Arab Emirates</p></div><p class="axDOAG TE8kwS DbgFmO T2Ht61 WXSovK"><button type="button" data-show-phone="show-phone" data-lead-id="5925041" class="pCIKui"><p class="axDOAG TE8kwS tv4uDl tpRZTm">إظهار الرقم</p></button></p><a class="OP1nBW tpRZTm QPjIt4 WXSovK dmJvlT" href="tel:+971 2 628 0857" data-desktop-number-revealed="desktop-show-number-revealed" data-lead-id="5925041">+971 2 628 0857</a><a class="OP1nBW tpRZTm QPjIt4 WXSovK Wyhe7t" href="tel:+971 2 628 0857" data-number-revealed="show-number-revealed" data-lead-id="5925041">+971 2 628 0857</a><a class="OP1nBW iSiUSy hQb42p kNK6vJ wIiwwv hqkplt" href="tel:+971 2 628 0857" data-phone-call="phone-call-button" data-lead-id="5925041">الاتصال للحجز</a><button data-desktop-show-phone="desktop-show-phone" data-lead-id="5925041" class="wIiwwv NxhrXa">إظهار الرقم</button></div><hr class="uc7fiG"/><div class="_Ya9oo"><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">نحت الجسم</p></div></div></div></li><li class="OwChdp" data-id="lite-location-card-5906870"><div data-qa="location-card-DOWN TOWN FITNESS GYM" class="e02Wz5"><a href="https://www.fresha.com/ar/lvp/down-town-fitness-gym-abu-dhabi-yX4Mnl" class="iZ_Jua" aria-label="DOWN TOWN FITNESS GYM"></a><div class="HdNCnr"><img src="https://images.fresha.com/lead-images/placeholders/gym-and-fitness-15.jpg?class=width-small" class="afSlte ZvLHng" alt="صورة المدربون الشخصيون خاصة بـ DOWN TOWN FITNESS GYM" loading="lazy"/></div><div class="ABjWcU"><div class="lJcJhG"><div class="cnqJzJ"><p class="axDOAG C3RXjX eGBYyp RYhd_E T2Ht61" title="DOWN TOWN FITNESS GYM">DOWN TOWN FITNESS GYM</p><p class="axDOAG FkLavb o3HUQR T2Ht61 fTV3EB" title="market c10 - Khalifa City - Sector 32 - Abu Dhabi - United Arab Emirates">market c10 - Khalifa City - Sector 32 - Abu Dhabi - United Arab Emirates</p></div><p class="axDOAG TE8kwS DbgFmO T2Ht61 WXSovK"><button type="button" data-show-phone="show-phone" data-lead-id="5906870" class="pCIKui"><p class="axDOAG TE8kwS tv4uDl tpRZTm">إظهار الرقم</p></button></p><a class="OP1nBW tpRZTm QPjIt4 WXSovK dmJvlT" href="tel:+971 56 909 4590" data-desktop-number-revealed="desktop-show-number-revealed" data-lead-id="5906870">+971 56 909 4590</a><a class="OP1nBW tpRZTm QPjIt4 WXSovK Wyhe7t" href="tel:+971 56 909 4590" data-number-revealed="show-number-revealed" data-lead-id="5906870">+971 56 909 4590</a><a class="OP1nBW iSiUSy hQb42p kNK6vJ wIiwwv hqkplt" href="tel:+971 56 909 4590" data-phone-call="phone-call-button" data-lead-id="5906870">الاتصال للحجز</a><button data-desktop-show-phone="desktop-show-phone" data-lead-id="5906870" class="wIiwwv NxhrXa">إظهار الرقم</button></div><hr class="uc7fiG"/><div class="_Ya9oo"><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">التدريب الشخصي</p></div></div></div></li><li class="OwChdp" data-id="lite-location-card-5919654"><div data-qa="location-card-Bodyline Gym" class="e02Wz5"><a href="https://www.fresha.com/ar/lvp/bodyline-gym-bw-zby-BoA6B2" class="iZ_Jua" aria-label="Bodyline Gym"></a><div class="HdNCnr"><img src="https://images.fresha.com/lead-images/placeholders/gym-and-fitness-13.jpg?class=width-small" class="afSlte ZvLHng" alt="صورة صالونات التجميل خاصة بـ Bodyline Gym" loading="lazy"/></div><div class="ABjWcU"><div class="lJcJhG"><div class="cnqJzJ"><p class="axDOAG C3RXjX eGBYyp RYhd_E T2Ht61" title="Bodyline Gym">Bodyline Gym</p><p class="axDOAG FkLavb o3HUQR T2Ht61 fTV3EB" title="Cricket &amp; Sports Hub - A - Khalifa City - SW17 01 - Abu Dhabi - United Arab Emirates">Cricket &amp; Sports Hub - A - Khalifa City - SW17 01 - Abu Dhabi - United Arab Emirates</p></div><p class="axDOAG TE8kwS DbgFmO T2Ht61 WXSovK"><button type="button" data-show-phone="show-phone" data-lead-id="5919654" class="pCIKui"><p class="axDOAG TE8kwS tv4uDl tpRZTm">إظهار الرقم</p></button></p><a class="OP1nBW tpRZTm QPjIt4 WXSovK dmJvlT" href="tel:+971 50 238 2309" data-desktop-number-revealed="desktop-show-number-revealed" data-lead-id="5919654">+971 50 238 2309</a><a class="OP1nBW tpRZTm QPjIt4 WXSovK Wyhe7t" href="tel:+971 50 238 2309" data-number-revealed="show-number-revealed" data-lead-id="5919654">+971 50 238 2309</a><a class="OP1nBW iSiUSy hQb42p kNK6vJ wIiwwv hqkplt" href="tel:+971 50 238 2309" data-phone-call="phone-call-button" data-lead-id="5919654">الاتصال للحجز</a><button data-desktop-show-phone="desktop-show-phone" data-lead-id="5919654" class="wIiwwv NxhrXa">إظهار الرقم</button></div><hr class="uc7fiG"/><div class="_Ya9oo"><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">نحت الجسم</p></div></div></div></li><li class="OwChdp" data-id="lite-location-card-5916879"><div data-qa="location-card-EMS Revolution UAE" class="e02Wz5"><a href="https://www.fresha.com/ar/lvp/ems-revolution-uae-channel-st-abu-dhabi-WqbDMX" class="iZ_Jua" aria-label="EMS Revolution UAE"></a><div class="HdNCnr"><img src="https://images.fresha.com/lead-images/placeholders/gym-and-fitness-3.jpg?class=width-small" class="afSlte ZvLHng" alt="صورة صالونات المساج والتدليك خاصة بـ EMS Revolution UAE" loading="lazy"/></div><div class="ABjWcU"><div class="lJcJhG"><div class="cnqJzJ"><p class="axDOAG C3RXjX eGBYyp RYhd_E T2Ht61" title="EMS Revolution UAE">EMS Revolution UAE</p><p class="axDOAG FkLavb o3HUQR T2Ht61 fTV3EB" title="Mall - Channel St - Al Rahah - Al Raha Gardens - Abu Dhabi - United Arab Emirates">Mall - Channel St - Al Rahah - Al Raha Gardens - Abu Dhabi - United Arab Emirates</p></div><p class="axDOAG TE8kwS DbgFmO T2Ht61 WXSovK"><button type="button" data-show-phone="show-phone" data-lead-id="5916879" class="pCIKui"><p class="axDOAG TE8kwS tv4uDl tpRZTm">إظهار الرقم</p></button></p><a class="OP1nBW tpRZTm QPjIt4 WXSovK dmJvlT" href="tel:+971 54 232 0000" data-desktop-number-revealed="desktop-show-number-revealed" data-lead-id="5916879">+971 54 232 0000</a><a class="OP1nBW tpRZTm QPjIt4 WXSovK Wyhe7t" href="tel:+971 54 232 0000" data-number-revealed="show-number-revealed" data-lead-id="5916879">+971 54 232 0000</a><a class="OP1nBW iSiUSy hQb42p kNK6vJ wIiwwv hqkplt" href="tel:+971 54 232 0000" data-phone-call="phone-call-button" data-lead-id="5916879">الاتصال للحجز</a><button data-desktop-show-phone="desktop-show-phone" data-lead-id="5916879" class="wIiwwv NxhrXa">إظهار الرقم</button></div><hr class="uc7fiG"/><div class="_Ya9oo"><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">مساج علاجي</p></div></div></div></li><li class="OwChdp" data-id="lite-location-card-5914743"><div data-qa="location-card-Future Fit EMS (Mazyad mall - Abu Dhabi Branch)" class="e02Wz5"><a href="https://www.fresha.com/ar/lvp/future-fit-ems-mazyad-mall-abu-dhabi-branch-28th-street-bw-zby-Nobkjx" class="iZ_Jua" aria-label="Future Fit EMS (Mazyad mall - Abu Dhabi Branch)"></a><div class="HdNCnr"><img src="https://images.fresha.com/lead-images/placeholders/gym-and-fitness-19.jpg?class=width-small" class="afSlte ZvLHng" alt="صورة المدربون الشخصيون خاصة بـ Future Fit EMS (Mazyad mall - Abu Dhabi Branch)" loading="lazy"/></div><div class="ABjWcU"><div class="lJcJhG"><div class="cnqJzJ"><p class="axDOAG C3RXjX eGBYyp RYhd_E T2Ht61" title="Future Fit EMS (Mazyad mall - Abu Dhabi Branch)">Future Fit EMS (Mazyad mall - Abu Dhabi Branch)</p><p class="axDOAG FkLavb o3HUQR T2Ht61 fTV3EB" title="2nd floor, Mazyad mall - 28th St - near Mussaffah - Musaffah - Abu Dhabi - United Arab Emirates">2nd floor, Mazyad mall - 28th St - near Mussaffah - Musaffah - Abu Dhabi - United Arab Emirates</p></div><p class="axDOAG TE8kwS DbgFmO T2Ht61 WXSovK"><button type="button" data-show-phone="show-phone" data-lead-id="5914743" class="pCIKui"><p class="axDOAG TE8kwS tv4uDl tpRZTm">إظهار الرقم</p></button></p><a class="OP1nBW tpRZTm QPjIt4 WXSovK dmJvlT" href="tel:+971 52 721 3402" data-desktop-number-revealed="desktop-show-number-revealed" data-lead-id="5914743">+971 52 721 3402</a><a class="OP1nBW tpRZTm QPjIt4 WXSovK Wyhe7t" href="tel:+971 52 721 3402" data-number-revealed="show-number-revealed" data-lead-id="5914743">+971 52 721 3402</a><a class="OP1nBW iSiUSy hQb42p kNK6vJ wIiwwv hqkplt" href="tel:+971 52 721 3402" data-phone-call="phone-call-button" data-lead-id="5914743">الاتصال للحجز</a><button data-desktop-show-phone="desktop-show-phone" data-lead-id="5914743" class="wIiwwv NxhrXa">إظهار الرقم</button></div><hr class="uc7fiG"/><div class="_Ya9oo"><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">التدريب الشخصي</p></div></div></div></li><li class="OwChdp" data-id="lite-location-card-5928931"><div data-qa="location-card-Body Abs Fitness Center" class="e02Wz5"><a href="https://www.fresha.com/ar/lvp/body-abs-fitness-center-a-bw-zby-q843oD" class="iZ_Jua" aria-label="Body Abs Fitness Center"></a><div class="HdNCnr"><img src="https://images.fresha.com/lead-images/placeholders/gym-and-fitness-15.jpg?class=width-small" class="afSlte ZvLHng" alt="صورة منتجعات صحية وساونا خاصة بـ Body Abs Fitness Center" loading="lazy"/></div><div class="ABjWcU"><div class="lJcJhG"><div class="cnqJzJ"><p class="axDOAG C3RXjX eGBYyp RYhd_E T2Ht61" title="Body Abs Fitness Center">Body Abs Fitness Center</p><p class="axDOAG FkLavb o3HUQR T2Ht61 fTV3EB" title="Liwa Residency Building Al Yas Al &#x27;Ali Street - A - Khalifa City - Abu Dhabi - United Arab Emirates">Liwa Residency Building Al Yas Al &#x27;Ali Street - A - Khalifa City - Abu Dhabi - United Arab Emirates</p></div><p class="axDOAG TE8kwS DbgFmO T2Ht61 WXSovK"><button type="button" data-show-phone="show-phone" data-lead-id="5928931" class="pCIKui"><p class="axDOAG TE8kwS tv4uDl tpRZTm">إظهار الرقم</p></button></p><a class="OP1nBW tpRZTm QPjIt4 WXSovK dmJvlT" href="tel:+971 2 565 6606" data-desktop-number-revealed="desktop-show-number-revealed" data-lead-id="5928931">+971 2 565 6606</a><a class="OP1nBW tpRZTm QPjIt4 WXSovK Wyhe7t" href="tel:+971 2 565 6606" data-number-revealed="show-number-revealed" data-lead-id="5928931">+971 2 565 6606</a><a class="OP1nBW iSiUSy hQb42p kNK6vJ wIiwwv hqkplt" href="tel:+971 2 565 6606" data-phone-call="phone-call-button" data-lead-id="5928931">الاتصال للحجز</a><button data-desktop-show-phone="desktop-show-phone" data-lead-id="5928931" class="wIiwwv NxhrXa">إظهار الرقم</button></div><hr class="uc7fiG"/><div class="_Ya9oo"><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">حمامات ساونا</p><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">لفائف الجسم</p></div></div></div></li><li class="OwChdp" data-id="lite-location-card-5919351"><div data-qa="location-card-Nest Martial Arts" class="e02Wz5"><a href="https://www.fresha.com/ar/lvp/nest-martial-arts-al-saray-street-abu-dhabi-Lyb6rQ" class="iZ_Jua" aria-label="Nest Martial Arts"></a><div class="HdNCnr"><img src="https://images.fresha.com/lead-images/placeholders/gym-and-fitness-14.jpg?class=width-small" class="afSlte ZvLHng" alt="صورة المدربون الشخصيون خاصة بـ Nest Martial Arts" loading="lazy"/></div><div class="ABjWcU"><div class="lJcJhG"><div class="cnqJzJ"><p class="axDOAG C3RXjX eGBYyp RYhd_E T2Ht61" title="Nest Martial Arts">Nest Martial Arts</p><p class="axDOAG FkLavb o3HUQR T2Ht61 fTV3EB" title="36 Al Ard St - Khalifa City - SW17 01 - Abu Dhabi - United Arab Emirates">36 Al Ard St - Khalifa City - SW17 01 - Abu Dhabi - United Arab Emirates</p></div><p class="axDOAG TE8kwS DbgFmO T2Ht61 WXSovK"><button type="button" data-show-phone="show-phone" data-lead-id="5919351" class="pCIKui"><p class="axDOAG TE8kwS tv4uDl tpRZTm">إظهار الرقم</p></button></p><a class="OP1nBW tpRZTm QPjIt4 WXSovK dmJvlT" href="tel:+971 52 776 5231" data-desktop-number-revealed="desktop-show-number-revealed" data-lead-id="5919351">+971 52 776 5231</a><a class="OP1nBW tpRZTm QPjIt4 WXSovK Wyhe7t" href="tel:+971 52 776 5231" data-number-revealed="show-number-revealed" data-lead-id="5919351">+971 52 776 5231</a><a class="OP1nBW iSiUSy hQb42p kNK6vJ wIiwwv hqkplt" href="tel:+971 52 776 5231" data-phone-call="phone-call-button" data-lead-id="5919351">الاتصال للحجز</a><button data-desktop-show-phone="desktop-show-phone" data-lead-id="5919351" class="wIiwwv NxhrXa">إظهار الرقم</button></div><hr class="uc7fiG"/><div class="_Ya9oo"><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">التدريب الشخصي</p></div></div></div></li><li class="OwChdp" data-id="lite-location-card-5901115"><div data-qa="location-card-Oriental Beauty Lounge - Khalifa City" class="e02Wz5"><a href="https://www.fresha.com/ar/lvp/oriental-beauty-lounge-khalifa-city-shraa-32-abu-dhabi-n641XK" class="iZ_Jua" aria-label="Oriental Beauty Lounge - Khalifa City"></a><div class="HdNCnr"><img src="https://images.fresha.com/lead-images/placeholders/beauty-salon-89.jpg?class=width-small" class="afSlte ZvLHng" alt="صورة صالونات التجميل خاصة بـ Oriental Beauty Lounge - Khalifa City" loading="lazy"/></div><div class="ABjWcU"><div class="lJcJhG"><div class="cnqJzJ"><p class="axDOAG C3RXjX eGBYyp RYhd_E T2Ht61" title="Oriental Beauty Lounge - Khalifa City">Oriental Beauty Lounge - Khalifa City</p><p class="axDOAG FkLavb o3HUQR T2Ht61 fTV3EB" title="شارع 32 - Khalifa City - ASector 32 - Abu Dhabi - United Arab Emirates">شارع 32 - Khalifa City - ASector 32 - Abu Dhabi - United Arab Emirates</p></div><p class="axDOAG TE8kwS DbgFmO T2Ht61 WXSovK"><button type="button" data-show-phone="show-phone" data-lead-id="5901115" class="pCIKui"><p class="axDOAG TE8kwS tv4uDl tpRZTm">إظهار الرقم</p></button></p><a class="OP1nBW tpRZTm QPjIt4 WXSovK dmJvlT" href="tel:+971 2 555 6999" data-desktop-number-revealed="desktop-show-number-revealed" data-lead-id="5901115">+971 2 555 6999</a><a class="OP1nBW tpRZTm QPjIt4 WXSovK Wyhe7t" href="tel:+971 2 555 6999" data-number-revealed="show-number-revealed" data-lead-id="5901115">+971 2 555 6999</a><a class="OP1nBW iSiUSy hQb42p kNK6vJ wIiwwv hqkplt" href="tel:+971 2 555 6999" data-phone-call="phone-call-button" data-lead-id="5901115">الاتصال للحجز</a><button data-desktop-show-phone="desktop-show-phone" data-lead-id="5901115" class="wIiwwv NxhrXa">إظهار الرقم</button></div><hr class="uc7fiG"/><div class="_Ya9oo"><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">تدليك الظهر</p><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">إزالة الشوائب من الوجه</p><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">إزالة شعر الحواجب بالخيط</p><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">إزالة الشعر بالخيط</p></div></div></div></li><li class="OwChdp" data-id="lite-location-card-5919477"><div data-qa="location-card-Energy Plus Gym Abu Dhabi" class="e02Wz5"><a href="https://www.fresha.com/ar/lvp/energy-plus-gym-abu-dhabi-bw-zby-Rvb6bb" class="iZ_Jua" aria-label="Energy Plus Gym Abu Dhabi"></a><div class="HdNCnr"><img src="https://images.fresha.com/lead-images/placeholders/gym-and-fitness-4.jpg?class=width-small" class="afSlte ZvLHng" alt="صورة المدربون الشخصيون خاصة بـ Energy Plus Gym Abu Dhabi" loading="lazy"/></div><div class="ABjWcU"><div class="lJcJhG"><div class="cnqJzJ"><p class="axDOAG C3RXjX eGBYyp RYhd_E T2Ht61" title="Energy Plus Gym Abu Dhabi">Energy Plus Gym Abu Dhabi</p><p class="axDOAG FkLavb o3HUQR T2Ht61 fTV3EB" title="First Floor, Al Forsan Village, Above Spinneys Khalifa City A - Abu Dhabi - United Arab Emirates">First Floor, Al Forsan Village, Above Spinneys Khalifa City A - Abu Dhabi - United Arab Emirates</p></div><p class="axDOAG TE8kwS DbgFmO T2Ht61 WXSovK"><button type="button" data-show-phone="show-phone" data-lead-id="5919477" class="pCIKui"><p class="axDOAG TE8kwS tv4uDl tpRZTm">إظهار الرقم</p></button></p><a class="OP1nBW tpRZTm QPjIt4 WXSovK dmJvlT" href="tel:+971 2 666 8998" data-desktop-number-revealed="desktop-show-number-revealed" data-lead-id="5919477">+971 2 666 8998</a><a class="OP1nBW tpRZTm QPjIt4 WXSovK Wyhe7t" href="tel:+971 2 666 8998" data-number-revealed="show-number-revealed" data-lead-id="5919477">+971 2 666 8998</a><a class="OP1nBW iSiUSy hQb42p kNK6vJ wIiwwv hqkplt" href="tel:+971 2 666 8998" data-phone-call="phone-call-button" data-lead-id="5919477">الاتصال للحجز</a><button data-desktop-show-phone="desktop-show-phone" data-lead-id="5919477" class="wIiwwv NxhrXa">إظهار الرقم</button></div><hr class="uc7fiG"/><div class="_Ya9oo"><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">التدريب الشخصي</p></div></div></div></li><li class="OwChdp" data-id="lite-location-card-5927961"><div data-qa="location-card-Aphrodite Fitness And Gym Ladies" class="e02Wz5"><a href="https://www.fresha.com/ar/lvp/aphrodite-ladies-fitness-and-gym-abu-dhabi-kqbb0n" class="iZ_Jua" aria-label="Aphrodite Fitness And Gym Ladies"></a><div class="HdNCnr"><img src="https://images.fresha.com/lead-images/placeholders/gym-and-fitness-11.jpg?class=width-small" class="afSlte ZvLHng" alt="صورة المدربون الشخصيون خاصة بـ Aphrodite Fitness And Gym Ladies" loading="lazy"/></div><div class="ABjWcU"><div class="lJcJhG"><div class="cnqJzJ"><p class="axDOAG C3RXjX eGBYyp RYhd_E T2Ht61" title="Aphrodite Fitness And Gym Ladies">Aphrodite Fitness And Gym Ladies</p><p class="axDOAG FkLavb o3HUQR T2Ht61 fTV3EB" title="Khalifa City - Sector 13 - Abu Dhabi - United Arab Emirates">Khalifa City - Sector 13 - Abu Dhabi - United Arab Emirates</p></div><p class="axDOAG TE8kwS DbgFmO T2Ht61 WXSovK"><button type="button" data-show-phone="show-phone" data-lead-id="5927961" class="pCIKui"><p class="axDOAG TE8kwS tv4uDl tpRZTm">إظهار الرقم</p></button></p><a class="OP1nBW tpRZTm QPjIt4 WXSovK dmJvlT" href="tel:+971 50 803 0842" data-desktop-number-revealed="desktop-show-number-revealed" data-lead-id="5927961">+971 50 803 0842</a><a class="OP1nBW tpRZTm QPjIt4 WXSovK Wyhe7t" href="tel:+971 50 803 0842" data-number-revealed="show-number-revealed" data-lead-id="5927961">+971 50 803 0842</a><a class="OP1nBW iSiUSy hQb42p kNK6vJ wIiwwv hqkplt" href="tel:+971 50 803 0842" data-phone-call="phone-call-button" data-lead-id="5927961">الاتصال للحجز</a><button data-desktop-show-phone="desktop-show-phone" data-lead-id="5927961" class="wIiwwv NxhrXa">إظهار الرقم</button></div><hr class="uc7fiG"/><div class="_Ya9oo"><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">التدريب الشخصي</p></div></div></div></li><li class="OwChdp" data-id="lite-location-card-5922968"><div data-qa="location-card-Golf Gardens Club House" class="e02Wz5"><a href="https://www.fresha.com/ar/lvp/golf-garden-club-house-4th-street-bw-zby-6Qro41" class="iZ_Jua" aria-label="Golf Gardens Club House"></a><div class="HdNCnr"><img src="https://images.fresha.com/lead-images/placeholders/gym-and-fitness-23.jpg?class=width-small" class="afSlte ZvLHng" alt="صورة المدربون الشخصيون خاصة بـ Golf Gardens Club House" loading="lazy"/></div><div class="ABjWcU"><div class="lJcJhG"><div class="cnqJzJ"><p class="axDOAG C3RXjX eGBYyp RYhd_E T2Ht61" title="Golf Gardens Club House">Golf Gardens Club House</p><p class="axDOAG FkLavb o3HUQR T2Ht61 fTV3EB" title="CGFM+366 N 54° - 24°25&#x27;13.3 - 31&#x27;53 4th St - Khalifa City - Golf Gardens - Abu Dhabi - United Arab Emirates">CGFM+366 N 54° - 24°25&#x27;13.3 - 31&#x27;53 4th St - Khalifa City - Golf Gardens - Abu Dhabi - United Arab Emirates</p></div><p class="axDOAG TE8kwS DbgFmO T2Ht61 WXSovK"><button type="button" data-show-phone="show-phone" data-lead-id="5922968" class="pCIKui"><p class="axDOAG TE8kwS tv4uDl tpRZTm">إظهار الرقم</p></button></p><a class="OP1nBW tpRZTm QPjIt4 WXSovK dmJvlT" href="tel:+971 800 544362" data-desktop-number-revealed="desktop-show-number-revealed" data-lead-id="5922968">+971 800 544362</a><a class="OP1nBW tpRZTm QPjIt4 WXSovK Wyhe7t" href="tel:+971 800 544362" data-number-revealed="show-number-revealed" data-lead-id="5922968">+971 800 544362</a><a class="OP1nBW iSiUSy hQb42p kNK6vJ wIiwwv hqkplt" href="tel:+971 800 544362" data-phone-call="phone-call-button" data-lead-id="5922968">الاتصال للحجز</a><button data-desktop-show-phone="desktop-show-phone" data-lead-id="5922968" class="wIiwwv NxhrXa">إظهار الرقم</button></div><hr class="uc7fiG"/><div class="_Ya9oo"><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">التدريب الشخصي</p></div></div></div></li><li class="OwChdp" data-id="lite-location-card-5919006"><div data-qa="location-card-Al Raha Gardens Plaza Gym" class="e02Wz5"><a href="https://www.fresha.com/ar/lvp/al-raha-gardens-plaza-gym-abu-dhabi-lo4re7" class="iZ_Jua" aria-label="Al Raha Gardens Plaza Gym"></a><div class="HdNCnr"><img src="https://images.fresha.com/lead-images/placeholders/gym-and-fitness-19.jpg?class=width-small" class="afSlte ZvLHng" alt="صورة المدربون الشخصيون خاصة بـ Al Raha Gardens Plaza Gym" loading="lazy"/></div><div class="ABjWcU"><div class="lJcJhG"><div class="cnqJzJ"><p class="axDOAG C3RXjX eGBYyp RYhd_E T2Ht61" title="Al Raha Gardens Plaza Gym">Al Raha Gardens Plaza Gym</p><p class="axDOAG FkLavb o3HUQR T2Ht61 fTV3EB" title="Gardens Plaza - Khalifa City - SW18 - Abu Dhabi - United Arab Emirates">Gardens Plaza - Khalifa City - SW18 - Abu Dhabi - United Arab Emirates</p></div><p class="axDOAG TE8kwS DbgFmO T2Ht61 WXSovK"><button type="button" data-show-phone="show-phone" data-lead-id="5919006" class="pCIKui"><p class="axDOAG TE8kwS tv4uDl tpRZTm">إظهار الرقم</p></button></p><a class="OP1nBW tpRZTm QPjIt4 WXSovK dmJvlT" href="tel:+971 2 464 5164" data-desktop-number-revealed="desktop-show-number-revealed" data-lead-id="5919006">+971 2 464 5164</a><a class="OP1nBW tpRZTm QPjIt4 WXSovK Wyhe7t" href="tel:+971 2 464 5164" data-number-revealed="show-number-revealed" data-lead-id="5919006">+971 2 464 5164</a><a class="OP1nBW iSiUSy hQb42p kNK6vJ wIiwwv hqkplt" href="tel:+971 2 464 5164" data-phone-call="phone-call-button" data-lead-id="5919006">الاتصال للحجز</a><button data-desktop-show-phone="desktop-show-phone" data-lead-id="5919006" class="wIiwwv NxhrXa">إظهار الرقم</button></div><hr class="uc7fiG"/><div class="_Ya9oo"><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">التدريب الشخصي</p></div></div></div></li><li class="OwChdp" data-id="lite-location-card-5920955"><div data-qa="location-card-Sas Al Nakhl Clubhouse" class="e02Wz5"><a href="https://www.fresha.com/ar/lvp/sas-al-nakhl-clubhouse-bw-zby-QvbzZW" class="iZ_Jua" aria-label="Sas Al Nakhl Clubhouse"></a><div class="HdNCnr"><img src="https://images.fresha.com/lead-images/placeholders/gym-and-fitness-1.jpg?class=width-small" class="afSlte ZvLHng" alt="صورة صالونات التجميل خاصة بـ Sas Al Nakhl Clubhouse" loading="lazy"/></div><div class="ABjWcU"><div class="lJcJhG"><div class="cnqJzJ"><p class="axDOAG C3RXjX eGBYyp RYhd_E T2Ht61" title="Sas Al Nakhl Clubhouse">Sas Al Nakhl Clubhouse</p><p class="axDOAG FkLavb o3HUQR T2Ht61 fTV3EB" title="Gate 2 - Village - Sas Al Nakhl Village - Abu Dhabi - United Arab Emirates">Gate 2 - Village - Sas Al Nakhl Village - Abu Dhabi - United Arab Emirates</p></div><p class="axDOAG TE8kwS DbgFmO T2Ht61 WXSovK"><button type="button" data-show-phone="show-phone" data-lead-id="5920955" class="pCIKui"><p class="axDOAG TE8kwS tv4uDl tpRZTm">إظهار الرقم</p></button></p><a class="OP1nBW tpRZTm QPjIt4 WXSovK dmJvlT" href="tel:+971 2 447 4054" data-desktop-number-revealed="desktop-show-number-revealed" data-lead-id="5920955">+971 2 447 4054</a><a class="OP1nBW tpRZTm QPjIt4 WXSovK Wyhe7t" href="tel:+971 2 447 4054" data-number-revealed="show-number-revealed" data-lead-id="5920955">+971 2 447 4054</a><a class="OP1nBW iSiUSy hQb42p kNK6vJ wIiwwv hqkplt" href="tel:+971 2 447 4054" data-phone-call="phone-call-button" data-lead-id="5920955">الاتصال للحجز</a><button data-desktop-show-phone="desktop-show-phone" data-lead-id="5920955" class="wIiwwv NxhrXa">إظهار الرقم</button></div><hr class="uc7fiG"/><div class="_Ya9oo"><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">نحت الجسم</p><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">حنة</p><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">علاج السيلوليت</p></div></div></div></li><li class="OwChdp" data-id="lite-location-card-5926904"><div data-qa="location-card-RUSH Ladies Fitness Center" class="e02Wz5"><a href="https://www.fresha.com/ar/lvp/rush-ladies-fitness-center-bw-zby-rwWWQG" class="iZ_Jua" aria-label="RUSH Ladies Fitness Center"></a><div class="HdNCnr"><img src="https://images.fresha.com/lead-images/placeholders/gym-and-fitness-6.jpg?class=width-small" class="afSlte ZvLHng" alt="صورة صالونات المساج والتدليك خاصة بـ RUSH Ladies Fitness Center" loading="lazy"/></div><div class="ABjWcU"><div class="lJcJhG"><div class="cnqJzJ"><p class="axDOAG C3RXjX eGBYyp RYhd_E T2Ht61" title="RUSH Ladies Fitness Center">RUSH Ladies Fitness Center</p><p class="axDOAG FkLavb o3HUQR T2Ht61 fTV3EB" title="Villa #183 - Khalifa City - SE13 - Abu Dhabi - United Arab Emirates">Villa #183 - Khalifa City - SE13 - Abu Dhabi - United Arab Emirates</p></div><p class="axDOAG TE8kwS DbgFmO T2Ht61 WXSovK"><button type="button" data-show-phone="show-phone" data-lead-id="5926904" class="pCIKui"><p class="axDOAG TE8kwS tv4uDl tpRZTm">إظهار الرقم</p></button></p><a class="OP1nBW tpRZTm QPjIt4 WXSovK dmJvlT" href="tel:+971 2 556 2660" data-desktop-number-revealed="desktop-show-number-revealed" data-lead-id="5926904">+971 2 556 2660</a><a class="OP1nBW tpRZTm QPjIt4 WXSovK Wyhe7t" href="tel:+971 2 556 2660" data-number-revealed="show-number-revealed" data-lead-id="5926904">+971 2 556 2660</a><a class="OP1nBW iSiUSy hQb42p kNK6vJ wIiwwv hqkplt" href="tel:+971 2 556 2660" data-phone-call="phone-call-button" data-lead-id="5926904">الاتصال للحجز</a><button data-desktop-show-phone="desktop-show-phone" data-lead-id="5926904" class="wIiwwv NxhrXa">إظهار الرقم</button></div><hr class="uc7fiG"/><div class="_Ya9oo"><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">مساج رياضي</p><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">مساج علاجي</p></div></div></div></li></ul></section><script>
+          const pushToDataLayer = properties => {
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push(properties);
+          };
+
+          function getCookieStr(cookieName) {
+            let cookie = {};
+            document.cookie.split(';').forEach(function(el) {
+              let [key,value] = el.split('=');
+              cookie[key.trim()] = value;
+            })
+            return cookieName + "=" + cookie[cookieName];
+          }
+
+          function getSessionData() {
+            const gaIdCookie = getCookieStr("_ga_SMQNG7NE8C");
+            const pattern = /_ga_SMQNG7NE8C=GS\d\.\d\.(.+?)(?:;|$)/;
+            const match = gaIdCookie.match(pattern);
+            const parts = match?.[1].split(".");
+          
+            return {
+              ga_session_id: parts?.shift(),
+              ga_session_number: parts?.shift(),
+            };
+          }
+
+          const gaSessionData = getSessionData();
+
+        (function(){
+  
+        const desktopShowPhoneArr = document.querySelectorAll('[data-desktop-show-phone]');
+        const showPhoneArr = document.querySelectorAll('[data-show-phone]');
+        const numberRevealedArr = document.querySelectorAll('[data-number-revealed]');
+        const numberDesktopRevealedArr = document.querySelectorAll('[data-desktop-number-revealed]');
+        const phoneCallArr = document.querySelectorAll('[data-phone-call]');
+        
+        desktopShowPhoneArr.forEach((element, index) => element.addEventListener('click', function (e) {
+          const leadId = element.dataset.leadId;
+          element.classList.add("WXSovK");
+          numberDesktopRevealedArr[index].classList.remove("WXSovK")
+          
+          const eventData = {
+            "event_type": "lead_click",
+            "properties": {
+              "lead_id": leadId,
+              "action": "Show number",
+              "page_url": window.location.href,
+              "google_analytics_session_id": gaSessionData.ga_session_id
+            }
+          }
+
+          fetch("https://analytics-api.fresha.com/analytics", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(eventData),
+          }).catch(() => {});
+
+            pushToDataLayer({
+              event: 'fresha.contact_call_click',
+              section: 'b2c web',
+              interaction_value: 'Show number',
+            });
+        }));
+
+        showPhoneArr.forEach((element, index) => element.addEventListener('click', function (e) {
+          const leadId = element.dataset.leadId;
+          element.parentElement.classList.add("WXSovK");
+          numberRevealedArr[index].classList.remove("WXSovK")
+          
+          const eventData = {
+            "event_type": "lead_click",
+            "properties": {
+              "lead_id": leadId,
+              "action": "Show number",
+              "page_url": window.location.href,
+              "google_analytics_session_id": gaSessionData.ga_session_id
+            }
+          }
+
+          fetch("https://analytics-api.fresha.com/analytics", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(eventData),
+          }).catch(() => {});
+
+            pushToDataLayer({
+              event: 'fresha.contact_call_click',
+              section: 'b2c web',
+              interaction_value: 'Show number',
+            });
+        }));
+
+        numberDesktopRevealedArr.forEach((element, index) => element.addEventListener('click', function (e) {
+          const leadId = element.dataset.leadId;
+          
+          const eventData = {
+            "event_type": "lead_click",
+            "properties": {
+              "lead_id": leadId,
+              "action": "Phone Number",
+              "page_url": window.location.href,
+              "google_analytics_session_id": gaSessionData.ga_session_id
+            }
+          }
+
+          fetch("https://analytics-api.fresha.com/analytics", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(eventData),
+          }).catch(() => {});
+
+            pushToDataLayer({
+              event: 'fresha.contact_call_click',
+              section: 'b2c web',
+              interaction_value: 'Phone Number',
+            });
+        }));
+
+        numberRevealedArr.forEach((element, index) => element.addEventListener('click', function (e) {
+          const leadId = element.dataset.leadId;
+          
+          const eventData = {
+            "event_type": "lead_click",
+            "properties": {
+              "lead_id": leadId,
+              "action": "Phone Number",
+              "page_url": window.location.href,
+              "google_analytics_session_id": gaSessionData.ga_session_id
+            }
+          }
+
+          fetch("https://analytics-api.fresha.com/analytics", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(eventData),
+          }).catch(() => {});
+
+            pushToDataLayer({
+              event: 'fresha.contact_call_click',
+              section: 'b2c web',
+              interaction_value: 'Phone Number',
+            });
+        }));
+
+      
+        phoneCallArr.forEach((element, index) => element.addEventListener('click', function (e) {
+          const leadId = element.dataset.leadId;
+          const eventData = {
+            "event_type": "lead_click",
+            "properties": {
+              "lead_id": leadId,
+              "action": "Call to book",
+              "page_url": window.location.href,
+              "google_analytics_session_id": gaSessionData.ga_session_id
+            }
+          }
+
+          fetch("https://analytics-api.fresha.com/analytics", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(eventData),
+          }).catch(() => {});
+
+          pushToDataLayer({
+              event: 'fresha.contact_call_click',
+              section: 'b2c web',
+              interaction_value: 'Call to book',
+          })
+        }));
+
+      })();
+        </script></div><div class="zm8xFb"><section class="Rzlv_b kfXiA3" data-qa="faqs-list"><h2 class="axDOAG HER_75 jpItlx">الأسئلة الشائعة حول لياقة بدنية وتعافي</h2></section><section class="Rzlv_b"><div class="OxEddX"><input type="checkbox" id="faq0" aria-hidden="true"/><h3 class="Dbazkw"><label for="faq0" class="nnN8I2"><span class="poivFd">أين يمكنني العثور على صالات كروس فيت بالقرب مني في Sector 33؟</span><span class="oRzb_C"><span class="v_Dfni vSYAhk veiqTU"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.22 8.345a.75.75 0 0 1 1.06 0l5.72 5.72 5.72-5.72a.75.75 0 1 1 1.06 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0l-6.25-6.25a.75.75 0 0 1 0-1.06Z"></path></svg></span></span></label></h3><label for="faq0" class="rRQbs6"><div class="Ubojno"><p>تتمتع Sector 33 بمجتمع قوي لرياضة كروس فيت مع العديد من الصالات في المدينة وضواحيها. تصفح واحجز أفضل صالات كروس فيت القريبة منك في Sector 33.</p></div></label></div><div class="OxEddX"><input type="checkbox" id="faq1" aria-hidden="true"/><h3 class="Dbazkw"><label for="faq1" class="nnN8I2"><span class="poivFd">أين أجد صالات ملاكمة قريبة مني في Sector 33؟</span><span class="oRzb_C"><span class="v_Dfni vSYAhk veiqTU"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.22 8.345a.75.75 0 0 1 1.06 0l5.72 5.72 5.72-5.72a.75.75 0 1 1 1.06 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0l-6.25-6.25a.75.75 0 0 1 0-1.06Z"></path></svg></span></span></label></h3><label for="faq1" class="rRQbs6"><div class="Ubojno"><p>تضم Sector 33 مجموعة واسعة من صالات الملاكمة التي تقدم تدريبات اللياقة البدنية، والملاكمة التنافسية، وبرامج التدريب المتخصصة. تصفح واحجز أفضل صالات الملاكمة القريبة منك في Sector 33.</p></div></label></div><div class="OxEddX"><input type="checkbox" id="faq2" aria-hidden="true"/><h3 class="Dbazkw"><label for="faq2" class="nnN8I2"><span class="poivFd">هل توجد صالات رياضية أو دروس لياقة بدنية متاحة يوم الأحد في Sector 33?</span><span class="oRzb_C"><span class="v_Dfni vSYAhk veiqTU"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.22 8.345a.75.75 0 0 1 1.06 0l5.72 5.72 5.72-5.72a.75.75 0 1 1 1.06 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0l-6.25-6.25a.75.75 0 0 1 0-1.06Z"></path></svg></span></span></label></h3><label for="faq2" class="rRQbs6"><div class="Ubojno"><p>نعم، العديد من صالات الرياضة والاستوديوهات في Sector 33 تفتح أبوابها يوم الأحد. تصفح Fresha للعثور على أماكن قريبة منك متاحة يوم الأحد واحجز موعدك خلال ثوانٍ.</p></div></label></div><div class="OxEddX"><input type="checkbox" id="faq3" aria-hidden="true"/><h3 class="Dbazkw"><label for="faq3" class="nnN8I2"><span class="poivFd">هل توجد صالات رياضية أو دروس لياقة بدنية متاحة يوم السبت في Sector 33?</span><span class="oRzb_C"><span class="v_Dfni vSYAhk veiqTU"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.22 8.345a.75.75 0 0 1 1.06 0l5.72 5.72 5.72-5.72a.75.75 0 1 1 1.06 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0l-6.25-6.25a.75.75 0 0 1 0-1.06Z"></path></svg></span></span></label></h3><label for="faq3" class="rRQbs6"><div class="Ubojno"><p>نعم، معظم صالات الرياضة واستوديوهات اللياقة في Sector 33 تفتح أبوابها يوم السبت، وغالبًا ما تقدم جدول حصص كامل. استخدم Fresha للتحقق من التوافر الفوري يوم السبت وحجز حصتك أو جلستك مسبقًا.</p></div></label></div><div class="OxEddX"><input type="checkbox" id="faq4" aria-hidden="true"/><h3 class="Dbazkw"><label for="faq4" class="nnN8I2"><span class="poivFd">هل توجد صالات رياضية بأسعار مناسبة أو اقتصادية بالقرب مني في Sector 33؟</span><span class="oRzb_C"><span class="v_Dfni vSYAhk veiqTU"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.22 8.345a.75.75 0 0 1 1.06 0l5.72 5.72 5.72-5.72a.75.75 0 1 1 1.06 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0l-6.25-6.25a.75.75 0 0 1 0-1.06Z"></path></svg></span></span></label></h3><label for="faq4" class="rRQbs6"><div class="Ubojno"><p>نعم، Sector 33 تضم صالات رياضية تناسب جميع الميزانيات، من مرافق اقتصادية تعمل على مدار الساعة إلى استوديوهات بوتيكية فاخرة. تقدم Fresha أسعار واضحة ومباشرة لتتمكن من العثور على الخيار المناسب لك بالقرب منك بسهولة.</p></div></label></div><div class="OxEddX"><input type="checkbox" id="faq5" aria-hidden="true"/><h3 class="Dbazkw"><label for="faq5" class="nnN8I2"><span class="poivFd">كيف أجد صالات رياضية ومراكز لياقة بدنية بالقرب مني في Sector 33؟</span><span class="oRzb_C"><span class="v_Dfni vSYAhk veiqTU"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.22 8.345a.75.75 0 0 1 1.06 0l5.72 5.72 5.72-5.72a.75.75 0 1 1 1.06 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0l-6.25-6.25a.75.75 0 0 1 0-1.06Z"></path></svg></span></span></label></h3><label for="faq5" class="rRQbs6"><div class="Ubojno"><p>أسهل طريقة للعثور على صالات الرياضة ومراكز اللياقة القريبة في Sector 33 هي استخدام Fresha. أدخل اسم منطقتك أو فعّل خاصية تحديد الموقع لتشاهد خريطة بأقرب الصالات واستوديوهات اللياقة، مع تقييمات، حصص تدريب، وتوفر المواعيد مباشرةً.</p></div></label></div><div class="OxEddX"><input type="checkbox" id="faq6" aria-hidden="true"/><h3 class="Dbazkw"><label for="faq6" class="nnN8I2"><span class="poivFd">هل يمكنني حجز دروس الجيم وجلسات اللياقة البدنية في Sector 33 عبر الإنترنت؟</span><span class="oRzb_C"><span class="v_Dfni vSYAhk veiqTU"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.22 8.345a.75.75 0 0 1 1.06 0l5.72 5.72 5.72-5.72a.75.75 0 1 1 1.06 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0l-6.25-6.25a.75.75 0 0 1 0-1.06Z"></path></svg></span></span></label></h3><label for="faq6" class="rRQbs6"><div class="Ubojno"><p>نعم، مع Fresha يمكنك حجز حصص الجيم وجلسات اللياقة البدنية في Sector 33 عبر الإنترنت على مدار الساعة طوال أيام الأسبوع. تصفح الأماكن القريبة منك، اختر نوع الحصة أو الجلسة، حدد الوقت المناسب، وأكد حجزك فوراً.</p></div></label></div></section></div><section class="vwFB4q"><div class="YKJYnf"><h2 class="axDOAG N7z9vs EnvOJp">‎متاح أيضًا في Sector 33</h2></div><section class="ZnEpfB kM_f0H" data-qa="business-types-pills" data-scrollable-pills="true" data-overflow="false"><div class="pIEL1R"><div class="n9k_wr"><div class="DrZt9r" aria-hidden="true"></div><nav class="c8sLsP" data-pills-scroll="true" aria-label="أنواع الأعمال"><a class="OP1nBW QoUCns sW7gEB" href="https://www.fresha.com/lp/ar/bt/صالونات-تصفيف-الشعر/ae-أبو-ظبي/sector-33" data-qa="bt-صالون تصفيف الشعر"><span class="DpJCAG">صالون تصفيف الشعر</span></a><a class="OP1nBW QoUCns sW7gEB" href="https://www.fresha.com/lp/ar/bt/صالونات-التجميل/ae-أبو-ظبي/sector-33" data-qa="bt-صالون تجميل"><span class="DpJCAG">صالون تجميل</span></a><a class="OP1nBW QoUCns sW7gEB" href="https://www.fresha.com/lp/ar/bt/أظافر/ae-أبو-ظبي/sector-33" data-qa="bt-أظافر"><span class="DpJCAG">أظافر</span></a><a class="OP1nBW QoUCns sW7gEB" href="https://www.fresha.com/lp/ar/bt/الحواجب-والرموش/ae-أبو-ظبي/sector-33" data-qa="bt-الحواجب والرموش"><span class="DpJCAG">الحواجب والرموش</span></a><a class="OP1nBW QoUCns sW7gEB" href="https://www.fresha.com/lp/ar/bt/منتجعات-صحية-طبية/ae-أبو-ظبي/sector-33" data-qa="bt-منتجع صحي طبي"><span class="DpJCAG">منتجع صحي طبي</span></a><a class="OP1nBW QoUCns sW7gEB" href="https://www.fresha.com/lp/ar/bt/مساج-وتدليك/ae-أبو-ظبي/sector-33" data-qa="bt-مساج وتدليك"><span class="DpJCAG">مساج وتدليك</span></a><a class="OP1nBW QoUCns sW7gEB" href="https://www.fresha.com/lp/ar/bt/صالونات-إزالة-الشعر-بالشمع/ae-أبو-ظبي/sector-33" data-qa="bt-صالون إزالة الشعر بالشمع"><span class="DpJCAG">صالون إزالة الشعر بالشمع</span></a><a class="OP1nBW QoUCns sW7gEB" href="https://www.fresha.com/lp/ar/bt/حلاقون/ae-أبو-ظبي/sector-33" data-qa="bt-حلاق"><span class="DpJCAG">حلاق</span></a><a class="OP1nBW QoUCns sW7gEB" href="https://www.fresha.com/lp/ar/bt/منتجعات-صحية-وساونا/ae-أبو-ظبي/sector-33" data-qa="bt-منتجع صحي وساونا"><span class="DpJCAG">منتجع صحي وساونا</span></a></nav><div class="uJhaAb"><details class="MUyBs8" data-scrollable-pills-overflow="true"><summary class="ltDb4C" aria-label="عرض جميع أنواع الأعمال"><span class="v_Dfni CpPDl7 veiqTU"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+  <circle cx="3" cy="5" r="1.25"/>
+  <circle cx="3" cy="10" r="1.25"/>
+  <circle cx="3" cy="15" r="1.25"/>
+  <rect x="6" y="4.25" width="11" height="1.5" rx="0.75"/>
+  <rect x="6" y="9.25" width="11" height="1.5" rx="0.75"/>
+  <rect x="6" y="14.25" width="11" height="1.5" rx="0.75"/>
+</svg>
+</span></summary><div class="yaMXdw"><div class="aJGVna" data-scrollable-pills-backdrop="true" aria-hidden="true"></div><div class="Tk6pcB" role="menu"><button type="button" class="OEF7eH" data-scrollable-pills-close="true" aria-label="إغلاق"><span class="v_Dfni CpPDl7 veiqTU"><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M4.293 4.293a1 1 0 011.414 0L12 10.585l6.293-6.292a1 1 0 011.32-.083l.094.083a1 1 0 010 1.414L13.415 12l6.292 6.293a1 1 0 01.083 1.32l-.083.094a1 1 0 01-1.414 0L12 13.415l-6.293 6.292a1 1 0 01-1.32.083l-.094-.083a1 1 0 010-1.414L10.585 12 4.293 5.707a1 1 0 01-.083-1.32z" />
+                  </svg></span></button><div><a class="OP1nBW AFFsFk" href="https://www.fresha.com/lp/ar/bt/صالونات-تصفيف-الشعر/ae-أبو-ظبي/sector-33" data-qa="bt-overflow-صالون تصفيف الشعر">صالون تصفيف الشعر</a><a class="OP1nBW AFFsFk" href="https://www.fresha.com/lp/ar/bt/صالونات-التجميل/ae-أبو-ظبي/sector-33" data-qa="bt-overflow-صالون تجميل">صالون تجميل</a><a class="OP1nBW AFFsFk" href="https://www.fresha.com/lp/ar/bt/أظافر/ae-أبو-ظبي/sector-33" data-qa="bt-overflow-أظافر">أظافر</a><a class="OP1nBW AFFsFk" href="https://www.fresha.com/lp/ar/bt/الحواجب-والرموش/ae-أبو-ظبي/sector-33" data-qa="bt-overflow-الحواجب والرموش">الحواجب والرموش</a><a class="OP1nBW AFFsFk" href="https://www.fresha.com/lp/ar/bt/منتجعات-صحية-طبية/ae-أبو-ظبي/sector-33" data-qa="bt-overflow-منتجع صحي طبي">منتجع صحي طبي</a><a class="OP1nBW AFFsFk" href="https://www.fresha.com/lp/ar/bt/مساج-وتدليك/ae-أبو-ظبي/sector-33" data-qa="bt-overflow-مساج وتدليك">مساج وتدليك</a><a class="OP1nBW AFFsFk" href="https://www.fresha.com/lp/ar/bt/صالونات-إزالة-الشعر-بالشمع/ae-أبو-ظبي/sector-33" data-qa="bt-overflow-صالون إزالة الشعر بالشمع">صالون إزالة الشعر بالشمع</a><a class="OP1nBW AFFsFk" href="https://www.fresha.com/lp/ar/bt/حلاقون/ae-أبو-ظبي/sector-33" data-qa="bt-overflow-حلاق">حلاق</a><a class="OP1nBW AFFsFk" href="https://www.fresha.com/lp/ar/bt/منتجعات-صحية-وساونا/ae-أبو-ظبي/sector-33" data-qa="bt-overflow-منتجع صحي وساونا">منتجع صحي وساونا</a></div></div></div></details></div></div></div><script>
+(function () {
+  var MOBILE_SHEET_MEDIA = '(max-width: 767px)';
+
+  function isMobileSheetViewport() {
+    return window.matchMedia(MOBILE_SHEET_MEDIA).matches;
+  }
+
+  function updateBodyScrollLock() {
+    var hasOpenSheet = isMobileSheetViewport()
+      && document.querySelector('[data-scrollable-pills-overflow][open]');
+    document.body.style.overflow = hasOpenSheet ? 'hidden' : '';
+  }
+
+  function updateScrollablePills(resetScroll) {
+    document.querySelectorAll('[data-scrollable-pills]').forEach(function (root) {
+      var scroll = root.querySelector('[data-pills-scroll]');
+      if (!scroll) {
+        return;
+      }
+
+      var overflows = scroll.scrollWidth > scroll.clientWidth + 1;
+      root.setAttribute('data-overflow', overflows ? 'true' : 'false');
+
+      if (resetScroll) {
+        scroll.scrollLeft = 0;
+      }
+    });
+  }
+
+  updateScrollablePills(true);
+
+  if (window.__scrollablePillsOverflowInit) {
+    return;
+  }
+
+  window.__scrollablePillsOverflowInit = true;
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function () {
+      updateScrollablePills(true);
+    });
+  }
+
+  window.addEventListener('load', function () {
+    updateScrollablePills(true);
+  });
+  window.addEventListener('resize', function () {
+    updateScrollablePills(false);
+    updateBodyScrollLock();
+  });
+
+  document.addEventListener('toggle', function (event) {
+    var details = event.target;
+    if (!(details instanceof HTMLDetailsElement)) {
+      return;
+    }
+
+    if (!details.matches('[data-scrollable-pills-overflow]')) {
+      return;
+    }
+
+    updateBodyScrollLock();
+  }, true);
+
+  document.addEventListener('click', function (event) {
+    document.querySelectorAll('[data-scrollable-pills-overflow]').forEach(function (details) {
+      if (!(details instanceof HTMLDetailsElement) || !details.open) {
+        return;
+      }
+
+      var target = event.target;
+      if (
+        target instanceof Element
+        && details.contains(target)
+        && target.closest('[data-scrollable-pills-close]')
+      ) {
+        details.open = false;
+        updateBodyScrollLock();
+        return;
+      }
+
+      if (
+        target instanceof Element
+        && target.closest('[data-scrollable-pills-backdrop]')
+      ) {
+        details.open = false;
+        updateBodyScrollLock();
+        return;
+      }
+
+      if (!details.contains(target)) {
+        details.open = false;
+        updateBodyScrollLock();
+      }
+    });
+  });
+
+  document.addEventListener('keydown', function (event) {
+    if (event.key !== 'Escape') {
+      return;
+    }
+
+    document.querySelectorAll('[data-scrollable-pills-overflow][open]').forEach(function (details) {
+      if (details instanceof HTMLDetailsElement) {
+        details.open = false;
+      }
+    });
+    updateBodyScrollLock();
+  });
+})();
+</script></section></section><section class="Rzlv_b I_D4Gr" data-qa="mobile-apps"><div class="yubTpO" data-qa="app-card"><div class="YzswRx"><img src="/lp/assets/29cca8f59ebf28b19ef8.webp" alt="" class="JFo4SK" aria-hidden="true"/><div class="uGH0VU"><h2 class="axDOAG N7z9vs eGBYyp RYhd_E uHhv4Z">تطبيق حجوزات للعملاء</h2><p class="axDOAG FkLavb RYhd_E lWlygP">احجزوا الآن تجارب ممتعة للتجميل وتحسين الصجة بالقرب منكم</p></div><div class="rh_B0i"><a class="OP1nBW pD3gej QWIzyR" href="https://apps.apple.com/app/fresha-for-customers/id1297230801" target="_blank" rel="noopener noreferrer"><img src="/lp/assets/27b35cba37648e74203b.png" alt="تنزيل من App Store" class="fYobCL"/></a><a class="OP1nBW pD3gej tfxTRN" href="https://play.google.com/store/apps/details?id=com.fresha.Fresha" target="_blank" rel="noopener noreferrer"><img src="/lp/assets/7ff297abde57431f1abe.png" alt="احصل عليه من جوجل بلاي" class="fYobCL"/></a></div></div><div class="MQswXO"><div class="XHTEUp"><img src="/lp/assets/8f84caaac13c9e0ac018.webp" alt="تطبيق فريشا للعملاء" class="A4hGLZ" loading="lazy"/></div></div></div><div class="yubTpO W9sYUt" data-qa="app-card"><div class="YzswRx"><img src="/lp/assets/3e5dbe843af4ec105879.webp" alt="" class="JFo4SK" aria-hidden="true"/><div class="uGH0VU"><h2 class="axDOAG N7z9vs eGBYyp RYhd_E uHhv4Z">تطبيق أعمال للمحترفين</h2><p class="axDOAG FkLavb RYhd_E lWlygP">برنامج بسيط ومرن وقوي لإدارة أعمالكم في أي وقت ومن أي مكان</p></div><div class="rh_B0i"><a class="OP1nBW pD3gej QWIzyR" href="https://apps.apple.com/app/fresha-for-business/id1455346253" target="_blank" rel="noopener noreferrer"><img src="/lp/assets/27b35cba37648e74203b.png" alt="تنزيل من App Store" class="fYobCL"/></a><a class="OP1nBW pD3gej tfxTRN" href="https://play.google.com/store/apps/details?id=com.fresha.Business" target="_blank" rel="noopener noreferrer"><img src="/lp/assets/7ff297abde57431f1abe.png" alt="احصل عليه من جوجل بلاي" class="fYobCL"/></a></div></div><div class="MQswXO"><div class="XHTEUp"><img src="/lp/assets/65c75697dfaee63bb95f.webp" alt="تطبيق فريشا للأعمال" class="A4hGLZ" loading="lazy"/></div></div></div></section><div class="X7yP66" data-qa="bottom-linking-modules"><section class="rAR5ei" data-qa="linking-module-لياقة بدنية وتعافي بالقرب من هنا"><div class="MGTbc5"><h2 class="axDOAG N7z9vs eGBYyp RYhd_E YtxWRz">لياقة بدنية وتعافي بالقرب من هنا</h2><input id="lm-lm-0-tab-0" class="RCRLUv" type="radio" name="lm-lm-0" checked="" value=" "/><div class="wQ76ph"><button type="button" class="KVkAfz r8lrQu K7cXTj" id="lm-lm-0-arrow-prev" aria-label="تمرير الروابط لليسار"><span class="v_Dfni vSYAhk veiqTU"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.03 4.72a.75.75 0 0 1 0 1.06l-5.47 5.47h14.69a.75.75 0 0 1 0 1.5H5.56l5.47 5.47a.75.75 0 1 1-1.06 1.06l-6.75-6.75a.75.75 0 0 1 0-1.06l6.75-6.75a.75.75 0 0 1 1.06 0Z"></path></svg></span></button><button type="button" class="KVkAfz e8ZKEt" id="lm-lm-0-arrow-next" aria-label="تمرير الروابط لليمين"><span class="v_Dfni vSYAhk veiqTU"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.97 4.72a.75.75 0 0 1 1.06 0l6.75 6.75a.75.75 0 0 1 0 1.06l-6.75 6.75a.75.75 0 1 1-1.06-1.06l5.47-5.47H3.75a.75.75 0 0 1 0-1.5h14.69l-5.47-5.47a.75.75 0 0 1 0-1.06Z"></path></svg></span></button><div class="ZNqZn5" id="lm-lm-0-scroll"><div class="xcTGz1" data-qa="tab-content-0"><div class="zqBUTg"><a class="OP1nBW VIvLa_" title="‎لياقة بدنية وتعافي في Al Muneera" href="https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ae-أبو-ظبي/al-muneera" data-qa="lm-link-https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ae-أبو-ظبي/al-muneera">‎لياقة بدنية وتعافي في Al Muneera</a><a class="OP1nBW VIvLa_" title="‎لياقة بدنية وتعافي في Al Rahah" href="https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ae-أبو-ظبي/al-rahah" data-qa="lm-link-https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ae-أبو-ظبي/al-rahah">‎لياقة بدنية وتعافي في Al Rahah</a><a class="OP1nBW VIvLa_" title="‎لياقة بدنية وتعافي في Masdar City" href="https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ae-أبو-ظبي/masdar-city" data-qa="lm-link-https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ae-أبو-ظبي/masdar-city">‎لياقة بدنية وتعافي في Masdar City</a><a class="OP1nBW VIvLa_" title="‎لياقة بدنية وتعافي في SE45" href="https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ae-أبو-ظبي/se45" data-qa="lm-link-https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ae-أبو-ظبي/se45">‎لياقة بدنية وتعافي في SE45</a><a class="OP1nBW VIvLa_" title="‎لياقة بدنية وتعافي في الراحة" href="https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ae-أبو-ظبي/الراحة" data-qa="lm-link-https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ae-أبو-ظبي/الراحة">‎لياقة بدنية وتعافي في الراحة</a><a class="OP1nBW VIvLa_" title="‎لياقة بدنية وتعافي في المنيرة" href="https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ae-أبو-ظبي/المنيرة" data-qa="lm-link-https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ae-أبو-ظبي/المنيرة">‎لياقة بدنية وتعافي في المنيرة</a></div><div class="zqBUTg"><a class="OP1nBW VIvLa_" title="‎لياقة بدنية وتعافي في شاطئ الراحة" href="https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ae-أبو-ظبي/شاطئ-الراحة" data-qa="lm-link-https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ae-أبو-ظبي/شاطئ-الراحة">‎لياقة بدنية وتعافي في شاطئ الراحة</a><a class="OP1nBW VIvLa_" title="‎لياقة بدنية وتعافي في مدينة مصدر" href="https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ae-أبو-ظبي/مدينة-مصدر" data-qa="lm-link-https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ae-أبو-ظبي/مدينة-مصدر">‎لياقة بدنية وتعافي في مدينة مصدر</a><a class="OP1nBW VIvLa_" title="‎لياقة بدنية وتعافي في Al Forsan Village (AFV)" href="https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ae-أبو-ظبي/al-forsan-village-afv" data-qa="lm-link-https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ae-أبو-ظبي/al-forsan-village-afv">‎لياقة بدنية وتعافي في Al Forsan Village (AFV)</a><a class="OP1nBW VIvLa_" title="‎لياقة بدنية وتعافي في Al Raha Gardens (ARG)" href="https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ae-أبو-ظبي/al-raha-gardens-arg" data-qa="lm-link-https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ae-أبو-ظبي/al-raha-gardens-arg">‎لياقة بدنية وتعافي في Al Raha Gardens (ARG)</a><a class="OP1nBW VIvLa_" title="‎لياقة بدنية وتعافي في Bawabat Abu Dhabi (BAD)" href="https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ae-أبو-ظبي/bawabat-abu-dhabi-bad" data-qa="lm-link-https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ae-أبو-ظبي/bawabat-abu-dhabi-bad">‎لياقة بدنية وتعافي في Bawabat Abu Dhabi (BAD)</a><a class="OP1nBW VIvLa_" title="‎لياقة بدنية وتعافي في Golf Gardens" href="https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ae-أبو-ظبي/golf-gardens" data-qa="lm-link-https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ae-أبو-ظبي/golf-gardens">‎لياقة بدنية وتعافي في Golf Gardens</a></div><div class="zqBUTg"><a class="OP1nBW VIvLa_" title="‎لياقة بدنية وتعافي في Khalifa City" href="https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ae-أبو-ظبي/khalifa-city" data-qa="lm-link-https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ae-أبو-ظبي/khalifa-city">‎لياقة بدنية وتعافي في Khalifa City</a><a class="OP1nBW VIvLa_" title="‎لياقة بدنية وتعافي في Rabdan" href="https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ae-أبو-ظبي/rabdan" data-qa="lm-link-https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ae-أبو-ظبي/rabdan">‎لياقة بدنية وتعافي في Rabdan</a><a class="OP1nBW VIvLa_" title="‎لياقة بدنية وتعافي في SE-13" href="https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ae-أبو-ظبي/se-13" data-qa="lm-link-https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ae-أبو-ظبي/se-13">‎لياقة بدنية وتعافي في SE-13</a><a class="OP1nBW VIvLa_" title="‎لياقة بدنية وتعافي في SE-16" href="https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ae-أبو-ظبي/se-16" data-qa="lm-link-https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ae-أبو-ظبي/se-16">‎لياقة بدنية وتعافي في SE-16</a><a class="OP1nBW VIvLa_" title="‎لياقة بدنية وتعافي في SE-25" href="https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ae-أبو-ظبي/se-25" data-qa="lm-link-https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ae-أبو-ظبي/se-25">‎لياقة بدنية وتعافي في SE-25</a><a class="OP1nBW VIvLa_" title="‎لياقة بدنية وتعافي في SE 26" href="https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ae-أبو-ظبي/se-26" data-qa="lm-link-https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ae-أبو-ظبي/se-26">‎لياقة بدنية وتعافي في SE 26</a></div><div class="zqBUTg"><a class="OP1nBW VIvLa_" title="‎لياقة بدنية وتعافي في SE-4" href="https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ae-أبو-ظبي/se-4" data-qa="lm-link-https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ae-أبو-ظبي/se-4">‎لياقة بدنية وتعافي في SE-4</a><a class="OP1nBW VIvLa_" title="‎لياقة بدنية وتعافي في Sector 12" href="https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ae-أبو-ظبي/sector-12" data-qa="lm-link-https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ae-أبو-ظبي/sector-12">‎لياقة بدنية وتعافي في Sector 12</a><a class="OP1nBW VIvLa_" title="‎لياقة بدنية وتعافي في Shops" href="https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ae-أبو-ظبي/shops" data-qa="lm-link-https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ae-أبو-ظبي/shops">‎لياقة بدنية وتعافي في Shops</a><a class="OP1nBW VIvLa_" title="‎لياقة بدنية وتعافي في SW-16" href="https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ae-أبو-ظبي/sw-16" data-qa="lm-link-https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ae-أبو-ظبي/sw-16">‎لياقة بدنية وتعافي في SW-16</a><a class="OP1nBW VIvLa_" title="‎لياقة بدنية وتعافي في SW-2" href="https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ae-أبو-ظبي/sw-2" data-qa="lm-link-https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ae-أبو-ظبي/sw-2">‎لياقة بدنية وتعافي في SW-2</a><a class="OP1nBW VIvLa_" title="‎لياقة بدنية وتعافي في SW-6" href="https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ae-أبو-ظبي/sw-6" data-qa="lm-link-https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ae-أبو-ظبي/sw-6">‎لياقة بدنية وتعافي في SW-6</a></div><div class="zqBUTg"><a class="OP1nBW VIvLa_" title="‎لياقة بدنية وتعافي في ربدان" href="https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ae-أبو-ظبي/ربدان" data-qa="lm-link-https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ae-أبو-ظبي/ربدان">‎لياقة بدنية وتعافي في ربدان</a><a class="OP1nBW VIvLa_" title="‎لياقة بدنية وتعافي في مدينة خليفة" href="https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ae-أبو-ظبي/مدينة-خليفة" data-qa="lm-link-https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ae-أبو-ظبي/مدينة-خليفة">‎لياقة بدنية وتعافي في مدينة خليفة</a></div></div></div></div><script>
+(function () {
+  var scrollContainer = document.getElementById("lm-lm-0-scroll");
+  var nextButton = document.getElementById("lm-lm-0-arrow-next");
+  var prevButton = document.getElementById("lm-lm-0-arrow-prev");
+
+  if (!scrollContainer || !nextButton || !prevButton) {
+    return;
+  }
+
+  var isRtl =
+    document.documentElement.dir === 'rtl' ||
+    getComputedStyle(document.documentElement).direction === 'rtl';
+
+  var SCROLL_THRESHOLD = 10;
+
+  function getMaxScroll() {
+    return scrollContainer.scrollWidth - scrollContainer.clientWidth;
+  }
+
+  function isAtStart() {
+    if (isRtl) {
+      return Math.abs(scrollContainer.scrollLeft) < SCROLL_THRESHOLD;
+    }
+    return scrollContainer.scrollLeft < SCROLL_THRESHOLD;
+  }
+
+  function isAtEnd() {
+    var maxScroll = getMaxScroll();
+    if (isRtl) {
+      return Math.abs(scrollContainer.scrollLeft) >= maxScroll - SCROLL_THRESHOLD;
+    }
+    return scrollContainer.scrollLeft >= maxScroll - SCROLL_THRESHOLD;
+  }
+
+  function hideNextArrow() {
+    if (scrollContainer.scrollWidth <= scrollContainer.clientWidth + 1) {
+      nextButton.classList.add("K7cXTj");
+      return;
+    }
+
+    if (isAtEnd()) {
+      nextButton.classList.add("K7cXTj");
+    } else {
+      nextButton.classList.remove("K7cXTj");
+    }
+  }
+
+  function hidePrevArrow() {
+    if (scrollContainer.scrollWidth <= scrollContainer.clientWidth + 1) {
+      prevButton.classList.add("K7cXTj");
+      return;
+    }
+
+    if (isAtStart()) {
+      prevButton.classList.add("K7cXTj");
+    } else {
+      prevButton.classList.remove("K7cXTj");
+    }
+  }
+
+  function updateArrows() {
+    hideNextArrow();
+    hidePrevArrow();
+  }
+
+  nextButton.addEventListener('click', function () {
+    var scrollAmount = scrollContainer.clientWidth;
+
+    if (isRtl) {
+      scrollContainer.scrollLeft -= scrollAmount;
+    } else {
+      scrollContainer.scrollLeft += scrollAmount;
+    }
+  });
+
+  prevButton.addEventListener('click', function () {
+    var scrollAmount = scrollContainer.clientWidth;
+
+    if (isRtl) {
+      scrollContainer.scrollLeft += scrollAmount;
+    } else {
+      scrollContainer.scrollLeft -= scrollAmount;
+    }
+  });
+
+  updateArrows();
+  scrollContainer.scrollLeft = 0;
+
+  var ticking = false;
+  scrollContainer.addEventListener('scroll', function () {
+    if (!ticking) {
+      window.requestAnimationFrame(function () {
+        updateArrows();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+
+  window.addEventListener('resize', updateArrows);
+})();
+</script></div></section></div></main><footer class="w8zCxJ"><div class="U4rfen"><div class="z0xID_ ftabih"><a class="OP1nBW QdYpnI ba5vfs" href="https://www.fresha.com/ar" data-qa="logo" aria-label="Fresha"><span class="v_Dfni veiqTU xUeY0V"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81.8 24"><path d="M51.5 2.1h3.9v8.1c1.3-1.9 4-2.5 6.2-1.6 2.2.9 2.9 2.5 3 2.7.2.5.4 1 .5 1.5.6 3.6-.6 7.2.5 10.7h-3.8c-1-2.5-.4-5.3-.4-7.9 0-.7 0-1.5-.4-2.2-.5-.9-1.5-1.6-2.5-1.6-1.1 0-2.1.6-2.6 1.5-.4.8-.4 1.8-.4 2.7v7.5h-3.9l-.1-21.4zM36 15.7c.1-4.3-2.6-7.5-6.8-7.5-2.8 0-5.2 1.4-6.5 3.8-1.4 2.6-1.3 6.3.4 8.8 2.5 3.4 7.6 4.2 12.5 1.9l-1.2-3.1c-4.1 1.8-8.5 1.3-8.8-2.4H36v-1.5zm-10.3-1.5c.3-.8.7-1.4 1.3-1.9 1.2-.9 3.3-1 4.4-.1.5.4.9 1.1 1.2 1.9h-6.9zM13.1 13.9s0-2.3-1.9-2.3H6.9v12.1H3V11.6H0V8.3h3V5.7C3 3.4 5.1 0 9.7 0s6.4 3.9 6.4 3.9l-3 2.1s-.8-2.5-3.3-2.5C8.7 3.5 7 4.4 7 6.2v2h6.1c2.7 0 3.4 2 3.4 2 1-2.4 4.6-2.1 5.3-2v3.1c-2.5-.2-4.8 1.2-4.8 4.1v8h-3.9v-9.5zM48.9 16.2c-1.2-1.2-4.3-1.6-6.3-2-1-.2-1.8-.4-1.8-1.4 0-1.2 1.2-1.5 2.4-1.5s2.4.5 3.1 1.5l3-1.6c-1.7-3-6.2-3.6-9.1-2.4-.9.4-1.6 1-2.1 1.7-1.1 1.5-1 4.1.3 5.3.7.7 1.9 1.2 3.4 1.5l2.8.5c1 .2 1.9.4 1.9 1.5 0 1.3-1.4 1.6-2.6 1.6-3.2 0-3.8-3-3.8-3L36.4 19c.2 1 1.5 5 7.4 5 3.3 0 6.2-1.3 6.3-4.8-.1-1.3-.5-2.3-1.2-3zM81.2 20.8c-.7 0-1.3-.4-1.3-1.4 0-.5-.1-2.2-.1-2.6 0-2.6.1-5.1-1.7-6.9-2-2-6.6-2.2-9-.6-.9.5-1.7 1.2-2.3 2.1l2.3 2.4c.9-1.5 2.2-2.2 3.7-2.2 1.4-.1 2.6.6 3.1 2-3.1.8-7.1 1.1-8.8 4.3-.8 1.5-.6 3.4.6 4.7.9 1 2.4 1.3 3.8 1.3 2.2 0 4.3-.5 5.6-2.5.7 1.7 2.2 2.5 4 2.5.3 0 .6-.1.8-.2v-3c-.2.1-.4.1-.7.1zm-5.3-3.1c.1 2.2-1.7 3.4-3.7 3.4-1.1 0-1.8-.5-1.8-1.6 0-1.2 1-1.6 2.1-1.9l3.4-1v1.1z"/></svg>
+</span></a><button type="button" class="Ka0K5G amlED7" data-redirect-url="https://www.fresha.com/app-store-redirect"><p class="axDOAG C3RXjX eGBYyp RYhd_E">تنزيل التطبيق</p><span class="cQa_Uv"><span class="v_Dfni vSYAhk veiqTU"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.026 8.163c-.094.058-2.318 1.293-2.318 4.03.105 3.121 2.807 4.216 2.853 4.216-.046.058-.408 1.491-1.479 2.993C18.232 20.696 17.29 22 15.856 22c-1.363 0-1.852-.862-3.425-.862-1.688 0-2.166.862-3.459.862-1.433 0-2.446-1.374-3.343-2.656-1.164-1.677-2.154-4.31-2.189-6.837-.023-1.339.233-2.655.885-3.774.92-1.56 2.562-2.62 4.356-2.655 1.374-.047 2.597.943 3.436.943.804 0 2.306-.943 4.006-.943.734 0 2.691.221 3.903 2.085ZM12 5.81c-.245-1.223.43-2.446 1.06-3.226C13.864 1.64 15.133 1 16.227 1a4.56 4.56 0 0 1-1.164 3.296C14.354 5.24 13.13 5.95 12 5.81Z" /></svg></span><span class="v_Dfni vSYAhk veiqTU"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12.003 2.4C6.7 2.4 2.4 6.698 2.4 12s4.3 9.6 9.603 9.6c8.008 0 9.812-7.434 9.061-11.2H12v3.2h6.19A6.398 6.398 0 0 1 12 18.4a6.4 6.4 0 0 1 0-12.8c1.607 0 3.071.597 4.195 1.575l2.274-2.272A9.568 9.568 0 0 0 12.003 2.4Z" /></svg>
+</span></span></button></div><div class="z0xID_"><p class="axDOAG C3RXjX eGBYyp RYhd_E FKYmNB">عن فريشا</p><a class="OP1nBW cRHsF7" href="https://www.fresha.com/ar/careers">فرص عمل</a><a class="OP1nBW cRHsF7" href="https://www.fresha.com/ar/help-center">دعم العملاء</a><a class="OP1nBW cRHsF7" href="https://www.fresha.com/blog">المدونة</a><a class="OP1nBW cRHsF7" href="https://www.fresha.com/ar/sitemap">خريطة الموقع</a></div><div class="z0xID_"><p class="axDOAG C3RXjX eGBYyp RYhd_E FKYmNB">للأعمال</p><a class="OP1nBW cRHsF7" href="https://www.fresha.com/ar/for-business">للشركاء</a><a class="OP1nBW cRHsF7" href="https://www.fresha.com/ar/pricing">التسعير</a><a class="OP1nBW cRHsF7" href="https://www.fresha.com/ar/for-business/features/payments">أجهزة مسح البطاقات</a><a class="OP1nBW cRHsF7" href="https://www.fresha.com/help-center">مساعدة</a><a class="OP1nBW cRHsF7" href="https://www.freshastatus.com">الحالة</a></div><div class="z0xID_"><p class="axDOAG C3RXjX eGBYyp RYhd_E FKYmNB">قانوني</p><a class="OP1nBW cRHsF7" href="https://terms.fresha.com/privacy-policy">سياسة الخصوصية</a><a class="OP1nBW cRHsF7" href="https://terms.fresha.com/terms-service">شروط الخدمة</a><a class="OP1nBW cRHsF7" href="https://terms.fresha.com/terms-use">شروط الاستخدام</a></div><div class="z0xID_"><p class="axDOAG C3RXjX eGBYyp RYhd_E FKYmNB">تابعونا على مواقع التواصل الاجتماعي</p><a class="OP1nBW yCOZ7e" href="https://www.facebook.com/Fresha-1504479806470099" data-qa="https://www.facebook.com/Fresha-1504479806470099" target="_blank" rel="noopener noreferrer"><span class="v_Dfni VqDAZf veiqTU IgRW3w"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none">
+  <path
+    fill-rule="evenodd"
+    clip-rule="evenodd"
+    d="M6.25 5C6.25 4.65482 6.52982 4.375 6.875 4.375H15C15.3452 4.375 15.625 4.65482 15.625 5V13.125C15.625 13.4702 15.3452 13.75 15 13.75C14.6548 13.75 14.375 13.4702 14.375 13.125V6.50888L5.44194 15.4419C5.19786 15.686 4.80214 15.686 4.55806 15.4419C4.31398 15.1979 4.31398 14.8021 4.55806 14.5581L13.4911 5.625H6.875C6.52982 5.625 6.25 5.34518 6.25 5Z"
+  />
+</svg>
+</span><span>Facebook</span></a><a class="OP1nBW yCOZ7e" href="https://www.linkedin.com/company/shedul/" data-qa="https://www.linkedin.com/company/shedul/" target="_blank" rel="noopener noreferrer"><span class="v_Dfni VqDAZf veiqTU IgRW3w"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none">
+  <path
+    fill-rule="evenodd"
+    clip-rule="evenodd"
+    d="M6.25 5C6.25 4.65482 6.52982 4.375 6.875 4.375H15C15.3452 4.375 15.625 4.65482 15.625 5V13.125C15.625 13.4702 15.3452 13.75 15 13.75C14.6548 13.75 14.375 13.4702 14.375 13.125V6.50888L5.44194 15.4419C5.19786 15.686 4.80214 15.686 4.55806 15.4419C4.31398 15.1979 4.31398 14.8021 4.55806 14.5581L13.4911 5.625H6.875C6.52982 5.625 6.25 5.34518 6.25 5Z"
+  />
+</svg>
+</span><span>LinkedIn</span></a><a class="OP1nBW yCOZ7e" href="https://www.instagram.com/fresha" data-qa="https://www.instagram.com/fresha" target="_blank" rel="noopener noreferrer"><span class="v_Dfni VqDAZf veiqTU IgRW3w"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none">
+  <path
+    fill-rule="evenodd"
+    clip-rule="evenodd"
+    d="M6.25 5C6.25 4.65482 6.52982 4.375 6.875 4.375H15C15.3452 4.375 15.625 4.65482 15.625 5V13.125C15.625 13.4702 15.3452 13.75 15 13.75C14.6548 13.75 14.375 13.4702 14.375 13.125V6.50888L5.44194 15.4419C5.19786 15.686 4.80214 15.686 4.55806 15.4419C4.31398 15.1979 4.31398 14.8021 4.55806 14.5581L13.4911 5.625H6.875C6.52982 5.625 6.25 5.34518 6.25 5Z"
+  />
+</svg>
+</span><span>Instagram</span></a></div></div></footer><div class="s5PSu4"><div id="lang-switch-section" class="p_WF82"><form class="KgsEom"><select id="language-select" name="url" aria-label="العربية"><option value="https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ae-أبو-ظبي/sector-33" selected="">العربية</option><option value="https://www.fresha.com/lp/en/bt/gym-and-fitness/in/ae-abu-dhabi/sector-33">English</option></select><span class="A3eh8z" aria-hidden="true"><span class="v_Dfni CpPDl7 HP7xLd OmxmkZ"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.25 16.25">
+  <path
+    fill-rule="evenodd"
+    clip-rule="evenodd"
+    d="M10.2678 0.285536C13.7154 1.2257 16.25 4.37936 16.25 8.125C16.25 9.3889 15.9614 10.5854 15.4465 11.6522C15.4324 11.6908 15.4142 11.7286 15.3918 11.765L15.3879 11.7713C14.0853 14.3606 11.4388 16.1577 8.36407 16.2466C8.32958 16.2503 8.29445 16.2511 8.25898 16.2489C8.21441 16.2496 8.16974 16.25 8.125 16.25C3.63769 16.25 0 12.6123 0 8.125C0 3.63769 3.63769 0 8.125 0C8.81544 0 9.48576 0.0861194 10.1258 0.248202C10.1744 0.255058 10.2221 0.267603 10.2678 0.285536ZM1.25 8.125C1.25 7.00855 1.51613 5.95425 1.9884 5.02208L2.80368 7.19142C2.87469 7.38908 2.99467 7.56554 3.15245 7.70428C3.31204 7.84461 3.50496 7.94165 3.71276 7.98612L5.38406 8.34537L5.67894 8.95842L5.68438 8.96945C5.78859 9.17561 5.94723 9.34932 6.14313 9.47175C6.33902 9.59418 6.56468 9.66067 6.79566 9.664L6.89754 9.66406L6.29693 11.01C6.19676 11.2327 6.16405 11.48 6.20286 11.7212C6.24175 11.9628 6.35072 12.1878 6.51626 12.368L7.98656 13.9581L7.78466 14.9917C4.1458 14.8143 1.25 11.8078 1.25 8.125ZM3.07694 4.36533L3.72276 2.84406C4.91535 1.84884 6.45024 1.25 8.125 1.25C8.64119 1.25 9.14409 1.30689 9.62778 1.41474L10.2173 2.48319L8.12008 4.37996L7.15077 4.91406L5.49217 4.91405C5.24736 4.9153 5.00506 4.98797 4.80095 5.12313C4.59683 5.25829 4.43657 5.45007 4.33986 5.67496L3.9325 6.64185L3.07694 4.36533ZM5.64387 7.12267L5.13263 7.01278L5.49502 6.16406C5.49502 6.16406 6.99183 6.16361 7.18081 6.16384C7.36979 6.16406 7.57703 6.10685 7.75385 6.01304L8.72383 5.47689C8.81059 5.42907 8.89101 5.37059 8.96323 5.30281L11.0662 3.40297C11.2707 3.21285 11.406 2.96012 11.451 2.68461C11.4843 2.48077 11.4667 2.27301 11.4013 2.07938C13.5448 3.24347 15 5.5143 15 8.125C15 8.96929 14.8478 9.77804 14.5694 10.5253L10.949 8.29844C10.7989 8.20323 10.6294 8.14294 10.4528 8.12201L8.67191 7.88093C8.40247 7.8429 8.12798 7.89496 7.89115 8.02907C7.7236 8.12395 7.58157 8.25611 7.47528 8.41406L6.80562 8.41175L6.5099 7.80227C6.42766 7.62974 6.30567 7.47693 6.15508 7.35921C6.00517 7.242 5.83021 7.16106 5.64387 7.12267ZM14.0242 11.6575C12.9763 13.4038 11.175 14.6463 9.06976 14.9356L9.21489 14.1989C9.2501 14.0072 9.24201 13.8021 9.18847 13.6147C9.13493 13.4273 9.03884 13.2548 8.90767 13.1106L7.43698 11.5226L8.50901 9.12028L10.2916 9.36158L14.0242 11.6575Z"
+  />
+</svg>
+</span><p class="axDOAG FkLavb qLhAks Yy8KVI">العربية</p></span></form><script>document.querySelector("#language-select").onchange=function(){
+            var newUrl = new FormData(this.form).get("url");
+            document.location.replace(newUrl);
+          };</script><p class="axDOAG FkLavb o3HUQR PqUVna">© 2026 Fresha.com SV Ltd</p></div></div></div>
+        
+  <script>
+    (function () {
+      const pushToDataLayer = properties => {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push(properties);
+      };
+      
+      const B2C_SECTION = 'b2c web';
+      const defaultTrackingData = { section: B2C_SECTION };
+
+      const onPageView = pathname => {
+        let loginSource = undefined;
+        let uid = undefined;
+    
+        try {
+          const trackingStorage = JSON.parse(localStorage.getItem('trackingStorage'));
+          loginSource = trackingStorage.loginSource;
+          uid = trackingStorage.uid;
+        } catch (e) {}
+    
+        const eventData = {
+          page_location: pathname,
+          page_referrer: window.document.referrer,
+          page_title: window.document.title,
+          user_id: uid,
+          content_group: 'venues',
+          authorization_type: loginSource,
+          section: B2C_SECTION,
+        };
+        pushToDataLayer({ event: 'fresha.page_view', ...eventData });
+      };
+    
+      onPageView(window.location.pathname);
+
+      document.querySelectorAll('[data-tracking]').forEach(element => element.addEventListener('click', function (e) {
+        pushToDataLayer({
+          event: 'fresha.user_navigation_clicked',
+          interaction_value: e.target.dataset.tracking,
+          ...defaultTrackingData,
+        });
+      }));
+
+      document.querySelectorAll('[data-business-tracking]').forEach(element => element.addEventListener('click', function (e) {
+        pushToDataLayer({
+          event: 'fresha.for_business_navigation_click',
+          interaction_value: e.target.dataset.tracking,
+          ...defaultTrackingData,
+        });
+      }));
+      
+    })();
+  </script>
+  
+        
+  <script>
+    (function () {
+      var SESSION_COOKIE = 'fsid';
+      var SESSION_TTL_MS = 30 * 60 * 1000;
+      var CONTAINER_KEY = 'fresha.mt.container_id';
+      var UUID_V7 = /^[0-9a-f]{8}-[0-9a-f]{4}-7[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
+
+      function uuidv7() {
+        var bytes = new Uint8Array(16);
+        crypto.getRandomValues(bytes);
+        var ts = Date.now();
+        bytes[0] = Math.floor(ts / 0x10000000000) & 255;
+        bytes[1] = Math.floor(ts / 0x100000000) & 255;
+        bytes[2] = Math.floor(ts / 0x1000000) & 255;
+        bytes[3] = Math.floor(ts / 0x10000) & 255;
+        bytes[4] = Math.floor(ts / 0x100) & 255;
+        bytes[5] = ts & 255;
+        bytes[6] = (bytes[6] & 0x0f) | 0x70;
+        bytes[8] = (bytes[8] & 0x3f) | 0x80;
+        var hex = '';
+        for (var i = 0; i < 16; i++) {
+          hex += (bytes[i] + 0x100).toString(16).slice(1);
+        }
+        return (
+          hex.slice(0, 8) + '-' + hex.slice(8, 12) + '-' + hex.slice(12, 16) + '-' +
+          hex.slice(16, 20) + '-' + hex.slice(20)
+        );
+      }
+
+      function readCookie(name) {
+        var parts = document.cookie.split(';');
+        for (var i = 0; i < parts.length; i++) {
+          var kv = parts[i].split('=');
+          if (kv[0].trim() === name) {
+            return kv.slice(1).join('=');
+          }
+        }
+        return null;
+      }
+
+      function cookieDomain() {
+        var hostname = window.location.hostname;
+        if (/(^|\.)fresha\.com$/.test(hostname)) return '.fresha.com';
+        if (/\.fresha\.io$/.test(hostname)) return '.fresha.io';
+        return '';
+      }
+
+      function ensureSession() {
+        var existing = readCookie(SESSION_COOKIE);
+        var id = existing && UUID_V7.test(existing) ? existing : uuidv7();
+        var domain = cookieDomain();
+        document.cookie =
+          SESSION_COOKIE + '=' + id + '; path=/' +
+          (domain ? '; domain=' + domain : '') +
+          '; expires=' + new Date(Date.now() + SESSION_TTL_MS).toUTCString();
+      }
+
+      function getContainerId() {
+        try {
+          var stored = window.sessionStorage.getItem(CONTAINER_KEY);
+          if (stored && UUID_V7.test(stored)) return stored;
+          var minted = uuidv7();
+          window.sessionStorage.setItem(CONTAINER_KEY, minted);
+          return minted;
+        } catch (e) {
+          return uuidv7();
+        }
+      }
+
+      try {
+        ensureSession();
+
+        fetch((window.location.hostname === 'fresha.com'
+  ? 'https://www.fresha.com/graphql'
+  : new URL('/graphql', window.location.origin).href), {
+          method: 'POST',
+          credentials: 'include',
+          keepalive: true,
+          headers: {
+            'Content-Type': 'application/json',
+            'x-client-platform': 'web',
+          },
+          body: JSON.stringify({
+            query: " mutation LandingPages_RecordMarketplaceTrackingEvents_Mutation( $events: [MarketplaceTrackingEvent!]! ) { recordMarketplaceTrackingEvents(events: $events) { accepted rejected { eventId reason } } } ",
+            variables: {
+              events: [
+                {
+                  eventId: uuidv7(),
+                  containerId: getContainerId(),
+                  eventDetails: {
+                    pageView: {
+                      url: window.location.href,
+                      referrerUrl: document.referrer || null,
+                    },
+                  },
+                },
+              ],
+            },
+          }),
+        }).catch(function () {});
+      } catch (e) {
+        // Tracking must never break the page.
+      }
+    })();
+  </script>
+
+      </body>
+      </html>

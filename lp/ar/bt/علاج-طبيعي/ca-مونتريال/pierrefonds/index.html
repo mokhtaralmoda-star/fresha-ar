@@ -1,0 +1,1349 @@
+<!doctype html>
+      <html lang="ar" dir="rtl">
+      <head>
+        
+    <script>
+      window.setLocalStorageValWithExpiry = function (key, value, ttl) {
+        var setValNow = new Date();
+
+        var setValItem = {
+          value: value,
+          expiry: setValNow.getTime() + ttl,
+        };
+
+        try {
+          localStorage.setItem(key, JSON.stringify(setValItem));
+        } catch (e) {
+          // Do nothing
+        }
+      };
+
+      window.getLocaleStorageValWithExpiry = function (key) {
+        try {
+          var getValItemStr = localStorage.getItem(key);
+
+          if (!getValItemStr) {
+            return null;
+          }
+
+          var parsedItem = JSON.parse(getValItemStr);
+          var getValNow = new Date();
+
+          if (getValNow.getTime() > parsedItem.expiry) {
+            localStorage.removeItem(key);
+            return null;
+          }
+          return parsedItem.value;
+        } catch (e) {
+          // Do nothing
+        }
+      };
+    </script>
+  
+        
+    <script>
+      (function() {
+        var SESSION_REFERRER_KEY = 'referrer';
+
+        function getUtmSourceReferrer() {
+          var url = new URL(window.location.href);
+          var source = url.searchParams.get('utm_source');
+          if (source === 'facebook' || source === 'fb') {
+            return 'https://www.facebook.com';
+          }
+          if (source === 'instagram' || source === 'ig') {
+            return 'https://www.instagram.com';
+          }
+          return '';
+        }
+
+        function getSessionReferrer() {
+          try {
+            return window.sessionStorage.getItem(SESSION_REFERRER_KEY) || '';
+          } catch (e) {
+            return '';
+          }
+        }
+
+        function getDocumentReferrer() {
+          return window.document.referrer || '';
+        }
+
+        function getReferrer() {
+          return getDocumentReferrer() || getSessionReferrer() || getUtmSourceReferrer() || '';
+        }
+
+        // Don't overwrite existing referrer value
+        var existingReferrer = getSessionReferrer();
+        if (existingReferrer) {
+          return;
+        }
+
+        var referrer = getReferrer();
+        try {
+          window.sessionStorage.setItem(SESSION_REFERRER_KEY, referrer);
+        } catch (e) {
+          // sessionStorage might not be available (e.g., in private browsing mode)
+          // Silently fail - the tracking will just not work in this case
+        }
+      })();
+    </script>
+  
+        
+    <script>
+      document.cookie = 'freshaLocale=ar; path=/; domain=fresha.com'
+    </script>
+  
+        <meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="robots" content="index,follow"/><link rel="canonical" href="https://www.fresha.com/lp/ar/bt/علاج-طبيعي/ca-مونتريال/pierrefonds"/><title>‎أفضل علاج طبيعي بالقرب مني في Pierrefonds, مونتريال | ‎Fresha‎</title><meta name="description" content="‎احجزوا مواعيدكم عبر الإنترنت مع أفضل العلاج الطبيعي بالقرب منك في Pierrefonds. عروض وخصومات رائعة! يمكنكم قراءة تعليقات العملاء والمقارنة بين خدمات العلاج الطبيعي الأعلى تقييمًا بالقرب منكم على فريشا."/><meta property="og:type" content="website"/><meta property="og:locale" content="ar"/><meta property="og:title" content="‎أفضل علاج طبيعي بالقرب مني في Pierrefonds, مونتريال | ‎Fresha‎"/><meta property="og:description" content="‎احجزوا مواعيدكم عبر الإنترنت مع أفضل العلاج الطبيعي بالقرب منك في Pierrefonds. عروض وخصومات رائعة! يمكنكم قراءة تعليقات العملاء والمقارنة بين خدمات العلاج الطبيعي الأعلى تقييمًا بالقرب منكم على فريشا."/><meta property="og:image" content="https://images.fresha.com/lead-images/placeholders/therapy-center-51.jpg"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="‎أفضل علاج طبيعي بالقرب مني في Pierrefonds, مونتريال | ‎Fresha‎"/><meta name="twitter:description" content="‎احجزوا مواعيدكم عبر الإنترنت مع أفضل العلاج الطبيعي بالقرب منك في Pierrefonds. عروض وخصومات رائعة! يمكنكم قراءة تعليقات العملاء والمقارنة بين خدمات العلاج الطبيعي الأعلى تقييمًا بالقرب منكم على فريشا."/><meta name="twitter:image" content="https://images.fresha.com/lead-images/placeholders/therapy-center-51.jpg"/><meta name="apple-mobile-web-app-title" content="‎أفضل علاج طبيعي بالقرب مني في Pierrefonds, مونتريال | ‎Fresha‎"/><meta name="format-detection" content="telephone=no"/><link rel="apple-touch-icon" sizes="57x57" href="/lp/assets/ea21aa5494afb5de453f.png"/><link rel="apple-touch-icon" sizes="60x60" href="/lp/assets/2a6c26590eace0efc001.png"/><link rel="apple-touch-icon" sizes="72x72" href="/lp/assets/4223931fddacbdb71061.png"/><link rel="apple-touch-icon" sizes="76x76" href="/lp/assets/ea232d3b179523196199.png"/><link rel="apple-touch-icon" sizes="114x114" href="/lp/assets/8785c58c327751b15df6.png"/><link rel="apple-touch-icon" sizes="120x120" href="/lp/assets/aba6a0aaee4f44a49b4a.png"/><link rel="apple-touch-icon" sizes="144x144" href="/lp/assets/fad67048f4679225fd83.png"/><link rel="apple-touch-icon" sizes="152x152" href="/lp/assets/b67d7cd8a75fa98ce42c.png"/><link rel="apple-touch-icon" sizes="180x180" href="/lp/assets/2dcd68e80c220eda4361.png"/><link rel="icon" type="image/png" sizes="192x192" href="/lp/assets/a4a1765801cf342709e9.png"/><link rel="icon" type="image/png" sizes="16x16" href="/lp/assets/2eccb60d40a3fb7e47be.png"/><link rel="icon" type="image/png" sizes="32x32" href="/lp/assets/dfda749997c10bd9329f.png"/><link rel="icon" type="image/png" sizes="96x96" href="/lp/assets/b8da8f524da9cafea0bd.png"/><link rel="icon" type="image/x-icon" href="/lp/assets/6f1f53623245a591df2c.ico"/><link rel="shortcut icon" href="/lp/assets/6f1f53623245a591df2c.ico"/><meta name="theme-color" content="#ffffff"/>
+        <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://www.fresha.com/#website","url":"https://www.fresha.com/","name":"Fresha","publisher":{"@id":"https://www.fresha.com/#organization"},"potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.fresha.com/search?query={search_term_string}"},"query-input":"required name=search_term_string"}},{"@type":"Organization","@id":"https://www.fresha.com/#organization","url":"https://www.fresha.com/","name":"Fresha","logo":{"@type":"ImageObject","url":"https://www.fresha.com/assets/website/fresha-logo.png"},"sameAs":["https://www.facebook.com/TeamFresha/","https://www.instagram.com/fresha/?hl=en","https://www.linkedin.com/company/heyfresha/","https://www.youtube.com/channel/UCV8KMYuFnmEE0GVLZdhJUcg","https://x.com/heyfresha"],"contactPoint":{"@type":"ContactPoint","contactType":"customer service","areaServed":"CA"}},{"@type":["HealthAndBeautyBusiness","Physiotherapy"],"name":"Acupuncture au Laser Jean Legault","address":{"@type":"PostalAddress","streetAddress":"4948 Rue Perron","addressLocality":"Montréal","addressRegion":"Québec","postalCode":"H8Z 3J3","addressCountry":"CA"},"@id":"https://www.fresha.com/ar/lvp/acupuncture-au-laser-jean-legault-rue-perron-montreal-30XZA8#business","url":"https://www.fresha.com/ar/lvp/acupuncture-au-laser-jean-legault-rue-perron-montreal-30XZA8","image":"https://images.fresha.com/lead-images/placeholders/therapy-center-51.jpg","telephone":"+1 514-684-9857","sameAs":["https://www.google.com/maps/place/?q=place_id:ChIJ1cm0vUQ7yUwR4H_2N8ovNuU","http://www.jeanlegault.com/"],"geo":{"@type":"GeoCoordinates","latitude":45.502178,"longitude":-73.835072}},{"@type":["HealthAndBeautyBusiness","Physiotherapy"],"name":"Clinique antidouleur Zhen Li 软伤疼痛诊所","address":{"@type":"PostalAddress","streetAddress":"4870 Rue des Érables","addressLocality":"Montréal","addressRegion":"Québec","postalCode":"H9J 1W4","addressCountry":"CA"},"@id":"https://www.fresha.com/ar/lvp/clinique-antidouleur-zhen-li-ruan-shang-teng-tong-zhen-suo-rue-des-erables-VEg7b2#business","url":"https://www.fresha.com/ar/lvp/clinique-antidouleur-zhen-li-ruan-shang-teng-tong-zhen-suo-rue-des-erables-VEg7b2","image":"https://images.fresha.com/lead-images/placeholders/therapy-center-30.jpg","telephone":"+1 438-501-2607","sameAs":["https://www.google.com/maps/place/?q=place_id:ChIJ72j6oQI7yUwRUZn-qhCcx_k","https://www.facebook.com/zhenliacupuncture","https://zhenliacupuncture.ca/"],"geo":{"@type":"GeoCoordinates","latitude":45.4651953,"longitude":-73.8751394}},{"@type":["HealthAndBeautyBusiness","Physiotherapy"],"name":"Kinatex Pierrefonds","address":{"@type":"PostalAddress","streetAddress":"Suite 30, 12774 Boulevard Gouin Ouest","addressLocality":"Montréal","addressRegion":"Québec","postalCode":"H8Z 1W5","addressCountry":"CA"},"@id":"https://www.fresha.com/ar/lvp/kinatex-sports-physio-pierrefonds-boulevard-gouin-ouest-montreal-wrgBn6#business","url":"https://www.fresha.com/ar/lvp/kinatex-sports-physio-pierrefonds-boulevard-gouin-ouest-montreal-wrgBn6","image":"https://images.fresha.com/lead-images/placeholders/therapy-center-6.jpg","telephone":"+1 514-548-2687","sameAs":["https://www.google.com/maps/place/?q=place_id:ChIJdcamSUQ7yUwRiu6tOvg5CGM","https://www.instagram.com/kinatex_ouest/","https://www.facebook.com/kinatexpierrefonds/","https://www.kinatex.com/cliniques/pierrefonds/"],"geo":{"@type":"GeoCoordinates","latitude":45.5036247,"longitude":-73.8374514}},{"@type":["HealthAndBeautyBusiness","Physiotherapy"],"name":"Physiomentum Sports Medicine Centre","address":{"@type":"PostalAddress","streetAddress":"3872 Boulevard Saint-Charles","addressLocality":"Montréal","addressRegion":"Québec","postalCode":"H9H 3C6","addressCountry":"CA"},"@id":"https://www.fresha.com/ar/lvp/physiomentum-sports-medicine-centre-boulevard-saint-charles-montreal-ZDGB9A#business","url":"https://www.fresha.com/ar/lvp/physiomentum-sports-medicine-centre-boulevard-saint-charles-montreal-ZDGB9A","image":"https://images.fresha.com/lead-images/placeholders/therapy-center-17.jpg","telephone":"+1 514-626-9996","sameAs":["https://www.google.com/maps/place/?q=place_id:ChIJ5zheBus7yUwRjX-juymX14M","https://www.instagram.com/physiomentum/","https://www.facebook.com/Physiomentum","http://www.physiomentum.com/"],"geo":{"@type":"GeoCoordinates","latitude":45.4602704,"longitude":-73.8673002}},{"@type":["HealthAndBeautyBusiness","Physiotherapy"],"name":"Pointe Claire Physiotherapy Clinic Universal","address":{"@type":"PostalAddress","streetAddress":"404, 955 Boulevard Saint-Jean","addressLocality":"Pointe-Claire","addressRegion":"Québec","postalCode":"H9R 5N8","addressCountry":"CA"},"@id":"https://www.fresha.com/ar/lvp/pointe-claire-physiotherapy-clinic-universal-boulevard-saint-jean-pointe-claire-a2JN53#business","url":"https://www.fresha.com/ar/lvp/pointe-claire-physiotherapy-clinic-universal-boulevard-saint-jean-pointe-claire-a2JN53","image":"https://images.fresha.com/lead-images/placeholders/therapy-center-24.jpg","telephone":"(888) 353-4270","sameAs":["https://www.google.com/maps/place/?q=place_id:ChIJk__k9Ho8yUwRLtZMoYWU_-o","https://physiotherapieuniverselle.com/cliniques/pointe-claire/"],"geo":{"@type":"GeoCoordinates","latitude":45.468842,"longitude":-73.8291453}},{"@type":["HealthAndBeautyBusiness","Physiotherapy"],"name":"Action Sport Physio West Island","address":{"@type":"PostalAddress","streetAddress":"6th Floor, 3883 Boulevard Saint-Jean","addressLocality":"Dollard-des-Ormeaux","addressRegion":"Québec","postalCode":"H9G 3B9","addressCountry":"CA"},"@id":"https://www.fresha.com/ar/lvp/action-sport-physio-west-island-boulevard-saint-jean-dollard-des-ormeaux-Lyj5bl#business","url":"https://www.fresha.com/ar/lvp/action-sport-physio-west-island-boulevard-saint-jean-dollard-des-ormeaux-Lyj5bl","image":"https://images.fresha.com/lead-images/placeholders/therapy-center-21.jpg","telephone":"+1 514-624-2424","sameAs":["https://www.google.com/maps/place/?q=place_id:ChIJc592sF0ByUwR2mgvo0Es2uU","https://www.instagram.com/actionsportphysio_westisland","https://www.facebook.com/aspwestisland/","http://www.actionsportphysio.com/fr/cliniques/west-island/","https://twitter.com/CliniquesPhysio"],"geo":{"@type":"GeoCoordinates","latitude":45.475192,"longitude":-73.836124}},{"@type":["HealthAndBeautyBusiness","Physiotherapy"],"name":"West island Harmony Acupuncture Clinic","address":{"@type":"PostalAddress","streetAddress":"unit #700, 6600 transcanadienne","addressLocality":"Pointe-Claire","addressRegion":"Québec","postalCode":"H9R 4S2","addressCountry":"CA"},"@id":"https://www.fresha.com/ar/lvp/west-island-harmony-acupuncture-clinic-saint-charles-boulevard-kirkland-oveVJG#business","url":"https://www.fresha.com/ar/lvp/west-island-harmony-acupuncture-clinic-saint-charles-boulevard-kirkland-oveVJG","image":"https://images.fresha.com/lead-images/placeholders/therapy-center-32.jpg","telephone":"+1 514-797-2914","sameAs":["https://www.google.com/maps/place/?q=place_id:ChIJ-xpZ66g-yUwRhRsj9Y3aGbI","https://www.westislandacupuncture.ca/"],"geo":{"@type":"GeoCoordinates","latitude":45.4621259,"longitude":-73.825546}},{"@type":["HealthAndBeautyBusiness","Physiotherapy"],"name":"Clinique Chiro-Santé Kirkland","address":{"@type":"PostalAddress","streetAddress":"Bureau 25, 3608 Saint-Charles Boulevard","addressLocality":"Kirkland","addressRegion":"Quebec","postalCode":"H9J 2C3","addressCountry":"CA"},"@id":"https://www.fresha.com/ar/lvp/clinique-chiro-sante-kirkland-saint-charles-boulevard-kirkland-2GPr52#business","url":"https://www.fresha.com/ar/lvp/clinique-chiro-sante-kirkland-saint-charles-boulevard-kirkland-2GPr52","image":"https://images.fresha.com/lead-images/placeholders/therapy-center-19.jpg","telephone":"+1 514-694-7111","sameAs":["https://www.google.com/maps/place/?q=place_id:ChIJscjMnO47yUwRg8YpogLR1h8","http://www.chirokirkland.com/"],"geo":{"@type":"GeoCoordinates","latitude":45.4568433,"longitude":-73.8639845}},{"@type":["HealthAndBeautyBusiness","Physiotherapy"],"name":"YiZhuoTang Acupuncture Clinique","address":{"@type":"PostalAddress","streetAddress":"suite 3300, 4000 Boulevard Saint-Jean","addressLocality":"Dollard-Des Ormeaux","addressRegion":"Quebec","postalCode":"H9G 1X1","addressCountry":"CA"},"@id":"https://www.fresha.com/ar/lvp/yizhuotang-acupuncture-clinique-boulevard-saint-jean-dollard-des-ormeaux-VEgaYr#business","url":"https://www.fresha.com/ar/lvp/yizhuotang-acupuncture-clinique-boulevard-saint-jean-dollard-des-ormeaux-VEgaYr","image":"https://images.fresha.com/lead-images/placeholders/therapy-center-46.jpg","telephone":"+1 514-561-5678","sameAs":["https://www.google.com/maps/place/?q=place_id:ChIJJXWRoOo7yUwRwQ49jXRit5w"],"geo":{"@type":"GeoCoordinates","latitude":45.4746379,"longitude":-73.837374}},{"@type":["HealthAndBeautyBusiness","Physiotherapy"],"name":"Catalyst Santé - DDO","address":{"@type":"PostalAddress","streetAddress":"475 Rue Westminster","addressLocality":"Dollard-des-Ormeaux","addressRegion":"Québec","postalCode":"H9G 2S3","addressCountry":"CA"},"@id":"https://www.fresha.com/ar/lvp/catalyst-sante-ddo-rue-westminster-dollard-des-ormeaux-6QXMBb#business","url":"https://www.fresha.com/ar/lvp/catalyst-sante-ddo-rue-westminster-dollard-des-ormeaux-6QXMBb","image":"https://images.fresha.com/lead-images/placeholders/therapy-center-34.jpg","telephone":"+1 514-421-2324","sameAs":["https://www.google.com/maps/place/?q=place_id:ChIJ3zb4rYw8yUwRjTE7iwysm3Q","https://www.instagram.com/catalystsante/","https://www.facebook.com/CatalystSante/","https://www.catalystsante.com/"],"geo":{"@type":"GeoCoordinates","latitude":45.476428,"longitude":-73.839584}},{"@type":["HealthAndBeautyBusiness","Physiotherapy"],"name":"Kinatex West Island","address":{"@type":"PostalAddress","streetAddress":"Suite 201","addressLocality":"Kirkland","addressRegion":"Québec","postalCode":"H9H 0A7","addressCountry":"CA"},"@id":"https://www.fresha.com/ar/lvp/kinatex-sports-physio-west-island-kirkland-rwNa6o#business","url":"https://www.fresha.com/ar/lvp/kinatex-sports-physio-west-island-kirkland-rwNa6o","image":"https://images.fresha.com/lead-images/placeholders/therapy-center-38.jpg","telephone":"+1 514-426-1000","sameAs":["https://www.google.com/maps/place/?q=place_id:ChIJiaEAzGY8yUwRr59yMtDPfCo","https://www.instagram.com/kinatex.westisland/","https://www.facebook.com/kinatexwestisland","https://www.kinatex.com/cliniques/west-island/"],"geo":{"@type":"GeoCoordinates","latitude":45.4548506,"longitude":-73.8594291}},{"@type":["HealthAndBeautyBusiness","Physiotherapy"],"name":"Dr Francois Hains, Chiropraticien","address":{"@type":"PostalAddress","streetAddress":"bureau 207, 3700 Boulevard des Sources","addressLocality":"Dollard-Des Ormeaux","addressRegion":"Quebec","postalCode":"H9B 3L8","addressCountry":"CA"},"@id":"https://www.fresha.com/ar/lvp/dr-francois-hains-chiropraticien-sources-boulevard-dollard-des-ormeaux-xZW8bx#business","url":"https://www.fresha.com/ar/lvp/dr-francois-hains-chiropraticien-sources-boulevard-dollard-des-ormeaux-xZW8bx","image":"https://images.fresha.com/lead-images/placeholders/therapy-center-3.jpg","telephone":"+1 514-683-3360","sameAs":["https://www.google.com/maps/place/?q=place_id:ChIJzZTr5ZQ8yUwRq7us2EusLpI","http://www.centreprosante.com/"],"geo":{"@type":"GeoCoordinates","latitude":45.4887695,"longitude":-73.8029785}},{"@type":["HealthAndBeautyBusiness","Physiotherapy"],"name":"West Island TCM","address":{"@type":"PostalAddress","streetAddress":"189 Hymus Blvd Suite#206, Pointe-Claire, QC H9R 1E9, Canada","addressCountry":"CA"},"@id":"https://www.fresha.com/ar/lvp/zenergy-acupuncture-tcm-clinic-hymus-boulevard-pointe-claire-a2JPb2#business","url":"https://www.fresha.com/ar/lvp/zenergy-acupuncture-tcm-clinic-hymus-boulevard-pointe-claire-a2JPb2","image":"https://images.fresha.com/lead-images/placeholders/therapy-center-24.jpg","telephone":"+1 438-505-4088","sameAs":["https://www.google.com/maps/place/?q=place_id:ChIJfbBZstU7yUwRrr6LOWz0CS8","http://westislandcm.com/"],"geo":{"@type":"GeoCoordinates","latitude":45.4529708,"longitude":-73.8687875}},{"@type":["HealthAndBeautyBusiness","Physiotherapy"],"name":"Acupuncture West Island","address":{"@type":"PostalAddress","streetAddress":"104, 560 Boulevard Jacques Bizard","addressLocality":"Montréal","addressRegion":"Québec","postalCode":"H9C 2J8","addressCountry":"CA"},"@id":"https://www.fresha.com/ar/lvp/acupuncture-west-island-boulevard-jacques-bizard-montreal-15XKKE#business","url":"https://www.fresha.com/ar/lvp/acupuncture-west-island-boulevard-jacques-bizard-montreal-15XKKE","image":"https://images.fresha.com/lead-images/placeholders/therapy-center-13.jpg","telephone":"+1 514-700-1594","sameAs":["https://www.google.com/maps/place/?q=place_id:ChIJFe5OcQo7yUwRWg9C3wzOBVs","https://www.instagram.com/acupuncturewestisland/","https://www.facebook.com/AcupunctureWI/","http://www.acupuncturewestisland.ca/"],"geo":{"@type":"GeoCoordinates","latitude":45.49471,"longitude":-73.87786}},{"@type":["HealthAndBeautyBusiness","Physiotherapy"],"name":"Centre Chiropratique Roxboro | Chiropraticien à Montréal","address":{"@type":"PostalAddress","streetAddress":"10400 Boulevard Gouin Ouest","addressLocality":"Montréal","addressRegion":"Québec","postalCode":"H8Y 1W4","addressCountry":"CA"},"@id":"https://www.fresha.com/ar/lvp/centre-chiropratique-roxboro-boulevard-gouin-ouest-montreal-ovew58#business","url":"https://www.fresha.com/ar/lvp/centre-chiropratique-roxboro-boulevard-gouin-ouest-montreal-ovew58","image":"https://images.fresha.com/lead-images/placeholders/therapy-center-42.jpg","telephone":"+1 514-683-3476","sameAs":["https://www.google.com/maps/place/?q=place_id:ChIJQ6vGIq08yUwRw1GlLq7pgE0","https://www.instagram.com/chirobeghdadi/","https://www.facebook.com/profile.php?id=100068599577424","http://www.chiroroxboro.com/"],"geo":{"@type":"GeoCoordinates","latitude":45.5101534,"longitude":-73.8044992}},{"@type":["HealthAndBeautyBusiness","DaySpa"],"name":"ARC Physio","address":{"@type":"PostalAddress","streetAddress":"400, 189 Hymus Boulevard","addressLocality":"Pointe-Claire","addressRegion":"Quebec","postalCode":"H9R 1E9","addressCountry":"CA"},"@id":"https://www.fresha.com/ar/lvp/arc-physio-hymus-boulevard-pointe-claire-7rlyA5#business","url":"https://www.fresha.com/ar/lvp/arc-physio-hymus-boulevard-pointe-claire-7rlyA5","image":"https://images.fresha.com/lead-images/placeholders/therapy-center-43.jpg","telephone":"+1 438-230-2388","sameAs":["https://www.google.com/maps/place/?q=place_id:ChIJS6cR1Mk9yUwRQym9ecgFC-0","https://www.instagram.com/arcphysio","https://www.facebook.com/ARCrehabphysio","https://www.arcrehabphysio.ca/"],"geo":{"@type":"GeoCoordinates","latitude":45.4618591,"longitude":-73.8205675}},{"@type":["HealthAndBeautyBusiness","DaySpa"],"name":"Integral Performance Physio West Island","address":{"@type":"PostalAddress","streetAddress":"Suite: 200, 3675 Boulevard des Sources","addressLocality":"Dollard-des-Ormeaux","addressRegion":"Québec","postalCode":"H9B 2T6","addressCountry":"CA"},"@id":"https://www.fresha.com/ar/lvp/integral-physiotherapy-osteopathy-massage-west-island-dollard-des-ormeaux-0qRqeo#business","url":"https://www.fresha.com/ar/lvp/integral-physiotherapy-osteopathy-massage-west-island-dollard-des-ormeaux-0qRqeo","image":"https://images.fresha.com/lead-images/placeholders/therapy-center-19.jpg","telephone":"+1 514-684-3636","sameAs":["https://www.google.com/maps/place/?q=place_id:ChIJOWR5QMY9yUwR_-82kgCEnlA","http://www.integralperformancephysio.com/"],"geo":{"@type":"GeoCoordinates","latitude":45.4886893,"longitude":-73.8004882}},{"@type":["HealthAndBeautyBusiness","DaySpa"],"name":"Modo Yoga West Island","address":{"@type":"PostalAddress","streetAddress":"3669 Boulevard des Sources","addressLocality":"Dollard-des-Ormeaux","addressRegion":"Québec","postalCode":"H9B 2T6","addressCountry":"CA"},"@id":"https://www.fresha.com/ar/lvp/modo-yoga-west-island-boulevard-des-sources-dollard-des-ormeaux-15XeJQ#business","url":"https://www.fresha.com/ar/lvp/modo-yoga-west-island-boulevard-des-sources-dollard-des-ormeaux-15XeJQ","image":"https://images.fresha.com/lead-images/placeholders/gym-and-fitness-22.jpg","telephone":"+1 514-542-3366","sameAs":["https://modoyoga.com/west-island/"],"geo":{"@type":"GeoCoordinates","latitude":45.4885085,"longitude":-73.8003529}},{"@type":["HealthAndBeautyBusiness","DaySpa"],"name":"RISE Clinic - Help with Anxiety and Depression West Island Psychology","address":{"@type":"PostalAddress","streetAddress":"4465 Bd des Sources, Roxboro, QC H8Y 3C1, Canada","addressCountry":"CA"},"@id":"https://www.fresha.com/ar/lvp/rise-clinic-help-with-anxiety-and-depression-west-island-psychology-boulevard-LyjQkJ#business","url":"https://www.fresha.com/ar/lvp/rise-clinic-help-with-anxiety-and-depression-west-island-psychology-boulevard-LyjQkJ","image":"https://images.fresha.com/lead-images/placeholders/therapy-center-47.jpg","telephone":"+1 514-232-6445","sameAs":["http://www.riseclinic.ca/"],"geo":{"@type":"GeoCoordinates","latitude":45.4980221,"longitude":-73.8108239}},{"@type":["HealthAndBeautyBusiness","DaySpa"],"name":"Medevie Ostéopathie (Private Extended Health Care Services)","address":{"@type":"PostalAddress","streetAddress":"400, 4226 Boulevard Saint-Jean","addressLocality":"Dollard-des-Ormeaux","addressRegion":"Québec","postalCode":"H9G 1X5","addressCountry":"CA"},"@id":"https://www.fresha.com/ar/lvp/medevie-osteopathie-private-extended-health-care-services-boulevard-saint-jean-58Xxe7#business","url":"https://www.fresha.com/ar/lvp/medevie-osteopathie-private-extended-health-care-services-boulevard-saint-jean-58Xxe7","image":"https://images.fresha.com/lead-images/placeholders/massage-111.jpg","telephone":"+1 514-245-7532","sameAs":["https://www.google.com/maps/place/?q=place_id:ChIJiRaWI3s8yUwRNOTAdjhDrz4","https://www.facebook.com/medevieosteopathy","http://www.medevie.com/"],"geo":{"@type":"GeoCoordinates","latitude":45.4796772,"longitude":-73.8423174}},{"@type":["HealthAndBeautyBusiness","DaySpa"],"name":"Skylit Ayurveda Inc.","address":{"@type":"PostalAddress","streetAddress":"306 Mnt de l'Église Ste 202, L'Île-Bizard—Sainte-Geneviève, Quebec H9C 1G9, Canada","addressCountry":"CA"},"@id":"https://www.fresha.com/ar/lvp/skylit-ayurveda-montee-de-leglise-montreal-8JLNw2#business","url":"https://www.fresha.com/ar/lvp/skylit-ayurveda-montee-de-leglise-montreal-8JLNw2","image":"https://images.fresha.com/lead-images/placeholders/therapy-center-31.jpg","telephone":"+1 514-242-3545","sameAs":["http://www.skylitayurveda.com/"],"geo":{"@type":"GeoCoordinates","latitude":45.4863965,"longitude":-73.8793523}},{"@type":["HealthAndBeautyBusiness","HealthClub"],"name":"Synergy Sports Therapy and Performance","address":{"@type":"PostalAddress","streetAddress":"90D Boulevard Brunswick","addressLocality":"Dollard-des-Ormeaux","addressRegion":"Québec","postalCode":"H9B 2C5","addressCountry":"CA"},"@id":"https://www.fresha.com/ar/lvp/synergy-sports-therapy-and-performance-boulevard-brunswick-dollard-des-ormeaux-q8ZeDy#business","url":"https://www.fresha.com/ar/lvp/synergy-sports-therapy-and-performance-boulevard-brunswick-dollard-des-ormeaux-q8ZeDy","image":"https://images.fresha.com/lead-images/placeholders/personal-trainer-3.jpg","telephone":"+1 514-575-0550","sameAs":["https://www.google.com/maps/place/?q=place_id:ChIJdZq4IvM8yUwRO7rzetuu1QA","https://www.instagram.com/synergysportsmtl/","https://www.facebook.com/synergysportsmtl/","http://synergymtl.com/"],"geo":{"@type":"GeoCoordinates","latitude":45.4759361,"longitude":-73.812256}},{"@type":["HealthAndBeautyBusiness","DaySpa"],"name":"Osteopathie West Island","address":{"@type":"PostalAddress","streetAddress":"6600 Trans-Canada Hwy Ste 500, Pointe-Claire, Quebec H9R 4S2, Canada","addressCountry":"CA"},"@id":"https://www.fresha.com/ar/lvp/osteopathie-west-island-trans-canada-highway-pointe-claire-Qv4Knl#business","url":"https://www.fresha.com/ar/lvp/osteopathie-west-island-trans-canada-highway-pointe-claire-Qv4Knl","image":"https://images.fresha.com/lead-images/placeholders/therapy-center-36.jpg","telephone":"+1 514-693-2800","sameAs":["http://osteopathewestisland.com/"],"geo":{"@type":"GeoCoordinates","latitude":45.4621259,"longitude":-73.825546}},{"@type":["HealthAndBeautyBusiness","MedicalClinic"],"name":"TeamNutrition","address":{"@type":"PostalAddress","streetAddress":"3883 Boul. Saint-Jean #600, Dollard-des-Ormeaux, QC H9G 3B9, Canada","addressCountry":"CA"},"@id":"https://www.fresha.com/ar/lvp/teamnutrition-boulevard-saint-jean-dollard-des-ormeaux-PVZxD9#business","url":"https://www.fresha.com/ar/lvp/teamnutrition-boulevard-saint-jean-dollard-des-ormeaux-PVZxD9","image":"https://images.fresha.com/lead-images/placeholders/therapy-center-42.jpg","telephone":"+1 514-943-6896","sameAs":["https://teamnutrition.ca/"],"geo":{"@type":"GeoCoordinates","latitude":45.4751991,"longitude":-73.8361324}},{"@type":["HealthAndBeautyBusiness","DaySpa"],"name":"Nutrimedicine Center- Alyaa Ghanema","address":{"@type":"PostalAddress","streetAddress":"4230 Boul. Saint-Jean, Dollard-des-Ormeaux, QC H9H 3X4, Canada","addressCountry":"CA"},"@id":"https://www.fresha.com/ar/lvp/nutrimedicine-center-alyaa-ghanema-boulevard-saint-jean-dollard-des-ormeaux-PVNkvV#business","url":"https://www.fresha.com/ar/lvp/nutrimedicine-center-alyaa-ghanema-boulevard-saint-jean-dollard-des-ormeaux-PVNkvV","image":"https://images.fresha.com/lead-images/placeholders/therapy-center-32.jpg","telephone":"+1 438-924-4664","sameAs":["https://www.nutrimedicine.center/"],"geo":{"@type":"GeoCoordinates","latitude":45.480179,"longitude":-73.8427831}},{"@type":["HealthAndBeautyBusiness","MedicalClinic"],"name":"SPAR Training","address":{"@type":"PostalAddress","streetAddress":"845E Rue Tecumseh","addressLocality":"Dollard-des-Ormeaux","addressRegion":"Québec","postalCode":"H9R 1A1","addressCountry":"CA"},"@id":"https://www.fresha.com/ar/lvp/spar-training-rue-tecumseh-dollard-des-ormeaux-xZVP5x#business","url":"https://www.fresha.com/ar/lvp/spar-training-rue-tecumseh-dollard-des-ormeaux-xZVP5x","image":"https://images.fresha.com/lead-images/placeholders/weight-loss-25.jpg","telephone":"+1 514-886-2847","sameAs":["https://www.google.com/maps/place/?q=place_id:ChIJM8yNiLA9yUwRgAp1U1fJgSg","https://www.instagram.com/spartrainingmtl/","https://www.facebook.com/spartrainingmtl/","https://spartrainingmtl.com/","https://twitter.com/spar_training"],"geo":{"@type":"GeoCoordinates","latitude":45.4776561,"longitude":-73.8144971}},{"@type":["HealthAndBeautyBusiness","HealthClub"],"name":"Kinelite West-Island | Kinésio, Entrainement \u0026 Clinique sportive","address":{"@type":"PostalAddress","streetAddress":"15 Rue de la Triade","addressLocality":"Pointe-Claire","addressRegion":"Québec","postalCode":"H9R 0E1","addressCountry":"CA"},"@id":"https://www.fresha.com/ar/lvp/kinelite-west-island-kinesiologues-et-cliniques-de-sante-rue-de-la-triade-pointe-n6zal9#business","url":"https://www.fresha.com/ar/lvp/kinelite-west-island-kinesiologues-et-cliniques-de-sante-rue-de-la-triade-pointe-n6zal9","image":"https://images.fresha.com/lead-images/placeholders/personal-trainer-35.jpg","telephone":"(877) 211-7817","sameAs":["https://www.google.com/maps/place/?q=place_id:ChIJIRVPjn49yUwR7aQ1IHZwZsE","https://www.instagram.com/kinelite.ca/","https://www.facebook.com/Kinelite.ca/","https://kinelite.ca/"],"geo":{"@type":"GeoCoordinates","latitude":45.4634979,"longitude":-73.8207381}},{"@type":["HealthAndBeautyBusiness","MedicalClinic"],"name":"Naureen Hunani Nutrition","address":{"@type":"PostalAddress","streetAddress":"161 Avenue Frontenac","addressLocality":"Pointe-Claire","addressRegion":"Québec","postalCode":"H9R 0H7","addressCountry":"CA"},"@id":"https://www.fresha.com/ar/lvp/naureen-hunani-nutrition-avenue-frontenac-pointe-claire-BokK7q#business","url":"https://www.fresha.com/ar/lvp/naureen-hunani-nutrition-avenue-frontenac-pointe-claire-BokK7q","image":"https://images.fresha.com/lead-images/placeholders/therapy-center-53.jpg","telephone":"+1 514-267-6673","sameAs":["http://www.naureenhunani.com/"],"geo":{"@type":"GeoCoordinates","latitude":45.4691029,"longitude":-73.827012}},{"@type":"ItemList","@id":"https://www.fresha.com/lp/ar/bt/علاج-طبيعي/ca-مونتريال/pierrefonds#itemlist","numberOfItems":28,"itemListOrder":"https://schema.org/ItemListUnordered","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://www.fresha.com/ar/lvp/acupuncture-au-laser-jean-legault-rue-perron-montreal-30XZA8#business"}},{"@type":"ListItem","position":2,"item":{"@id":"https://www.fresha.com/ar/lvp/clinique-antidouleur-zhen-li-ruan-shang-teng-tong-zhen-suo-rue-des-erables-VEg7b2#business"}},{"@type":"ListItem","position":3,"item":{"@id":"https://www.fresha.com/ar/lvp/kinatex-sports-physio-pierrefonds-boulevard-gouin-ouest-montreal-wrgBn6#business"}},{"@type":"ListItem","position":4,"item":{"@id":"https://www.fresha.com/ar/lvp/physiomentum-sports-medicine-centre-boulevard-saint-charles-montreal-ZDGB9A#business"}},{"@type":"ListItem","position":5,"item":{"@id":"https://www.fresha.com/ar/lvp/pointe-claire-physiotherapy-clinic-universal-boulevard-saint-jean-pointe-claire-a2JN53#business"}},{"@type":"ListItem","position":6,"item":{"@id":"https://www.fresha.com/ar/lvp/action-sport-physio-west-island-boulevard-saint-jean-dollard-des-ormeaux-Lyj5bl#business"}},{"@type":"ListItem","position":7,"item":{"@id":"https://www.fresha.com/ar/lvp/west-island-harmony-acupuncture-clinic-saint-charles-boulevard-kirkland-oveVJG#business"}},{"@type":"ListItem","position":8,"item":{"@id":"https://www.fresha.com/ar/lvp/clinique-chiro-sante-kirkland-saint-charles-boulevard-kirkland-2GPr52#business"}},{"@type":"ListItem","position":9,"item":{"@id":"https://www.fresha.com/ar/lvp/yizhuotang-acupuncture-clinique-boulevard-saint-jean-dollard-des-ormeaux-VEgaYr#business"}},{"@type":"ListItem","position":10,"item":{"@id":"https://www.fresha.com/ar/lvp/catalyst-sante-ddo-rue-westminster-dollard-des-ormeaux-6QXMBb#business"}},{"@type":"ListItem","position":11,"item":{"@id":"https://www.fresha.com/ar/lvp/kinatex-sports-physio-west-island-kirkland-rwNa6o#business"}},{"@type":"ListItem","position":12,"item":{"@id":"https://www.fresha.com/ar/lvp/dr-francois-hains-chiropraticien-sources-boulevard-dollard-des-ormeaux-xZW8bx#business"}},{"@type":"ListItem","position":13,"item":{"@id":"https://www.fresha.com/ar/lvp/zenergy-acupuncture-tcm-clinic-hymus-boulevard-pointe-claire-a2JPb2#business"}},{"@type":"ListItem","position":14,"item":{"@id":"https://www.fresha.com/ar/lvp/acupuncture-west-island-boulevard-jacques-bizard-montreal-15XKKE#business"}},{"@type":"ListItem","position":15,"item":{"@id":"https://www.fresha.com/ar/lvp/centre-chiropratique-roxboro-boulevard-gouin-ouest-montreal-ovew58#business"}},{"@type":"ListItem","position":16,"item":{"@id":"https://www.fresha.com/ar/lvp/arc-physio-hymus-boulevard-pointe-claire-7rlyA5#business"}},{"@type":"ListItem","position":17,"item":{"@id":"https://www.fresha.com/ar/lvp/integral-physiotherapy-osteopathy-massage-west-island-dollard-des-ormeaux-0qRqeo#business"}},{"@type":"ListItem","position":18,"item":{"@id":"https://www.fresha.com/ar/lvp/modo-yoga-west-island-boulevard-des-sources-dollard-des-ormeaux-15XeJQ#business"}},{"@type":"ListItem","position":19,"item":{"@id":"https://www.fresha.com/ar/lvp/rise-clinic-help-with-anxiety-and-depression-west-island-psychology-boulevard-LyjQkJ#business"}},{"@type":"ListItem","position":20,"item":{"@id":"https://www.fresha.com/ar/lvp/medevie-osteopathie-private-extended-health-care-services-boulevard-saint-jean-58Xxe7#business"}},{"@type":"ListItem","position":21,"item":{"@id":"https://www.fresha.com/ar/lvp/skylit-ayurveda-montee-de-leglise-montreal-8JLNw2#business"}},{"@type":"ListItem","position":22,"item":{"@id":"https://www.fresha.com/ar/lvp/synergy-sports-therapy-and-performance-boulevard-brunswick-dollard-des-ormeaux-q8ZeDy#business"}},{"@type":"ListItem","position":23,"item":{"@id":"https://www.fresha.com/ar/lvp/osteopathie-west-island-trans-canada-highway-pointe-claire-Qv4Knl#business"}},{"@type":"ListItem","position":24,"item":{"@id":"https://www.fresha.com/ar/lvp/teamnutrition-boulevard-saint-jean-dollard-des-ormeaux-PVZxD9#business"}},{"@type":"ListItem","position":25,"item":{"@id":"https://www.fresha.com/ar/lvp/nutrimedicine-center-alyaa-ghanema-boulevard-saint-jean-dollard-des-ormeaux-PVNkvV#business"}},{"@type":"ListItem","position":26,"item":{"@id":"https://www.fresha.com/ar/lvp/spar-training-rue-tecumseh-dollard-des-ormeaux-xZVP5x#business"}},{"@type":"ListItem","position":27,"item":{"@id":"https://www.fresha.com/ar/lvp/kinelite-west-island-kinesiologues-et-cliniques-de-sante-rue-de-la-triade-pointe-n6zal9#business"}},{"@type":"ListItem","position":28,"item":{"@id":"https://www.fresha.com/ar/lvp/naureen-hunani-nutrition-avenue-frontenac-pointe-claire-BokK7q#business"}}]},{"@type":"BreadcrumbList","@id":"https://www.fresha.com/lp/ar/bt/علاج-طبيعي/ca-مونتريال/pierrefonds#breadcrumbs","itemListElement":[{"@type":"ListItem","position":1,"name":"الصفحة الرئيسية","item":"https://www.fresha.com/ar"},{"@type":"ListItem","position":2,"name":"علاج طبيعي","item":"https://www.fresha.com/lp/ar/bt/علاج-طبيعي"},{"@type":"ListItem","position":3,"name":"كندا","item":"https://www.fresha.com/lp/ar/bt/علاج-طبيعي/كندا"},{"@type":"ListItem","position":4,"name":"مونتريال","item":"https://www.fresha.com/lp/ar/bt/علاج-طبيعي/ca-مونتريال"},{"@type":"ListItem","position":5,"name":"Pierrefonds","item":"https://www.fresha.com/lp/ar/bt/علاج-طبيعي/ca-مونتريال/pierrefonds"}]},{"@type":"City","@id":"https://www.fresha.com/lp/ar/bt/علاج-طبيعي/ca-مونتريال/pierrefonds#geo","name":"Pierrefonds","containedInPlace":{"@type":"AdministrativeArea","name":"Quebec","containedInPlace":{"@type":"Country","name":"كندا","identifier":"CA"}}},{"@type":"CollectionPage","@id":"https://www.fresha.com/lp/ar/bt/علاج-طبيعي/ca-مونتريال/pierrefonds#page","url":"https://www.fresha.com/lp/ar/bt/علاج-طبيعي/ca-مونتريال/pierrefonds","name":"أفضل علاج طبيعي بالقرب مني في Pierrefonds, مونتريال","headline":"‎أفضل علاج طبيعي بالقرب مني في Pierrefonds, مونتريال","inLanguage":"ar-CA","isPartOf":{"@id":"https://www.fresha.com/#website"},"mainEntity":{"@id":"https://www.fresha.com/lp/ar/bt/علاج-طبيعي/ca-مونتريال/pierrefonds#itemlist"},"dateModified":"2026-11-14T05:08:09.349Z","breadcrumb":{"@id":"https://www.fresha.com/lp/ar/bt/علاج-طبيعي/ca-مونتريال/pierrefonds#breadcrumbs"},"contentLocation":{"@id":"https://www.fresha.com/lp/ar/bt/علاج-طبيعي/ca-مونتريال/pierrefonds#geo"},"about":[{"@type":"Thing","name":"علاج طبيعي"},{"@type":"Thing","name":"الوخز بالإبر"}]}]}</script>
+        
+    <script>
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl+ '&gtm_auth=I3dLwNFiDu7j5z-Gbm8FTQ&gtm_preview=env-1&gtm_cookies_win=x';f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-WZVW87Z');
+      </script>
+      
+        
+    <script type="text/javascript">
+      !function(){"use strict";!function(e,t){var r=e.amplitude||{_q:[],_iq:{}};if(r.invoked)e.console&&console.error&&console.error("Amplitude snippet has been loaded.");else{var n=function(e,t){e.prototype[t]=function(){return this._q.push({name:t,args:Array.prototype.slice.call(arguments,0)}),this}},s=function(e,t,r){return function(n){e._q.push({name:t,args:Array.prototype.slice.call(r,0),resolve:n})}},o=function(e,t,r){e[t]=function(){if(r)return{promise:new Promise(s(e,t,Array.prototype.slice.call(arguments)))};!function(e,t,r){e._q.push({name:t,args:Array.prototype.slice.call(r,0)})}(e,t,Array.prototype.slice.call(arguments))}},i=function(e){for(var t=0;t<v.length;t++)o(e,v[t],!1);for(var r=0;r<g.length;r++)o(e,g[r],!0)};r.invoked=!0;var c=t.createElement("script");c.type="text/javascript",c.integrity="sha384-4O8lKNFNgd/jP8qyPyPo+hGxkbqZ9dQ/DUufAi9GWr0ZryDdHu+46n/uC5ZmwffP",c.crossOrigin="anonymous",c.async=!0,c.src="https://cdn.amplitude.com/libs/analytics-browser-2.40.0-min.js.gz",c.onload=function(){e.amplitude.runQueuedFunctions||console.log("[Amplitude] Error: could not load SDK")};var a=t.getElementsByTagName("script")[0];a.parentNode.insertBefore(c,a);for(var u=function(){return this._q=[],this},l=["add","append","clearAll","prepend","set","setOnce","unset","preInsert","postInsert","remove","getUserProperties"],p=0;p<l.length;p++)n(u,l[p]);r.Identify=u;for(var d=function(){return this._q=[],this},f=["getEventProperties","setProductId","setQuantity","setPrice","setRevenue","setRevenueType","setReceipt","setReceiptSig","setCurrency","setEventProperties"],y=0;y<f.length;y++)n(d,f[y]);r.Revenue=d;var v=["getDeviceId","setDeviceId","getSessionId","setSessionId","getUserId","setUserId","setOptOut","setTransport","reset","extendSession"],g=["init","add","remove","track","logEvent","identify","groupIdentify","setGroup","revenue","flush"];i(r),r.createInstance=function(e){return r._iq[e]={_q:[]},i(r._iq[e]),r._iq[e]},e.amplitude=r}}(window,document)}();
+      (function () {
+        var apiKey = "29e2cb5b7d55e4c4dcfa427e0f9fc784";
+        var serverUrl = "https://www.fresha.com/plumbus/2/httpapi";
+        var appVersion = "357caec53d27f8ab014f091c4324f426b62a829b";
+        var userId = undefined;
+        try {
+          var raw = localStorage.getItem('trackingStorage');
+          if (raw) {
+            var trackingStorage = JSON.parse(raw);
+            if (trackingStorage != null && trackingStorage.uid != null) {
+              userId = String(trackingStorage.uid);
+            }
+          }
+        } catch (e) {}
+        var options = {
+          serverUrl: serverUrl,
+          remoteConfig: {
+            fetchRemoteConfig: false,
+          },
+          minIdLength: 1,
+          logLevel: 0,
+          autocapture: {
+            attribution: true,
+            pageViews: true,
+            sessions: true,
+            formInteractions: false,
+            fileDownloads: false,
+            elementInteractions: false,
+          },
+        };
+        if (appVersion) {
+          options.appVersion = appVersion;
+        }
+        if (userId) {
+          amplitude.init(apiKey, userId, options);
+        } else {
+          amplitude.init(apiKey, options);
+        }
+      })();
+    </script>
+  
+        
+    <link rel="alternate" hreflang="ar" href="https://www.fresha.com/lp/ar/bt/علاج-طبيعي/ca-مونتريال/pierrefonds" />
+<link rel="alternate" hreflang="en" href="https://www.fresha.com/lp/en/bt/therapy-centers/in/ca-montréal/pierrefonds" />
+<link rel="alternate" hreflang="es" href="https://www.fresha.com/lp/es/bt/centros-de-terapia/ca-montreal/pierrefonds" />
+<link rel="alternate" hreflang="fr" href="https://www.fresha.com/lp/fr/bt/centres-de-thérapie/ca-montréal/pierrefonds" />
+<link rel="alternate" hreflang="it" href="https://www.fresha.com/lp/it/bt/centri-terapeutici/ca-montréal/pierrefonds" />
+<link rel="alternate" hreflang="zh-CN" href="https://www.fresha.com/lp/zh-CN/bt/物理治疗/ca-蒙特利尔/pierrefonds" />
+<link rel="alternate" hreflang="zh-HK" href="https://www.fresha.com/lp/zh-HK/bt/物理治療/ca-蒙特婁/pierrefonds" />
+    <link rel="alternate" hreflang="x-default" href="https://www.fresha.com/lp/en/bt/therapy-centers/in/ca-montréal/pierrefonds" />
+  
+        
+    <script>
+      function getUtmSourceReferrer() {
+        var url = new URL(window.location.href);
+        var source = url.searchParams.get('utm_source');
+        if (source === 'facebook' || source === 'fb') {
+          return 'https://www.facebook.com';
+        }
+        if (source === 'instagram' || source === 'ig') {
+          return 'https://www.instagram.com';
+        }
+        return '';
+      }
+
+      function getReferrer() {
+        return document.referrer || getUtmSourceReferrer() || '';
+      }
+
+      (function(){
+        var externalReferrerUrl = window.getLocaleStorageValWithExpiry('externalReferrerUrl');
+        var userLandedFirstUrl = window.getLocaleStorageValWithExpiry('userLandedFirstUrl');
+        if (!externalReferrerUrl && externalReferrerUrl !== "") {
+          window.setLocalStorageValWithExpiry('externalReferrerUrl', getReferrer(), 1000 * 60 * 60 * 24);
+        }
+        if (!userLandedFirstUrl && userLandedFirstUrl !== "") {
+          window.setLocalStorageValWithExpiry('userLandedFirstUrl', window.location.href, 1000 * 60 * 60 * 24);
+        }
+      })();
+    </script>
+  
+        <link href="/lp/assets/main-91659a18986f51525692.min.css" rel="stylesheet">
+        
+      </head>
+      <body>
+        
+      <noscript>
+        <iframe
+          title="Google Tag Manager for GA4"
+          src="https://www.googletagmanager.com/ns.html?id=GTM-WZVW87Z&gtm_auth=I3dLwNFiDu7j5z-Gbm8FTQ&gtm_preview=env-1&gtm_cookies_win=x"
+          height="0"
+          width="0"
+          style={{ display: 'none', visibility: 'hidden' }}
+        ></iframe>
+      </noscript>
+    
+        <link rel="preload" as="image" href="/lp/assets/29cca8f59ebf28b19ef8.webp"/><link rel="preload" as="image" href="/lp/assets/27b35cba37648e74203b.png"/><link rel="preload" as="image" href="/lp/assets/7ff297abde57431f1abe.png"/><link rel="preload" as="image" href="/lp/assets/3e5dbe843af4ec105879.webp"/><div dir="rtl"><div class="cvV1n9" data-lp-navigation="true"><nav class="siTBQ1"><div class="Zp_cMo HrIGgh"><a class="OP1nBW QdYpnI" href="https://www.fresha.com/ar" data-qa="logo" aria-label="Fresha"><span class="v_Dfni veiqTU xUeY0V"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81.8 24"><path d="M51.5 2.1h3.9v8.1c1.3-1.9 4-2.5 6.2-1.6 2.2.9 2.9 2.5 3 2.7.2.5.4 1 .5 1.5.6 3.6-.6 7.2.5 10.7h-3.8c-1-2.5-.4-5.3-.4-7.9 0-.7 0-1.5-.4-2.2-.5-.9-1.5-1.6-2.5-1.6-1.1 0-2.1.6-2.6 1.5-.4.8-.4 1.8-.4 2.7v7.5h-3.9l-.1-21.4zM36 15.7c.1-4.3-2.6-7.5-6.8-7.5-2.8 0-5.2 1.4-6.5 3.8-1.4 2.6-1.3 6.3.4 8.8 2.5 3.4 7.6 4.2 12.5 1.9l-1.2-3.1c-4.1 1.8-8.5 1.3-8.8-2.4H36v-1.5zm-10.3-1.5c.3-.8.7-1.4 1.3-1.9 1.2-.9 3.3-1 4.4-.1.5.4.9 1.1 1.2 1.9h-6.9zM13.1 13.9s0-2.3-1.9-2.3H6.9v12.1H3V11.6H0V8.3h3V5.7C3 3.4 5.1 0 9.7 0s6.4 3.9 6.4 3.9l-3 2.1s-.8-2.5-3.3-2.5C8.7 3.5 7 4.4 7 6.2v2h6.1c2.7 0 3.4 2 3.4 2 1-2.4 4.6-2.1 5.3-2v3.1c-2.5-.2-4.8 1.2-4.8 4.1v8h-3.9v-9.5zM48.9 16.2c-1.2-1.2-4.3-1.6-6.3-2-1-.2-1.8-.4-1.8-1.4 0-1.2 1.2-1.5 2.4-1.5s2.4.5 3.1 1.5l3-1.6c-1.7-3-6.2-3.6-9.1-2.4-.9.4-1.6 1-2.1 1.7-1.1 1.5-1 4.1.3 5.3.7.7 1.9 1.2 3.4 1.5l2.8.5c1 .2 1.9.4 1.9 1.5 0 1.3-1.4 1.6-2.6 1.6-3.2 0-3.8-3-3.8-3L36.4 19c.2 1 1.5 5 7.4 5 3.3 0 6.2-1.3 6.3-4.8-.1-1.3-.5-2.3-1.2-3zM81.2 20.8c-.7 0-1.3-.4-1.3-1.4 0-.5-.1-2.2-.1-2.6 0-2.6.1-5.1-1.7-6.9-2-2-6.6-2.2-9-.6-.9.5-1.7 1.2-2.3 2.1l2.3 2.4c.9-1.5 2.2-2.2 3.7-2.2 1.4-.1 2.6.6 3.1 2-3.1.8-7.1 1.1-8.8 4.3-.8 1.5-.6 3.4.6 4.7.9 1 2.4 1.3 3.8 1.3 2.2 0 4.3-.5 5.6-2.5.7 1.7 2.2 2.5 4 2.5.3 0 .6-.1.8-.2v-3c-.2.1-.4.1-.7.1zm-5.3-3.1c.1 2.2-1.7 3.4-3.7 3.4-1.1 0-1.8-.5-1.8-1.6 0-1.2 1-1.6 2.1-1.9l3.4-1v1.1z"/></svg>
+</span></a></div><div class="Zp_cMo Ix7DRq"><a class="OP1nBW QdYpnI" href="https://www.fresha.com/ar" data-qa="logo" aria-label="Fresha"><span class="v_Dfni veiqTU xUeY0V"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81.8 24"><path d="M51.5 2.1h3.9v8.1c1.3-1.9 4-2.5 6.2-1.6 2.2.9 2.9 2.5 3 2.7.2.5.4 1 .5 1.5.6 3.6-.6 7.2.5 10.7h-3.8c-1-2.5-.4-5.3-.4-7.9 0-.7 0-1.5-.4-2.2-.5-.9-1.5-1.6-2.5-1.6-1.1 0-2.1.6-2.6 1.5-.4.8-.4 1.8-.4 2.7v7.5h-3.9l-.1-21.4zM36 15.7c.1-4.3-2.6-7.5-6.8-7.5-2.8 0-5.2 1.4-6.5 3.8-1.4 2.6-1.3 6.3.4 8.8 2.5 3.4 7.6 4.2 12.5 1.9l-1.2-3.1c-4.1 1.8-8.5 1.3-8.8-2.4H36v-1.5zm-10.3-1.5c.3-.8.7-1.4 1.3-1.9 1.2-.9 3.3-1 4.4-.1.5.4.9 1.1 1.2 1.9h-6.9zM13.1 13.9s0-2.3-1.9-2.3H6.9v12.1H3V11.6H0V8.3h3V5.7C3 3.4 5.1 0 9.7 0s6.4 3.9 6.4 3.9l-3 2.1s-.8-2.5-3.3-2.5C8.7 3.5 7 4.4 7 6.2v2h6.1c2.7 0 3.4 2 3.4 2 1-2.4 4.6-2.1 5.3-2v3.1c-2.5-.2-4.8 1.2-4.8 4.1v8h-3.9v-9.5zM48.9 16.2c-1.2-1.2-4.3-1.6-6.3-2-1-.2-1.8-.4-1.8-1.4 0-1.2 1.2-1.5 2.4-1.5s2.4.5 3.1 1.5l3-1.6c-1.7-3-6.2-3.6-9.1-2.4-.9.4-1.6 1-2.1 1.7-1.1 1.5-1 4.1.3 5.3.7.7 1.9 1.2 3.4 1.5l2.8.5c1 .2 1.9.4 1.9 1.5 0 1.3-1.4 1.6-2.6 1.6-3.2 0-3.8-3-3.8-3L36.4 19c.2 1 1.5 5 7.4 5 3.3 0 6.2-1.3 6.3-4.8-.1-1.3-.5-2.3-1.2-3zM81.2 20.8c-.7 0-1.3-.4-1.3-1.4 0-.5-.1-2.2-.1-2.6 0-2.6.1-5.1-1.7-6.9-2-2-6.6-2.2-9-.6-.9.5-1.7 1.2-2.3 2.1l2.3 2.4c.9-1.5 2.2-2.2 3.7-2.2 1.4-.1 2.6.6 3.1 2-3.1.8-7.1 1.1-8.8 4.3-.8 1.5-.6 3.4.6 4.7.9 1 2.4 1.3 3.8 1.3 2.2 0 4.3-.5 5.6-2.5.7 1.7 2.2 2.5 4 2.5.3 0 .6-.1.8-.2v-3c-.2.1-.4.1-.7.1zm-5.3-3.1c.1 2.2-1.7 3.4-3.7 3.4-1.1 0-1.8-.5-1.8-1.6 0-1.2 1-1.6 2.1-1.9l3.4-1v1.1z"/></svg>
+</span></a></div><div class="zeLhfM KUb747"><a class="OP1nBW _aj4fe jhHtJg" href="https://www.fresha.com/ar/search?center=45.482239484507055,-73.85474815352114&amp;distance=6.836&amp;business-type-id=11&amp;sort=recommended" data-qa="search-box" rel="nofollow"><div class="axDOAG FkLavb qLhAks RYhd_E T2Ht61" title="علاج طبيعي">علاج طبيعي</div></a><a class="OP1nBW _aj4fe" href="https://www.fresha.com/ar/search?center=45.482239484507055,-73.85474815352114&amp;distance=6.836&amp;business-type-id=11&amp;sort=recommended" data-qa="search-box-location" rel="nofollow"><div class="axDOAG FkLavb qLhAks RYhd_E T2Ht61" title="‎Pierrefonds, مونتريال">‎Pierrefonds, مونتريال</div></a><a class="OP1nBW _aj4fe" href="https://www.fresha.com/ar/search?center=45.482239484507055,-73.85474815352114&amp;distance=6.836&amp;business-type-id=11&amp;sort=recommended" data-qa="search-box-time" rel="nofollow"><div class="axDOAG FkLavb qLhAks RYhd_E T2Ht61" title="أي وقت">أي وقت</div></a><a class="OP1nBW lae5d6" title="بحث" href="https://www.fresha.com/ar/search?center=45.482239484507055,-73.85474815352114&amp;distance=6.836&amp;business-type-id=11&amp;sort=recommended" data-qa="search-box-submit" rel="nofollow"><span class="jxuPik"><span class="v_Dfni CpPDl7 SF7BiT"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.875 3.75a7.125 7.125 0 1 0 0 14.25 7.125 7.125 0 0 0 0-14.25ZM2.25 10.875a8.625 8.625 0 1 1 15.231 5.546l4.05 4.049a.75.75 0 1 1-1.061 1.06l-4.05-4.049a8.625 8.625 0 0 1-14.17-6.606Z"></path></svg></span></span></a></div><div class="lVX8vr"><a href="#" class="q1Jkfo Ix7DRq" data-modal="modal-search" aria-label="للبحث عن مركز أو خدمة"><span class="v_Dfni vSYAhk veiqTU"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.875 3.75a7.125 7.125 0 1 0 0 14.25 7.125 7.125 0 0 0 0-14.25ZM2.25 10.875a8.625 8.625 0 1 1 15.231 5.546l4.05 4.049a.75.75 0 1 1-1.061 1.06l-4.05-4.049a8.625 8.625 0 0 1-14.17-6.606Z"></path></svg></span></a><a href="#" class="q1Jkfo Ix7DRq" data-modal="modal-menu" data-lp-mobile-menu-trigger="true" aria-label="القائمة"><span data-lp-mobile-menu-icon="true"><span class="v_Dfni vSYAhk veiqTU"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 6a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6Zm0 6a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 6a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 18Z"></path></svg></span></span></a><div class="zjRND1 teEzkc" id="modal-search"><div class="cswpPv Rou8CE"><button aria-label="إغلاق" type="button" class="ziPrKd modal-exit"><span class="v_Dfni VqDAZf veiqTU"><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M4.293 4.293a1 1 0 011.414 0L12 10.585l6.293-6.292a1 1 0 011.32-.083l.094.083a1 1 0 010 1.414L13.415 12l6.292 6.293a1 1 0 01.083 1.32l-.083.094a1 1 0 01-1.414 0L12 13.415l-6.293 6.292a1 1 0 01-1.32.083l-.094-.083a1 1 0 010-1.414L10.585 12 4.293 5.707a1 1 0 01-.083-1.32z" />
+                  </svg></span></button></div><div class="kIGviM"><p class="axDOAG N7z9vs meyZbf">بحث</p><a class="OP1nBW zQcZFo" href="https://www.fresha.com/ar/search?center=45.482239484507055,-73.85474815352114&amp;distance=6.836&amp;business-type-id=11&amp;sort=recommended" data-tracking="Search"><div class="QguCgd"><span class="v_Dfni CpPDl7 Rh6zLx"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.875 3.75a7.125 7.125 0 1 0 0 14.25 7.125 7.125 0 0 0 0-14.25ZM2.25 10.875a8.625 8.625 0 1 1 15.231 5.546l4.05 4.049a.75.75 0 1 1-1.061 1.06l-4.05-4.049a8.625 8.625 0 0 1-14.17-6.606Z"></path></svg></span></div><p class="axDOAG TE8kwS">علاج طبيعي</p></a><a class="OP1nBW zQcZFo" href="https://www.fresha.com/ar/search?center=45.482239484507055,-73.85474815352114&amp;distance=6.836&amp;business-type-id=11&amp;sort=recommended" data-tracking="Search"><div class="QguCgd"><span class="v_Dfni CpPDl7 Rh6zLx">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.543 22.345a.84.84 0 0 0 .983-.05 21.987 21.987 0 0 0 1.131-.9 25.156 25.156 0 0 0 2.659-2.622c1.918-2.205 3.934-5.378 3.934-9.023a8.25 8.25 0 1 0-16.5 0c0 3.645 2.016 6.818 3.934 9.023a25.146 25.146 0 0 0 3.538 3.334 14.102 14.102 0 0 0 .32.238ZM12 3a6.75 6.75 0 0 0-6.75 6.75c0 3.105 1.734 5.932 3.566 8.04A23.64 23.64 0 0 0 12 20.812a23.633 23.633 0 0 0 3.184-3.023c1.832-2.108 3.566-4.935 3.566-8.04A6.75 6.75 0 0 0 12 3Z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M12 6a3.75 3.75 0 1 0 0 7.5A3.75 3.75 0 0 0 12 6Zm0 1.5a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5Z"></path></svg></span></div><p class="axDOAG TE8kwS">‎Pierrefonds, مونتريال</p></a><a class="OP1nBW iSiUSy xc6EHb QblrHl dBIRgx" href="https://www.fresha.com/ar/search?center=45.482239484507055,-73.85474815352114&amp;distance=6.836&amp;business-type-id=11&amp;sort=recommended" data-tracking="Search"><p class="axDOAG zL1l9a">بحث</p></a></div></div><div class="zjRND1 vs4sBU OmmbzA" id="modal-menu"><div class="cswpPv"><a class="OP1nBW QdYpnI" href="https://www.fresha.com/ar" data-qa="logo-mobile" aria-label="Fresha"><span class="v_Dfni veiqTU xUeY0V"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81.8 24"><path d="M51.5 2.1h3.9v8.1c1.3-1.9 4-2.5 6.2-1.6 2.2.9 2.9 2.5 3 2.7.2.5.4 1 .5 1.5.6 3.6-.6 7.2.5 10.7h-3.8c-1-2.5-.4-5.3-.4-7.9 0-.7 0-1.5-.4-2.2-.5-.9-1.5-1.6-2.5-1.6-1.1 0-2.1.6-2.6 1.5-.4.8-.4 1.8-.4 2.7v7.5h-3.9l-.1-21.4zM36 15.7c.1-4.3-2.6-7.5-6.8-7.5-2.8 0-5.2 1.4-6.5 3.8-1.4 2.6-1.3 6.3.4 8.8 2.5 3.4 7.6 4.2 12.5 1.9l-1.2-3.1c-4.1 1.8-8.5 1.3-8.8-2.4H36v-1.5zm-10.3-1.5c.3-.8.7-1.4 1.3-1.9 1.2-.9 3.3-1 4.4-.1.5.4.9 1.1 1.2 1.9h-6.9zM13.1 13.9s0-2.3-1.9-2.3H6.9v12.1H3V11.6H0V8.3h3V5.7C3 3.4 5.1 0 9.7 0s6.4 3.9 6.4 3.9l-3 2.1s-.8-2.5-3.3-2.5C8.7 3.5 7 4.4 7 6.2v2h6.1c2.7 0 3.4 2 3.4 2 1-2.4 4.6-2.1 5.3-2v3.1c-2.5-.2-4.8 1.2-4.8 4.1v8h-3.9v-9.5zM48.9 16.2c-1.2-1.2-4.3-1.6-6.3-2-1-.2-1.8-.4-1.8-1.4 0-1.2 1.2-1.5 2.4-1.5s2.4.5 3.1 1.5l3-1.6c-1.7-3-6.2-3.6-9.1-2.4-.9.4-1.6 1-2.1 1.7-1.1 1.5-1 4.1.3 5.3.7.7 1.9 1.2 3.4 1.5l2.8.5c1 .2 1.9.4 1.9 1.5 0 1.3-1.4 1.6-2.6 1.6-3.2 0-3.8-3-3.8-3L36.4 19c.2 1 1.5 5 7.4 5 3.3 0 6.2-1.3 6.3-4.8-.1-1.3-.5-2.3-1.2-3zM81.2 20.8c-.7 0-1.3-.4-1.3-1.4 0-.5-.1-2.2-.1-2.6 0-2.6.1-5.1-1.7-6.9-2-2-6.6-2.2-9-.6-.9.5-1.7 1.2-2.3 2.1l2.3 2.4c.9-1.5 2.2-2.2 3.7-2.2 1.4-.1 2.6.6 3.1 2-3.1.8-7.1 1.1-8.8 4.3-.8 1.5-.6 3.4.6 4.7.9 1 2.4 1.3 3.8 1.3 2.2 0 4.3-.5 5.6-2.5.7 1.7 2.2 2.5 4 2.5.3 0 .6-.1.8-.2v-3c-.2.1-.4.1-.7.1zm-5.3-3.1c.1 2.2-1.7 3.4-3.7 3.4-1.1 0-1.8-.5-1.8-1.6 0-1.2 1-1.6 2.1-1.9l3.4-1v1.1z"/></svg>
+</span></a><button aria-label="إغلاق" type="button" class="KYbtY2 modal-exit"><span class="v_Dfni VqDAZf veiqTU"><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M4.293 4.293a1 1 0 011.414 0L12 10.585l6.293-6.292a1 1 0 011.32-.083l.094.083a1 1 0 010 1.414L13.415 12l6.292 6.293a1 1 0 01.083 1.32l-.083.094a1 1 0 01-1.414 0L12 13.415l-6.293 6.292a1 1 0 01-1.32.083l-.094-.083a1 1 0 010-1.414L10.585 12 4.293 5.707a1 1 0 01-.083-1.32z" />
+                  </svg></span></button></div><div class="WEULBK"><div class="OGFmDZ"><div class="_Cwzfx">للعملاء</div><ul class="yXnLyK" id="lp-mobile-menu-list"><li><a class="OP1nBW JwHcK0 pBtIbo" href="https://www.fresha.com/ar/auth?type=socials-login" data-qa="menu-item-log-in" rel="nofollow" data-tracking="Log in or sign up">تسجيل الدخول أو إنشاء حساب جديد<span class="v_Dfni vSYAhk veiqTU N_YrF7"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" iconColor="#101928" class="Icon__StyledInlineSVG-sc-c98r68-0 cxRwTg Icon-sc-c98r68-1 styled__ListItemArrow-sc-3phtig-8 kMfJYW UjZKy" width="24" height="24"><path d="M14.481 12l-7.14 6.247a1 1 0 001.318 1.506l8-7a1 1 0 000-1.506l-8-7a1 1 0 10-1.317 1.506L14.482 12z"></path></svg></span></a></li><li><a class="OP1nBW JwHcK0" href="https://www.fresha.com/ar/buy-fresha-gift-card" rel="nofollow" data-tracking="Send a gift card">إرسال بطاقة هدايا<span class="v_Dfni vSYAhk veiqTU N_YrF7"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" iconColor="#101928" class="Icon__StyledInlineSVG-sc-c98r68-0 cxRwTg Icon-sc-c98r68-1 styled__ListItemArrow-sc-3phtig-8 kMfJYW UjZKy" width="24" height="24"><path d="M14.481 12l-7.14 6.247a1 1 0 001.318 1.506l8-7a1 1 0 000-1.506l-8-7a1 1 0 10-1.317 1.506L14.482 12z"></path></svg></span></a></li><li><button type="button" class="Ka0K5G JwHcK0" data-redirect-url="https://www.fresha.com/app-store-redirect" data-qa="menu-item-download-app" data-tracking="Download the app">تنزيل التطبيق<span class="v_Dfni vSYAhk veiqTU N_YrF7"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" iconColor="#101928" class="Icon__StyledInlineSVG-sc-c98r68-0 cxRwTg Icon-sc-c98r68-1 styled__ListItemArrow-sc-3phtig-8 kMfJYW UjZKy" width="24" height="24"><path d="M14.481 12l-7.14 6.247a1 1 0 001.318 1.506l8-7a1 1 0 000-1.506l-8-7a1 1 0 10-1.317 1.506L14.482 12z"></path></svg></span></button></li><li><a class="OP1nBW JwHcK0" href="https://www.fresha.com/ar/help-center" data-qa="menu-item-support" rel="nofollow" data-tracking="Help and support">المساعدة والدعم<span class="v_Dfni vSYAhk veiqTU N_YrF7"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" iconColor="#101928" class="Icon__StyledInlineSVG-sc-c98r68-0 cxRwTg Icon-sc-c98r68-1 styled__ListItemArrow-sc-3phtig-8 kMfJYW UjZKy" width="24" height="24"><path d="M14.481 12l-7.14 6.247a1 1 0 001.318 1.506l8-7a1 1 0 000-1.506l-8-7a1 1 0 10-1.317 1.506L14.482 12z"></path></svg></span></a></li></ul></div><div class="OGFmDZ"><ul class="yXnLyK"><li><a class="OP1nBW JwHcK0 bsH7DV" href="https://www.fresha.com/ar/for-business" data-qa="menu-item-for-business" rel="nofollow" data-business-tracking="For business">للأعمال<span class="v_Dfni CpPDl7 veiqTU N_YrF7"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.97 4.72a.75.75 0 0 1 1.06 0l6.75 6.75a.75.75 0 0 1 0 1.06l-6.75 6.75a.75.75 0 1 1-1.06-1.06l5.47-5.47H3.75a.75.75 0 0 1 0-1.5h14.69l-5.47-5.47a.75.75 0 0 1 0-1.06Z"></path></svg></span></a></li></ul></div></div></div><div class="xSCh4e js-lp-user-menu" id="lp-user-menu" data-state="guest"><input id="lp-user-menu-trigger" type="checkbox"/><label for="lp-user-menu-trigger" class="vQxCMu" id="lp-user-menu-trigger-label"><span class="t1olRo" data-lp-menu-trigger-guest="true"><span class="LZfZ9o">القائمة</span><span class="v_Dfni vSYAhk veiqTU"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 6a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6Zm0 6a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 6a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 18Z"></path></svg></span></span><span class="ici0Y3" data-lp-menu-trigger-auth="true"><span class="khKXsb" id="lp-user-menu-avatar"><span class="l8BU0k" data-lp-avatar-guest="true" aria-hidden="true"></span><span class="E2J4Pv" data-lp-avatar-auth="true" aria-hidden="true"></span></span><span class="isMa3A"><span class="v_Dfni vSYAhk veiqTU N9Wbrw"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.22 8.345a.75.75 0 0 1 1.06 0l5.72 5.72 5.72-5.72a.75.75 0 1 1 1.06 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0l-6.25-6.25a.75.75 0 0 1 0-1.06Z"></path></svg></span><span class="v_Dfni vSYAhk veiqTU uLCUQ5"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.22 8.345a.75.75 0 0 1 1.06 0l5.72 5.72 5.72-5.72a.75.75 0 1 1 1.06 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0l-6.25-6.25a.75.75 0 0 1 0-1.06Z"></path></svg></span></span></span></label><div class="EMH71x" id="lp-user-menu-popup" role="menu"><div class="sX1tHA" data-lp-menu-panel="guest"><div class="GfU0bC">للعملاء</div><a class="OP1nBW VznW96 NbuBVO" href="https://www.fresha.com/ar/auth?type=socials-login" data-qa="menu-item-log-in" rel="nofollow" data-tracking="Log in or sign up">تسجيل الدخول أو إنشاء حساب جديد</a><a class="OP1nBW VznW96" href="https://www.fresha.com/ar/buy-fresha-gift-card" rel="nofollow" data-tracking="Send a gift card">إرسال بطاقة هدايا</a><button type="button" class="Ka0K5G VznW96" data-redirect-url="https://www.fresha.com/app-store-redirect" data-qa="menu-item-download-app" data-tracking="Download the app">تنزيل التطبيق</button><a class="OP1nBW VznW96" href="https://www.fresha.com/ar/help-center" data-qa="menu-item-support" rel="nofollow" data-tracking="Help and support">المساعدة والدعم</a><div class="TDibjD"></div><a class="OP1nBW VznW96 OFLTnl" href="https://www.fresha.com/ar/for-business" data-qa="menu-item-for-business" rel="nofollow" data-business-tracking="For business">للأعمال<span class="v_Dfni CpPDl7 veiqTU MHdN0x"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.97 4.72a.75.75 0 0 1 1.06 0l6.75 6.75a.75.75 0 0 1 0 1.06l-6.75 6.75a.75.75 0 1 1-1.06-1.06l5.47-5.47H3.75a.75.75 0 0 1 0-1.5h14.69l-5.47-5.47a.75.75 0 0 1 0-1.06Z"></path></svg></span></a></div><div class="cCyfoB" data-lp-menu-panel="authenticated"><span class="GfU0bC" id="lp-user-menu-user-name"></span><a class="OP1nBW VznW96" href="https://www.fresha.com/ar/profile" rel="nofollow" data-tracking="Profile">الملف الشخصي</a><a class="OP1nBW VznW96" href="https://www.fresha.com/ar/activity" rel="nofollow" data-tracking="Activity">النشاط</a><a class="OP1nBW VznW96" href="https://www.fresha.com/ar/wallet" rel="nofollow" data-tracking="Wallet">المحفظة</a><a class="OP1nBW VznW96" href="https://www.fresha.com/ar/messages" rel="nofollow" data-tracking="Messages">الرسائل</a><a class="OP1nBW VznW96" href="https://www.fresha.com/ar/favorites" rel="nofollow" data-tracking="Favorites">المفضلة</a><a class="OP1nBW VznW96" href="https://www.fresha.com/ar/buy-fresha-gift-card" rel="nofollow" data-tracking="Send a gift card">إرسال بطاقة هدايا</a><a class="OP1nBW VznW96" href="https://www.fresha.com/ar/consultation-forms" rel="nofollow" data-tracking="Forms">نماذج</a><a class="OP1nBW VznW96" href="https://www.fresha.com/ar/settings" rel="nofollow" data-tracking="Settings">الإعدادات</a><a class="OP1nBW VznW96" href="https://www.fresha.com/ar?modal=logout-confirmation" rel="nofollow" data-tracking="Log out">تسجيل الخروج</a><div class="TDibjD"></div><button type="button" class="Ka0K5G VznW96" data-redirect-url="https://www.fresha.com/app-store-redirect" data-tracking="Download the app">تنزيل التطبيق</button><a class="OP1nBW VznW96" href="https://www.fresha.com/ar/help-center" rel="nofollow" data-tracking="Help and support">المساعدة والدعم</a><div class="TDibjD"></div><a class="OP1nBW VznW96 OFLTnl" href="https://www.fresha.com/ar/for-business" rel="nofollow" data-business-tracking="For business">للأعمال</a></div></div></div></div><script>
+            
+(function () {
+  function openModal(modalId) {
+    var modal = document.getElementById(modalId);
+    if (!modal) {
+      return;
+    }
+    modal.setAttribute('data-open', 'true');
+  }
+
+  function closeModal(modal) {
+    modal.removeAttribute('data-open');
+  }
+
+  document.addEventListener('click', function (event) {
+    var trigger = event.target.closest('[data-modal]');
+    if (trigger) {
+      event.preventDefault();
+      openModal(trigger.getAttribute('data-modal'));
+      return;
+    }
+
+    var exit = event.target.closest('.modal-exit');
+    if (exit) {
+      var modal = exit.closest('[id^="modal-"]');
+      if (modal) {
+        event.preventDefault();
+        closeModal(modal);
+      }
+    }
+  });
+})();
+
+            
+(function () {
+  var nav = document.querySelector('[data-lp-navigation]');
+  if (!nav) {
+    return;
+  }
+
+  if (window.__navigationScrollShadowInit) {
+    return;
+  }
+
+  window.__navigationScrollShadowInit = true;
+
+  var SCROLL_THRESHOLD = 1;
+
+  function updateScrollState() {
+    nav.setAttribute('data-scrolled', window.scrollY > SCROLL_THRESHOLD ? 'true' : 'false');
+  }
+
+  updateScrollState();
+  window.addEventListener('scroll', updateScrollState, { passive: true });
+})();
+
+            
+(function () {
+  var menuRoot = document.getElementById('lp-user-menu');
+  if (!menuRoot) {
+    return;
+  }
+
+  var userNameEl = document.getElementById('lp-user-menu-user-name');
+  var avatarAuthSlot = document.querySelector('[data-lp-avatar-auth]');
+  var triggerLabel = document.getElementById('lp-user-menu-trigger-label');
+  var menuTrigger = document.getElementById('lp-user-menu-trigger');
+  var mobileMenuButton = document.querySelector('[data-lp-mobile-menu-trigger]');
+  var graphqlUrl = (window.location.hostname === 'fresha.com'
+  ? 'https://www.fresha.com/graphql'
+  : new URL('/graphql', window.location.origin).href);
+
+  function renderAvatar(user) {
+    if (!avatarAuthSlot) {
+      return;
+    }
+
+    avatarAuthSlot.textContent = '';
+
+    if (user.avatarThumb && user.avatarThumb.url) {
+      var img = document.createElement('img');
+      img.src = user.avatarThumb.url;
+      img.alt = user.fullName || '';
+      img.width = 40;
+      img.height = 40;
+      img.style.cssText =
+        'width:40px;height:40px;border-radius:999px;object-fit:cover;border:1px solid #f0f0ff;';
+      avatarAuthSlot.appendChild(img);
+      return;
+    }
+
+    var initials = document.createElement('span');
+    initials.style.cssText =
+      'display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:999px;border:1px solid #f0f0ff;background:#f0f0ff;color:#0d0d0d;font-size:14px;letter-spacing:-0.1px;font-weight:600;';
+    initials.textContent = user.initials || '';
+    avatarAuthSlot.appendChild(initials);
+  }
+
+  function applyAuthenticatedState(user) {
+    menuRoot.setAttribute('data-state', 'authenticated');
+
+    if (userNameEl) {
+      userNameEl.textContent = user.fullName || '';
+    }
+
+    renderAvatar(user);
+
+    if (mobileMenuButton) {
+      mobileMenuButton.setAttribute('href', '/menu');
+      mobileMenuButton.removeAttribute('data-modal');
+    }
+  }
+
+  function closeMenuOnOutsideClick() {
+    if (!menuTrigger) {
+      return;
+    }
+
+    window.addEventListener('click', function (event) {
+      if (!menuRoot.contains(event.target) && menuTrigger.checked) {
+        menuTrigger.checked = false;
+      }
+    });
+  }
+
+  closeMenuOnOutsideClick();
+
+  if (triggerLabel && menuTrigger) {
+    triggerLabel.addEventListener('click', function (event) {
+      if (
+        menuRoot.getAttribute('data-state') === 'authenticated' &&
+        window.matchMedia('(max-width: 1023px)').matches
+      ) {
+        event.preventDefault();
+        window.location.href = '/menu';
+      }
+    });
+  }
+
+  fetch(graphqlUrl, {
+    method: 'POST',
+    credentials: 'include',
+    headers: {
+      'Content-Type': 'application/json',
+      'accept-language': document.documentElement.lang || 'en',
+    },
+    body: JSON.stringify({ query: " query LibViewer_BasicProfile_Query { profile: user { id firstName lastName fullName initials avatarThumb: avatar(transformer: THUMB) { url } } } " }),
+  })
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (payload) {
+      var user = payload && payload.data && payload.data.profile;
+      if (!user || !user.id) {
+        return;
+      }
+      applyAuthenticatedState(user);
+    })
+    .catch(function () {
+      // Keep guest menu when profile cannot be loaded.
+    });
+})();
+
+            
+(function () {
+  try {
+    var params = new URLSearchParams(window.location.search);
+    if (params.get('explore') === '1') {
+      document.documentElement.setAttribute('data-lp-explore', '1');
+    }
+  } catch (e) {}
+
+  if (window.__lpExploreMenuInit) {
+    return;
+  }
+  window.__lpExploreMenuInit = true;
+
+  var HOSTS = '[data-lp-explore-root], [data-lp-explore-item]';
+  var VIEWPORT_MARGIN = 8;
+  var DEFAULT_PANEL_OFFSET = -24;
+  var scheduled = false;
+
+  function closestExplore(el, selector) {
+    return el && el.closest ? el.closest(selector) : null;
+  }
+
+  function getPanel(host) {
+    var children = host.children;
+    for (var i = 0; i < children.length; i++) {
+      if (children[i].hasAttribute && children[i].hasAttribute('data-lp-explore-panel')) {
+        return children[i];
+      }
+    }
+    return null;
+  }
+
+  function getToggle(host) {
+    var children = host.children;
+    for (var i = 0; i < children.length; i++) {
+      var child = children[i];
+      if (!child || !child.getAttribute) {
+        continue;
+      }
+      if (
+        child.getAttribute('data-lp-explore-trigger') !== null
+        || child.getAttribute('data-lp-explore-toggle') !== null
+      ) {
+        return child;
+      }
+      var nested = child.querySelector
+        ? child.querySelector('[data-lp-explore-trigger], [data-lp-explore-toggle]')
+        : null;
+      if (nested) {
+        return nested;
+      }
+    }
+    return host.querySelector('[data-lp-explore-trigger], [data-lp-explore-toggle]');
+  }
+
+  function positionPanel(host) {
+    var panel = getPanel(host);
+    if (!panel) {
+      return;
+    }
+
+    host.style.removeProperty('--lp-explore-panel-offset');
+    host.style.removeProperty('--lp-explore-panel-top-adjustment');
+    var rect = panel.getBoundingClientRect();
+    var adjustment = 0;
+    var topAdjustment = 0;
+    var isRtl = window.getComputedStyle(host).direction === 'rtl';
+
+    if (rect.right > window.innerWidth - VIEWPORT_MARGIN) {
+      var endOverflow = rect.right - (window.innerWidth - VIEWPORT_MARGIN);
+      adjustment = isRtl
+        ? -endOverflow
+        : endOverflow;
+    } else if (rect.left < VIEWPORT_MARGIN) {
+      var startOverflow = VIEWPORT_MARGIN - rect.left;
+      adjustment = isRtl
+        ? startOverflow
+        : -startOverflow;
+    }
+
+    if (adjustment !== 0) {
+      host.style.setProperty(
+        '--lp-explore-panel-offset',
+        String(DEFAULT_PANEL_OFFSET + adjustment) + 'px',
+      );
+    }
+
+    if (rect.bottom > window.innerHeight - VIEWPORT_MARGIN) {
+      topAdjustment = window.innerHeight - VIEWPORT_MARGIN - rect.bottom;
+    } else if (rect.top < VIEWPORT_MARGIN) {
+      topAdjustment = VIEWPORT_MARGIN - rect.top;
+    }
+
+    if (topAdjustment !== 0) {
+      host.style.setProperty(
+        '--lp-explore-panel-top-adjustment',
+        String(topAdjustment) + 'px',
+      );
+    }
+  }
+
+  function positionAllPanels() {
+    document.querySelectorAll(HOSTS).forEach(positionPanel);
+  }
+
+  function schedulePositioning() {
+    if (scheduled) {
+      return;
+    }
+    scheduled = true;
+    window.requestAnimationFrame(function () {
+      scheduled = false;
+      positionAllPanels();
+    });
+  }
+
+  function setOpen(el, open) {
+    if (!el) {
+      return;
+    }
+    if (open) {
+      el.setAttribute('data-open', 'true');
+    } else {
+      el.removeAttribute('data-open');
+    }
+    var toggle = getToggle(el);
+    if (toggle) {
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    }
+  }
+
+  function closeAll(except) {
+    document.querySelectorAll('[data-lp-explore-root][data-open="true"], [data-lp-explore-item][data-open="true"]').forEach(function (el) {
+      if (except && (el === except || el.contains(except) || (except.contains && except.contains(el)))) {
+        return;
+      }
+      setOpen(el, false);
+    });
+  }
+
+  function getFocusTargetAfterEscape() {
+    var openHosts = document.querySelectorAll(
+      '[data-lp-explore-root][data-open="true"], [data-lp-explore-item][data-open="true"]',
+    );
+    if (!openHosts.length) {
+      var host = closestExplore(document.activeElement, HOSTS);
+      return host ? getToggle(host) : null;
+    }
+
+    var innermost = openHosts[0];
+    for (var i = 1; i < openHosts.length; i++) {
+      if (innermost.contains(openHosts[i])) {
+        innermost = openHosts[i];
+      }
+    }
+    return getToggle(innermost);
+  }
+
+  document.addEventListener('click', function (event) {
+    var control = closestExplore(event.target, '[data-lp-explore-toggle]')
+      || closestExplore(event.target, '[data-lp-explore-trigger]');
+
+    if (control) {
+      event.preventDefault();
+      event.stopPropagation();
+      var host = closestExplore(control, HOSTS);
+      if (!host) {
+        return;
+      }
+      if (host.getAttribute('data-open') === 'true') {
+        setOpen(host, false);
+        return;
+      }
+      closeAll(host);
+      setOpen(host, true);
+      positionAllPanels();
+      return;
+    }
+
+    if (!closestExplore(event.target, '[data-lp-explore-root]')) {
+      closeAll();
+    }
+  });
+
+  document.addEventListener('keydown', function (event) {
+    if (event.key !== 'Escape') {
+      return;
+    }
+    var focusTarget = getFocusTargetAfterEscape();
+    closeAll();
+    if (focusTarget && typeof focusTarget.focus === 'function') {
+      focusTarget.focus();
+    }
+  });
+
+  document.addEventListener('mouseover', function (event) {
+    if (closestExplore(event.target, '[data-lp-explore-root]')) {
+      schedulePositioning();
+    }
+  });
+
+  document.addEventListener('focusin', function (event) {
+    if (closestExplore(event.target, '[data-lp-explore-root]')) {
+      schedulePositioning();
+    }
+  });
+
+  window.addEventListener('resize', schedulePositioning);
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', positionAllPanels);
+  } else {
+    positionAllPanels();
+  }
+})();
+
+            
+(function () {
+  if (window.__redirectButtonInit) {
+    return;
+  }
+
+  window.__redirectButtonInit = true;
+
+  document.addEventListener('click', function (event) {
+    var target = event.target;
+    var button = target && target.closest ? target.closest('[data-redirect-url]') : null;
+    var url = button && button.getAttribute('data-redirect-url');
+
+    if (url) {
+      window.location.assign(url);
+    }
+  });
+})();
+
+            </script></nav></div><main><div class="zs_ttC"><p class="LkYmOG"><a class="OP1nBW uUQ4ck ut_xFw" href="https://www.fresha.com/ar">الصفحة الرئيسية</a><span class="sNl9cF" aria-hidden="true">•</span><a class="OP1nBW uUQ4ck ut_xFw" href="https://www.fresha.com/lp/ar/bt/علاج-طبيعي">علاج طبيعي</a><span class="sNl9cF" aria-hidden="true">•</span><a class="OP1nBW uUQ4ck ut_xFw" href="https://www.fresha.com/lp/ar/bt/علاج-طبيعي/كندا">كندا</a><span class="sNl9cF" aria-hidden="true">•</span><a class="OP1nBW uUQ4ck ut_xFw" href="https://www.fresha.com/lp/ar/bt/علاج-طبيعي/ca-مونتريال">مونتريال</a><span class="sNl9cF" aria-hidden="true">•</span><span class="uUQ4ck cAZuqV">Pierrefonds</span></p></div><div class="Rzlv_b SAsCgI"><div><h1 class="axDOAG N7z9vs yPqIKn">أفضل علاج طبيعي بالقرب مني في Pierrefonds, مونتريال</h1><div class="axDOAG C3RXjX o3HUQR zk7Hpq"><p>‎علاج طبيعي في Pierrefonds، مونتريال <a class="OP1nBW" href="https://www.fresha.com/ar/search?center=45.482239484507055%2C-73.85474815352114&amp;distance=6.836&amp;business-type-id=11&amp;sort=recommended#map" rel="nofollow">عرض الخريطة</a></p></div></div></div><section class="ZnEpfB" data-qa="scrollable-pills" data-scrollable-pills="true" data-overflow="false"><div class="pIEL1R"><div class="n9k_wr"><div class="DrZt9r" aria-hidden="true"></div><nav class="c8sLsP" data-pills-scroll="true" aria-label="أنواع العلاج"><span class="QoUCns" data-qa="pill-self"><span class="DpJCAG">علاج طبيعي</span></span><a class="OP1nBW QoUCns" href="https://www.fresha.com/lp/ar/tt/الوخز-بالإبر/ca-مونتريال/pierrefonds" data-qa="pill-الوخز بالإبر"><span class="DpJCAG">الوخز بالإبر</span></a></nav><div class="uJhaAb"><details class="MUyBs8" data-scrollable-pills-overflow="true"><summary class="ltDb4C" aria-label="عرض جميع أنواع العلاج"><span class="v_Dfni CpPDl7 veiqTU"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+  <circle cx="3" cy="5" r="1.25"/>
+  <circle cx="3" cy="10" r="1.25"/>
+  <circle cx="3" cy="15" r="1.25"/>
+  <rect x="6" y="4.25" width="11" height="1.5" rx="0.75"/>
+  <rect x="6" y="9.25" width="11" height="1.5" rx="0.75"/>
+  <rect x="6" y="14.25" width="11" height="1.5" rx="0.75"/>
+</svg>
+</span></summary><div class="yaMXdw"><div class="aJGVna" data-scrollable-pills-backdrop="true" aria-hidden="true"></div><div class="Tk6pcB" role="menu"><button type="button" class="OEF7eH" data-scrollable-pills-close="true" aria-label="إغلاق"><span class="v_Dfni CpPDl7 veiqTU"><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M4.293 4.293a1 1 0 011.414 0L12 10.585l6.293-6.292a1 1 0 011.32-.083l.094.083a1 1 0 010 1.414L13.415 12l6.292 6.293a1 1 0 01.083 1.32l-.083.094a1 1 0 01-1.414 0L12 13.415l-6.293 6.292a1 1 0 01-1.32.083l-.094-.083a1 1 0 010-1.414L10.585 12 4.293 5.707a1 1 0 01-.083-1.32z" />
+                  </svg></span></button><div><span class="AFFsFk" aria-current="page">علاج طبيعي</span><a class="OP1nBW AFFsFk" href="https://www.fresha.com/lp/ar/tt/الوخز-بالإبر/ca-مونتريال/pierrefonds" data-qa="pill-overflow-الوخز بالإبر">الوخز بالإبر</a></div></div></div></details></div></div></div><script>
+(function () {
+  var MOBILE_SHEET_MEDIA = '(max-width: 767px)';
+
+  function isMobileSheetViewport() {
+    return window.matchMedia(MOBILE_SHEET_MEDIA).matches;
+  }
+
+  function updateBodyScrollLock() {
+    var hasOpenSheet = isMobileSheetViewport()
+      && document.querySelector('[data-scrollable-pills-overflow][open]');
+    document.body.style.overflow = hasOpenSheet ? 'hidden' : '';
+  }
+
+  function updateScrollablePills(resetScroll) {
+    document.querySelectorAll('[data-scrollable-pills]').forEach(function (root) {
+      var scroll = root.querySelector('[data-pills-scroll]');
+      if (!scroll) {
+        return;
+      }
+
+      var overflows = scroll.scrollWidth > scroll.clientWidth + 1;
+      root.setAttribute('data-overflow', overflows ? 'true' : 'false');
+
+      if (resetScroll) {
+        scroll.scrollLeft = 0;
+      }
+    });
+  }
+
+  updateScrollablePills(true);
+
+  if (window.__scrollablePillsOverflowInit) {
+    return;
+  }
+
+  window.__scrollablePillsOverflowInit = true;
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function () {
+      updateScrollablePills(true);
+    });
+  }
+
+  window.addEventListener('load', function () {
+    updateScrollablePills(true);
+  });
+  window.addEventListener('resize', function () {
+    updateScrollablePills(false);
+    updateBodyScrollLock();
+  });
+
+  document.addEventListener('toggle', function (event) {
+    var details = event.target;
+    if (!(details instanceof HTMLDetailsElement)) {
+      return;
+    }
+
+    if (!details.matches('[data-scrollable-pills-overflow]')) {
+      return;
+    }
+
+    updateBodyScrollLock();
+  }, true);
+
+  document.addEventListener('click', function (event) {
+    document.querySelectorAll('[data-scrollable-pills-overflow]').forEach(function (details) {
+      if (!(details instanceof HTMLDetailsElement) || !details.open) {
+        return;
+      }
+
+      var target = event.target;
+      if (
+        target instanceof Element
+        && details.contains(target)
+        && target.closest('[data-scrollable-pills-close]')
+      ) {
+        details.open = false;
+        updateBodyScrollLock();
+        return;
+      }
+
+      if (
+        target instanceof Element
+        && target.closest('[data-scrollable-pills-backdrop]')
+      ) {
+        details.open = false;
+        updateBodyScrollLock();
+        return;
+      }
+
+      if (!details.contains(target)) {
+        details.open = false;
+        updateBodyScrollLock();
+      }
+    });
+  });
+
+  document.addEventListener('keydown', function (event) {
+    if (event.key !== 'Escape') {
+      return;
+    }
+
+    document.querySelectorAll('[data-scrollable-pills-overflow][open]').forEach(function (details) {
+      if (details instanceof HTMLDetailsElement) {
+        details.open = false;
+      }
+    });
+    updateBodyScrollLock();
+  });
+})();
+</script></section><div class="EqASg6"><section class="Rzlv_b" data-qa="litelocations-grid"><ul class="LRAjDL"><li class="OwChdp" data-id="lite-location-card-6590134"><div data-qa="location-card-Acupuncture au Laser Jean Legault" class="e02Wz5"><a href="https://www.fresha.com/ar/lvp/acupuncture-au-laser-jean-legault-rue-perron-montreal-30XZA8" class="iZ_Jua" aria-label="Acupuncture au Laser Jean Legault"></a><div class="HdNCnr"><img src="https://images.fresha.com/lead-images/placeholders/therapy-center-51.jpg?class=width-small" class="afSlte ZvLHng" alt="صورة علاج طبيعي خاصة بـ Acupuncture au Laser Jean Legault" loading="lazy"/></div><div class="ABjWcU"><div class="lJcJhG"><div class="cnqJzJ"><p class="axDOAG C3RXjX eGBYyp RYhd_E T2Ht61" title="Acupuncture au Laser Jean Legault">Acupuncture au Laser Jean Legault</p><p class="axDOAG FkLavb o3HUQR T2Ht61 fTV3EB" title="4948 Rue Perron, Pierrefonds, QC H8Z 3J3, Canada">4948 Rue Perron, Pierrefonds, QC H8Z 3J3, Canada</p></div><p class="axDOAG TE8kwS DbgFmO T2Ht61 WXSovK"><button type="button" data-show-phone="show-phone" data-lead-id="6590134" class="pCIKui"><p class="axDOAG TE8kwS tv4uDl tpRZTm">إظهار الرقم</p></button></p><a class="OP1nBW tpRZTm QPjIt4 WXSovK dmJvlT" href="tel:+1 514-684-9857" data-desktop-number-revealed="desktop-show-number-revealed" data-lead-id="6590134">+1 514-684-9857</a><a class="OP1nBW tpRZTm QPjIt4 WXSovK Wyhe7t" href="tel:+1 514-684-9857" data-number-revealed="show-number-revealed" data-lead-id="6590134">+1 514-684-9857</a><a class="OP1nBW iSiUSy hQb42p kNK6vJ wIiwwv hqkplt" href="tel:+1 514-684-9857" data-phone-call="phone-call-button" data-lead-id="6590134">الاتصال للحجز</a><button data-desktop-show-phone="desktop-show-phone" data-lead-id="6590134" class="wIiwwv NxhrXa">إظهار الرقم</button></div><hr class="uc7fiG"/><div class="_Ya9oo"><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">وخز جاف بالإبر</p><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">الوخز بالإبر</p></div></div></div></li><li class="OwChdp" data-id="lite-location-card-6599019"><div data-qa="location-card-Clinique antidouleur Zhen Li 软伤疼痛诊所" class="e02Wz5"><a href="https://www.fresha.com/ar/lvp/clinique-antidouleur-zhen-li-ruan-shang-teng-tong-zhen-suo-rue-des-erables-VEg7b2" class="iZ_Jua" aria-label="Clinique antidouleur Zhen Li 软伤疼痛诊所"></a><div class="HdNCnr"><img src="https://images.fresha.com/lead-images/placeholders/therapy-center-30.jpg?class=width-small" class="afSlte ZvLHng" alt="صورة علاج طبيعي خاصة بـ Clinique antidouleur Zhen Li 软伤疼痛诊所" loading="lazy"/></div><div class="ABjWcU"><div class="lJcJhG"><div class="cnqJzJ"><p class="axDOAG C3RXjX eGBYyp RYhd_E T2Ht61" title="Clinique antidouleur Zhen Li 软伤疼痛诊所">Clinique antidouleur Zhen Li 软伤疼痛诊所</p><p class="axDOAG FkLavb o3HUQR T2Ht61 fTV3EB" title="4870 Rue des Érables, Pierrefonds, QC H9J 1W4, Canada">4870 Rue des Érables, Pierrefonds, QC H9J 1W4, Canada</p></div><p class="axDOAG TE8kwS DbgFmO T2Ht61 WXSovK"><button type="button" data-show-phone="show-phone" data-lead-id="6599019" class="pCIKui"><p class="axDOAG TE8kwS tv4uDl tpRZTm">إظهار الرقم</p></button></p><a class="OP1nBW tpRZTm QPjIt4 WXSovK dmJvlT" href="tel:+1 438-501-2607" data-desktop-number-revealed="desktop-show-number-revealed" data-lead-id="6599019">+1 438-501-2607</a><a class="OP1nBW tpRZTm QPjIt4 WXSovK Wyhe7t" href="tel:+1 438-501-2607" data-number-revealed="show-number-revealed" data-lead-id="6599019">+1 438-501-2607</a><a class="OP1nBW iSiUSy hQb42p kNK6vJ wIiwwv hqkplt" href="tel:+1 438-501-2607" data-phone-call="phone-call-button" data-lead-id="6599019">الاتصال للحجز</a><button data-desktop-show-phone="desktop-show-phone" data-lead-id="6599019" class="wIiwwv NxhrXa">إظهار الرقم</button></div><hr class="uc7fiG"/><div class="_Ya9oo"><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">وخز جاف بالإبر</p><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">الوخز بالإبر</p></div></div></div></li><li class="OwChdp" data-id="lite-location-card-6614338"><div data-qa="location-card-Kinatex Pierrefonds" class="e02Wz5"><a href="https://www.fresha.com/ar/lvp/kinatex-sports-physio-pierrefonds-boulevard-gouin-ouest-montreal-wrgBn6" class="iZ_Jua" aria-label="Kinatex Pierrefonds"></a><div class="HdNCnr"><img src="https://images.fresha.com/lead-images/placeholders/therapy-center-6.jpg?class=width-small" class="afSlte ZvLHng" alt="صورة علاج طبيعي خاصة بـ Kinatex Pierrefonds" loading="lazy"/></div><div class="ABjWcU"><div class="lJcJhG"><div class="cnqJzJ"><p class="axDOAG C3RXjX eGBYyp RYhd_E T2Ht61" title="Kinatex Pierrefonds">Kinatex Pierrefonds</p><p class="axDOAG FkLavb o3HUQR T2Ht61 fTV3EB" title="12774 Boul Gouin O Ste 30, Pierrefonds, QC H8Z 1W5, Canada">12774 Boul Gouin O Ste 30, Pierrefonds, QC H8Z 1W5, Canada</p></div><p class="axDOAG TE8kwS DbgFmO T2Ht61 WXSovK"><button type="button" data-show-phone="show-phone" data-lead-id="6614338" class="pCIKui"><p class="axDOAG TE8kwS tv4uDl tpRZTm">إظهار الرقم</p></button></p><a class="OP1nBW tpRZTm QPjIt4 WXSovK dmJvlT" href="tel:+1 514-548-2687" data-desktop-number-revealed="desktop-show-number-revealed" data-lead-id="6614338">+1 514-548-2687</a><a class="OP1nBW tpRZTm QPjIt4 WXSovK Wyhe7t" href="tel:+1 514-548-2687" data-number-revealed="show-number-revealed" data-lead-id="6614338">+1 514-548-2687</a><a class="OP1nBW iSiUSy hQb42p kNK6vJ wIiwwv hqkplt" href="tel:+1 514-548-2687" data-phone-call="phone-call-button" data-lead-id="6614338">الاتصال للحجز</a><button data-desktop-show-phone="desktop-show-phone" data-lead-id="6614338" class="wIiwwv NxhrXa">إظهار الرقم</button></div><hr class="uc7fiG"/><div class="_Ya9oo"><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">وخز جاف بالإبر</p><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">الوخز بالإبر</p><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">علاج طبيعي</p></div></div></div></li><li class="OwChdp" data-id="lite-location-card-6597312"><div data-qa="location-card-Physiomentum Sports Medicine Centre" class="e02Wz5"><a href="https://www.fresha.com/ar/lvp/physiomentum-sports-medicine-centre-boulevard-saint-charles-montreal-ZDGB9A" class="iZ_Jua" aria-label="Physiomentum Sports Medicine Centre"></a><div class="HdNCnr"><img src="https://images.fresha.com/lead-images/placeholders/therapy-center-17.jpg?class=width-small" class="afSlte ZvLHng" alt="صورة علاج طبيعي خاصة بـ Physiomentum Sports Medicine Centre" loading="lazy"/></div><div class="ABjWcU"><div class="lJcJhG"><div class="cnqJzJ"><p class="axDOAG C3RXjX eGBYyp RYhd_E T2Ht61" title="Physiomentum Sports Medicine Centre">Physiomentum Sports Medicine Centre</p><p class="axDOAG FkLavb o3HUQR T2Ht61 fTV3EB" title="3872 Saint-Charles Blvd, Pierrefonds-Roxboro, Quebec H9H 3C6, Canada">3872 Saint-Charles Blvd, Pierrefonds-Roxboro, Quebec H9H 3C6, Canada</p></div><p class="axDOAG TE8kwS DbgFmO T2Ht61 WXSovK"><button type="button" data-show-phone="show-phone" data-lead-id="6597312" class="pCIKui"><p class="axDOAG TE8kwS tv4uDl tpRZTm">إظهار الرقم</p></button></p><a class="OP1nBW tpRZTm QPjIt4 WXSovK dmJvlT" href="tel:+1 514-626-9996" data-desktop-number-revealed="desktop-show-number-revealed" data-lead-id="6597312">+1 514-626-9996</a><a class="OP1nBW tpRZTm QPjIt4 WXSovK Wyhe7t" href="tel:+1 514-626-9996" data-number-revealed="show-number-revealed" data-lead-id="6597312">+1 514-626-9996</a><a class="OP1nBW iSiUSy hQb42p kNK6vJ wIiwwv hqkplt" href="tel:+1 514-626-9996" data-phone-call="phone-call-button" data-lead-id="6597312">الاتصال للحجز</a><button data-desktop-show-phone="desktop-show-phone" data-lead-id="6597312" class="wIiwwv NxhrXa">إظهار الرقم</button></div><hr class="uc7fiG"/><div class="_Ya9oo"><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">علاج طبيعي</p><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">الوخز بالإبر</p><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">وخز جاف بالإبر</p></div></div></div></li><li class="OwChdp" data-id="lite-location-card-6635441"><div data-qa="location-card-Pointe Claire Physiotherapy Clinic Universal" class="e02Wz5"><a href="https://www.fresha.com/ar/lvp/pointe-claire-physiotherapy-clinic-universal-boulevard-saint-jean-pointe-claire-a2JN53" class="iZ_Jua" aria-label="Pointe Claire Physiotherapy Clinic Universal"></a><div class="HdNCnr"><img src="https://images.fresha.com/lead-images/placeholders/therapy-center-24.jpg?class=width-small" class="afSlte ZvLHng" alt="صورة علاج طبيعي خاصة بـ Pointe Claire Physiotherapy Clinic Universal" loading="lazy"/></div><div class="ABjWcU"><div class="lJcJhG"><div class="cnqJzJ"><p class="axDOAG C3RXjX eGBYyp RYhd_E T2Ht61" title="Pointe Claire Physiotherapy Clinic Universal">Pointe Claire Physiotherapy Clinic Universal</p><p class="axDOAG FkLavb o3HUQR T2Ht61 fTV3EB" title="955 Boul. Saint-Jean #404, Pointe-Claire, QC H9R 5N8, Canada">955 Boul. Saint-Jean #404, Pointe-Claire, QC H9R 5N8, Canada</p></div><p class="axDOAG TE8kwS DbgFmO T2Ht61 WXSovK"><button type="button" data-show-phone="show-phone" data-lead-id="6635441" class="pCIKui"><p class="axDOAG TE8kwS tv4uDl tpRZTm">إظهار الرقم</p></button></p><a class="OP1nBW tpRZTm QPjIt4 WXSovK dmJvlT" href="tel:(888) 353-4270" data-desktop-number-revealed="desktop-show-number-revealed" data-lead-id="6635441">(888) 353-4270</a><a class="OP1nBW tpRZTm QPjIt4 WXSovK Wyhe7t" href="tel:(888) 353-4270" data-number-revealed="show-number-revealed" data-lead-id="6635441">(888) 353-4270</a><a class="OP1nBW iSiUSy hQb42p kNK6vJ wIiwwv hqkplt" href="tel:(888) 353-4270" data-phone-call="phone-call-button" data-lead-id="6635441">الاتصال للحجز</a><button data-desktop-show-phone="desktop-show-phone" data-lead-id="6635441" class="wIiwwv NxhrXa">إظهار الرقم</button></div><hr class="uc7fiG"/><div class="_Ya9oo"><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">وخز جاف بالإبر</p><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">علاج طبيعي</p></div></div></div></li><li class="OwChdp" data-id="lite-location-card-6610607"><div data-qa="location-card-Action Sport Physio West Island" class="e02Wz5"><a href="https://www.fresha.com/ar/lvp/action-sport-physio-west-island-boulevard-saint-jean-dollard-des-ormeaux-Lyj5bl" class="iZ_Jua" aria-label="Action Sport Physio West Island"></a><div class="HdNCnr"><img src="https://images.fresha.com/lead-images/placeholders/therapy-center-21.jpg?class=width-small" class="afSlte ZvLHng" alt="صورة علاج طبيعي خاصة بـ Action Sport Physio West Island" loading="lazy"/></div><div class="ABjWcU"><div class="lJcJhG"><div class="cnqJzJ"><p class="axDOAG C3RXjX eGBYyp RYhd_E T2Ht61" title="Action Sport Physio West Island">Action Sport Physio West Island</p><p class="axDOAG FkLavb o3HUQR T2Ht61 fTV3EB" title="3883 Boul. Saint-Jean 6th Floor, Dollard-Des Ormeaux, Quebec H9G 3B9, Canada">3883 Boul. Saint-Jean 6th Floor, Dollard-Des Ormeaux, Quebec H9G 3B9, Canada</p></div><p class="axDOAG TE8kwS DbgFmO T2Ht61 WXSovK"><button type="button" data-show-phone="show-phone" data-lead-id="6610607" class="pCIKui"><p class="axDOAG TE8kwS tv4uDl tpRZTm">إظهار الرقم</p></button></p><a class="OP1nBW tpRZTm QPjIt4 WXSovK dmJvlT" href="tel:+1 514-624-2424" data-desktop-number-revealed="desktop-show-number-revealed" data-lead-id="6610607">+1 514-624-2424</a><a class="OP1nBW tpRZTm QPjIt4 WXSovK Wyhe7t" href="tel:+1 514-624-2424" data-number-revealed="show-number-revealed" data-lead-id="6610607">+1 514-624-2424</a><a class="OP1nBW iSiUSy hQb42p kNK6vJ wIiwwv hqkplt" href="tel:+1 514-624-2424" data-phone-call="phone-call-button" data-lead-id="6610607">الاتصال للحجز</a><button data-desktop-show-phone="desktop-show-phone" data-lead-id="6610607" class="wIiwwv NxhrXa">إظهار الرقم</button></div><hr class="uc7fiG"/><div class="_Ya9oo"><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">العلاج بالأكسجين عالي الضغط</p><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">وخز جاف بالإبر</p><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">علاج طبيعي</p></div></div></div></li><li class="OwChdp" data-id="lite-location-card-6674944"><div data-qa="location-card-West island Harmony Acupuncture Clinic" class="e02Wz5"><a href="https://www.fresha.com/ar/lvp/west-island-harmony-acupuncture-clinic-saint-charles-boulevard-kirkland-oveVJG" class="iZ_Jua" aria-label="West island Harmony Acupuncture Clinic"></a><div class="HdNCnr"><img src="https://images.fresha.com/lead-images/placeholders/therapy-center-32.jpg?class=width-small" class="afSlte ZvLHng" alt="صورة علاج طبيعي خاصة بـ West island Harmony Acupuncture Clinic" loading="lazy"/></div><div class="ABjWcU"><div class="lJcJhG"><div class="cnqJzJ"><p class="axDOAG C3RXjX eGBYyp RYhd_E T2Ht61" title="West island Harmony Acupuncture Clinic">West island Harmony Acupuncture Clinic</p><p class="axDOAG FkLavb o3HUQR T2Ht61 fTV3EB" title="6600 transcanadienne unit #700, Pointe-Claire, Quebec H9R 4S2, Canada">6600 transcanadienne unit #700, Pointe-Claire, Quebec H9R 4S2, Canada</p></div><p class="axDOAG TE8kwS DbgFmO T2Ht61 WXSovK"><button type="button" data-show-phone="show-phone" data-lead-id="6674944" class="pCIKui"><p class="axDOAG TE8kwS tv4uDl tpRZTm">إظهار الرقم</p></button></p><a class="OP1nBW tpRZTm QPjIt4 WXSovK dmJvlT" href="tel:+1 514-797-2914" data-desktop-number-revealed="desktop-show-number-revealed" data-lead-id="6674944">+1 514-797-2914</a><a class="OP1nBW tpRZTm QPjIt4 WXSovK Wyhe7t" href="tel:+1 514-797-2914" data-number-revealed="show-number-revealed" data-lead-id="6674944">+1 514-797-2914</a><a class="OP1nBW iSiUSy hQb42p kNK6vJ wIiwwv hqkplt" href="tel:+1 514-797-2914" data-phone-call="phone-call-button" data-lead-id="6674944">الاتصال للحجز</a><button data-desktop-show-phone="desktop-show-phone" data-lead-id="6674944" class="wIiwwv NxhrXa">إظهار الرقم</button></div><hr class="uc7fiG"/><div class="_Ya9oo"><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">الوخز بالإبر</p><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">وخز جاف بالإبر</p></div></div></div></li><li class="OwChdp" data-id="lite-location-card-6659065"><div data-qa="location-card-Clinique Chiro-Santé Kirkland" class="e02Wz5"><a href="https://www.fresha.com/ar/lvp/clinique-chiro-sante-kirkland-saint-charles-boulevard-kirkland-2GPr52" class="iZ_Jua" aria-label="Clinique Chiro-Santé Kirkland"></a><div class="HdNCnr"><img src="https://images.fresha.com/lead-images/placeholders/therapy-center-19.jpg?class=width-small" class="afSlte ZvLHng" alt="صورة علاج طبيعي خاصة بـ Clinique Chiro-Santé Kirkland" loading="lazy"/></div><div class="ABjWcU"><div class="lJcJhG"><div class="cnqJzJ"><p class="axDOAG C3RXjX eGBYyp RYhd_E T2Ht61" title="Clinique Chiro-Santé Kirkland">Clinique Chiro-Santé Kirkland</p><p class="axDOAG FkLavb o3HUQR T2Ht61 fTV3EB" title="3608 Saint-Charles Blvd Bureau 25, Kirkland, Quebec H9J 2C3, Canada">3608 Saint-Charles Blvd Bureau 25, Kirkland, Quebec H9J 2C3, Canada</p></div><p class="axDOAG TE8kwS DbgFmO T2Ht61 WXSovK"><button type="button" data-show-phone="show-phone" data-lead-id="6659065" class="pCIKui"><p class="axDOAG TE8kwS tv4uDl tpRZTm">إظهار الرقم</p></button></p><a class="OP1nBW tpRZTm QPjIt4 WXSovK dmJvlT" href="tel:+1 514-694-7111" data-desktop-number-revealed="desktop-show-number-revealed" data-lead-id="6659065">+1 514-694-7111</a><a class="OP1nBW tpRZTm QPjIt4 WXSovK Wyhe7t" href="tel:+1 514-694-7111" data-number-revealed="show-number-revealed" data-lead-id="6659065">+1 514-694-7111</a><a class="OP1nBW iSiUSy hQb42p kNK6vJ wIiwwv hqkplt" href="tel:+1 514-694-7111" data-phone-call="phone-call-button" data-lead-id="6659065">الاتصال للحجز</a><button data-desktop-show-phone="desktop-show-phone" data-lead-id="6659065" class="wIiwwv NxhrXa">إظهار الرقم</button></div><hr class="uc7fiG"/><div class="_Ya9oo"><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">علاج تقويم العمود الفقري</p></div></div></div></li><li class="OwChdp" data-id="lite-location-card-6633519"><div data-qa="location-card-YiZhuoTang Acupuncture Clinique" class="e02Wz5"><a href="https://www.fresha.com/ar/lvp/yizhuotang-acupuncture-clinique-boulevard-saint-jean-dollard-des-ormeaux-VEgaYr" class="iZ_Jua" aria-label="YiZhuoTang Acupuncture Clinique"></a><div class="HdNCnr"><img src="https://images.fresha.com/lead-images/placeholders/therapy-center-46.jpg?class=width-small" class="afSlte ZvLHng" alt="صورة علاج طبيعي خاصة بـ YiZhuoTang Acupuncture Clinique" loading="lazy"/></div><div class="ABjWcU"><div class="lJcJhG"><div class="cnqJzJ"><p class="axDOAG C3RXjX eGBYyp RYhd_E T2Ht61" title="YiZhuoTang Acupuncture Clinique">YiZhuoTang Acupuncture Clinique</p><p class="axDOAG FkLavb o3HUQR T2Ht61 fTV3EB" title="4000 Boul. Saint-Jean Ste 3300, Dollard-Des Ormeaux, Quebec H9G 1X1, Canada">4000 Boul. Saint-Jean Ste 3300, Dollard-Des Ormeaux, Quebec H9G 1X1, Canada</p></div><p class="axDOAG TE8kwS DbgFmO T2Ht61 WXSovK"><button type="button" data-show-phone="show-phone" data-lead-id="6633519" class="pCIKui"><p class="axDOAG TE8kwS tv4uDl tpRZTm">إظهار الرقم</p></button></p><a class="OP1nBW tpRZTm QPjIt4 WXSovK dmJvlT" href="tel:+1 514-561-5678" data-desktop-number-revealed="desktop-show-number-revealed" data-lead-id="6633519">+1 514-561-5678</a><a class="OP1nBW tpRZTm QPjIt4 WXSovK Wyhe7t" href="tel:+1 514-561-5678" data-number-revealed="show-number-revealed" data-lead-id="6633519">+1 514-561-5678</a><a class="OP1nBW iSiUSy hQb42p kNK6vJ wIiwwv hqkplt" href="tel:+1 514-561-5678" data-phone-call="phone-call-button" data-lead-id="6633519">الاتصال للحجز</a><button data-desktop-show-phone="desktop-show-phone" data-lead-id="6633519" class="wIiwwv NxhrXa">إظهار الرقم</button></div><hr class="uc7fiG"/><div class="_Ya9oo"><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">الوخز بالإبر</p></div></div></div></li><li class="OwChdp" data-id="lite-location-card-6594224"><div data-qa="location-card-Catalyst Santé - DDO" class="e02Wz5"><a href="https://www.fresha.com/ar/lvp/catalyst-sante-ddo-rue-westminster-dollard-des-ormeaux-6QXMBb" class="iZ_Jua" aria-label="Catalyst Santé - DDO"></a><div class="HdNCnr"><img src="https://images.fresha.com/lead-images/placeholders/therapy-center-34.jpg?class=width-small" class="afSlte ZvLHng" alt="صورة علاج طبيعي خاصة بـ Catalyst Santé - DDO" loading="lazy"/></div><div class="ABjWcU"><div class="lJcJhG"><div class="cnqJzJ"><p class="axDOAG C3RXjX eGBYyp RYhd_E T2Ht61" title="Catalyst Santé - DDO">Catalyst Santé - DDO</p><p class="axDOAG FkLavb o3HUQR T2Ht61 fTV3EB" title="475 Rue Westminster, Dollard-des-Ormeaux, QC H9G 2S3, Canada">475 Rue Westminster, Dollard-des-Ormeaux, QC H9G 2S3, Canada</p></div><p class="axDOAG TE8kwS DbgFmO T2Ht61 WXSovK"><button type="button" data-show-phone="show-phone" data-lead-id="6594224" class="pCIKui"><p class="axDOAG TE8kwS tv4uDl tpRZTm">إظهار الرقم</p></button></p><a class="OP1nBW tpRZTm QPjIt4 WXSovK dmJvlT" href="tel:+1 514-421-2324" data-desktop-number-revealed="desktop-show-number-revealed" data-lead-id="6594224">+1 514-421-2324</a><a class="OP1nBW tpRZTm QPjIt4 WXSovK Wyhe7t" href="tel:+1 514-421-2324" data-number-revealed="show-number-revealed" data-lead-id="6594224">+1 514-421-2324</a><a class="OP1nBW iSiUSy hQb42p kNK6vJ wIiwwv hqkplt" href="tel:+1 514-421-2324" data-phone-call="phone-call-button" data-lead-id="6594224">الاتصال للحجز</a><button data-desktop-show-phone="desktop-show-phone" data-lead-id="6594224" class="wIiwwv NxhrXa">إظهار الرقم</button></div><hr class="uc7fiG"/><div class="_Ya9oo"><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">علاج طبيعي</p><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">وخز جاف بالإبر</p></div></div></div></li><li class="OwChdp" data-id="lite-location-card-6628992"><div data-qa="location-card-Kinatex West Island" class="e02Wz5"><a href="https://www.fresha.com/ar/lvp/kinatex-sports-physio-west-island-kirkland-rwNa6o" class="iZ_Jua" aria-label="Kinatex West Island"></a><div class="HdNCnr"><img src="https://images.fresha.com/lead-images/placeholders/therapy-center-38.jpg?class=width-small" class="afSlte ZvLHng" alt="صورة علاج طبيعي خاصة بـ Kinatex West Island" loading="lazy"/></div><div class="ABjWcU"><div class="lJcJhG"><div class="cnqJzJ"><p class="axDOAG C3RXjX eGBYyp RYhd_E T2Ht61" title="Kinatex West Island">Kinatex West Island</p><p class="axDOAG FkLavb o3HUQR T2Ht61 fTV3EB" title="17001 Transcanadienne, #201, Kirkland, QC H9H 0A7, Canada">17001 Transcanadienne, #201, Kirkland, QC H9H 0A7, Canada</p></div><p class="axDOAG TE8kwS DbgFmO T2Ht61 WXSovK"><button type="button" data-show-phone="show-phone" data-lead-id="6628992" class="pCIKui"><p class="axDOAG TE8kwS tv4uDl tpRZTm">إظهار الرقم</p></button></p><a class="OP1nBW tpRZTm QPjIt4 WXSovK dmJvlT" href="tel:+1 514-426-1000" data-desktop-number-revealed="desktop-show-number-revealed" data-lead-id="6628992">+1 514-426-1000</a><a class="OP1nBW tpRZTm QPjIt4 WXSovK Wyhe7t" href="tel:+1 514-426-1000" data-number-revealed="show-number-revealed" data-lead-id="6628992">+1 514-426-1000</a><a class="OP1nBW iSiUSy hQb42p kNK6vJ wIiwwv hqkplt" href="tel:+1 514-426-1000" data-phone-call="phone-call-button" data-lead-id="6628992">الاتصال للحجز</a><button data-desktop-show-phone="desktop-show-phone" data-lead-id="6628992" class="wIiwwv NxhrXa">إظهار الرقم</button></div><hr class="uc7fiG"/><div class="_Ya9oo"><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">علاج طبيعي</p><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">وخز جاف بالإبر</p><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">الوخز بالإبر</p></div></div></div></li><li class="OwChdp" data-id="lite-location-card-6682427"><div data-qa="location-card-Dr Francois Hains, Chiropraticien" class="e02Wz5"><a href="https://www.fresha.com/ar/lvp/dr-francois-hains-chiropraticien-sources-boulevard-dollard-des-ormeaux-xZW8bx" class="iZ_Jua" aria-label="Dr Francois Hains, Chiropraticien"></a><div class="HdNCnr"><img src="https://images.fresha.com/lead-images/placeholders/therapy-center-3.jpg?class=width-small" class="afSlte ZvLHng" alt="صورة علاج طبيعي خاصة بـ Dr Francois Hains, Chiropraticien" loading="lazy"/></div><div class="ABjWcU"><div class="lJcJhG"><div class="cnqJzJ"><p class="axDOAG C3RXjX eGBYyp RYhd_E T2Ht61" title="Dr Francois Hains, Chiropraticien">Dr Francois Hains, Chiropraticien</p><p class="axDOAG FkLavb o3HUQR T2Ht61 fTV3EB" title="3700 Bd des Sources bureau 207, Dollard-Des Ormeaux, Quebec H9B 3L8, Canada">3700 Bd des Sources bureau 207, Dollard-Des Ormeaux, Quebec H9B 3L8, Canada</p></div><p class="axDOAG TE8kwS DbgFmO T2Ht61 WXSovK"><button type="button" data-show-phone="show-phone" data-lead-id="6682427" class="pCIKui"><p class="axDOAG TE8kwS tv4uDl tpRZTm">إظهار الرقم</p></button></p><a class="OP1nBW tpRZTm QPjIt4 WXSovK dmJvlT" href="tel:+1 514-683-3360" data-desktop-number-revealed="desktop-show-number-revealed" data-lead-id="6682427">+1 514-683-3360</a><a class="OP1nBW tpRZTm QPjIt4 WXSovK Wyhe7t" href="tel:+1 514-683-3360" data-number-revealed="show-number-revealed" data-lead-id="6682427">+1 514-683-3360</a><a class="OP1nBW iSiUSy hQb42p kNK6vJ wIiwwv hqkplt" href="tel:+1 514-683-3360" data-phone-call="phone-call-button" data-lead-id="6682427">الاتصال للحجز</a><button data-desktop-show-phone="desktop-show-phone" data-lead-id="6682427" class="wIiwwv NxhrXa">إظهار الرقم</button></div><hr class="uc7fiG"/><div class="_Ya9oo"><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">علاج تقويم العمود الفقري</p></div></div></div></li><li class="OwChdp" data-id="lite-location-card-6620285"><div data-qa="location-card-West Island TCM" class="e02Wz5"><a href="https://www.fresha.com/ar/lvp/zenergy-acupuncture-tcm-clinic-hymus-boulevard-pointe-claire-a2JPb2" class="iZ_Jua" aria-label="West Island TCM"></a><div class="HdNCnr"><img src="https://images.fresha.com/lead-images/placeholders/therapy-center-24.jpg?class=width-small" class="afSlte ZvLHng" alt="صورة علاج طبيعي خاصة بـ West Island TCM" loading="lazy"/></div><div class="ABjWcU"><div class="lJcJhG"><div class="cnqJzJ"><p class="axDOAG C3RXjX eGBYyp RYhd_E T2Ht61" title="West Island TCM">West Island TCM</p><p class="axDOAG FkLavb o3HUQR T2Ht61 fTV3EB" title="189 Hymus Blvd Suite#206, Pointe-Claire, QC H9R 1E9, Canada">189 Hymus Blvd Suite#206, Pointe-Claire, QC H9R 1E9, Canada</p></div><p class="axDOAG TE8kwS DbgFmO T2Ht61 WXSovK"><button type="button" data-show-phone="show-phone" data-lead-id="6620285" class="pCIKui"><p class="axDOAG TE8kwS tv4uDl tpRZTm">إظهار الرقم</p></button></p><a class="OP1nBW tpRZTm QPjIt4 WXSovK dmJvlT" href="tel:+1 438-505-4088" data-desktop-number-revealed="desktop-show-number-revealed" data-lead-id="6620285">+1 438-505-4088</a><a class="OP1nBW tpRZTm QPjIt4 WXSovK Wyhe7t" href="tel:+1 438-505-4088" data-number-revealed="show-number-revealed" data-lead-id="6620285">+1 438-505-4088</a><a class="OP1nBW iSiUSy hQb42p kNK6vJ wIiwwv hqkplt" href="tel:+1 438-505-4088" data-phone-call="phone-call-button" data-lead-id="6620285">الاتصال للحجز</a><button data-desktop-show-phone="desktop-show-phone" data-lead-id="6620285" class="wIiwwv NxhrXa">إظهار الرقم</button></div><hr class="uc7fiG"/><div class="_Ya9oo"><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">الوخز بالإبر</p><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">وخز جاف بالإبر</p></div></div></div></li><li class="OwChdp" data-id="lite-location-card-6620564"><div data-qa="location-card-Acupuncture West Island" class="e02Wz5"><a href="https://www.fresha.com/ar/lvp/acupuncture-west-island-boulevard-jacques-bizard-montreal-15XKKE" class="iZ_Jua" aria-label="Acupuncture West Island"></a><div class="HdNCnr"><img src="https://images.fresha.com/lead-images/placeholders/therapy-center-13.jpg?class=width-small" class="afSlte ZvLHng" alt="صورة علاج طبيعي خاصة بـ Acupuncture West Island" loading="lazy"/></div><div class="ABjWcU"><div class="lJcJhG"><div class="cnqJzJ"><p class="axDOAG C3RXjX eGBYyp RYhd_E T2Ht61" title="Acupuncture West Island">Acupuncture West Island</p><p class="axDOAG FkLavb o3HUQR T2Ht61 fTV3EB" title="560 Bd Jacques Bizard #104, L&#x27;Île-Bizard, QC H9C 2J8, Canada">560 Bd Jacques Bizard #104, L&#x27;Île-Bizard, QC H9C 2J8, Canada</p></div><p class="axDOAG TE8kwS DbgFmO T2Ht61 WXSovK"><button type="button" data-show-phone="show-phone" data-lead-id="6620564" class="pCIKui"><p class="axDOAG TE8kwS tv4uDl tpRZTm">إظهار الرقم</p></button></p><a class="OP1nBW tpRZTm QPjIt4 WXSovK dmJvlT" href="tel:+1 514-700-1594" data-desktop-number-revealed="desktop-show-number-revealed" data-lead-id="6620564">+1 514-700-1594</a><a class="OP1nBW tpRZTm QPjIt4 WXSovK Wyhe7t" href="tel:+1 514-700-1594" data-number-revealed="show-number-revealed" data-lead-id="6620564">+1 514-700-1594</a><a class="OP1nBW iSiUSy hQb42p kNK6vJ wIiwwv hqkplt" href="tel:+1 514-700-1594" data-phone-call="phone-call-button" data-lead-id="6620564">الاتصال للحجز</a><button data-desktop-show-phone="desktop-show-phone" data-lead-id="6620564" class="wIiwwv NxhrXa">إظهار الرقم</button></div><hr class="uc7fiG"/><div class="_Ya9oo"><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">وخز جاف بالإبر</p><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">الوخز بالإبر</p></div></div></div></li><li class="OwChdp" data-id="lite-location-card-6652388"><div data-qa="location-card-Centre Chiropratique Roxboro | Chiropraticien à Montréal" class="e02Wz5"><a href="https://www.fresha.com/ar/lvp/centre-chiropratique-roxboro-boulevard-gouin-ouest-montreal-ovew58" class="iZ_Jua" aria-label="Centre Chiropratique Roxboro | Chiropraticien à Montréal"></a><div class="HdNCnr"><img src="https://images.fresha.com/lead-images/placeholders/therapy-center-42.jpg?class=width-small" class="afSlte ZvLHng" alt="صورة علاج طبيعي خاصة بـ Centre Chiropratique Roxboro | Chiropraticien à Montréal" loading="lazy"/></div><div class="ABjWcU"><div class="lJcJhG"><div class="cnqJzJ"><p class="axDOAG C3RXjX eGBYyp RYhd_E T2Ht61" title="Centre Chiropratique Roxboro | Chiropraticien à Montréal">Centre Chiropratique Roxboro | Chiropraticien à Montréal</p><p class="axDOAG FkLavb o3HUQR T2Ht61 fTV3EB" title="10400 Boul Gouin O, Roxboro, QC H8Y 1W4, Canada">10400 Boul Gouin O, Roxboro, QC H8Y 1W4, Canada</p></div><p class="axDOAG TE8kwS DbgFmO T2Ht61 WXSovK"><button type="button" data-show-phone="show-phone" data-lead-id="6652388" class="pCIKui"><p class="axDOAG TE8kwS tv4uDl tpRZTm">إظهار الرقم</p></button></p><a class="OP1nBW tpRZTm QPjIt4 WXSovK dmJvlT" href="tel:+1 514-683-3476" data-desktop-number-revealed="desktop-show-number-revealed" data-lead-id="6652388">+1 514-683-3476</a><a class="OP1nBW tpRZTm QPjIt4 WXSovK Wyhe7t" href="tel:+1 514-683-3476" data-number-revealed="show-number-revealed" data-lead-id="6652388">+1 514-683-3476</a><a class="OP1nBW iSiUSy hQb42p kNK6vJ wIiwwv hqkplt" href="tel:+1 514-683-3476" data-phone-call="phone-call-button" data-lead-id="6652388">الاتصال للحجز</a><button data-desktop-show-phone="desktop-show-phone" data-lead-id="6652388" class="wIiwwv NxhrXa">إظهار الرقم</button></div><hr class="uc7fiG"/><div class="_Ya9oo"><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">علاج تقويم العمود الفقري</p></div></div></div></li><li class="OwChdp" data-id="lite-location-card-6658457"><div data-qa="location-card-ARC Physio" class="e02Wz5"><a href="https://www.fresha.com/ar/lvp/arc-physio-hymus-boulevard-pointe-claire-7rlyA5" class="iZ_Jua" aria-label="ARC Physio"></a><div class="HdNCnr"><img src="https://images.fresha.com/lead-images/placeholders/therapy-center-43.jpg?class=width-small" class="afSlte ZvLHng" alt="صورة مساج وتدليك خاصة بـ ARC Physio" loading="lazy"/></div><div class="ABjWcU"><div class="lJcJhG"><div class="cnqJzJ"><p class="axDOAG C3RXjX eGBYyp RYhd_E T2Ht61" title="ARC Physio">ARC Physio</p><p class="axDOAG FkLavb o3HUQR T2Ht61 fTV3EB" title="189 Boul Hymus #400, Pointe-Claire, Quebec H9R 1E9, Canada">189 Boul Hymus #400, Pointe-Claire, Quebec H9R 1E9, Canada</p></div><p class="axDOAG TE8kwS DbgFmO T2Ht61 WXSovK"><button type="button" data-show-phone="show-phone" data-lead-id="6658457" class="pCIKui"><p class="axDOAG TE8kwS tv4uDl tpRZTm">إظهار الرقم</p></button></p><a class="OP1nBW tpRZTm QPjIt4 WXSovK dmJvlT" href="tel:+1 438-230-2388" data-desktop-number-revealed="desktop-show-number-revealed" data-lead-id="6658457">+1 438-230-2388</a><a class="OP1nBW tpRZTm QPjIt4 WXSovK Wyhe7t" href="tel:+1 438-230-2388" data-number-revealed="show-number-revealed" data-lead-id="6658457">+1 438-230-2388</a><a class="OP1nBW iSiUSy hQb42p kNK6vJ wIiwwv hqkplt" href="tel:+1 438-230-2388" data-phone-call="phone-call-button" data-lead-id="6658457">الاتصال للحجز</a><button data-desktop-show-phone="desktop-show-phone" data-lead-id="6658457" class="wIiwwv NxhrXa">إظهار الرقم</button></div><hr class="uc7fiG"/><div class="_Ya9oo"><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">مساج علاجي</p><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">تدليك القدمين</p><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">تدليك الأنسجة العميقة</p><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">مساج رياضي</p></div></div></div></li><li class="OwChdp" data-id="lite-location-card-6647930"><div data-qa="location-card-Integral Performance Physio West Island" class="e02Wz5"><a href="https://www.fresha.com/ar/lvp/integral-physiotherapy-osteopathy-massage-west-island-dollard-des-ormeaux-0qRqeo" class="iZ_Jua" aria-label="Integral Performance Physio West Island"></a><div class="HdNCnr"><img src="https://images.fresha.com/lead-images/placeholders/therapy-center-19.jpg?class=width-small" class="afSlte ZvLHng" alt="صورة مساج وتدليك خاصة بـ Integral Performance Physio West Island" loading="lazy"/></div><div class="ABjWcU"><div class="lJcJhG"><div class="cnqJzJ"><p class="axDOAG C3RXjX eGBYyp RYhd_E T2Ht61" title="Integral Performance Physio West Island">Integral Performance Physio West Island</p><p class="axDOAG FkLavb o3HUQR T2Ht61 fTV3EB" title="3675 Bd des Sources Suite: 200, Dollard-Des Ormeaux, Quebec H9B 2T6, Canada">3675 Bd des Sources Suite: 200, Dollard-Des Ormeaux, Quebec H9B 2T6, Canada</p></div><p class="axDOAG TE8kwS DbgFmO T2Ht61 WXSovK"><button type="button" data-show-phone="show-phone" data-lead-id="6647930" class="pCIKui"><p class="axDOAG TE8kwS tv4uDl tpRZTm">إظهار الرقم</p></button></p><a class="OP1nBW tpRZTm QPjIt4 WXSovK dmJvlT" href="tel:+1 514-684-3636" data-desktop-number-revealed="desktop-show-number-revealed" data-lead-id="6647930">+1 514-684-3636</a><a class="OP1nBW tpRZTm QPjIt4 WXSovK Wyhe7t" href="tel:+1 514-684-3636" data-number-revealed="show-number-revealed" data-lead-id="6647930">+1 514-684-3636</a><a class="OP1nBW iSiUSy hQb42p kNK6vJ wIiwwv hqkplt" href="tel:+1 514-684-3636" data-phone-call="phone-call-button" data-lead-id="6647930">الاتصال للحجز</a><button data-desktop-show-phone="desktop-show-phone" data-lead-id="6647930" class="wIiwwv NxhrXa">إظهار الرقم</button></div><hr class="uc7fiG"/><div class="_Ya9oo"><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">مساج التصريف اللمفاوي</p><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">مساج علاجي</p><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">مساج وتدليك للاسترخاء</p><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">الحجامة</p></div></div></div></li><li class="OwChdp" data-id="lite-location-card-6609220"><div data-qa="location-card-Modo Yoga West Island" class="e02Wz5"><a href="https://www.fresha.com/ar/lvp/modo-yoga-west-island-boulevard-des-sources-dollard-des-ormeaux-15XeJQ" class="iZ_Jua" aria-label="Modo Yoga West Island"></a><div class="HdNCnr"><img src="https://images.fresha.com/lead-images/placeholders/gym-and-fitness-22.jpg?class=width-small" class="afSlte ZvLHng" alt="صورة مساج وتدليك خاصة بـ Modo Yoga West Island" loading="lazy"/></div><div class="ABjWcU"><div class="lJcJhG"><div class="cnqJzJ"><p class="axDOAG C3RXjX eGBYyp RYhd_E T2Ht61" title="Modo Yoga West Island">Modo Yoga West Island</p><p class="axDOAG FkLavb o3HUQR T2Ht61 fTV3EB" title="3669 Bd des Sources, Dollard-des-Ormeaux, QC H9B 2T6, Canada">3669 Bd des Sources, Dollard-des-Ormeaux, QC H9B 2T6, Canada</p></div><p class="axDOAG TE8kwS DbgFmO T2Ht61 WXSovK"><button type="button" data-show-phone="show-phone" data-lead-id="6609220" class="pCIKui"><p class="axDOAG TE8kwS tv4uDl tpRZTm">إظهار الرقم</p></button></p><a class="OP1nBW tpRZTm QPjIt4 WXSovK dmJvlT" href="tel:+1 514-542-3366" data-desktop-number-revealed="desktop-show-number-revealed" data-lead-id="6609220">+1 514-542-3366</a><a class="OP1nBW tpRZTm QPjIt4 WXSovK Wyhe7t" href="tel:+1 514-542-3366" data-number-revealed="show-number-revealed" data-lead-id="6609220">+1 514-542-3366</a><a class="OP1nBW iSiUSy hQb42p kNK6vJ wIiwwv hqkplt" href="tel:+1 514-542-3366" data-phone-call="phone-call-button" data-lead-id="6609220">الاتصال للحجز</a><button data-desktop-show-phone="desktop-show-phone" data-lead-id="6609220" class="wIiwwv NxhrXa">إظهار الرقم</button></div><hr class="uc7fiG"/><div class="_Ya9oo"><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">علم المنعكسات</p><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">تدليك القدمين</p></div></div></div></li><li class="OwChdp" data-id="lite-location-card-6619307"><div data-qa="location-card-RISE Clinic - Help with Anxiety and Depression West Island Psychology" class="e02Wz5"><a href="https://www.fresha.com/ar/lvp/rise-clinic-help-with-anxiety-and-depression-west-island-psychology-boulevard-LyjQkJ" class="iZ_Jua" aria-label="RISE Clinic - Help with Anxiety and Depression West Island Psychology"></a><div class="HdNCnr"><img src="https://images.fresha.com/lead-images/placeholders/therapy-center-47.jpg?class=width-small" class="afSlte ZvLHng" alt="صورة منتجعات صحية وساونا خاصة بـ RISE Clinic - Help with Anxiety and Depression West Island Psychology" loading="lazy"/></div><div class="ABjWcU"><div class="lJcJhG"><div class="cnqJzJ"><p class="axDOAG C3RXjX eGBYyp RYhd_E T2Ht61" title="RISE Clinic - Help with Anxiety and Depression West Island Psychology">RISE Clinic - Help with Anxiety and Depression West Island Psychology</p><p class="axDOAG FkLavb o3HUQR T2Ht61 fTV3EB" title="4465 Bd des Sources, Roxboro, QC H8Y 3C1, Canada">4465 Bd des Sources, Roxboro, QC H8Y 3C1, Canada</p></div><p class="axDOAG TE8kwS DbgFmO T2Ht61 WXSovK"><button type="button" data-show-phone="show-phone" data-lead-id="6619307" class="pCIKui"><p class="axDOAG TE8kwS tv4uDl tpRZTm">إظهار الرقم</p></button></p><a class="OP1nBW tpRZTm QPjIt4 WXSovK dmJvlT" href="tel:+1 514-232-6445" data-desktop-number-revealed="desktop-show-number-revealed" data-lead-id="6619307">+1 514-232-6445</a><a class="OP1nBW tpRZTm QPjIt4 WXSovK Wyhe7t" href="tel:+1 514-232-6445" data-number-revealed="show-number-revealed" data-lead-id="6619307">+1 514-232-6445</a><a class="OP1nBW iSiUSy hQb42p kNK6vJ wIiwwv hqkplt" href="tel:+1 514-232-6445" data-phone-call="phone-call-button" data-lead-id="6619307">الاتصال للحجز</a><button data-desktop-show-phone="desktop-show-phone" data-lead-id="6619307" class="wIiwwv NxhrXa">إظهار الرقم</button></div><hr class="uc7fiG"/><div class="_Ya9oo"><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">العلاج بالتبريد</p></div></div></div></li><li class="OwChdp" data-id="lite-location-card-6629749"><div data-qa="location-card-Medevie Ostéopathie (Private Extended Health Care Services)" class="e02Wz5"><a href="https://www.fresha.com/ar/lvp/medevie-osteopathie-private-extended-health-care-services-boulevard-saint-jean-58Xxe7" class="iZ_Jua" aria-label="Medevie Ostéopathie (Private Extended Health Care Services)"></a><div class="HdNCnr"><img src="https://images.fresha.com/lead-images/placeholders/massage-111.jpg?class=width-small" class="afSlte ZvLHng" alt="صورة مساج وتدليك خاصة بـ Medevie Ostéopathie (Private Extended Health Care Services)" loading="lazy"/></div><div class="ABjWcU"><div class="lJcJhG"><div class="cnqJzJ"><p class="axDOAG C3RXjX eGBYyp RYhd_E T2Ht61" title="Medevie Ostéopathie (Private Extended Health Care Services)">Medevie Ostéopathie (Private Extended Health Care Services)</p><p class="axDOAG FkLavb o3HUQR T2Ht61 fTV3EB" title="4226 Boul. Saint-Jean #400, Dollard-des-Ormeaux, QC H9G 1X5, Canada">4226 Boul. Saint-Jean #400, Dollard-des-Ormeaux, QC H9G 1X5, Canada</p></div><p class="axDOAG TE8kwS DbgFmO T2Ht61 WXSovK"><button type="button" data-show-phone="show-phone" data-lead-id="6629749" class="pCIKui"><p class="axDOAG TE8kwS tv4uDl tpRZTm">إظهار الرقم</p></button></p><a class="OP1nBW tpRZTm QPjIt4 WXSovK dmJvlT" href="tel:+1 514-245-7532" data-desktop-number-revealed="desktop-show-number-revealed" data-lead-id="6629749">+1 514-245-7532</a><a class="OP1nBW tpRZTm QPjIt4 WXSovK Wyhe7t" href="tel:+1 514-245-7532" data-number-revealed="show-number-revealed" data-lead-id="6629749">+1 514-245-7532</a><a class="OP1nBW iSiUSy hQb42p kNK6vJ wIiwwv hqkplt" href="tel:+1 514-245-7532" data-phone-call="phone-call-button" data-lead-id="6629749">الاتصال للحجز</a><button data-desktop-show-phone="desktop-show-phone" data-lead-id="6629749" class="wIiwwv NxhrXa">إظهار الرقم</button></div><hr class="uc7fiG"/><div class="_Ya9oo"><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">تدليك الأنسجة العميقة</p><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">مساج علاجي</p><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">مساج علاجي</p><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">مساج تايلاندي</p></div></div></div></li><li class="OwChdp" data-id="lite-location-card-6644702"><div data-qa="location-card-Skylit Ayurveda Inc." class="e02Wz5"><a href="https://www.fresha.com/ar/lvp/skylit-ayurveda-montee-de-leglise-montreal-8JLNw2" class="iZ_Jua" aria-label="Skylit Ayurveda Inc."></a><div class="HdNCnr"><img src="https://images.fresha.com/lead-images/placeholders/therapy-center-31.jpg?class=width-small" class="afSlte ZvLHng" alt="صورة منتجعات صحية وساونا خاصة بـ Skylit Ayurveda Inc." loading="lazy"/></div><div class="ABjWcU"><div class="lJcJhG"><div class="cnqJzJ"><p class="axDOAG C3RXjX eGBYyp RYhd_E T2Ht61" title="Skylit Ayurveda Inc.">Skylit Ayurveda Inc.</p><p class="axDOAG FkLavb o3HUQR T2Ht61 fTV3EB" title="306 Mnt de l&#x27;Église Ste 202, L&#x27;Île-Bizard—Sainte-Geneviève, Quebec H9C 1G9, Canada">306 Mnt de l&#x27;Église Ste 202, L&#x27;Île-Bizard—Sainte-Geneviève, Quebec H9C 1G9, Canada</p></div><p class="axDOAG TE8kwS DbgFmO T2Ht61 WXSovK"><button type="button" data-show-phone="show-phone" data-lead-id="6644702" class="pCIKui"><p class="axDOAG TE8kwS tv4uDl tpRZTm">إظهار الرقم</p></button></p><a class="OP1nBW tpRZTm QPjIt4 WXSovK dmJvlT" href="tel:+1 514-242-3545" data-desktop-number-revealed="desktop-show-number-revealed" data-lead-id="6644702">+1 514-242-3545</a><a class="OP1nBW tpRZTm QPjIt4 WXSovK Wyhe7t" href="tel:+1 514-242-3545" data-number-revealed="show-number-revealed" data-lead-id="6644702">+1 514-242-3545</a><a class="OP1nBW iSiUSy hQb42p kNK6vJ wIiwwv hqkplt" href="tel:+1 514-242-3545" data-phone-call="phone-call-button" data-lead-id="6644702">الاتصال للحجز</a><button data-desktop-show-phone="desktop-show-phone" data-lead-id="6644702" class="wIiwwv NxhrXa">إظهار الرقم</button></div><hr class="uc7fiG"/><div class="_Ya9oo"><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">العلاج بالتبريد</p><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">مقشرات الجسم</p></div></div></div></li><li class="OwChdp" data-id="lite-location-card-6616175"><div data-qa="location-card-Synergy Sports Therapy and Performance" class="e02Wz5"><a href="https://www.fresha.com/ar/lvp/synergy-sports-therapy-and-performance-boulevard-brunswick-dollard-des-ormeaux-q8ZeDy" class="iZ_Jua" aria-label="Synergy Sports Therapy and Performance"></a><div class="HdNCnr"><img src="https://images.fresha.com/lead-images/placeholders/personal-trainer-3.jpg?class=width-small" class="afSlte ZvLHng" alt="صورة المدربون الشخصيون خاصة بـ Synergy Sports Therapy and Performance" loading="lazy"/></div><div class="ABjWcU"><div class="lJcJhG"><div class="cnqJzJ"><p class="axDOAG C3RXjX eGBYyp RYhd_E T2Ht61" title="Synergy Sports Therapy and Performance">Synergy Sports Therapy and Performance</p><p class="axDOAG FkLavb o3HUQR T2Ht61 fTV3EB" title="90D Brunswick Blvd, Dollard-Des Ormeaux, Quebec H9B 2C5, Canada">90D Brunswick Blvd, Dollard-Des Ormeaux, Quebec H9B 2C5, Canada</p></div><p class="axDOAG TE8kwS DbgFmO T2Ht61 WXSovK"><button type="button" data-show-phone="show-phone" data-lead-id="6616175" class="pCIKui"><p class="axDOAG TE8kwS tv4uDl tpRZTm">إظهار الرقم</p></button></p><a class="OP1nBW tpRZTm QPjIt4 WXSovK dmJvlT" href="tel:+1 514-575-0550" data-desktop-number-revealed="desktop-show-number-revealed" data-lead-id="6616175">+1 514-575-0550</a><a class="OP1nBW tpRZTm QPjIt4 WXSovK Wyhe7t" href="tel:+1 514-575-0550" data-number-revealed="show-number-revealed" data-lead-id="6616175">+1 514-575-0550</a><a class="OP1nBW iSiUSy hQb42p kNK6vJ wIiwwv hqkplt" href="tel:+1 514-575-0550" data-phone-call="phone-call-button" data-lead-id="6616175">الاتصال للحجز</a><button data-desktop-show-phone="desktop-show-phone" data-lead-id="6616175" class="wIiwwv NxhrXa">إظهار الرقم</button></div><hr class="uc7fiG"/><div class="_Ya9oo"><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">التدريب الشخصي</p></div></div></div></li><li class="OwChdp" data-id="lite-location-card-6652355"><div data-qa="location-card-Osteopathie West Island" class="e02Wz5"><a href="https://www.fresha.com/ar/lvp/osteopathie-west-island-trans-canada-highway-pointe-claire-Qv4Knl" class="iZ_Jua" aria-label="Osteopathie West Island"></a><div class="HdNCnr"><img src="https://images.fresha.com/lead-images/placeholders/therapy-center-36.jpg?class=width-small" class="afSlte ZvLHng" alt="صورة مساج وتدليك خاصة بـ Osteopathie West Island" loading="lazy"/></div><div class="ABjWcU"><div class="lJcJhG"><div class="cnqJzJ"><p class="axDOAG C3RXjX eGBYyp RYhd_E T2Ht61" title="Osteopathie West Island">Osteopathie West Island</p><p class="axDOAG FkLavb o3HUQR T2Ht61 fTV3EB" title="6600 Trans-Canada Hwy Ste 500, Pointe-Claire, Quebec H9R 4S2, Canada">6600 Trans-Canada Hwy Ste 500, Pointe-Claire, Quebec H9R 4S2, Canada</p></div><p class="axDOAG TE8kwS DbgFmO T2Ht61 WXSovK"><button type="button" data-show-phone="show-phone" data-lead-id="6652355" class="pCIKui"><p class="axDOAG TE8kwS tv4uDl tpRZTm">إظهار الرقم</p></button></p><a class="OP1nBW tpRZTm QPjIt4 WXSovK dmJvlT" href="tel:+1 514-693-2800" data-desktop-number-revealed="desktop-show-number-revealed" data-lead-id="6652355">+1 514-693-2800</a><a class="OP1nBW tpRZTm QPjIt4 WXSovK Wyhe7t" href="tel:+1 514-693-2800" data-number-revealed="show-number-revealed" data-lead-id="6652355">+1 514-693-2800</a><a class="OP1nBW iSiUSy hQb42p kNK6vJ wIiwwv hqkplt" href="tel:+1 514-693-2800" data-phone-call="phone-call-button" data-lead-id="6652355">الاتصال للحجز</a><button data-desktop-show-phone="desktop-show-phone" data-lead-id="6652355" class="wIiwwv NxhrXa">إظهار الرقم</button></div><hr class="uc7fiG"/><div class="_Ya9oo"><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">مساج علاجي</p></div></div></div></li><li class="OwChdp" data-id="lite-location-card-6613901"><div data-qa="location-card-TeamNutrition" class="e02Wz5"><a href="https://www.fresha.com/ar/lvp/teamnutrition-boulevard-saint-jean-dollard-des-ormeaux-PVZxD9" class="iZ_Jua" aria-label="TeamNutrition"></a><div class="HdNCnr"><img src="https://images.fresha.com/lead-images/placeholders/therapy-center-42.jpg?class=width-small" class="afSlte ZvLHng" alt="صورة مراكز رعاية صحية خاصة بـ TeamNutrition" loading="lazy"/></div><div class="ABjWcU"><div class="lJcJhG"><div class="cnqJzJ"><p class="axDOAG C3RXjX eGBYyp RYhd_E T2Ht61" title="TeamNutrition">TeamNutrition</p><p class="axDOAG FkLavb o3HUQR T2Ht61 fTV3EB" title="3883 Boul. Saint-Jean #600, Dollard-des-Ormeaux, QC H9G 3B9, Canada">3883 Boul. Saint-Jean #600, Dollard-des-Ormeaux, QC H9G 3B9, Canada</p></div><p class="axDOAG TE8kwS DbgFmO T2Ht61 WXSovK"><button type="button" data-show-phone="show-phone" data-lead-id="6613901" class="pCIKui"><p class="axDOAG TE8kwS tv4uDl tpRZTm">إظهار الرقم</p></button></p><a class="OP1nBW tpRZTm QPjIt4 WXSovK dmJvlT" href="tel:+1 514-943-6896" data-desktop-number-revealed="desktop-show-number-revealed" data-lead-id="6613901">+1 514-943-6896</a><a class="OP1nBW tpRZTm QPjIt4 WXSovK Wyhe7t" href="tel:+1 514-943-6896" data-number-revealed="show-number-revealed" data-lead-id="6613901">+1 514-943-6896</a><a class="OP1nBW iSiUSy hQb42p kNK6vJ wIiwwv hqkplt" href="tel:+1 514-943-6896" data-phone-call="phone-call-button" data-lead-id="6613901">الاتصال للحجز</a><button data-desktop-show-phone="desktop-show-phone" data-lead-id="6613901" class="wIiwwv NxhrXa">إظهار الرقم</button></div><hr class="uc7fiG"/><div class="_Ya9oo"><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">فقدان الوزن</p></div></div></div></li><li class="OwChdp" data-id="lite-location-card-6653945"><div data-qa="location-card-Nutrimedicine Center- Alyaa Ghanema" class="e02Wz5"><a href="https://www.fresha.com/ar/lvp/nutrimedicine-center-alyaa-ghanema-boulevard-saint-jean-dollard-des-ormeaux-PVNkvV" class="iZ_Jua" aria-label="Nutrimedicine Center- Alyaa Ghanema"></a><div class="HdNCnr"><img src="https://images.fresha.com/lead-images/placeholders/therapy-center-32.jpg?class=width-small" class="afSlte ZvLHng" alt="صورة مساج وتدليك خاصة بـ Nutrimedicine Center- Alyaa Ghanema" loading="lazy"/></div><div class="ABjWcU"><div class="lJcJhG"><div class="cnqJzJ"><p class="axDOAG C3RXjX eGBYyp RYhd_E T2Ht61" title="Nutrimedicine Center- Alyaa Ghanema">Nutrimedicine Center- Alyaa Ghanema</p><p class="axDOAG FkLavb o3HUQR T2Ht61 fTV3EB" title="4230 Boul. Saint-Jean, Dollard-des-Ormeaux, QC H9H 3X4, Canada">4230 Boul. Saint-Jean, Dollard-des-Ormeaux, QC H9H 3X4, Canada</p></div><p class="axDOAG TE8kwS DbgFmO T2Ht61 WXSovK"><button type="button" data-show-phone="show-phone" data-lead-id="6653945" class="pCIKui"><p class="axDOAG TE8kwS tv4uDl tpRZTm">إظهار الرقم</p></button></p><a class="OP1nBW tpRZTm QPjIt4 WXSovK dmJvlT" href="tel:+1 438-924-4664" data-desktop-number-revealed="desktop-show-number-revealed" data-lead-id="6653945">+1 438-924-4664</a><a class="OP1nBW tpRZTm QPjIt4 WXSovK Wyhe7t" href="tel:+1 438-924-4664" data-number-revealed="show-number-revealed" data-lead-id="6653945">+1 438-924-4664</a><a class="OP1nBW iSiUSy hQb42p kNK6vJ wIiwwv hqkplt" href="tel:+1 438-924-4664" data-phone-call="phone-call-button" data-lead-id="6653945">الاتصال للحجز</a><button data-desktop-show-phone="desktop-show-phone" data-lead-id="6653945" class="wIiwwv NxhrXa">إظهار الرقم</button></div><hr class="uc7fiG"/><div class="_Ya9oo"><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">الحجامة</p><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">مساج الأيورفيدا</p><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">علم المنعكسات</p></div></div></div></li><li class="OwChdp" data-id="lite-location-card-6640671"><div data-qa="location-card-SPAR Training" class="e02Wz5"><a href="https://www.fresha.com/ar/lvp/spar-training-rue-tecumseh-dollard-des-ormeaux-xZVP5x" class="iZ_Jua" aria-label="SPAR Training"></a><div class="HdNCnr"><img src="https://images.fresha.com/lead-images/placeholders/weight-loss-25.jpg?class=width-small" class="afSlte ZvLHng" alt="صورة مراكز رعاية صحية خاصة بـ SPAR Training" loading="lazy"/></div><div class="ABjWcU"><div class="lJcJhG"><div class="cnqJzJ"><p class="axDOAG C3RXjX eGBYyp RYhd_E T2Ht61" title="SPAR Training">SPAR Training</p><p class="axDOAG FkLavb o3HUQR T2Ht61 fTV3EB" title="845E Tecumseh St, Dollard-Des Ormeaux, Quebec H9R 1A1, Canada">845E Tecumseh St, Dollard-Des Ormeaux, Quebec H9R 1A1, Canada</p></div><p class="axDOAG TE8kwS DbgFmO T2Ht61 WXSovK"><button type="button" data-show-phone="show-phone" data-lead-id="6640671" class="pCIKui"><p class="axDOAG TE8kwS tv4uDl tpRZTm">إظهار الرقم</p></button></p><a class="OP1nBW tpRZTm QPjIt4 WXSovK dmJvlT" href="tel:+1 514-886-2847" data-desktop-number-revealed="desktop-show-number-revealed" data-lead-id="6640671">+1 514-886-2847</a><a class="OP1nBW tpRZTm QPjIt4 WXSovK Wyhe7t" href="tel:+1 514-886-2847" data-number-revealed="show-number-revealed" data-lead-id="6640671">+1 514-886-2847</a><a class="OP1nBW iSiUSy hQb42p kNK6vJ wIiwwv hqkplt" href="tel:+1 514-886-2847" data-phone-call="phone-call-button" data-lead-id="6640671">الاتصال للحجز</a><button data-desktop-show-phone="desktop-show-phone" data-lead-id="6640671" class="wIiwwv NxhrXa">إظهار الرقم</button></div><hr class="uc7fiG"/><div class="_Ya9oo"><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">فقدان الوزن</p></div></div></div></li><li class="OwChdp" data-id="lite-location-card-6629815"><div data-qa="location-card-Kinelite West-Island | Kinésio, Entrainement &amp; Clinique sportive" class="e02Wz5"><a href="https://www.fresha.com/ar/lvp/kinelite-west-island-kinesiologues-et-cliniques-de-sante-rue-de-la-triade-pointe-n6zal9" class="iZ_Jua" aria-label="Kinelite West-Island | Kinésio, Entrainement &amp; Clinique sportive"></a><div class="HdNCnr"><img src="https://images.fresha.com/lead-images/placeholders/personal-trainer-35.jpg?class=width-small" class="afSlte ZvLHng" alt="صورة المدربون الشخصيون خاصة بـ Kinelite West-Island | Kinésio, Entrainement &amp; Clinique sportive" loading="lazy"/></div><div class="ABjWcU"><div class="lJcJhG"><div class="cnqJzJ"><p class="axDOAG C3RXjX eGBYyp RYhd_E T2Ht61" title="Kinelite West-Island | Kinésio, Entrainement &amp; Clinique sportive">Kinelite West-Island | Kinésio, Entrainement &amp; Clinique sportive</p><p class="axDOAG FkLavb o3HUQR T2Ht61 fTV3EB" title="15 Rue de la Triade, Pointe-Claire, Quebec H9R 0E1, Canada">15 Rue de la Triade, Pointe-Claire, Quebec H9R 0E1, Canada</p></div><p class="axDOAG TE8kwS DbgFmO T2Ht61 WXSovK"><button type="button" data-show-phone="show-phone" data-lead-id="6629815" class="pCIKui"><p class="axDOAG TE8kwS tv4uDl tpRZTm">إظهار الرقم</p></button></p><a class="OP1nBW tpRZTm QPjIt4 WXSovK dmJvlT" href="tel:(877) 211-7817" data-desktop-number-revealed="desktop-show-number-revealed" data-lead-id="6629815">(877) 211-7817</a><a class="OP1nBW tpRZTm QPjIt4 WXSovK Wyhe7t" href="tel:(877) 211-7817" data-number-revealed="show-number-revealed" data-lead-id="6629815">(877) 211-7817</a><a class="OP1nBW iSiUSy hQb42p kNK6vJ wIiwwv hqkplt" href="tel:(877) 211-7817" data-phone-call="phone-call-button" data-lead-id="6629815">الاتصال للحجز</a><button data-desktop-show-phone="desktop-show-phone" data-lead-id="6629815" class="wIiwwv NxhrXa">إظهار الرقم</button></div><hr class="uc7fiG"/><div class="_Ya9oo"><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">التدريب الشخصي</p></div></div></div></li><li class="OwChdp" data-id="lite-location-card-6649498"><div data-qa="location-card-Naureen Hunani Nutrition" class="e02Wz5"><a href="https://www.fresha.com/ar/lvp/naureen-hunani-nutrition-avenue-frontenac-pointe-claire-BokK7q" class="iZ_Jua" aria-label="Naureen Hunani Nutrition"></a><div class="HdNCnr"><img src="https://images.fresha.com/lead-images/placeholders/therapy-center-53.jpg?class=width-small" class="afSlte ZvLHng" alt="صورة مراكز رعاية صحية خاصة بـ Naureen Hunani Nutrition" loading="lazy"/></div><div class="ABjWcU"><div class="lJcJhG"><div class="cnqJzJ"><p class="axDOAG C3RXjX eGBYyp RYhd_E T2Ht61" title="Naureen Hunani Nutrition">Naureen Hunani Nutrition</p><p class="axDOAG FkLavb o3HUQR T2Ht61 fTV3EB" title="161 Av. Frontenac, Pointe-Claire, QC H9R 0H7, Canada">161 Av. Frontenac, Pointe-Claire, QC H9R 0H7, Canada</p></div><p class="axDOAG TE8kwS DbgFmO T2Ht61 WXSovK"><button type="button" data-show-phone="show-phone" data-lead-id="6649498" class="pCIKui"><p class="axDOAG TE8kwS tv4uDl tpRZTm">إظهار الرقم</p></button></p><a class="OP1nBW tpRZTm QPjIt4 WXSovK dmJvlT" href="tel:+1 514-267-6673" data-desktop-number-revealed="desktop-show-number-revealed" data-lead-id="6649498">+1 514-267-6673</a><a class="OP1nBW tpRZTm QPjIt4 WXSovK Wyhe7t" href="tel:+1 514-267-6673" data-number-revealed="show-number-revealed" data-lead-id="6649498">+1 514-267-6673</a><a class="OP1nBW iSiUSy hQb42p kNK6vJ wIiwwv hqkplt" href="tel:+1 514-267-6673" data-phone-call="phone-call-button" data-lead-id="6649498">الاتصال للحجز</a><button data-desktop-show-phone="desktop-show-phone" data-lead-id="6649498" class="wIiwwv NxhrXa">إظهار الرقم</button></div><hr class="uc7fiG"/><div class="_Ya9oo"><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">فقدان الوزن</p></div></div></div></li></ul></section><script>
+          const pushToDataLayer = properties => {
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push(properties);
+          };
+
+          function getCookieStr(cookieName) {
+            let cookie = {};
+            document.cookie.split(';').forEach(function(el) {
+              let [key,value] = el.split('=');
+              cookie[key.trim()] = value;
+            })
+            return cookieName + "=" + cookie[cookieName];
+          }
+
+          function getSessionData() {
+            const gaIdCookie = getCookieStr("_ga_SMQNG7NE8C");
+            const pattern = /_ga_SMQNG7NE8C=GS\d\.\d\.(.+?)(?:;|$)/;
+            const match = gaIdCookie.match(pattern);
+            const parts = match?.[1].split(".");
+          
+            return {
+              ga_session_id: parts?.shift(),
+              ga_session_number: parts?.shift(),
+            };
+          }
+
+          const gaSessionData = getSessionData();
+
+        (function(){
+  
+        const desktopShowPhoneArr = document.querySelectorAll('[data-desktop-show-phone]');
+        const showPhoneArr = document.querySelectorAll('[data-show-phone]');
+        const numberRevealedArr = document.querySelectorAll('[data-number-revealed]');
+        const numberDesktopRevealedArr = document.querySelectorAll('[data-desktop-number-revealed]');
+        const phoneCallArr = document.querySelectorAll('[data-phone-call]');
+        
+        desktopShowPhoneArr.forEach((element, index) => element.addEventListener('click', function (e) {
+          const leadId = element.dataset.leadId;
+          element.classList.add("WXSovK");
+          numberDesktopRevealedArr[index].classList.remove("WXSovK")
+          
+          const eventData = {
+            "event_type": "lead_click",
+            "properties": {
+              "lead_id": leadId,
+              "action": "Show number",
+              "page_url": window.location.href,
+              "google_analytics_session_id": gaSessionData.ga_session_id
+            }
+          }
+
+          fetch("https://analytics-api.fresha.com/analytics", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(eventData),
+          }).catch(() => {});
+
+            pushToDataLayer({
+              event: 'fresha.contact_call_click',
+              section: 'b2c web',
+              interaction_value: 'Show number',
+            });
+        }));
+
+        showPhoneArr.forEach((element, index) => element.addEventListener('click', function (e) {
+          const leadId = element.dataset.leadId;
+          element.parentElement.classList.add("WXSovK");
+          numberRevealedArr[index].classList.remove("WXSovK")
+          
+          const eventData = {
+            "event_type": "lead_click",
+            "properties": {
+              "lead_id": leadId,
+              "action": "Show number",
+              "page_url": window.location.href,
+              "google_analytics_session_id": gaSessionData.ga_session_id
+            }
+          }
+
+          fetch("https://analytics-api.fresha.com/analytics", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(eventData),
+          }).catch(() => {});
+
+            pushToDataLayer({
+              event: 'fresha.contact_call_click',
+              section: 'b2c web',
+              interaction_value: 'Show number',
+            });
+        }));
+
+        numberDesktopRevealedArr.forEach((element, index) => element.addEventListener('click', function (e) {
+          const leadId = element.dataset.leadId;
+          
+          const eventData = {
+            "event_type": "lead_click",
+            "properties": {
+              "lead_id": leadId,
+              "action": "Phone Number",
+              "page_url": window.location.href,
+              "google_analytics_session_id": gaSessionData.ga_session_id
+            }
+          }
+
+          fetch("https://analytics-api.fresha.com/analytics", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(eventData),
+          }).catch(() => {});
+
+            pushToDataLayer({
+              event: 'fresha.contact_call_click',
+              section: 'b2c web',
+              interaction_value: 'Phone Number',
+            });
+        }));
+
+        numberRevealedArr.forEach((element, index) => element.addEventListener('click', function (e) {
+          const leadId = element.dataset.leadId;
+          
+          const eventData = {
+            "event_type": "lead_click",
+            "properties": {
+              "lead_id": leadId,
+              "action": "Phone Number",
+              "page_url": window.location.href,
+              "google_analytics_session_id": gaSessionData.ga_session_id
+            }
+          }
+
+          fetch("https://analytics-api.fresha.com/analytics", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(eventData),
+          }).catch(() => {});
+
+            pushToDataLayer({
+              event: 'fresha.contact_call_click',
+              section: 'b2c web',
+              interaction_value: 'Phone Number',
+            });
+        }));
+
+      
+        phoneCallArr.forEach((element, index) => element.addEventListener('click', function (e) {
+          const leadId = element.dataset.leadId;
+          const eventData = {
+            "event_type": "lead_click",
+            "properties": {
+              "lead_id": leadId,
+              "action": "Call to book",
+              "page_url": window.location.href,
+              "google_analytics_session_id": gaSessionData.ga_session_id
+            }
+          }
+
+          fetch("https://analytics-api.fresha.com/analytics", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(eventData),
+          }).catch(() => {});
+
+          pushToDataLayer({
+              event: 'fresha.contact_call_click',
+              section: 'b2c web',
+              interaction_value: 'Call to book',
+          })
+        }));
+
+      })();
+        </script></div><div class="oeBexT"><section class="Rzlv_b xcqEkV" data-qa="locations-list"><h2 class="axDOAG HER_75 B1fY_f">هيا إلى حجز موعدك التالي مع علاج طبيعي في Pierrefonds على فريشا</h2></section><section class="Rzlv_b uTN28V"><div><p class="axDOAG CsQ9La SycVRT SFUGJd">في <a href="https://www.fresha.com/ar" style="color:#6950F3; text-decoration: none;">Fresha</a>، نسعى لجعل حياتك أسهل. لذلك جمعنا لك أفضل أماكن الإرشاد النفسي في Pierrefonds. تصفح مجموعتنا، وإذا وجدت المكان الذي يناسب ذوقك، يمكنك مقارنة الأسعار، التقييمات، والعلاجات المتوفرة. بعد اختيار <a href="https://www.fresha.com/lp/ar/bt/%D8%B9%D9%84%D8%A7%D8%AC-%D8%B7%D8%A8%D9%8A%D8%B9%D9%8A/ca-%D9%85%D9%88%D9%86%D8%AA%D8%B1%D9%8A%D8%A7%D9%84" style="color:#6950F3; text-decoration: none;">مركز العلاج</a> المفضل لديك، ما عليك سوى تحديد الوقت وتأكيد موعدك. خطوة ذكية من جانبنا وسهولة تامة لك.</p><p class="axDOAG CsQ9La SycVRT SFUGJd">سواء كنت بحاجة إلى لحظة للتأمل أو تبحث عن طريقة أفضل للمضي قدمًا، هناك خبراء يمكنك الاعتماد عليهم هنا. ابحث عن الدعم الذي تحتاجه في Pierrefonds مباشرة عبر Fresha. يمكنك حجز <a href="https://www.fresha.com/lp/ar/tt/%D8%A7%D9%84%D9%88%D8%AE%D8%B2-%D8%A8%D8%A7%D9%84%D8%A5%D8%A8%D8%B1/ca-%D9%85%D9%88%D9%86%D8%AA%D8%B1%D9%8A%D8%A7%D9%84/pierrefonds" style="color:#6950F3; text-decoration: none;">العلاج بالوخز بالإبر</a> أو <a href="https://www.fresha.com/lp/ar/tt/%D9%88%D8%AE%D8%B2-%D8%AC%D8%A7%D9%81-%D8%A8%D8%A7%D9%84%D8%A5%D8%A8%D8%B1/ca-%D9%85%D9%88%D9%86%D8%AA%D8%B1%D9%8A%D8%A7%D9%84/pierrefonds" style="color:#6950F3; text-decoration: none;">علاج بالإبر الجافة</a> في الوقت الأنسب لك. والأمر أصبح أسهل مع <a href="https://www.fresha.com/download-app" style="color:#6950F3; text-decoration: none;">التطبيق</a> المحمول، حيث يمكنك إدارة كل ما يتعلق بموعدك في مكان واحد. كما يمكنك إعادة الحجز بسهولة أيضًا، فقط أدخل بياناتك مرة واحدة، واستكمل الدفع بسرعة أكبر في الحجوزات القادمة.</p></div><div><p class="axDOAG CsQ9La SycVRT SFUGJd">حان الوقت لأفضل جزء: خدمتك في Pierrefonds، كندا. لقد قمنا بحجز مليار موعد في أكثر من 120 دولة. موعدك قد يكون القادم. إذا واجهت أي صعوبة خلال العملية، يمكنك زيارة <a href="https://www.fresha.com/help-center" style="color:#6950F3; text-decoration: none;">مركز المساعدة</a> حيث نساعدك على تجاوزها بسهولة. عندما تكون جاهزًا للحجز، اعلم أن شركاء أعمالنا حول العالم يستخدمون <a href="https://www.fresha.com/for-business" style="color:#6950F3; text-decoration: none;">نظام الحجز عبر الإنترنت</a> الرائد من Fresha للحفاظ على مواعيدهم مفتوحة من أجلك. لا تجد نشاطك التجاري المفضل؟ راسلنا عبر <a href="mailto:hello@fresha.com" style="color:#6950F3; text-decoration: none;">hello@fresha.com</a> وأخبرنا. نحن ندير الأمور بكفاءة حتى تكون لحظات العناية بنفسك سلسة ومريحة تمامًا.</p></div></section></div><section class="vwFB4q"><div class="YKJYnf"><h2 class="axDOAG N7z9vs EnvOJp">‎متاح أيضًا في Pierrefonds</h2></div><section class="ZnEpfB kM_f0H" data-qa="business-types-pills" data-scrollable-pills="true" data-overflow="false"><div class="pIEL1R"><div class="n9k_wr"><div class="DrZt9r" aria-hidden="true"></div><nav class="c8sLsP" data-pills-scroll="true" aria-label="أنواع الأعمال"><a class="OP1nBW QoUCns sW7gEB" href="https://www.fresha.com/lp/ar/bt/صالونات-التجميل/ca-مونتريال/pierrefonds" data-qa="bt-صالون تجميل"><span class="DpJCAG">صالون تجميل</span></a><a class="OP1nBW QoUCns sW7gEB" href="https://www.fresha.com/lp/ar/bt/صالونات-تصفيف-الشعر/ca-مونتريال/pierrefonds" data-qa="bt-صالون تصفيف الشعر"><span class="DpJCAG">صالون تصفيف الشعر</span></a><a class="OP1nBW QoUCns sW7gEB" href="https://www.fresha.com/lp/ar/bt/أظافر/ca-مونتريال/pierrefonds" data-qa="bt-أظافر"><span class="DpJCAG">أظافر</span></a><a class="OP1nBW QoUCns sW7gEB" href="https://www.fresha.com/lp/ar/bt/منتجعات-صحية-طبية/ca-مونتريال/pierrefonds" data-qa="bt-منتجع صحي طبي"><span class="DpJCAG">منتجع صحي طبي</span></a><a class="OP1nBW QoUCns sW7gEB" href="https://www.fresha.com/lp/ar/bt/الحواجب-والرموش/ca-مونتريال/pierrefonds" data-qa="bt-الحواجب والرموش"><span class="DpJCAG">الحواجب والرموش</span></a><a class="OP1nBW QoUCns sW7gEB" href="https://www.fresha.com/lp/ar/bt/صالونات-إزالة-الشعر-بالشمع/ca-مونتريال/pierrefonds" data-qa="bt-صالون إزالة الشعر بالشمع"><span class="DpJCAG">صالون إزالة الشعر بالشمع</span></a><a class="OP1nBW QoUCns sW7gEB" href="https://www.fresha.com/lp/ar/bt/مساج-وتدليك/ca-مونتريال/pierrefonds" data-qa="bt-مساج وتدليك"><span class="DpJCAG">مساج وتدليك</span></a><a class="OP1nBW QoUCns sW7gEB" href="https://www.fresha.com/lp/ar/bt/حلاقون/ca-مونتريال/pierrefonds" data-qa="bt-حلاق"><span class="DpJCAG">حلاق</span></a><a class="OP1nBW QoUCns sW7gEB" href="https://www.fresha.com/lp/ar/bt/منتجعات-صحية-وساونا/ca-مونتريال/pierrefonds" data-qa="bt-منتجع صحي وساونا"><span class="DpJCAG">منتجع صحي وساونا</span></a><a class="OP1nBW QoUCns sW7gEB" href="https://www.fresha.com/lp/ar/bt/مركز-تسمير-البشرة/ca-مونتريال/pierrefonds" data-qa="bt-مركز تسمير البشرة"><span class="DpJCAG">مركز تسمير البشرة</span></a></nav><div class="uJhaAb"><details class="MUyBs8" data-scrollable-pills-overflow="true"><summary class="ltDb4C" aria-label="عرض جميع أنواع الأعمال"><span class="v_Dfni CpPDl7 veiqTU"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+  <circle cx="3" cy="5" r="1.25"/>
+  <circle cx="3" cy="10" r="1.25"/>
+  <circle cx="3" cy="15" r="1.25"/>
+  <rect x="6" y="4.25" width="11" height="1.5" rx="0.75"/>
+  <rect x="6" y="9.25" width="11" height="1.5" rx="0.75"/>
+  <rect x="6" y="14.25" width="11" height="1.5" rx="0.75"/>
+</svg>
+</span></summary><div class="yaMXdw"><div class="aJGVna" data-scrollable-pills-backdrop="true" aria-hidden="true"></div><div class="Tk6pcB" role="menu"><button type="button" class="OEF7eH" data-scrollable-pills-close="true" aria-label="إغلاق"><span class="v_Dfni CpPDl7 veiqTU"><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M4.293 4.293a1 1 0 011.414 0L12 10.585l6.293-6.292a1 1 0 011.32-.083l.094.083a1 1 0 010 1.414L13.415 12l6.292 6.293a1 1 0 01.083 1.32l-.083.094a1 1 0 01-1.414 0L12 13.415l-6.293 6.292a1 1 0 01-1.32.083l-.094-.083a1 1 0 010-1.414L10.585 12 4.293 5.707a1 1 0 01-.083-1.32z" />
+                  </svg></span></button><div><a class="OP1nBW AFFsFk" href="https://www.fresha.com/lp/ar/bt/صالونات-التجميل/ca-مونتريال/pierrefonds" data-qa="bt-overflow-صالون تجميل">صالون تجميل</a><a class="OP1nBW AFFsFk" href="https://www.fresha.com/lp/ar/bt/صالونات-تصفيف-الشعر/ca-مونتريال/pierrefonds" data-qa="bt-overflow-صالون تصفيف الشعر">صالون تصفيف الشعر</a><a class="OP1nBW AFFsFk" href="https://www.fresha.com/lp/ar/bt/أظافر/ca-مونتريال/pierrefonds" data-qa="bt-overflow-أظافر">أظافر</a><a class="OP1nBW AFFsFk" href="https://www.fresha.com/lp/ar/bt/منتجعات-صحية-طبية/ca-مونتريال/pierrefonds" data-qa="bt-overflow-منتجع صحي طبي">منتجع صحي طبي</a><a class="OP1nBW AFFsFk" href="https://www.fresha.com/lp/ar/bt/الحواجب-والرموش/ca-مونتريال/pierrefonds" data-qa="bt-overflow-الحواجب والرموش">الحواجب والرموش</a><a class="OP1nBW AFFsFk" href="https://www.fresha.com/lp/ar/bt/صالونات-إزالة-الشعر-بالشمع/ca-مونتريال/pierrefonds" data-qa="bt-overflow-صالون إزالة الشعر بالشمع">صالون إزالة الشعر بالشمع</a><a class="OP1nBW AFFsFk" href="https://www.fresha.com/lp/ar/bt/مساج-وتدليك/ca-مونتريال/pierrefonds" data-qa="bt-overflow-مساج وتدليك">مساج وتدليك</a><a class="OP1nBW AFFsFk" href="https://www.fresha.com/lp/ar/bt/حلاقون/ca-مونتريال/pierrefonds" data-qa="bt-overflow-حلاق">حلاق</a><a class="OP1nBW AFFsFk" href="https://www.fresha.com/lp/ar/bt/منتجعات-صحية-وساونا/ca-مونتريال/pierrefonds" data-qa="bt-overflow-منتجع صحي وساونا">منتجع صحي وساونا</a><a class="OP1nBW AFFsFk" href="https://www.fresha.com/lp/ar/bt/مركز-تسمير-البشرة/ca-مونتريال/pierrefonds" data-qa="bt-overflow-مركز تسمير البشرة">مركز تسمير البشرة</a></div></div></div></details></div></div></div><script>
+(function () {
+  var MOBILE_SHEET_MEDIA = '(max-width: 767px)';
+
+  function isMobileSheetViewport() {
+    return window.matchMedia(MOBILE_SHEET_MEDIA).matches;
+  }
+
+  function updateBodyScrollLock() {
+    var hasOpenSheet = isMobileSheetViewport()
+      && document.querySelector('[data-scrollable-pills-overflow][open]');
+    document.body.style.overflow = hasOpenSheet ? 'hidden' : '';
+  }
+
+  function updateScrollablePills(resetScroll) {
+    document.querySelectorAll('[data-scrollable-pills]').forEach(function (root) {
+      var scroll = root.querySelector('[data-pills-scroll]');
+      if (!scroll) {
+        return;
+      }
+
+      var overflows = scroll.scrollWidth > scroll.clientWidth + 1;
+      root.setAttribute('data-overflow', overflows ? 'true' : 'false');
+
+      if (resetScroll) {
+        scroll.scrollLeft = 0;
+      }
+    });
+  }
+
+  updateScrollablePills(true);
+
+  if (window.__scrollablePillsOverflowInit) {
+    return;
+  }
+
+  window.__scrollablePillsOverflowInit = true;
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function () {
+      updateScrollablePills(true);
+    });
+  }
+
+  window.addEventListener('load', function () {
+    updateScrollablePills(true);
+  });
+  window.addEventListener('resize', function () {
+    updateScrollablePills(false);
+    updateBodyScrollLock();
+  });
+
+  document.addEventListener('toggle', function (event) {
+    var details = event.target;
+    if (!(details instanceof HTMLDetailsElement)) {
+      return;
+    }
+
+    if (!details.matches('[data-scrollable-pills-overflow]')) {
+      return;
+    }
+
+    updateBodyScrollLock();
+  }, true);
+
+  document.addEventListener('click', function (event) {
+    document.querySelectorAll('[data-scrollable-pills-overflow]').forEach(function (details) {
+      if (!(details instanceof HTMLDetailsElement) || !details.open) {
+        return;
+      }
+
+      var target = event.target;
+      if (
+        target instanceof Element
+        && details.contains(target)
+        && target.closest('[data-scrollable-pills-close]')
+      ) {
+        details.open = false;
+        updateBodyScrollLock();
+        return;
+      }
+
+      if (
+        target instanceof Element
+        && target.closest('[data-scrollable-pills-backdrop]')
+      ) {
+        details.open = false;
+        updateBodyScrollLock();
+        return;
+      }
+
+      if (!details.contains(target)) {
+        details.open = false;
+        updateBodyScrollLock();
+      }
+    });
+  });
+
+  document.addEventListener('keydown', function (event) {
+    if (event.key !== 'Escape') {
+      return;
+    }
+
+    document.querySelectorAll('[data-scrollable-pills-overflow][open]').forEach(function (details) {
+      if (details instanceof HTMLDetailsElement) {
+        details.open = false;
+      }
+    });
+    updateBodyScrollLock();
+  });
+})();
+</script></section></section><section class="Rzlv_b I_D4Gr" data-qa="mobile-apps"><div class="yubTpO" data-qa="app-card"><div class="YzswRx"><img src="/lp/assets/29cca8f59ebf28b19ef8.webp" alt="" class="JFo4SK" aria-hidden="true"/><div class="uGH0VU"><h2 class="axDOAG N7z9vs eGBYyp RYhd_E uHhv4Z">تطبيق حجوزات للعملاء</h2><p class="axDOAG FkLavb RYhd_E lWlygP">احجزوا الآن تجارب ممتعة للتجميل وتحسين الصجة بالقرب منكم</p></div><div class="rh_B0i"><a class="OP1nBW pD3gej QWIzyR" href="https://apps.apple.com/app/fresha-for-customers/id1297230801" target="_blank" rel="noopener noreferrer"><img src="/lp/assets/27b35cba37648e74203b.png" alt="تنزيل من App Store" class="fYobCL"/></a><a class="OP1nBW pD3gej tfxTRN" href="https://play.google.com/store/apps/details?id=com.fresha.Fresha" target="_blank" rel="noopener noreferrer"><img src="/lp/assets/7ff297abde57431f1abe.png" alt="احصل عليه من جوجل بلاي" class="fYobCL"/></a></div></div><div class="MQswXO"><div class="XHTEUp"><img src="/lp/assets/8f84caaac13c9e0ac018.webp" alt="تطبيق فريشا للعملاء" class="A4hGLZ" loading="lazy"/></div></div></div><div class="yubTpO W9sYUt" data-qa="app-card"><div class="YzswRx"><img src="/lp/assets/3e5dbe843af4ec105879.webp" alt="" class="JFo4SK" aria-hidden="true"/><div class="uGH0VU"><h2 class="axDOAG N7z9vs eGBYyp RYhd_E uHhv4Z">تطبيق أعمال للمحترفين</h2><p class="axDOAG FkLavb RYhd_E lWlygP">برنامج بسيط ومرن وقوي لإدارة أعمالكم في أي وقت ومن أي مكان</p></div><div class="rh_B0i"><a class="OP1nBW pD3gej QWIzyR" href="https://apps.apple.com/app/fresha-for-business/id1455346253" target="_blank" rel="noopener noreferrer"><img src="/lp/assets/27b35cba37648e74203b.png" alt="تنزيل من App Store" class="fYobCL"/></a><a class="OP1nBW pD3gej tfxTRN" href="https://play.google.com/store/apps/details?id=com.fresha.Business" target="_blank" rel="noopener noreferrer"><img src="/lp/assets/7ff297abde57431f1abe.png" alt="احصل عليه من جوجل بلاي" class="fYobCL"/></a></div></div><div class="MQswXO"><div class="XHTEUp"><img src="/lp/assets/65c75697dfaee63bb95f.webp" alt="تطبيق فريشا للأعمال" class="A4hGLZ" loading="lazy"/></div></div></div></section><div class="X7yP66" data-qa="bottom-linking-modules"><section class="rAR5ei" data-qa="linking-module-علاج طبيعي بالقرب من هنا"><div class="MGTbc5"><h2 class="axDOAG N7z9vs eGBYyp RYhd_E YtxWRz">علاج طبيعي بالقرب من هنا</h2><input id="lm-lm-0-tab-0" class="RCRLUv" type="radio" name="lm-lm-0" checked="" value=" "/><div class="wQ76ph"><button type="button" class="KVkAfz r8lrQu K7cXTj" id="lm-lm-0-arrow-prev" aria-label="تمرير الروابط لليسار"><span class="v_Dfni vSYAhk veiqTU"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.03 4.72a.75.75 0 0 1 0 1.06l-5.47 5.47h14.69a.75.75 0 0 1 0 1.5H5.56l5.47 5.47a.75.75 0 1 1-1.06 1.06l-6.75-6.75a.75.75 0 0 1 0-1.06l6.75-6.75a.75.75 0 0 1 1.06 0Z"></path></svg></span></button><button type="button" class="KVkAfz e8ZKEt" id="lm-lm-0-arrow-next" aria-label="تمرير الروابط لليمين"><span class="v_Dfni vSYAhk veiqTU"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.97 4.72a.75.75 0 0 1 1.06 0l6.75 6.75a.75.75 0 0 1 0 1.06l-6.75 6.75a.75.75 0 1 1-1.06-1.06l5.47-5.47H3.75a.75.75 0 0 1 0-1.5h14.69l-5.47-5.47a.75.75 0 0 1 0-1.06Z"></path></svg></span></button><div class="ZNqZn5" id="lm-lm-0-scroll"><div class="xcTGz1" data-qa="tab-content-0"><div class="zqBUTg"><a class="OP1nBW VIvLa_" title="‎علاج طبيعي في Dorval" href="https://www.fresha.com/lp/ar/bt/علاج-طبيعي/ca-مونتريال/dorval" data-qa="lm-link-https://www.fresha.com/lp/ar/bt/علاج-طبيعي/ca-مونتريال/dorval">‎علاج طبيعي في Dorval</a><a class="OP1nBW VIvLa_" title="‎علاج طبيعي في Pointe-Claire" href="https://www.fresha.com/lp/ar/bt/علاج-طبيعي/ca-مونتريال/pointe-claire" data-qa="lm-link-https://www.fresha.com/lp/ar/bt/علاج-طبيعي/ca-مونتريال/pointe-claire">‎علاج طبيعي في Pointe-Claire</a><a class="OP1nBW VIvLa_" title="‎علاج طبيعي في Kirkland" href="https://www.fresha.com/lp/ar/bt/علاج-طبيعي/ca-مونتريال/kirkland" data-qa="lm-link-https://www.fresha.com/lp/ar/bt/علاج-طبيعي/ca-مونتريال/kirkland">‎علاج طبيعي في Kirkland</a><a class="OP1nBW VIvLa_" title="‎علاج طبيعي في Dollard-Des Ormeaux" href="https://www.fresha.com/lp/ar/bt/علاج-طبيعي/ca-مونتريال/dollard-des-ormeaux" data-qa="lm-link-https://www.fresha.com/lp/ar/bt/علاج-طبيعي/ca-مونتريال/dollard-des-ormeaux">‎علاج طبيعي في Dollard-Des Ormeaux</a><a class="OP1nBW VIvLa_" title="‎علاج طبيعي في Nord-Ouest de l&#x27;Ile de Montréal" href="https://www.fresha.com/lp/ar/bt/علاج-طبيعي/ca-مونتريال/nord-ouest-de-l&#x27;ile-de-montréal" data-qa="lm-link-https://www.fresha.com/lp/ar/bt/علاج-طبيعي/ca-مونتريال/nord-ouest-de-l&#x27;ile-de-montréal">‎علاج طبيعي في Nord-Ouest de l&#x27;Ile de Montréal</a><a class="OP1nBW VIvLa_" title="‎علاج طبيعي في Pierrefonds-Roxboro" href="https://www.fresha.com/lp/ar/bt/علاج-طبيعي/ca-مونتريال/pierrefonds-roxboro" data-qa="lm-link-https://www.fresha.com/lp/ar/bt/علاج-طبيعي/ca-مونتريال/pierrefonds-roxboro">‎علاج طبيعي في Pierrefonds-Roxboro</a></div></div></div></div><script>
+(function () {
+  var scrollContainer = document.getElementById("lm-lm-0-scroll");
+  var nextButton = document.getElementById("lm-lm-0-arrow-next");
+  var prevButton = document.getElementById("lm-lm-0-arrow-prev");
+
+  if (!scrollContainer || !nextButton || !prevButton) {
+    return;
+  }
+
+  var isRtl =
+    document.documentElement.dir === 'rtl' ||
+    getComputedStyle(document.documentElement).direction === 'rtl';
+
+  var SCROLL_THRESHOLD = 10;
+
+  function getMaxScroll() {
+    return scrollContainer.scrollWidth - scrollContainer.clientWidth;
+  }
+
+  function isAtStart() {
+    if (isRtl) {
+      return Math.abs(scrollContainer.scrollLeft) < SCROLL_THRESHOLD;
+    }
+    return scrollContainer.scrollLeft < SCROLL_THRESHOLD;
+  }
+
+  function isAtEnd() {
+    var maxScroll = getMaxScroll();
+    if (isRtl) {
+      return Math.abs(scrollContainer.scrollLeft) >= maxScroll - SCROLL_THRESHOLD;
+    }
+    return scrollContainer.scrollLeft >= maxScroll - SCROLL_THRESHOLD;
+  }
+
+  function hideNextArrow() {
+    if (scrollContainer.scrollWidth <= scrollContainer.clientWidth + 1) {
+      nextButton.classList.add("K7cXTj");
+      return;
+    }
+
+    if (isAtEnd()) {
+      nextButton.classList.add("K7cXTj");
+    } else {
+      nextButton.classList.remove("K7cXTj");
+    }
+  }
+
+  function hidePrevArrow() {
+    if (scrollContainer.scrollWidth <= scrollContainer.clientWidth + 1) {
+      prevButton.classList.add("K7cXTj");
+      return;
+    }
+
+    if (isAtStart()) {
+      prevButton.classList.add("K7cXTj");
+    } else {
+      prevButton.classList.remove("K7cXTj");
+    }
+  }
+
+  function updateArrows() {
+    hideNextArrow();
+    hidePrevArrow();
+  }
+
+  nextButton.addEventListener('click', function () {
+    var scrollAmount = scrollContainer.clientWidth;
+
+    if (isRtl) {
+      scrollContainer.scrollLeft -= scrollAmount;
+    } else {
+      scrollContainer.scrollLeft += scrollAmount;
+    }
+  });
+
+  prevButton.addEventListener('click', function () {
+    var scrollAmount = scrollContainer.clientWidth;
+
+    if (isRtl) {
+      scrollContainer.scrollLeft += scrollAmount;
+    } else {
+      scrollContainer.scrollLeft -= scrollAmount;
+    }
+  });
+
+  updateArrows();
+  scrollContainer.scrollLeft = 0;
+
+  var ticking = false;
+  scrollContainer.addEventListener('scroll', function () {
+    if (!ticking) {
+      window.requestAnimationFrame(function () {
+        updateArrows();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+
+  window.addEventListener('resize', updateArrows);
+})();
+</script></div></section></div></main><footer class="w8zCxJ"><div class="U4rfen"><div class="z0xID_ ftabih"><a class="OP1nBW QdYpnI ba5vfs" href="https://www.fresha.com/ar" data-qa="logo" aria-label="Fresha"><span class="v_Dfni veiqTU xUeY0V"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81.8 24"><path d="M51.5 2.1h3.9v8.1c1.3-1.9 4-2.5 6.2-1.6 2.2.9 2.9 2.5 3 2.7.2.5.4 1 .5 1.5.6 3.6-.6 7.2.5 10.7h-3.8c-1-2.5-.4-5.3-.4-7.9 0-.7 0-1.5-.4-2.2-.5-.9-1.5-1.6-2.5-1.6-1.1 0-2.1.6-2.6 1.5-.4.8-.4 1.8-.4 2.7v7.5h-3.9l-.1-21.4zM36 15.7c.1-4.3-2.6-7.5-6.8-7.5-2.8 0-5.2 1.4-6.5 3.8-1.4 2.6-1.3 6.3.4 8.8 2.5 3.4 7.6 4.2 12.5 1.9l-1.2-3.1c-4.1 1.8-8.5 1.3-8.8-2.4H36v-1.5zm-10.3-1.5c.3-.8.7-1.4 1.3-1.9 1.2-.9 3.3-1 4.4-.1.5.4.9 1.1 1.2 1.9h-6.9zM13.1 13.9s0-2.3-1.9-2.3H6.9v12.1H3V11.6H0V8.3h3V5.7C3 3.4 5.1 0 9.7 0s6.4 3.9 6.4 3.9l-3 2.1s-.8-2.5-3.3-2.5C8.7 3.5 7 4.4 7 6.2v2h6.1c2.7 0 3.4 2 3.4 2 1-2.4 4.6-2.1 5.3-2v3.1c-2.5-.2-4.8 1.2-4.8 4.1v8h-3.9v-9.5zM48.9 16.2c-1.2-1.2-4.3-1.6-6.3-2-1-.2-1.8-.4-1.8-1.4 0-1.2 1.2-1.5 2.4-1.5s2.4.5 3.1 1.5l3-1.6c-1.7-3-6.2-3.6-9.1-2.4-.9.4-1.6 1-2.1 1.7-1.1 1.5-1 4.1.3 5.3.7.7 1.9 1.2 3.4 1.5l2.8.5c1 .2 1.9.4 1.9 1.5 0 1.3-1.4 1.6-2.6 1.6-3.2 0-3.8-3-3.8-3L36.4 19c.2 1 1.5 5 7.4 5 3.3 0 6.2-1.3 6.3-4.8-.1-1.3-.5-2.3-1.2-3zM81.2 20.8c-.7 0-1.3-.4-1.3-1.4 0-.5-.1-2.2-.1-2.6 0-2.6.1-5.1-1.7-6.9-2-2-6.6-2.2-9-.6-.9.5-1.7 1.2-2.3 2.1l2.3 2.4c.9-1.5 2.2-2.2 3.7-2.2 1.4-.1 2.6.6 3.1 2-3.1.8-7.1 1.1-8.8 4.3-.8 1.5-.6 3.4.6 4.7.9 1 2.4 1.3 3.8 1.3 2.2 0 4.3-.5 5.6-2.5.7 1.7 2.2 2.5 4 2.5.3 0 .6-.1.8-.2v-3c-.2.1-.4.1-.7.1zm-5.3-3.1c.1 2.2-1.7 3.4-3.7 3.4-1.1 0-1.8-.5-1.8-1.6 0-1.2 1-1.6 2.1-1.9l3.4-1v1.1z"/></svg>
+</span></a><button type="button" class="Ka0K5G amlED7" data-redirect-url="https://www.fresha.com/app-store-redirect"><p class="axDOAG C3RXjX eGBYyp RYhd_E">تنزيل التطبيق</p><span class="cQa_Uv"><span class="v_Dfni vSYAhk veiqTU"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.026 8.163c-.094.058-2.318 1.293-2.318 4.03.105 3.121 2.807 4.216 2.853 4.216-.046.058-.408 1.491-1.479 2.993C18.232 20.696 17.29 22 15.856 22c-1.363 0-1.852-.862-3.425-.862-1.688 0-2.166.862-3.459.862-1.433 0-2.446-1.374-3.343-2.656-1.164-1.677-2.154-4.31-2.189-6.837-.023-1.339.233-2.655.885-3.774.92-1.56 2.562-2.62 4.356-2.655 1.374-.047 2.597.943 3.436.943.804 0 2.306-.943 4.006-.943.734 0 2.691.221 3.903 2.085ZM12 5.81c-.245-1.223.43-2.446 1.06-3.226C13.864 1.64 15.133 1 16.227 1a4.56 4.56 0 0 1-1.164 3.296C14.354 5.24 13.13 5.95 12 5.81Z" /></svg></span><span class="v_Dfni vSYAhk veiqTU"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12.003 2.4C6.7 2.4 2.4 6.698 2.4 12s4.3 9.6 9.603 9.6c8.008 0 9.812-7.434 9.061-11.2H12v3.2h6.19A6.398 6.398 0 0 1 12 18.4a6.4 6.4 0 0 1 0-12.8c1.607 0 3.071.597 4.195 1.575l2.274-2.272A9.568 9.568 0 0 0 12.003 2.4Z" /></svg>
+</span></span></button></div><div class="z0xID_"><p class="axDOAG C3RXjX eGBYyp RYhd_E FKYmNB">عن فريشا</p><a class="OP1nBW cRHsF7" href="https://www.fresha.com/ar/careers">فرص عمل</a><a class="OP1nBW cRHsF7" href="https://www.fresha.com/ar/help-center">دعم العملاء</a><a class="OP1nBW cRHsF7" href="https://www.fresha.com/blog">المدونة</a><a class="OP1nBW cRHsF7" href="https://www.fresha.com/ar/sitemap">خريطة الموقع</a></div><div class="z0xID_"><p class="axDOAG C3RXjX eGBYyp RYhd_E FKYmNB">للأعمال</p><a class="OP1nBW cRHsF7" href="https://www.fresha.com/ar/for-business">للشركاء</a><a class="OP1nBW cRHsF7" href="https://www.fresha.com/ar/pricing">التسعير</a><a class="OP1nBW cRHsF7" href="https://www.fresha.com/ar/for-business/features/payments">أجهزة مسح البطاقات</a><a class="OP1nBW cRHsF7" href="https://www.fresha.com/help-center">مساعدة</a><a class="OP1nBW cRHsF7" href="https://www.freshastatus.com">الحالة</a></div><div class="z0xID_"><p class="axDOAG C3RXjX eGBYyp RYhd_E FKYmNB">قانوني</p><a class="OP1nBW cRHsF7" href="https://terms.fresha.com/privacy-policy">سياسة الخصوصية</a><a class="OP1nBW cRHsF7" href="https://terms.fresha.com/terms-service">شروط الخدمة</a><a class="OP1nBW cRHsF7" href="https://terms.fresha.com/terms-use">شروط الاستخدام</a></div><div class="z0xID_"><p class="axDOAG C3RXjX eGBYyp RYhd_E FKYmNB">تابعونا على مواقع التواصل الاجتماعي</p><a class="OP1nBW yCOZ7e" href="https://www.facebook.com/Fresha-1504479806470099" data-qa="https://www.facebook.com/Fresha-1504479806470099" target="_blank" rel="noopener noreferrer"><span class="v_Dfni VqDAZf veiqTU IgRW3w"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none">
+  <path
+    fill-rule="evenodd"
+    clip-rule="evenodd"
+    d="M6.25 5C6.25 4.65482 6.52982 4.375 6.875 4.375H15C15.3452 4.375 15.625 4.65482 15.625 5V13.125C15.625 13.4702 15.3452 13.75 15 13.75C14.6548 13.75 14.375 13.4702 14.375 13.125V6.50888L5.44194 15.4419C5.19786 15.686 4.80214 15.686 4.55806 15.4419C4.31398 15.1979 4.31398 14.8021 4.55806 14.5581L13.4911 5.625H6.875C6.52982 5.625 6.25 5.34518 6.25 5Z"
+  />
+</svg>
+</span><span>Facebook</span></a><a class="OP1nBW yCOZ7e" href="https://www.linkedin.com/company/shedul/" data-qa="https://www.linkedin.com/company/shedul/" target="_blank" rel="noopener noreferrer"><span class="v_Dfni VqDAZf veiqTU IgRW3w"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none">
+  <path
+    fill-rule="evenodd"
+    clip-rule="evenodd"
+    d="M6.25 5C6.25 4.65482 6.52982 4.375 6.875 4.375H15C15.3452 4.375 15.625 4.65482 15.625 5V13.125C15.625 13.4702 15.3452 13.75 15 13.75C14.6548 13.75 14.375 13.4702 14.375 13.125V6.50888L5.44194 15.4419C5.19786 15.686 4.80214 15.686 4.55806 15.4419C4.31398 15.1979 4.31398 14.8021 4.55806 14.5581L13.4911 5.625H6.875C6.52982 5.625 6.25 5.34518 6.25 5Z"
+  />
+</svg>
+</span><span>LinkedIn</span></a><a class="OP1nBW yCOZ7e" href="https://www.instagram.com/fresha" data-qa="https://www.instagram.com/fresha" target="_blank" rel="noopener noreferrer"><span class="v_Dfni VqDAZf veiqTU IgRW3w"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none">
+  <path
+    fill-rule="evenodd"
+    clip-rule="evenodd"
+    d="M6.25 5C6.25 4.65482 6.52982 4.375 6.875 4.375H15C15.3452 4.375 15.625 4.65482 15.625 5V13.125C15.625 13.4702 15.3452 13.75 15 13.75C14.6548 13.75 14.375 13.4702 14.375 13.125V6.50888L5.44194 15.4419C5.19786 15.686 4.80214 15.686 4.55806 15.4419C4.31398 15.1979 4.31398 14.8021 4.55806 14.5581L13.4911 5.625H6.875C6.52982 5.625 6.25 5.34518 6.25 5Z"
+  />
+</svg>
+</span><span>Instagram</span></a></div></div></footer><div class="s5PSu4"><div id="lang-switch-section" class="p_WF82"><form class="KgsEom"><select id="language-select" name="url" aria-label="العربية"><option value="https://www.fresha.com/lp/ar/bt/علاج-طبيعي/ca-مونتريال/pierrefonds" selected="">العربية</option><option value="https://www.fresha.com/lp/en/bt/therapy-centers/in/ca-montréal/pierrefonds">English</option><option value="https://www.fresha.com/lp/es/bt/centros-de-terapia/ca-montreal/pierrefonds">español</option><option value="https://www.fresha.com/lp/fr/bt/centres-de-thérapie/ca-montréal/pierrefonds">français</option><option value="https://www.fresha.com/lp/it/bt/centri-terapeutici/ca-montréal/pierrefonds">italiano</option><option value="https://www.fresha.com/lp/zh-CN/bt/物理治疗/ca-蒙特利尔/pierrefonds">中文（中国）</option><option value="https://www.fresha.com/lp/zh-HK/bt/物理治療/ca-蒙特婁/pierrefonds">中文（中国香港特别行政区）</option></select><span class="A3eh8z" aria-hidden="true"><span class="v_Dfni CpPDl7 HP7xLd OmxmkZ"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.25 16.25">
+  <path
+    fill-rule="evenodd"
+    clip-rule="evenodd"
+    d="M10.2678 0.285536C13.7154 1.2257 16.25 4.37936 16.25 8.125C16.25 9.3889 15.9614 10.5854 15.4465 11.6522C15.4324 11.6908 15.4142 11.7286 15.3918 11.765L15.3879 11.7713C14.0853 14.3606 11.4388 16.1577 8.36407 16.2466C8.32958 16.2503 8.29445 16.2511 8.25898 16.2489C8.21441 16.2496 8.16974 16.25 8.125 16.25C3.63769 16.25 0 12.6123 0 8.125C0 3.63769 3.63769 0 8.125 0C8.81544 0 9.48576 0.0861194 10.1258 0.248202C10.1744 0.255058 10.2221 0.267603 10.2678 0.285536ZM1.25 8.125C1.25 7.00855 1.51613 5.95425 1.9884 5.02208L2.80368 7.19142C2.87469 7.38908 2.99467 7.56554 3.15245 7.70428C3.31204 7.84461 3.50496 7.94165 3.71276 7.98612L5.38406 8.34537L5.67894 8.95842L5.68438 8.96945C5.78859 9.17561 5.94723 9.34932 6.14313 9.47175C6.33902 9.59418 6.56468 9.66067 6.79566 9.664L6.89754 9.66406L6.29693 11.01C6.19676 11.2327 6.16405 11.48 6.20286 11.7212C6.24175 11.9628 6.35072 12.1878 6.51626 12.368L7.98656 13.9581L7.78466 14.9917C4.1458 14.8143 1.25 11.8078 1.25 8.125ZM3.07694 4.36533L3.72276 2.84406C4.91535 1.84884 6.45024 1.25 8.125 1.25C8.64119 1.25 9.14409 1.30689 9.62778 1.41474L10.2173 2.48319L8.12008 4.37996L7.15077 4.91406L5.49217 4.91405C5.24736 4.9153 5.00506 4.98797 4.80095 5.12313C4.59683 5.25829 4.43657 5.45007 4.33986 5.67496L3.9325 6.64185L3.07694 4.36533ZM5.64387 7.12267L5.13263 7.01278L5.49502 6.16406C5.49502 6.16406 6.99183 6.16361 7.18081 6.16384C7.36979 6.16406 7.57703 6.10685 7.75385 6.01304L8.72383 5.47689C8.81059 5.42907 8.89101 5.37059 8.96323 5.30281L11.0662 3.40297C11.2707 3.21285 11.406 2.96012 11.451 2.68461C11.4843 2.48077 11.4667 2.27301 11.4013 2.07938C13.5448 3.24347 15 5.5143 15 8.125C15 8.96929 14.8478 9.77804 14.5694 10.5253L10.949 8.29844C10.7989 8.20323 10.6294 8.14294 10.4528 8.12201L8.67191 7.88093C8.40247 7.8429 8.12798 7.89496 7.89115 8.02907C7.7236 8.12395 7.58157 8.25611 7.47528 8.41406L6.80562 8.41175L6.5099 7.80227C6.42766 7.62974 6.30567 7.47693 6.15508 7.35921C6.00517 7.242 5.83021 7.16106 5.64387 7.12267ZM14.0242 11.6575C12.9763 13.4038 11.175 14.6463 9.06976 14.9356L9.21489 14.1989C9.2501 14.0072 9.24201 13.8021 9.18847 13.6147C9.13493 13.4273 9.03884 13.2548 8.90767 13.1106L7.43698 11.5226L8.50901 9.12028L10.2916 9.36158L14.0242 11.6575Z"
+  />
+</svg>
+</span><p class="axDOAG FkLavb qLhAks Yy8KVI">العربية</p></span></form><script>document.querySelector("#language-select").onchange=function(){
+            var newUrl = new FormData(this.form).get("url");
+            document.location.replace(newUrl);
+          };</script><p class="axDOAG FkLavb o3HUQR PqUVna">© 2026 Fresha.com SV Ltd</p></div></div></div>
+        
+  <script>
+    (function () {
+      const pushToDataLayer = properties => {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push(properties);
+      };
+      
+      const B2C_SECTION = 'b2c web';
+      const defaultTrackingData = { section: B2C_SECTION };
+
+      const onPageView = pathname => {
+        let loginSource = undefined;
+        let uid = undefined;
+    
+        try {
+          const trackingStorage = JSON.parse(localStorage.getItem('trackingStorage'));
+          loginSource = trackingStorage.loginSource;
+          uid = trackingStorage.uid;
+        } catch (e) {}
+    
+        const eventData = {
+          page_location: pathname,
+          page_referrer: window.document.referrer,
+          page_title: window.document.title,
+          user_id: uid,
+          content_group: 'venues',
+          authorization_type: loginSource,
+          section: B2C_SECTION,
+        };
+        pushToDataLayer({ event: 'fresha.page_view', ...eventData });
+      };
+    
+      onPageView(window.location.pathname);
+
+      document.querySelectorAll('[data-tracking]').forEach(element => element.addEventListener('click', function (e) {
+        pushToDataLayer({
+          event: 'fresha.user_navigation_clicked',
+          interaction_value: e.target.dataset.tracking,
+          ...defaultTrackingData,
+        });
+      }));
+
+      document.querySelectorAll('[data-business-tracking]').forEach(element => element.addEventListener('click', function (e) {
+        pushToDataLayer({
+          event: 'fresha.for_business_navigation_click',
+          interaction_value: e.target.dataset.tracking,
+          ...defaultTrackingData,
+        });
+      }));
+      
+    })();
+  </script>
+  
+        
+  <script>
+    (function () {
+      var SESSION_COOKIE = 'fsid';
+      var SESSION_TTL_MS = 30 * 60 * 1000;
+      var CONTAINER_KEY = 'fresha.mt.container_id';
+      var UUID_V7 = /^[0-9a-f]{8}-[0-9a-f]{4}-7[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
+
+      function uuidv7() {
+        var bytes = new Uint8Array(16);
+        crypto.getRandomValues(bytes);
+        var ts = Date.now();
+        bytes[0] = Math.floor(ts / 0x10000000000) & 255;
+        bytes[1] = Math.floor(ts / 0x100000000) & 255;
+        bytes[2] = Math.floor(ts / 0x1000000) & 255;
+        bytes[3] = Math.floor(ts / 0x10000) & 255;
+        bytes[4] = Math.floor(ts / 0x100) & 255;
+        bytes[5] = ts & 255;
+        bytes[6] = (bytes[6] & 0x0f) | 0x70;
+        bytes[8] = (bytes[8] & 0x3f) | 0x80;
+        var hex = '';
+        for (var i = 0; i < 16; i++) {
+          hex += (bytes[i] + 0x100).toString(16).slice(1);
+        }
+        return (
+          hex.slice(0, 8) + '-' + hex.slice(8, 12) + '-' + hex.slice(12, 16) + '-' +
+          hex.slice(16, 20) + '-' + hex.slice(20)
+        );
+      }
+
+      function readCookie(name) {
+        var parts = document.cookie.split(';');
+        for (var i = 0; i < parts.length; i++) {
+          var kv = parts[i].split('=');
+          if (kv[0].trim() === name) {
+            return kv.slice(1).join('=');
+          }
+        }
+        return null;
+      }
+
+      function cookieDomain() {
+        var hostname = window.location.hostname;
+        if (/(^|\.)fresha\.com$/.test(hostname)) return '.fresha.com';
+        if (/\.fresha\.io$/.test(hostname)) return '.fresha.io';
+        return '';
+      }
+
+      function ensureSession() {
+        var existing = readCookie(SESSION_COOKIE);
+        var id = existing && UUID_V7.test(existing) ? existing : uuidv7();
+        var domain = cookieDomain();
+        document.cookie =
+          SESSION_COOKIE + '=' + id + '; path=/' +
+          (domain ? '; domain=' + domain : '') +
+          '; expires=' + new Date(Date.now() + SESSION_TTL_MS).toUTCString();
+      }
+
+      function getContainerId() {
+        try {
+          var stored = window.sessionStorage.getItem(CONTAINER_KEY);
+          if (stored && UUID_V7.test(stored)) return stored;
+          var minted = uuidv7();
+          window.sessionStorage.setItem(CONTAINER_KEY, minted);
+          return minted;
+        } catch (e) {
+          return uuidv7();
+        }
+      }
+
+      try {
+        ensureSession();
+
+        fetch((window.location.hostname === 'fresha.com'
+  ? 'https://www.fresha.com/graphql'
+  : new URL('/graphql', window.location.origin).href), {
+          method: 'POST',
+          credentials: 'include',
+          keepalive: true,
+          headers: {
+            'Content-Type': 'application/json',
+            'x-client-platform': 'web',
+          },
+          body: JSON.stringify({
+            query: " mutation LandingPages_RecordMarketplaceTrackingEvents_Mutation( $events: [MarketplaceTrackingEvent!]! ) { recordMarketplaceTrackingEvents(events: $events) { accepted rejected { eventId reason } } } ",
+            variables: {
+              events: [
+                {
+                  eventId: uuidv7(),
+                  containerId: getContainerId(),
+                  eventDetails: {
+                    pageView: {
+                      url: window.location.href,
+                      referrerUrl: document.referrer || null,
+                    },
+                  },
+                },
+              ],
+            },
+          }),
+        }).catch(function () {});
+      } catch (e) {
+        // Tracking must never break the page.
+      }
+    })();
+  </script>
+
+      </body>
+      </html>
