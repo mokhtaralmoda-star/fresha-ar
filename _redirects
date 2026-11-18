@@ -1,0 +1,7 @@
+/lp/assets/*  https://www.fresha.com/lp/assets/:splat  200
+/_next/*      https://www.fresha.com/_next/:splat      200
+/assets/*     https://www.fresha.com/assets/:splat     200
+/img/*        https://www.fresha.com/img/:splat        200
+/fonts/*      https://www.fresha.com/fonts/:splat      200
+/static/*     https://www.fresha.com/static/:splat     200
+/*  /index.html  200
