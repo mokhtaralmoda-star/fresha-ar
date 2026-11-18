@@ -1,0 +1,22 @@
+﻿15:22:50  todo 38733
+15:24:24  todo 38733
+15:27:36  todo 38733
+15:27:36  chunks ready
+17:14:51  all done
+17:16:27  started 5 workers
+19:36:05  extra todo 13951
+19:36:06  started 5 extra workers
+20:29:44  extra worker done ok=2697 bad=93
+20:30:01  extra worker done ok=2699 bad=92
+20:30:57  extra worker done ok=2691 bad=99
+20:31:11  extra worker done ok=2690 bad=100
+20:32:37  extra worker done ok=2682 bad=108
+20:32:37  extra all done
+23:15:46  rest todo 492
+23:15:46  started rest workers
+23:36:14  rest worker done ok=0 bad=98
+23:36:14  rest worker done ok=0 bad=98
+23:36:16  rest worker done ok=1 bad=98
+23:36:17  rest worker done ok=0 bad=98
+23:36:26  rest worker done ok=0 bad=99
+23:36:26  rest all done
