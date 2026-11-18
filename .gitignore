@@ -2,3 +2,11 @@
 img/
 lp/en/
 _next/
+_fill*.ps1
+_long.ps1
+_chunk_*.txt
+_long_*.txt
+_fill.log
+_long.log
+_night.log
+_batch.txt
