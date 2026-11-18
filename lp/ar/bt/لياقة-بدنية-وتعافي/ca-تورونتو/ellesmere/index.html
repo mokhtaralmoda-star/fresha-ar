@@ -1,0 +1,1250 @@
+<!doctype html>
+      <html lang="ar" dir="rtl">
+      <head>
+        
+    <script>
+      window.setLocalStorageValWithExpiry = function (key, value, ttl) {
+        var setValNow = new Date();
+
+        var setValItem = {
+          value: value,
+          expiry: setValNow.getTime() + ttl,
+        };
+
+        try {
+          localStorage.setItem(key, JSON.stringify(setValItem));
+        } catch (e) {
+          // Do nothing
+        }
+      };
+
+      window.getLocaleStorageValWithExpiry = function (key) {
+        try {
+          var getValItemStr = localStorage.getItem(key);
+
+          if (!getValItemStr) {
+            return null;
+          }
+
+          var parsedItem = JSON.parse(getValItemStr);
+          var getValNow = new Date();
+
+          if (getValNow.getTime() > parsedItem.expiry) {
+            localStorage.removeItem(key);
+            return null;
+          }
+          return parsedItem.value;
+        } catch (e) {
+          // Do nothing
+        }
+      };
+    </script>
+  
+        
+    <script>
+      (function() {
+        var SESSION_REFERRER_KEY = 'referrer';
+
+        function getUtmSourceReferrer() {
+          var url = new URL(window.location.href);
+          var source = url.searchParams.get('utm_source');
+          if (source === 'facebook' || source === 'fb') {
+            return 'https://www.facebook.com';
+          }
+          if (source === 'instagram' || source === 'ig') {
+            return 'https://www.instagram.com';
+          }
+          return '';
+        }
+
+        function getSessionReferrer() {
+          try {
+            return window.sessionStorage.getItem(SESSION_REFERRER_KEY) || '';
+          } catch (e) {
+            return '';
+          }
+        }
+
+        function getDocumentReferrer() {
+          return window.document.referrer || '';
+        }
+
+        function getReferrer() {
+          return getDocumentReferrer() || getSessionReferrer() || getUtmSourceReferrer() || '';
+        }
+
+        // Don't overwrite existing referrer value
+        var existingReferrer = getSessionReferrer();
+        if (existingReferrer) {
+          return;
+        }
+
+        var referrer = getReferrer();
+        try {
+          window.sessionStorage.setItem(SESSION_REFERRER_KEY, referrer);
+        } catch (e) {
+          // sessionStorage might not be available (e.g., in private browsing mode)
+          // Silently fail - the tracking will just not work in this case
+        }
+      })();
+    </script>
+  
+        
+    <script>
+      document.cookie = 'freshaLocale=ar; path=/; domain=fresha.com'
+    </script>
+  
+        <meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="robots" content="index,follow"/><link rel="canonical" href="https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ca-تورونتو/ellesmere"/><title>‎أفضل لياقة بدنية وتعافي بالقرب مني في Ellesmere, تورونتو | ‎Fresha‎</title><meta name="description" content="‎احجزوا مواعيدكم عبر الإنترنت مع أفضل اللياقة والتعافي بالقرب منك في Ellesmere. عروض وخصومات رائعة! يمكنكم قراءة تعليقات العملاء والمقارنة بين خدمات اللياقة البدنية والتعافي الأعلى تقييمًا بالقرب منكم على فريشا."/><meta property="og:type" content="website"/><meta property="og:locale" content="ar"/><meta property="og:title" content="‎أفضل لياقة بدنية وتعافي بالقرب مني في Ellesmere, تورونتو | ‎Fresha‎"/><meta property="og:description" content="‎احجزوا مواعيدكم عبر الإنترنت مع أفضل اللياقة والتعافي بالقرب منك في Ellesmere. عروض وخصومات رائعة! يمكنكم قراءة تعليقات العملاء والمقارنة بين خدمات اللياقة البدنية والتعافي الأعلى تقييمًا بالقرب منكم على فريشا."/><meta property="og:image" content="https://images.fresha.com/lead-images/placeholders/gym-and-fitness-3.jpg"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="‎أفضل لياقة بدنية وتعافي بالقرب مني في Ellesmere, تورونتو | ‎Fresha‎"/><meta name="twitter:description" content="‎احجزوا مواعيدكم عبر الإنترنت مع أفضل اللياقة والتعافي بالقرب منك في Ellesmere. عروض وخصومات رائعة! يمكنكم قراءة تعليقات العملاء والمقارنة بين خدمات اللياقة البدنية والتعافي الأعلى تقييمًا بالقرب منكم على فريشا."/><meta name="twitter:image" content="https://images.fresha.com/lead-images/placeholders/gym-and-fitness-3.jpg"/><meta name="apple-mobile-web-app-title" content="‎أفضل لياقة بدنية وتعافي بالقرب مني في Ellesmere, تورونتو | ‎Fresha‎"/><meta name="format-detection" content="telephone=no"/><link rel="apple-touch-icon" sizes="57x57" href="/lp/assets/ea21aa5494afb5de453f.png"/><link rel="apple-touch-icon" sizes="60x60" href="/lp/assets/2a6c26590eace0efc001.png"/><link rel="apple-touch-icon" sizes="72x72" href="/lp/assets/4223931fddacbdb71061.png"/><link rel="apple-touch-icon" sizes="76x76" href="/lp/assets/ea232d3b179523196199.png"/><link rel="apple-touch-icon" sizes="114x114" href="/lp/assets/8785c58c327751b15df6.png"/><link rel="apple-touch-icon" sizes="120x120" href="/lp/assets/aba6a0aaee4f44a49b4a.png"/><link rel="apple-touch-icon" sizes="144x144" href="/lp/assets/fad67048f4679225fd83.png"/><link rel="apple-touch-icon" sizes="152x152" href="/lp/assets/b67d7cd8a75fa98ce42c.png"/><link rel="apple-touch-icon" sizes="180x180" href="/lp/assets/2dcd68e80c220eda4361.png"/><link rel="icon" type="image/png" sizes="192x192" href="/lp/assets/a4a1765801cf342709e9.png"/><link rel="icon" type="image/png" sizes="16x16" href="/lp/assets/2eccb60d40a3fb7e47be.png"/><link rel="icon" type="image/png" sizes="32x32" href="/lp/assets/dfda749997c10bd9329f.png"/><link rel="icon" type="image/png" sizes="96x96" href="/lp/assets/b8da8f524da9cafea0bd.png"/><link rel="icon" type="image/x-icon" href="/lp/assets/6f1f53623245a591df2c.ico"/><link rel="shortcut icon" href="/lp/assets/6f1f53623245a591df2c.ico"/><meta name="theme-color" content="#ffffff"/>
+        <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://www.fresha.com/#website","url":"https://www.fresha.com/","name":"Fresha","publisher":{"@id":"https://www.fresha.com/#organization"},"potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.fresha.com/search?query={search_term_string}"},"query-input":"required name=search_term_string"}},{"@type":"Organization","@id":"https://www.fresha.com/#organization","url":"https://www.fresha.com/","name":"Fresha","logo":{"@type":"ImageObject","url":"https://www.fresha.com/assets/website/fresha-logo.png"},"sameAs":["https://www.facebook.com/TeamFresha/","https://www.instagram.com/fresha/?hl=en","https://www.linkedin.com/company/heyfresha/","https://www.youtube.com/channel/UCV8KMYuFnmEE0GVLZdhJUcg","https://x.com/heyfresha"],"contactPoint":{"@type":"ContactPoint","contactType":"customer service","areaServed":"CA"}},{"@type":["HealthAndBeautyBusiness","HealthClub"],"name":"Physical Elite","address":{"@type":"PostalAddress","streetAddress":"Unit 7, 21 Progress Avenue","addressLocality":"Toronto","addressRegion":"Ontario","postalCode":"M1P 4S7","addressCountry":"CA"},"@id":"https://www.fresha.com/ar/lvp/goal-crusher-by-coach-nicko-progress-avenue-toronto-eXoV5a#business","url":"https://www.fresha.com/ar/lvp/goal-crusher-by-coach-nicko-progress-avenue-toronto-eXoV5a","image":"https://images.fresha.com/lead-images/placeholders/gym-and-fitness-3.jpg","telephone":"+1 647-502-4199","sameAs":["https://www.google.com/maps/place/?q=place_id:ChIJi3Befa_T1IkRN9PGQokL1iU","http://www.goalcrusheracademy.com/"],"geo":{"@type":"GeoCoordinates","latitude":43.7675091,"longitude":-79.279205}},{"@type":["HealthAndBeautyBusiness","DaySpa"],"name":"Fit4Less","address":{"@type":"PostalAddress","streetAddress":"1911 Kennedy Rd, Scarborough, ON M1P 2L9, Canada","addressCountry":"CA"},"@id":"https://www.fresha.com/ar/lvp/fit4less-kennedy-road-toronto-Ev15W9#business","url":"https://www.fresha.com/ar/lvp/fit4less-kennedy-road-toronto-Ev15W9","image":"https://images.fresha.com/lead-images/placeholders/gym-and-fitness-20.jpg","telephone":"+1 416-297-7846","sameAs":["https://www.fit4less.ca/locations/provinces/ontario/scarborough/scarborough-kennedy-road?utm_source=G\u0026utm_medium=lpm\u0026utm_campaign=fit4less"],"geo":{"@type":"GeoCoordinates","latitude":43.76743,"longitude":-79.280694}},{"@type":["HealthAndBeautyBusiness","Physiotherapy"],"name":"Lu Strength \u0026 Therapy - Physiotherapy Services, Sports Massage Therapy \u0026 Chiropractic Services","address":{"@type":"PostalAddress","streetAddress":"Unit 1, 1149 Bellamy Road North","addressLocality":"Toronto","addressRegion":"Ontario","postalCode":"M1H 1H7","addressCountry":"CA"},"@id":"https://www.fresha.com/ar/lvp/lu-strength-therapy-physiotherapy-services-sports-massage-therapy-chiropractic-JQYND6#business","url":"https://www.fresha.com/ar/lvp/lu-strength-therapy-physiotherapy-services-sports-massage-therapy-chiropractic-JQYND6","image":"https://images.fresha.com/lead-images/placeholders/therapy-center-13.jpg","telephone":"+1 437-888-3888","sameAs":["https://www.google.com/maps/place/?q=place_id:ChIJPzX3tFXQ1IkRIfWhCVo4rJU","https://www.instagram.com/p/DdoUdJwFqzi/","https://www.facebook.com/LuStrengthTherapy","http://www.lustrengththerapy.com/"],"geo":{"@type":"GeoCoordinates","latitude":43.7782224,"longitude":-79.2424271}},{"@type":["HealthAndBeautyBusiness","DaySpa"],"name":"GoodLife Fitness North York Victoria Terrace","address":{"@type":"PostalAddress","streetAddress":"1448 Lawrence Ave E, North York, ON M4A 2V6, Canada","addressCountry":"CA"},"@id":"https://www.fresha.com/ar/lvp/goodlife-fitness-north-york-victoria-terrace-lawrence-avenue-east-toronto-eXgB0e#business","url":"https://www.fresha.com/ar/lvp/goodlife-fitness-north-york-victoria-terrace-lawrence-avenue-east-toronto-eXgB0e","image":"https://images.fresha.com/lead-images/placeholders/gym-and-fitness-19.jpg","telephone":"+1 416-615-1185","sameAs":["https://www.goodlifefitness.com/clubs/club.112.html?utm_source=G\u0026utm_medium=LPM\u0026utm_campaign=GoodlifeFitness"],"geo":{"@type":"GeoCoordinates","latitude":43.7428458,"longitude":-79.3137626}},{"@type":["HealthAndBeautyBusiness","HealthClub"],"name":"Pro Trainer Live Gym","address":{"@type":"PostalAddress","streetAddress":"2054 Sheppard Avenue East","addressLocality":"Toronto","addressRegion":"Ontario","postalCode":"M2J 4W6","addressCountry":"CA"},"@id":"https://www.fresha.com/ar/lvp/pro-trainer-live-gym-sheppard-avenue-east-toronto-NoJ0Mq#business","url":"https://www.fresha.com/ar/lvp/pro-trainer-live-gym-sheppard-avenue-east-toronto-NoJ0Mq","image":"https://images.fresha.com/lead-images/placeholders/personal-trainer-25.jpg","telephone":"+1 416-890-4168","sameAs":["https://www.google.com/maps/place/?q=place_id:ChIJz27el1nS1IkRj6kAwC3f01c","https://www.instagram.com/protrainerlive/","https://www.facebook.com/pages/ProTrainerLive/188492844494749","http://protrainerlive.com/","https://twitter.com/protrainerlive"],"geo":{"@type":"GeoCoordinates","latitude":43.7754404,"longitude":-79.3301523}},{"@type":["HealthAndBeautyBusiness","HealthClub"],"name":"Band of Barbells","address":{"@type":"PostalAddress","streetAddress":"1125 Kennedy Rd Unit 1, Scarborough, ON M1P 2K8, Canada","addressCountry":"CA"},"@id":"https://www.fresha.com/ar/lvp/band-of-barbells-kennedy-road-toronto-loYw98#business","url":"https://www.fresha.com/ar/lvp/band-of-barbells-kennedy-road-toronto-loYw98","image":"https://images.fresha.com/lead-images/placeholders/gym-and-fitness-20.jpg","telephone":"+1 416-930-8113","sameAs":["http://www.bandofbarbells.com/"],"geo":{"@type":"GeoCoordinates","latitude":43.7512791,"longitude":-79.274938}},{"@type":["HealthAndBeautyBusiness","HealthClub"],"name":"Raeden Fitness","address":{"@type":"PostalAddress","streetAddress":"2115 Midland Ave Unit 5, Scarborough, ON M1P 3E4, Canada","addressCountry":"CA"},"@id":"https://www.fresha.com/ar/lvp/raeden-fitness-midland-avenue-toronto-X41bEM#business","url":"https://www.fresha.com/ar/lvp/raeden-fitness-midland-avenue-toronto-X41bEM","image":"https://images.fresha.com/lead-images/placeholders/gym-and-fitness-1.jpg","telephone":"+1 416-412-1936","sameAs":["https://www.raedenfitness.com/"],"geo":{"@type":"GeoCoordinates","latitude":43.7718251,"longitude":-79.2716312}},{"@type":["HealthAndBeautyBusiness","TattooParlor"],"name":"Yogasalai","address":{"@type":"PostalAddress","streetAddress":"210 Silver Star Blvd #850, Scarborough, ON M1V 5J9, Canada","addressCountry":"CA"},"@id":"https://www.fresha.com/ar/lvp/yogasalai-silver-star-boulevard-toronto-ovB6GQ#business","url":"https://www.fresha.com/ar/lvp/yogasalai-silver-star-boulevard-toronto-ovB6GQ","image":"https://images.fresha.com/lead-images/placeholders/gym-and-fitness-28.jpg","telephone":"+1 647-760-8156","sameAs":["http://yogasalai.org/"],"geo":{"@type":"GeoCoordinates","latitude":43.8103719,"longitude":-79.2947043}},{"@type":["HealthAndBeautyBusiness","HealthClub"],"name":"Bamboo Kung Fu - Scarborough","address":{"@type":"PostalAddress","streetAddress":"Unit 13, 4385 Sheppard Avenue East","addressLocality":"Toronto","addressRegion":"Ontario","postalCode":"M1S 1T9","addressCountry":"CA"},"@id":"https://www.fresha.com/ar/lvp/bamboo-kung-fu-scarborough-sheppard-avenue-east-toronto-7rlrqD#business","url":"https://www.fresha.com/ar/lvp/bamboo-kung-fu-scarborough-sheppard-avenue-east-toronto-7rlrqD","image":"https://images.fresha.com/lead-images/placeholders/personal-trainer-24.jpg","telephone":"+1 416-412-3930","sameAs":["https://www.google.com/maps/place/?q=place_id:ChIJoewKr-LT1IkRDiZKK1_to2w","https://www.bambamboo.com/"],"geo":{"@type":"GeoCoordinates","latitude":43.7867347,"longitude":-79.2700061}},{"@type":["HealthAndBeautyBusiness","HealthClub"],"name":"Body Form","address":{"@type":"PostalAddress","streetAddress":"111 Grangeway Ave #403, Scarborough, ON M1H 3E9, Canada","addressCountry":"CA"},"@id":"https://www.fresha.com/ar/lvp/body-form-grangeway-avenue-toronto-looZ1w#business","url":"https://www.fresha.com/ar/lvp/body-form-grangeway-avenue-toronto-looZ1w","image":"https://images.fresha.com/lead-images/placeholders/gym-and-fitness-18.jpg","telephone":"+1 416-289-6738","sameAs":["https://bodyformfitness.com/"],"geo":{"@type":"GeoCoordinates","latitude":43.7763617,"longitude":-79.2500458}},{"@type":["HealthAndBeautyBusiness","HealthClub"],"name":"MyQuest","address":{"@type":"PostalAddress","streetAddress":"unit 11, 285 Progress Avenue","addressLocality":"Toronto","addressRegion":"Ontario","postalCode":"M1P 2Z3","addressCountry":"CA"},"@id":"https://www.fresha.com/ar/lvp/myquest-fitness-progress-avenue-toronto-a2DVjY#business","url":"https://www.fresha.com/ar/lvp/myquest-fitness-progress-avenue-toronto-a2DVjY","image":"https://images.fresha.com/lead-images/placeholders/personal-trainer-23.jpg","telephone":"+1 647-581-3566","sameAs":["https://www.google.com/maps/place/?q=place_id:ChIJq6qqMcbN1IkRGTLRlVirI9A","https://www.myquestfitness.com/"],"geo":{"@type":"GeoCoordinates","latitude":43.7726439,"longitude":-79.2709283}},{"@type":["HealthAndBeautyBusiness","HealthClub"],"name":"K*nect Pilates Studio","address":{"@type":"PostalAddress","streetAddress":"Unit 3, 102 Crockford Boulevard","addressLocality":"Toronto","addressRegion":"Ontario","postalCode":"M1R 3C3","addressCountry":"CA"},"@id":"https://www.fresha.com/ar/lvp/k-nect-pilates-studio-honey-drive-toronto-NoBk8k#business","url":"https://www.fresha.com/ar/lvp/k-nect-pilates-studio-honey-drive-toronto-NoBk8k","image":"https://images.fresha.com/lead-images/placeholders/gym-and-fitness-20.jpg","telephone":"+1 437-383-8221","sameAs":["http://www.pilateswithcristina.ca/"],"geo":{"@type":"GeoCoordinates","latitude":43.7437234,"longitude":-79.2907414}},{"@type":["HealthAndBeautyBusiness","DaySpa"],"name":"GoodLife Fitness Scarborough Kennedy and Lawrence","address":{"@type":"PostalAddress","streetAddress":"1141 Kennedy Rd, Scarborough, ON M1P 2K8, Canada","addressCountry":"CA"},"@id":"https://www.fresha.com/ar/lvp/goodlife-fitness-scarborough-kennedy-and-lawrence-kennedy-road-toronto-jb54Zy#business","url":"https://www.fresha.com/ar/lvp/goodlife-fitness-scarborough-kennedy-and-lawrence-kennedy-road-toronto-jb54Zy","image":"https://images.fresha.com/lead-images/placeholders/gym-and-fitness-19.jpg","telephone":"+1 416-750-7892","sameAs":["https://www.goodlifefitness.com/clubs/club.29.html?utm_source=G\u0026utm_medium=LPM\u0026utm_campaign=GoodlifeFitness"],"geo":{"@type":"GeoCoordinates","latitude":43.752151,"longitude":-79.274801}},{"@type":["HealthAndBeautyBusiness","HealthClub"],"name":"Combative Concepts Academy of Martial Arts","address":{"@type":"PostalAddress","streetAddress":"2nd Floor, 1211 Kennedy Road","addressLocality":"Toronto","addressRegion":"Ontario","postalCode":"M1N 3P4","addressCountry":"CA"},"@id":"https://www.fresha.com/ar/lvp/combative-concepts-academy-of-martial-arts-kennedy-road-toronto-58X2A7#business","url":"https://www.fresha.com/ar/lvp/combative-concepts-academy-of-martial-arts-kennedy-road-toronto-58X2A7","image":"https://images.fresha.com/lead-images/placeholders/personal-trainer-12.jpg","telephone":"+1 647-868-9104","sameAs":["https://www.google.com/maps/place/?q=place_id:ChIJ3cx2XqJNV0ARrBhLe3SkeDQ","https://www.instagram.com/combativeconcepts/","https://www.facebook.com/Combative-Concepts-Academy-Of-Martial-Arts-135209013181473/","http://www.combativeconceptsama.ca/","https://twitter.com/combativeconcep"],"geo":{"@type":"GeoCoordinates","latitude":43.7549769,"longitude":-79.2764792}},{"@type":["HealthAndBeautyBusiness","HealthClub"],"name":"Nithyananda Meditation Academy","address":{"@type":"PostalAddress","streetAddress":"1960 Ellesmere Rd, Scarborough, ON M1H 2V9, Canada","addressCountry":"CA"},"@id":"https://www.fresha.com/ar/lvp/nithyananda-meditation-academy-ellesmere-road-toronto-znWDgo#business","url":"https://www.fresha.com/ar/lvp/nithyananda-meditation-academy-ellesmere-road-toronto-znWDgo","image":"https://images.fresha.com/lead-images/placeholders/gym-and-fitness-8.jpg","telephone":"+1 416-439-2089","sameAs":["http://nithyananda.ca/"],"geo":{"@type":"GeoCoordinates","latitude":43.7761634,"longitude":-79.2391197}},{"@type":["HealthAndBeautyBusiness","HealthClub"],"name":"Fuzion Fitness and Yoga Studio","address":{"@type":"PostalAddress","streetAddress":"49 Gloxinia Crescent, Scarborough, ON M1W 2C5, Canada","addressCountry":"CA"},"@id":"https://www.fresha.com/ar/lvp/fuzion-fitness-and-yoga-studio-gloxinia-crescent-toronto-kq63bw#business","url":"https://www.fresha.com/ar/lvp/fuzion-fitness-and-yoga-studio-gloxinia-crescent-toronto-kq63bw","image":"https://images.fresha.com/lead-images/placeholders/gym-and-fitness-6.jpg","telephone":"+1 647-856-2422","sameAs":["http://www.fuzionfitnessandyoga.com/"],"geo":{"@type":"GeoCoordinates","latitude":43.7962202,"longitude":-79.3064658}},{"@type":["HealthAndBeautyBusiness","HealthClub"],"name":"Krudar Muay Thai: Don Mills","address":{"@type":"PostalAddress","streetAddress":"1335 Lawrence Avenue East","addressLocality":"Toronto","addressRegion":"Ontario","postalCode":"M3A 1C6","addressCountry":"CA"},"@id":"https://www.fresha.com/ar/lvp/krudar-muay-thai-don-mills-lawrence-avenue-east-toronto-gn1620#business","url":"https://www.fresha.com/ar/lvp/krudar-muay-thai-don-mills-lawrence-avenue-east-toronto-gn1620","image":"https://images.fresha.com/lead-images/placeholders/personal-trainer-8.jpg","telephone":"+1 416-444-5633","sameAs":["https://www.google.com/maps/place/?q=place_id:ChIJO2QC-Y7N1IkRmPr-lAZJzGY","https://www.instagram.com/krudarmuaythai/","https://www.facebook.com/KrudarMuayThai/","http://www.krudar.com/"],"geo":{"@type":"GeoCoordinates","latitude":43.7407372,"longitude":-79.3207064}},{"@type":["HealthAndBeautyBusiness","HealthClub"],"name":"Modo Yoga Scarborough","address":{"@type":"PostalAddress","streetAddress":"45 Milner Ave, Scarborough, ON M1S 3P6, Canada","addressCountry":"CA"},"@id":"https://www.fresha.com/ar/lvp/modo-yoga-scarborough-milner-avenue-toronto-30Xl9l#business","url":"https://www.fresha.com/ar/lvp/modo-yoga-scarborough-milner-avenue-toronto-30Xl9l","image":"https://images.fresha.com/lead-images/placeholders/gym-and-fitness-15.jpg","telephone":"+1 416-291-1999","sameAs":["https://modoyoga.com/scarborough"],"geo":{"@type":"GeoCoordinates","latitude":43.7829008,"longitude":-79.2527797}},{"@type":["HealthAndBeautyBusiness","Physiotherapy"],"name":"Lawrence Victoria Park Physiotherapy \u0026 Rehabilitation","address":{"@type":"PostalAddress","streetAddress":"1721 Lawrence Avenue East","addressLocality":"Toronto","addressRegion":"Ontario","postalCode":"M1R 2X7","addressCountry":"CA"},"@id":"https://www.fresha.com/ar/lvp/lawrence-victoria-park-physiotherapy-rehabilitation-lawrence-avenue-east-toronto-eXgQJn#business","url":"https://www.fresha.com/ar/lvp/lawrence-victoria-park-physiotherapy-rehabilitation-lawrence-avenue-east-toronto-eXgQJn","image":"https://images.fresha.com/lead-images/placeholders/therapy-center-29.jpg","telephone":"+1 647-341-5877","sameAs":["https://www.google.com/maps/place/?q=place_id:ChIJwUSlfvTN1IkRx2ws3HQaY8A","https://www.instagram.com/lawrencevicpark/","https://www.facebook.com/people/Lawrence-Victoria-Park-Physiotherapy-Rehabilitation/100067748340169/","https://lvpphysio.ca/"],"geo":{"@type":"GeoCoordinates","latitude":43.7418354,"longitude":-79.3089041}},{"@type":["HealthAndBeautyBusiness","HealthClub"],"name":"Toronto Basketball Training Centre - House of Legends","address":{"@type":"PostalAddress","streetAddress":"14 Scotswood Rd, Toronto, ON M1R 3N2, Canada","addressCountry":"CA"},"@id":"https://www.fresha.com/ar/lvp/toronto-basketball-training-centre-house-of-legends-bertrand-avenue-toronto-xZVYPE#business","url":"https://www.fresha.com/ar/lvp/toronto-basketball-training-centre-house-of-legends-bertrand-avenue-toronto-xZVYPE","image":"https://images.fresha.com/lead-images/placeholders/gym-and-fitness-23.jpg","telephone":"+1 647-718-4095","sameAs":["http://www.torontobasketballtraining.com/"],"geo":{"@type":"GeoCoordinates","latitude":43.75857278046756,"longitude":-79.307417962569}},{"@type":["HealthAndBeautyBusiness","DaySpa"],"name":"World Gym","address":{"@type":"PostalAddress","streetAddress":"1455 McCowan Rd, Scarborough, ON M1S 5K7, Canada","addressCountry":"CA"},"@id":"https://www.fresha.com/ar/lvp/world-gym-mccowan-road-toronto-jb9rG7#business","url":"https://www.fresha.com/ar/lvp/world-gym-mccowan-road-toronto-jb9rG7","image":"https://images.fresha.com/lead-images/placeholders/gym-and-fitness-12.jpg","telephone":"+1 416-754-9777","sameAs":["http://www.worldgym.com/scarborough"],"geo":{"@type":"GeoCoordinates","latitude":43.7845183,"longitude":-79.255439}},{"@type":["HealthAndBeautyBusiness","DaySpa"],"name":"GoodLife Fitness North York Sheppard and Consumers","address":{"@type":"PostalAddress","streetAddress":"2235 Sheppard Ave E, North York, ON M2J 5B5, Canada","addressCountry":"CA"},"@id":"https://www.fresha.com/ar/lvp/goodlife-fitness-north-york-sheppard-and-consumers-sheppard-avenue-east-toronto-q8ZJXk#business","url":"https://www.fresha.com/ar/lvp/goodlife-fitness-north-york-sheppard-and-consumers-sheppard-avenue-east-toronto-q8ZJXk","image":"https://images.fresha.com/lead-images/placeholders/gym-and-fitness-14.jpg","telephone":"+1 416-491-5830","sameAs":["https://www.goodlifefitness.com/clubs/club.336.html?utm_source=G\u0026utm_medium=LPM\u0026utm_campaign=GoodlifeFitness"],"geo":{"@type":"GeoCoordinates","latitude":43.772698,"longitude":-79.328088}},{"@type":["HealthAndBeautyBusiness","DaySpa"],"name":"Fit4Less","address":{"@type":"PostalAddress","streetAddress":"2900 Warden Ave., Scarborough, ON M1W 2S8, Canada","addressCountry":"CA"},"@id":"https://www.fresha.com/ar/lvp/fit4less-warden-avenue-toronto-rwNeYv#business","url":"https://www.fresha.com/ar/lvp/fit4less-warden-avenue-toronto-rwNeYv","image":"https://images.fresha.com/lead-images/placeholders/gym-and-fitness-11.jpg","telephone":"+1 416-491-3276","sameAs":["https://fit4less.ca/locations/ontario/scarborough/445?utm_source=G\u0026utm_medium=lpm\u0026utm_campaign=fit4less"],"geo":{"@type":"GeoCoordinates","latitude":43.7996262,"longitude":-79.3189498}},{"@type":["HealthAndBeautyBusiness","DaySpa"],"name":"Fit4Less","address":{"@type":"PostalAddress","streetAddress":"1880 Eglinton Avenue East","addressLocality":"Toronto","addressRegion":"Ontario","postalCode":"M1L 2L9","addressCountry":"CA"},"@id":"https://www.fresha.com/ar/lvp/fit4less-eglinton-avenue-east-toronto-KzLP9q#business","url":"https://www.fresha.com/ar/lvp/fit4less-eglinton-avenue-east-toronto-KzLP9q","image":"https://images.fresha.com/lead-images/placeholders/gym-and-fitness-16.jpg","telephone":"+1 416-750-9120","sameAs":["https://fit4less.ca/locations/ontario/scarborough/405?utm_source=G\u0026utm_medium=lpm\u0026utm_campaign=fit4less"],"geo":{"@type":"GeoCoordinates","latitude":43.7260374,"longitude":-79.2989976}},{"@type":["HealthAndBeautyBusiness","DaySpa"],"name":"GoodLife Fitness Scarborough Town Centre For Women","address":{"@type":"PostalAddress","streetAddress":"1755 Brimley Rd, Scarborough, ON M1P 0A3, Canada","addressCountry":"CA"},"@id":"https://www.fresha.com/ar/lvp/goodlife-fitness-scarborough-town-centre-womens-only-brimley-road-toronto-Qv4gYA#business","url":"https://www.fresha.com/ar/lvp/goodlife-fitness-scarborough-town-centre-womens-only-brimley-road-toronto-Qv4gYA","image":"https://images.fresha.com/lead-images/placeholders/gym-and-fitness-24.jpg","telephone":"+1 416-296-1276","sameAs":["https://www.goodlifefitness.com/clubs/club.173.html?utm_source=G\u0026utm_medium=LPM\u0026utm_campaign=GoodlifeFitness"],"geo":{"@type":"GeoCoordinates","latitude":43.778003,"longitude":-79.263245}},{"@type":["HealthAndBeautyBusiness","HealthClub"],"name":"Scarborough YMCA","address":{"@type":"PostalAddress","streetAddress":"230 Town Centre Court, Scarborough, ON M1P 4Y7, Canada","addressCountry":"CA"},"@id":"https://www.fresha.com/ar/lvp/scarborough-ymca-town-centre-court-toronto-PVZj86#business","url":"https://www.fresha.com/ar/lvp/scarborough-ymca-town-centre-court-toronto-PVZj86","image":"https://images.fresha.com/lead-images/placeholders/gym-and-fitness-26.jpg","telephone":"+1 416-296-9622","sameAs":["https://www.ymcagta.org/find-a-y/scarborough-ymca"],"geo":{"@type":"GeoCoordinates","latitude":43.7746276,"longitude":-79.2543661}},{"@type":"ItemList","@id":"https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ca-تورونتو/ellesmere#itemlist","numberOfItems":26,"itemListOrder":"https://schema.org/ItemListUnordered","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://www.fresha.com/ar/lvp/goal-crusher-by-coach-nicko-progress-avenue-toronto-eXoV5a#business"}},{"@type":"ListItem","position":2,"item":{"@id":"https://www.fresha.com/ar/lvp/fit4less-kennedy-road-toronto-Ev15W9#business"}},{"@type":"ListItem","position":3,"item":{"@id":"https://www.fresha.com/ar/lvp/lu-strength-therapy-physiotherapy-services-sports-massage-therapy-chiropractic-JQYND6#business"}},{"@type":"ListItem","position":4,"item":{"@id":"https://www.fresha.com/ar/lvp/goodlife-fitness-north-york-victoria-terrace-lawrence-avenue-east-toronto-eXgB0e#business"}},{"@type":"ListItem","position":5,"item":{"@id":"https://www.fresha.com/ar/lvp/pro-trainer-live-gym-sheppard-avenue-east-toronto-NoJ0Mq#business"}},{"@type":"ListItem","position":6,"item":{"@id":"https://www.fresha.com/ar/lvp/band-of-barbells-kennedy-road-toronto-loYw98#business"}},{"@type":"ListItem","position":7,"item":{"@id":"https://www.fresha.com/ar/lvp/raeden-fitness-midland-avenue-toronto-X41bEM#business"}},{"@type":"ListItem","position":8,"item":{"@id":"https://www.fresha.com/ar/lvp/yogasalai-silver-star-boulevard-toronto-ovB6GQ#business"}},{"@type":"ListItem","position":9,"item":{"@id":"https://www.fresha.com/ar/lvp/bamboo-kung-fu-scarborough-sheppard-avenue-east-toronto-7rlrqD#business"}},{"@type":"ListItem","position":10,"item":{"@id":"https://www.fresha.com/ar/lvp/body-form-grangeway-avenue-toronto-looZ1w#business"}},{"@type":"ListItem","position":11,"item":{"@id":"https://www.fresha.com/ar/lvp/myquest-fitness-progress-avenue-toronto-a2DVjY#business"}},{"@type":"ListItem","position":12,"item":{"@id":"https://www.fresha.com/ar/lvp/k-nect-pilates-studio-honey-drive-toronto-NoBk8k#business"}},{"@type":"ListItem","position":13,"item":{"@id":"https://www.fresha.com/ar/lvp/goodlife-fitness-scarborough-kennedy-and-lawrence-kennedy-road-toronto-jb54Zy#business"}},{"@type":"ListItem","position":14,"item":{"@id":"https://www.fresha.com/ar/lvp/combative-concepts-academy-of-martial-arts-kennedy-road-toronto-58X2A7#business"}},{"@type":"ListItem","position":15,"item":{"@id":"https://www.fresha.com/ar/lvp/nithyananda-meditation-academy-ellesmere-road-toronto-znWDgo#business"}},{"@type":"ListItem","position":16,"item":{"@id":"https://www.fresha.com/ar/lvp/fuzion-fitness-and-yoga-studio-gloxinia-crescent-toronto-kq63bw#business"}},{"@type":"ListItem","position":17,"item":{"@id":"https://www.fresha.com/ar/lvp/krudar-muay-thai-don-mills-lawrence-avenue-east-toronto-gn1620#business"}},{"@type":"ListItem","position":18,"item":{"@id":"https://www.fresha.com/ar/lvp/modo-yoga-scarborough-milner-avenue-toronto-30Xl9l#business"}},{"@type":"ListItem","position":19,"item":{"@id":"https://www.fresha.com/ar/lvp/lawrence-victoria-park-physiotherapy-rehabilitation-lawrence-avenue-east-toronto-eXgQJn#business"}},{"@type":"ListItem","position":20,"item":{"@id":"https://www.fresha.com/ar/lvp/toronto-basketball-training-centre-house-of-legends-bertrand-avenue-toronto-xZVYPE#business"}},{"@type":"ListItem","position":21,"item":{"@id":"https://www.fresha.com/ar/lvp/world-gym-mccowan-road-toronto-jb9rG7#business"}},{"@type":"ListItem","position":22,"item":{"@id":"https://www.fresha.com/ar/lvp/goodlife-fitness-north-york-sheppard-and-consumers-sheppard-avenue-east-toronto-q8ZJXk#business"}},{"@type":"ListItem","position":23,"item":{"@id":"https://www.fresha.com/ar/lvp/fit4less-warden-avenue-toronto-rwNeYv#business"}},{"@type":"ListItem","position":24,"item":{"@id":"https://www.fresha.com/ar/lvp/fit4less-eglinton-avenue-east-toronto-KzLP9q#business"}},{"@type":"ListItem","position":25,"item":{"@id":"https://www.fresha.com/ar/lvp/goodlife-fitness-scarborough-town-centre-womens-only-brimley-road-toronto-Qv4gYA#business"}},{"@type":"ListItem","position":26,"item":{"@id":"https://www.fresha.com/ar/lvp/scarborough-ymca-town-centre-court-toronto-PVZj86#business"}}]},{"@type":"BreadcrumbList","@id":"https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ca-تورونتو/ellesmere#breadcrumbs","itemListElement":[{"@type":"ListItem","position":1,"name":"الصفحة الرئيسية","item":"https://www.fresha.com/ar"},{"@type":"ListItem","position":2,"name":"لياقة بدنية وتعافي","item":"https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي"},{"@type":"ListItem","position":3,"name":"كندا","item":"https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/كندا"},{"@type":"ListItem","position":4,"name":"تورونتو","item":"https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ca-تورونتو"},{"@type":"ListItem","position":5,"name":"Ellesmere","item":"https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ca-تورونتو/ellesmere"}]},{"@type":"City","@id":"https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ca-تورونتو/ellesmere#geo","name":"Ellesmere","containedInPlace":{"@type":"AdministrativeArea","name":"Ontario","containedInPlace":{"@type":"Country","name":"كندا","identifier":"CA"}}},{"@type":"CollectionPage","@id":"https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ca-تورونتو/ellesmere#page","url":"https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ca-تورونتو/ellesmere","name":"أفضل لياقة بدنية وتعافي بالقرب مني في Ellesmere, تورونتو","headline":"‎أفضل لياقة بدنية وتعافي بالقرب مني في Ellesmere, تورونتو","inLanguage":"ar-CA","isPartOf":{"@id":"https://www.fresha.com/#website"},"mainEntity":{"@id":"https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ca-تورونتو/ellesmere#itemlist"},"dateModified":"2026-11-10T09:41:11.050Z","breadcrumb":{"@id":"https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ca-تورونتو/ellesmere#breadcrumbs"},"contentLocation":{"@id":"https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ca-تورونتو/ellesmere#geo"},"about":[{"@type":"Thing","name":"لياقة بدنية وتعافي"}]},{"@type":"FAQPage","@id":"https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ca-تورونتو/ellesmere#faq","isPartOf":{"@id":"https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ca-تورونتو/ellesmere#page"},"mainEntity":[{"@type":"Question","name":"أين يمكنني العثور على صف دراجة ثابتة أو سبينينغ بالقرب مني في Ellesmere؟","acceptedAnswer":{"@type":"Answer","text":"تتوفر دروس السبين وركوب الدراجة الثابتة في العديد من استوديوهات اللياقة البدنية في Ellesmere. تصفح واحجز أفضل دروس السبين بالقرب منك في Ellesmere."}},{"@type":"Question","name":"أين أجد دروس يوغا بالقرب مني في Ellesmere؟","acceptedAnswer":{"@type":"Answer","text":"تضم Ellesmere مجموعة واسعة من استوديوهات اليوغا والدروس، بدءًا من الجلسات المناسبة للمبتدئين وحتى اليوغا الساخنة والتدريبات المتقدمة. تصفح واحجز أفضل استوديوهات اليوغا القريبة منك في Ellesmere."}},{"@type":"Question","name":"ما هي أفضل الصالات الرياضية ومراكز اللياقة البدنية تقييمًا في Ellesmere؟","acceptedAnswer":{"@type":"Answer","text":"تقدم Fresha قائمة واسعة من النوادي الرياضية، الاستوديوهات، ومراكز اللياقة البدنية في Ellesmere، جميعها مزودة بتقييمات موثوقة من العملاء. قم بفرز النتائج حسب التقييم لتجد أفضل أماكن اللياقة القريبة منك قبل الحجز."}},{"@type":"Question","name":"ما هي الصالات الرياضية أو استوديوهات اللياقة البدنية المفتوحة الآن بالقرب مني في Ellesmere؟","acceptedAnswer":{"@type":"Answer","text":"استخدم Fresha للعثور على صالات الرياضة واستوديوهات اللياقة في Ellesmere المفتوحة الآن. قم بتصفية النتائج حسب تاريخ ووقت اليوم لرؤية التوفر الفوري وحجز موعدك مباشرة."}},{"@type":"Question","name":"هل توجد صالات رياضية أو دروس لياقة بدنية متاحة يوم السبت في Ellesmere?","acceptedAnswer":{"@type":"Answer","text":"نعم، معظم صالات الرياضة واستوديوهات اللياقة في Ellesmere تفتح أبوابها يوم السبت، وغالبًا ما تقدم جدول حصص كامل. استخدم Fresha للتحقق من التوافر الفوري يوم السبت وحجز حصتك أو جلستك مسبقًا."}},{"@type":"Question","name":"أين أجد صالات ملاكمة قريبة مني في Ellesmere؟","acceptedAnswer":{"@type":"Answer","text":"تضم Ellesmere مجموعة واسعة من صالات الملاكمة التي تقدم تدريبات اللياقة البدنية، والملاكمة التنافسية، وبرامج التدريب المتخصصة. تصفح واحجز أفضل صالات الملاكمة القريبة منك في Ellesmere."}},{"@type":"Question","name":"أين يمكنني العثور على دروس بيلاتس بالقرب مني في Ellesmere؟","acceptedAnswer":{"@type":"Answer","text":"تتميز Ellesmere بمشهد نابض بالحياة لرياضة البيلاتس، حيث تقدم الاستوديوهات جلسات بيلاتس على جهاز الريفورمر، والبيلاتس على الحصيرة، والبيلاتس العلاجي. تصفح واحجز أفضل استوديوهات البيلاتس بالقرب منك في Ellesmere."}}]}]}</script>
+        
+    <script>
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl+ '&gtm_auth=I3dLwNFiDu7j5z-Gbm8FTQ&gtm_preview=env-1&gtm_cookies_win=x';f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-WZVW87Z');
+      </script>
+      
+        
+    <script type="text/javascript">
+      !function(){"use strict";!function(e,t){var r=e.amplitude||{_q:[],_iq:{}};if(r.invoked)e.console&&console.error&&console.error("Amplitude snippet has been loaded.");else{var n=function(e,t){e.prototype[t]=function(){return this._q.push({name:t,args:Array.prototype.slice.call(arguments,0)}),this}},s=function(e,t,r){return function(n){e._q.push({name:t,args:Array.prototype.slice.call(r,0),resolve:n})}},o=function(e,t,r){e[t]=function(){if(r)return{promise:new Promise(s(e,t,Array.prototype.slice.call(arguments)))};!function(e,t,r){e._q.push({name:t,args:Array.prototype.slice.call(r,0)})}(e,t,Array.prototype.slice.call(arguments))}},i=function(e){for(var t=0;t<v.length;t++)o(e,v[t],!1);for(var r=0;r<g.length;r++)o(e,g[r],!0)};r.invoked=!0;var c=t.createElement("script");c.type="text/javascript",c.integrity="sha384-4O8lKNFNgd/jP8qyPyPo+hGxkbqZ9dQ/DUufAi9GWr0ZryDdHu+46n/uC5ZmwffP",c.crossOrigin="anonymous",c.async=!0,c.src="https://cdn.amplitude.com/libs/analytics-browser-2.40.0-min.js.gz",c.onload=function(){e.amplitude.runQueuedFunctions||console.log("[Amplitude] Error: could not load SDK")};var a=t.getElementsByTagName("script")[0];a.parentNode.insertBefore(c,a);for(var u=function(){return this._q=[],this},l=["add","append","clearAll","prepend","set","setOnce","unset","preInsert","postInsert","remove","getUserProperties"],p=0;p<l.length;p++)n(u,l[p]);r.Identify=u;for(var d=function(){return this._q=[],this},f=["getEventProperties","setProductId","setQuantity","setPrice","setRevenue","setRevenueType","setReceipt","setReceiptSig","setCurrency","setEventProperties"],y=0;y<f.length;y++)n(d,f[y]);r.Revenue=d;var v=["getDeviceId","setDeviceId","getSessionId","setSessionId","getUserId","setUserId","setOptOut","setTransport","reset","extendSession"],g=["init","add","remove","track","logEvent","identify","groupIdentify","setGroup","revenue","flush"];i(r),r.createInstance=function(e){return r._iq[e]={_q:[]},i(r._iq[e]),r._iq[e]},e.amplitude=r}}(window,document)}();
+      (function () {
+        var apiKey = "29e2cb5b7d55e4c4dcfa427e0f9fc784";
+        var serverUrl = "https://www.fresha.com/plumbus/2/httpapi";
+        var appVersion = "0baeb17a2a7a3565a29515a786156d621a0534a1";
+        var userId = undefined;
+        try {
+          var raw = localStorage.getItem('trackingStorage');
+          if (raw) {
+            var trackingStorage = JSON.parse(raw);
+            if (trackingStorage != null && trackingStorage.uid != null) {
+              userId = String(trackingStorage.uid);
+            }
+          }
+        } catch (e) {}
+        var options = {
+          serverUrl: serverUrl,
+          remoteConfig: {
+            fetchRemoteConfig: false,
+          },
+          minIdLength: 1,
+          logLevel: 0,
+          autocapture: {
+            attribution: true,
+            pageViews: true,
+            sessions: true,
+            formInteractions: false,
+            fileDownloads: false,
+            elementInteractions: false,
+          },
+        };
+        if (appVersion) {
+          options.appVersion = appVersion;
+        }
+        if (userId) {
+          amplitude.init(apiKey, userId, options);
+        } else {
+          amplitude.init(apiKey, options);
+        }
+      })();
+    </script>
+  
+        
+    <script>
+      (function(h,o,u,n,d) {
+        h=h[d]=h[d]||{q:[],onReady:function(c){h.q.push(c)}}
+        d=o.createElement(u);d.async=1;d.src=n
+        n=o.getElementsByTagName(u)[0];n.parentNode.insertBefore(d,n)
+      })(window,document,'script','https://www.datadoghq-browser-agent.com/datadog-rum-v4.js','DD_RUM')
+        DD_RUM.onReady(function() {
+          DD_RUM.init({
+            clientToken: 'pub75bf78931d2a925ddce6f5e5f7de2399',
+            applicationId: 'c70f20c5-ce57-4e6c-ae68-e57f2b02b699',
+            service: 'landing-pages',
+            env: 'production',
+            version: '0baeb17a2a7a3565a29515a786156d621a0534a1',
+            sampleRate: 2,
+            sessionReplaySampleRate: 100,
+            trackResources: true,
+            trackLongTasks: true,
+            trackInteractions: true,
+            trackInteractions: true,
+          })
+          DD_RUM.startSessionReplayRecording()
+        })
+    </script>
+  
+        
+    <link rel="alternate" hreflang="ar" href="https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ca-تورونتو/ellesmere" />
+<link rel="alternate" hreflang="en" href="https://www.fresha.com/lp/en/bt/gym-and-fitness/in/ca-toronto/ellesmere" />
+<link rel="alternate" hreflang="es" href="https://www.fresha.com/lp/es/bt/gimnasio-y-fitness/ca-toronto/ellesmere" />
+<link rel="alternate" hreflang="fr" href="https://www.fresha.com/lp/fr/bt/salle-de-sport/ca-toronto/ellesmere" />
+<link rel="alternate" hreflang="it" href="https://www.fresha.com/lp/it/bt/palestra-e-fitness/ca-toronto/ellesmere" />
+<link rel="alternate" hreflang="zh-CN" href="https://www.fresha.com/lp/zh-CN/bt/健身康复/ca-多伦多/ellesmere" />
+<link rel="alternate" hreflang="zh-HK" href="https://www.fresha.com/lp/zh-HK/bt/健身及復康/ca-多倫多/ellesmere" />
+    <link rel="alternate" hreflang="x-default" href="https://www.fresha.com/lp/en/bt/gym-and-fitness/in/ca-toronto/ellesmere" />
+  
+        
+    <script>
+      function getUtmSourceReferrer() {
+        var url = new URL(window.location.href);
+        var source = url.searchParams.get('utm_source');
+        if (source === 'facebook' || source === 'fb') {
+          return 'https://www.facebook.com';
+        }
+        if (source === 'instagram' || source === 'ig') {
+          return 'https://www.instagram.com';
+        }
+        return '';
+      }
+
+      function getReferrer() {
+        return document.referrer || getUtmSourceReferrer() || '';
+      }
+
+      (function(){
+        var externalReferrerUrl = window.getLocaleStorageValWithExpiry('externalReferrerUrl');
+        var userLandedFirstUrl = window.getLocaleStorageValWithExpiry('userLandedFirstUrl');
+        if (!externalReferrerUrl && externalReferrerUrl !== "") {
+          window.setLocalStorageValWithExpiry('externalReferrerUrl', getReferrer(), 1000 * 60 * 60 * 24);
+        }
+        if (!userLandedFirstUrl && userLandedFirstUrl !== "") {
+          window.setLocalStorageValWithExpiry('userLandedFirstUrl', window.location.href, 1000 * 60 * 60 * 24);
+        }
+      })();
+    </script>
+  
+        <link href="/lp/assets/main-91659a18986f51525692.min.css" rel="stylesheet">
+        
+      </head>
+      <body>
+        
+      <noscript>
+        <iframe
+          title="Google Tag Manager for GA4"
+          src="https://www.googletagmanager.com/ns.html?id=GTM-WZVW87Z&gtm_auth=I3dLwNFiDu7j5z-Gbm8FTQ&gtm_preview=env-1&gtm_cookies_win=x"
+          height="0"
+          width="0"
+          style={{ display: 'none', visibility: 'hidden' }}
+        ></iframe>
+      </noscript>
+    
+        <link rel="preload" as="image" href="/lp/assets/29cca8f59ebf28b19ef8.webp"/><link rel="preload" as="image" href="/lp/assets/27b35cba37648e74203b.png"/><link rel="preload" as="image" href="/lp/assets/7ff297abde57431f1abe.png"/><link rel="preload" as="image" href="/lp/assets/3e5dbe843af4ec105879.webp"/><div dir="rtl"><div class="cvV1n9" data-lp-navigation="true"><nav class="siTBQ1"><div class="Zp_cMo HrIGgh"><a class="OP1nBW QdYpnI" href="https://www.fresha.com/ar" data-qa="logo" aria-label="Fresha"><span class="v_Dfni veiqTU xUeY0V"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81.8 24"><path d="M51.5 2.1h3.9v8.1c1.3-1.9 4-2.5 6.2-1.6 2.2.9 2.9 2.5 3 2.7.2.5.4 1 .5 1.5.6 3.6-.6 7.2.5 10.7h-3.8c-1-2.5-.4-5.3-.4-7.9 0-.7 0-1.5-.4-2.2-.5-.9-1.5-1.6-2.5-1.6-1.1 0-2.1.6-2.6 1.5-.4.8-.4 1.8-.4 2.7v7.5h-3.9l-.1-21.4zM36 15.7c.1-4.3-2.6-7.5-6.8-7.5-2.8 0-5.2 1.4-6.5 3.8-1.4 2.6-1.3 6.3.4 8.8 2.5 3.4 7.6 4.2 12.5 1.9l-1.2-3.1c-4.1 1.8-8.5 1.3-8.8-2.4H36v-1.5zm-10.3-1.5c.3-.8.7-1.4 1.3-1.9 1.2-.9 3.3-1 4.4-.1.5.4.9 1.1 1.2 1.9h-6.9zM13.1 13.9s0-2.3-1.9-2.3H6.9v12.1H3V11.6H0V8.3h3V5.7C3 3.4 5.1 0 9.7 0s6.4 3.9 6.4 3.9l-3 2.1s-.8-2.5-3.3-2.5C8.7 3.5 7 4.4 7 6.2v2h6.1c2.7 0 3.4 2 3.4 2 1-2.4 4.6-2.1 5.3-2v3.1c-2.5-.2-4.8 1.2-4.8 4.1v8h-3.9v-9.5zM48.9 16.2c-1.2-1.2-4.3-1.6-6.3-2-1-.2-1.8-.4-1.8-1.4 0-1.2 1.2-1.5 2.4-1.5s2.4.5 3.1 1.5l3-1.6c-1.7-3-6.2-3.6-9.1-2.4-.9.4-1.6 1-2.1 1.7-1.1 1.5-1 4.1.3 5.3.7.7 1.9 1.2 3.4 1.5l2.8.5c1 .2 1.9.4 1.9 1.5 0 1.3-1.4 1.6-2.6 1.6-3.2 0-3.8-3-3.8-3L36.4 19c.2 1 1.5 5 7.4 5 3.3 0 6.2-1.3 6.3-4.8-.1-1.3-.5-2.3-1.2-3zM81.2 20.8c-.7 0-1.3-.4-1.3-1.4 0-.5-.1-2.2-.1-2.6 0-2.6.1-5.1-1.7-6.9-2-2-6.6-2.2-9-.6-.9.5-1.7 1.2-2.3 2.1l2.3 2.4c.9-1.5 2.2-2.2 3.7-2.2 1.4-.1 2.6.6 3.1 2-3.1.8-7.1 1.1-8.8 4.3-.8 1.5-.6 3.4.6 4.7.9 1 2.4 1.3 3.8 1.3 2.2 0 4.3-.5 5.6-2.5.7 1.7 2.2 2.5 4 2.5.3 0 .6-.1.8-.2v-3c-.2.1-.4.1-.7.1zm-5.3-3.1c.1 2.2-1.7 3.4-3.7 3.4-1.1 0-1.8-.5-1.8-1.6 0-1.2 1-1.6 2.1-1.9l3.4-1v1.1z"/></svg>
+</span></a></div><div class="Zp_cMo Ix7DRq"><a class="OP1nBW QdYpnI" href="https://www.fresha.com/ar" data-qa="logo" aria-label="Fresha"><span class="v_Dfni veiqTU xUeY0V"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81.8 24"><path d="M51.5 2.1h3.9v8.1c1.3-1.9 4-2.5 6.2-1.6 2.2.9 2.9 2.5 3 2.7.2.5.4 1 .5 1.5.6 3.6-.6 7.2.5 10.7h-3.8c-1-2.5-.4-5.3-.4-7.9 0-.7 0-1.5-.4-2.2-.5-.9-1.5-1.6-2.5-1.6-1.1 0-2.1.6-2.6 1.5-.4.8-.4 1.8-.4 2.7v7.5h-3.9l-.1-21.4zM36 15.7c.1-4.3-2.6-7.5-6.8-7.5-2.8 0-5.2 1.4-6.5 3.8-1.4 2.6-1.3 6.3.4 8.8 2.5 3.4 7.6 4.2 12.5 1.9l-1.2-3.1c-4.1 1.8-8.5 1.3-8.8-2.4H36v-1.5zm-10.3-1.5c.3-.8.7-1.4 1.3-1.9 1.2-.9 3.3-1 4.4-.1.5.4.9 1.1 1.2 1.9h-6.9zM13.1 13.9s0-2.3-1.9-2.3H6.9v12.1H3V11.6H0V8.3h3V5.7C3 3.4 5.1 0 9.7 0s6.4 3.9 6.4 3.9l-3 2.1s-.8-2.5-3.3-2.5C8.7 3.5 7 4.4 7 6.2v2h6.1c2.7 0 3.4 2 3.4 2 1-2.4 4.6-2.1 5.3-2v3.1c-2.5-.2-4.8 1.2-4.8 4.1v8h-3.9v-9.5zM48.9 16.2c-1.2-1.2-4.3-1.6-6.3-2-1-.2-1.8-.4-1.8-1.4 0-1.2 1.2-1.5 2.4-1.5s2.4.5 3.1 1.5l3-1.6c-1.7-3-6.2-3.6-9.1-2.4-.9.4-1.6 1-2.1 1.7-1.1 1.5-1 4.1.3 5.3.7.7 1.9 1.2 3.4 1.5l2.8.5c1 .2 1.9.4 1.9 1.5 0 1.3-1.4 1.6-2.6 1.6-3.2 0-3.8-3-3.8-3L36.4 19c.2 1 1.5 5 7.4 5 3.3 0 6.2-1.3 6.3-4.8-.1-1.3-.5-2.3-1.2-3zM81.2 20.8c-.7 0-1.3-.4-1.3-1.4 0-.5-.1-2.2-.1-2.6 0-2.6.1-5.1-1.7-6.9-2-2-6.6-2.2-9-.6-.9.5-1.7 1.2-2.3 2.1l2.3 2.4c.9-1.5 2.2-2.2 3.7-2.2 1.4-.1 2.6.6 3.1 2-3.1.8-7.1 1.1-8.8 4.3-.8 1.5-.6 3.4.6 4.7.9 1 2.4 1.3 3.8 1.3 2.2 0 4.3-.5 5.6-2.5.7 1.7 2.2 2.5 4 2.5.3 0 .6-.1.8-.2v-3c-.2.1-.4.1-.7.1zm-5.3-3.1c.1 2.2-1.7 3.4-3.7 3.4-1.1 0-1.8-.5-1.8-1.6 0-1.2 1-1.6 2.1-1.9l3.4-1v1.1z"/></svg>
+</span></a></div><div class="zeLhfM KUb747"><a class="OP1nBW _aj4fe jhHtJg" href="https://www.fresha.com/ar/search?center=43.767081,-79.284682&amp;distance=0.766&amp;business-type-id=9&amp;sort=recommended" data-qa="search-box" rel="nofollow"><div class="axDOAG FkLavb qLhAks RYhd_E T2Ht61" title="لياقة بدنية وتعافي">لياقة بدنية وتعافي</div></a><a class="OP1nBW _aj4fe" href="https://www.fresha.com/ar/search?center=43.767081,-79.284682&amp;distance=0.766&amp;business-type-id=9&amp;sort=recommended" data-qa="search-box-location" rel="nofollow"><div class="axDOAG FkLavb qLhAks RYhd_E T2Ht61" title="‎Ellesmere, تورونتو">‎Ellesmere, تورونتو</div></a><a class="OP1nBW _aj4fe" href="https://www.fresha.com/ar/search?center=43.767081,-79.284682&amp;distance=0.766&amp;business-type-id=9&amp;sort=recommended" data-qa="search-box-time" rel="nofollow"><div class="axDOAG FkLavb qLhAks RYhd_E T2Ht61" title="أي وقت">أي وقت</div></a><a class="OP1nBW lae5d6" title="بحث" href="https://www.fresha.com/ar/search?center=43.767081,-79.284682&amp;distance=0.766&amp;business-type-id=9&amp;sort=recommended" data-qa="search-box-submit" rel="nofollow"><span class="jxuPik"><span class="v_Dfni CpPDl7 SF7BiT"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.875 3.75a7.125 7.125 0 1 0 0 14.25 7.125 7.125 0 0 0 0-14.25ZM2.25 10.875a8.625 8.625 0 1 1 15.231 5.546l4.05 4.049a.75.75 0 1 1-1.061 1.06l-4.05-4.049a8.625 8.625 0 0 1-14.17-6.606Z"></path></svg></span></span></a></div><div class="lVX8vr"><a href="#" class="q1Jkfo Ix7DRq" data-modal="modal-search" aria-label="للبحث عن مركز أو خدمة"><span class="v_Dfni vSYAhk veiqTU"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.875 3.75a7.125 7.125 0 1 0 0 14.25 7.125 7.125 0 0 0 0-14.25ZM2.25 10.875a8.625 8.625 0 1 1 15.231 5.546l4.05 4.049a.75.75 0 1 1-1.061 1.06l-4.05-4.049a8.625 8.625 0 0 1-14.17-6.606Z"></path></svg></span></a><a href="#" class="q1Jkfo Ix7DRq" data-modal="modal-menu" data-lp-mobile-menu-trigger="true" aria-label="القائمة"><span data-lp-mobile-menu-icon="true"><span class="v_Dfni vSYAhk veiqTU"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 6a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6Zm0 6a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 6a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 18Z"></path></svg></span></span></a><div class="zjRND1 teEzkc" id="modal-search"><div class="cswpPv Rou8CE"><button aria-label="إغلاق" type="button" class="ziPrKd modal-exit"><span class="v_Dfni VqDAZf veiqTU"><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M4.293 4.293a1 1 0 011.414 0L12 10.585l6.293-6.292a1 1 0 011.32-.083l.094.083a1 1 0 010 1.414L13.415 12l6.292 6.293a1 1 0 01.083 1.32l-.083.094a1 1 0 01-1.414 0L12 13.415l-6.293 6.292a1 1 0 01-1.32.083l-.094-.083a1 1 0 010-1.414L10.585 12 4.293 5.707a1 1 0 01-.083-1.32z" />
+                  </svg></span></button></div><div class="kIGviM"><p class="axDOAG N7z9vs meyZbf">بحث</p><a class="OP1nBW zQcZFo" href="https://www.fresha.com/ar/search?center=43.767081,-79.284682&amp;distance=0.766&amp;business-type-id=9&amp;sort=recommended" data-tracking="Search"><div class="QguCgd"><span class="v_Dfni CpPDl7 Rh6zLx"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.875 3.75a7.125 7.125 0 1 0 0 14.25 7.125 7.125 0 0 0 0-14.25ZM2.25 10.875a8.625 8.625 0 1 1 15.231 5.546l4.05 4.049a.75.75 0 1 1-1.061 1.06l-4.05-4.049a8.625 8.625 0 0 1-14.17-6.606Z"></path></svg></span></div><p class="axDOAG TE8kwS">لياقة بدنية وتعافي</p></a><a class="OP1nBW zQcZFo" href="https://www.fresha.com/ar/search?center=43.767081,-79.284682&amp;distance=0.766&amp;business-type-id=9&amp;sort=recommended" data-tracking="Search"><div class="QguCgd"><span class="v_Dfni CpPDl7 Rh6zLx">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.543 22.345a.84.84 0 0 0 .983-.05 21.987 21.987 0 0 0 1.131-.9 25.156 25.156 0 0 0 2.659-2.622c1.918-2.205 3.934-5.378 3.934-9.023a8.25 8.25 0 1 0-16.5 0c0 3.645 2.016 6.818 3.934 9.023a25.146 25.146 0 0 0 3.538 3.334 14.102 14.102 0 0 0 .32.238ZM12 3a6.75 6.75 0 0 0-6.75 6.75c0 3.105 1.734 5.932 3.566 8.04A23.64 23.64 0 0 0 12 20.812a23.633 23.633 0 0 0 3.184-3.023c1.832-2.108 3.566-4.935 3.566-8.04A6.75 6.75 0 0 0 12 3Z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M12 6a3.75 3.75 0 1 0 0 7.5A3.75 3.75 0 0 0 12 6Zm0 1.5a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5Z"></path></svg></span></div><p class="axDOAG TE8kwS">‎Ellesmere, تورونتو</p></a><a class="OP1nBW iSiUSy xc6EHb QblrHl dBIRgx" href="https://www.fresha.com/ar/search?center=43.767081,-79.284682&amp;distance=0.766&amp;business-type-id=9&amp;sort=recommended" data-tracking="Search"><p class="axDOAG zL1l9a">بحث</p></a></div></div><div class="zjRND1 vs4sBU OmmbzA" id="modal-menu"><div class="cswpPv"><a class="OP1nBW QdYpnI" href="https://www.fresha.com/ar" data-qa="logo-mobile" aria-label="Fresha"><span class="v_Dfni veiqTU xUeY0V"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81.8 24"><path d="M51.5 2.1h3.9v8.1c1.3-1.9 4-2.5 6.2-1.6 2.2.9 2.9 2.5 3 2.7.2.5.4 1 .5 1.5.6 3.6-.6 7.2.5 10.7h-3.8c-1-2.5-.4-5.3-.4-7.9 0-.7 0-1.5-.4-2.2-.5-.9-1.5-1.6-2.5-1.6-1.1 0-2.1.6-2.6 1.5-.4.8-.4 1.8-.4 2.7v7.5h-3.9l-.1-21.4zM36 15.7c.1-4.3-2.6-7.5-6.8-7.5-2.8 0-5.2 1.4-6.5 3.8-1.4 2.6-1.3 6.3.4 8.8 2.5 3.4 7.6 4.2 12.5 1.9l-1.2-3.1c-4.1 1.8-8.5 1.3-8.8-2.4H36v-1.5zm-10.3-1.5c.3-.8.7-1.4 1.3-1.9 1.2-.9 3.3-1 4.4-.1.5.4.9 1.1 1.2 1.9h-6.9zM13.1 13.9s0-2.3-1.9-2.3H6.9v12.1H3V11.6H0V8.3h3V5.7C3 3.4 5.1 0 9.7 0s6.4 3.9 6.4 3.9l-3 2.1s-.8-2.5-3.3-2.5C8.7 3.5 7 4.4 7 6.2v2h6.1c2.7 0 3.4 2 3.4 2 1-2.4 4.6-2.1 5.3-2v3.1c-2.5-.2-4.8 1.2-4.8 4.1v8h-3.9v-9.5zM48.9 16.2c-1.2-1.2-4.3-1.6-6.3-2-1-.2-1.8-.4-1.8-1.4 0-1.2 1.2-1.5 2.4-1.5s2.4.5 3.1 1.5l3-1.6c-1.7-3-6.2-3.6-9.1-2.4-.9.4-1.6 1-2.1 1.7-1.1 1.5-1 4.1.3 5.3.7.7 1.9 1.2 3.4 1.5l2.8.5c1 .2 1.9.4 1.9 1.5 0 1.3-1.4 1.6-2.6 1.6-3.2 0-3.8-3-3.8-3L36.4 19c.2 1 1.5 5 7.4 5 3.3 0 6.2-1.3 6.3-4.8-.1-1.3-.5-2.3-1.2-3zM81.2 20.8c-.7 0-1.3-.4-1.3-1.4 0-.5-.1-2.2-.1-2.6 0-2.6.1-5.1-1.7-6.9-2-2-6.6-2.2-9-.6-.9.5-1.7 1.2-2.3 2.1l2.3 2.4c.9-1.5 2.2-2.2 3.7-2.2 1.4-.1 2.6.6 3.1 2-3.1.8-7.1 1.1-8.8 4.3-.8 1.5-.6 3.4.6 4.7.9 1 2.4 1.3 3.8 1.3 2.2 0 4.3-.5 5.6-2.5.7 1.7 2.2 2.5 4 2.5.3 0 .6-.1.8-.2v-3c-.2.1-.4.1-.7.1zm-5.3-3.1c.1 2.2-1.7 3.4-3.7 3.4-1.1 0-1.8-.5-1.8-1.6 0-1.2 1-1.6 2.1-1.9l3.4-1v1.1z"/></svg>
+</span></a><button aria-label="إغلاق" type="button" class="KYbtY2 modal-exit"><span class="v_Dfni VqDAZf veiqTU"><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M4.293 4.293a1 1 0 011.414 0L12 10.585l6.293-6.292a1 1 0 011.32-.083l.094.083a1 1 0 010 1.414L13.415 12l6.292 6.293a1 1 0 01.083 1.32l-.083.094a1 1 0 01-1.414 0L12 13.415l-6.293 6.292a1 1 0 01-1.32.083l-.094-.083a1 1 0 010-1.414L10.585 12 4.293 5.707a1 1 0 01-.083-1.32z" />
+                  </svg></span></button></div><div class="WEULBK"><div class="OGFmDZ"><div class="_Cwzfx">للعملاء</div><ul class="yXnLyK" id="lp-mobile-menu-list"><li><a class="OP1nBW JwHcK0 pBtIbo" href="https://www.fresha.com/ar/auth?type=socials-login" data-qa="menu-item-log-in" rel="nofollow" data-tracking="Log in or sign up">تسجيل الدخول أو إنشاء حساب جديد<span class="v_Dfni vSYAhk veiqTU N_YrF7"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" iconColor="#101928" class="Icon__StyledInlineSVG-sc-c98r68-0 cxRwTg Icon-sc-c98r68-1 styled__ListItemArrow-sc-3phtig-8 kMfJYW UjZKy" width="24" height="24"><path d="M14.481 12l-7.14 6.247a1 1 0 001.318 1.506l8-7a1 1 0 000-1.506l-8-7a1 1 0 10-1.317 1.506L14.482 12z"></path></svg></span></a></li><li><a class="OP1nBW JwHcK0" href="https://www.fresha.com/ar/buy-fresha-gift-card" rel="nofollow" data-tracking="Send a gift card">إرسال بطاقة هدايا<span class="v_Dfni vSYAhk veiqTU N_YrF7"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" iconColor="#101928" class="Icon__StyledInlineSVG-sc-c98r68-0 cxRwTg Icon-sc-c98r68-1 styled__ListItemArrow-sc-3phtig-8 kMfJYW UjZKy" width="24" height="24"><path d="M14.481 12l-7.14 6.247a1 1 0 001.318 1.506l8-7a1 1 0 000-1.506l-8-7a1 1 0 10-1.317 1.506L14.482 12z"></path></svg></span></a></li><li><button type="button" class="Ka0K5G JwHcK0" data-redirect-url="https://www.fresha.com/app-store-redirect" data-qa="menu-item-download-app" data-tracking="Download the app">تنزيل التطبيق<span class="v_Dfni vSYAhk veiqTU N_YrF7"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" iconColor="#101928" class="Icon__StyledInlineSVG-sc-c98r68-0 cxRwTg Icon-sc-c98r68-1 styled__ListItemArrow-sc-3phtig-8 kMfJYW UjZKy" width="24" height="24"><path d="M14.481 12l-7.14 6.247a1 1 0 001.318 1.506l8-7a1 1 0 000-1.506l-8-7a1 1 0 10-1.317 1.506L14.482 12z"></path></svg></span></button></li><li><a class="OP1nBW JwHcK0" href="https://www.fresha.com/ar/help-center" data-qa="menu-item-support" rel="nofollow" data-tracking="Help and support">المساعدة والدعم<span class="v_Dfni vSYAhk veiqTU N_YrF7"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" iconColor="#101928" class="Icon__StyledInlineSVG-sc-c98r68-0 cxRwTg Icon-sc-c98r68-1 styled__ListItemArrow-sc-3phtig-8 kMfJYW UjZKy" width="24" height="24"><path d="M14.481 12l-7.14 6.247a1 1 0 001.318 1.506l8-7a1 1 0 000-1.506l-8-7a1 1 0 10-1.317 1.506L14.482 12z"></path></svg></span></a></li></ul></div><div class="OGFmDZ"><ul class="yXnLyK"><li><a class="OP1nBW JwHcK0 bsH7DV" href="https://www.fresha.com/ar/for-business" data-qa="menu-item-for-business" rel="nofollow" data-business-tracking="For business">للأعمال<span class="v_Dfni CpPDl7 veiqTU N_YrF7"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.97 4.72a.75.75 0 0 1 1.06 0l6.75 6.75a.75.75 0 0 1 0 1.06l-6.75 6.75a.75.75 0 1 1-1.06-1.06l5.47-5.47H3.75a.75.75 0 0 1 0-1.5h14.69l-5.47-5.47a.75.75 0 0 1 0-1.06Z"></path></svg></span></a></li></ul></div></div></div><div class="xSCh4e js-lp-user-menu" id="lp-user-menu" data-state="guest"><input id="lp-user-menu-trigger" type="checkbox"/><label for="lp-user-menu-trigger" class="vQxCMu" id="lp-user-menu-trigger-label"><span class="t1olRo" data-lp-menu-trigger-guest="true"><span class="LZfZ9o">القائمة</span><span class="v_Dfni vSYAhk veiqTU"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 6a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6Zm0 6a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 6a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 18Z"></path></svg></span></span><span class="ici0Y3" data-lp-menu-trigger-auth="true"><span class="khKXsb" id="lp-user-menu-avatar"><span class="l8BU0k" data-lp-avatar-guest="true" aria-hidden="true"></span><span class="E2J4Pv" data-lp-avatar-auth="true" aria-hidden="true"></span></span><span class="isMa3A"><span class="v_Dfni vSYAhk veiqTU N9Wbrw"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.22 8.345a.75.75 0 0 1 1.06 0l5.72 5.72 5.72-5.72a.75.75 0 1 1 1.06 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0l-6.25-6.25a.75.75 0 0 1 0-1.06Z"></path></svg></span><span class="v_Dfni vSYAhk veiqTU uLCUQ5"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.22 8.345a.75.75 0 0 1 1.06 0l5.72 5.72 5.72-5.72a.75.75 0 1 1 1.06 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0l-6.25-6.25a.75.75 0 0 1 0-1.06Z"></path></svg></span></span></span></label><div class="EMH71x" id="lp-user-menu-popup" role="menu"><div class="sX1tHA" data-lp-menu-panel="guest"><div class="GfU0bC">للعملاء</div><a class="OP1nBW VznW96 NbuBVO" href="https://www.fresha.com/ar/auth?type=socials-login" data-qa="menu-item-log-in" rel="nofollow" data-tracking="Log in or sign up">تسجيل الدخول أو إنشاء حساب جديد</a><a class="OP1nBW VznW96" href="https://www.fresha.com/ar/buy-fresha-gift-card" rel="nofollow" data-tracking="Send a gift card">إرسال بطاقة هدايا</a><button type="button" class="Ka0K5G VznW96" data-redirect-url="https://www.fresha.com/app-store-redirect" data-qa="menu-item-download-app" data-tracking="Download the app">تنزيل التطبيق</button><a class="OP1nBW VznW96" href="https://www.fresha.com/ar/help-center" data-qa="menu-item-support" rel="nofollow" data-tracking="Help and support">المساعدة والدعم</a><div class="TDibjD"></div><a class="OP1nBW VznW96 OFLTnl" href="https://www.fresha.com/ar/for-business" data-qa="menu-item-for-business" rel="nofollow" data-business-tracking="For business">للأعمال<span class="v_Dfni CpPDl7 veiqTU MHdN0x"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.97 4.72a.75.75 0 0 1 1.06 0l6.75 6.75a.75.75 0 0 1 0 1.06l-6.75 6.75a.75.75 0 1 1-1.06-1.06l5.47-5.47H3.75a.75.75 0 0 1 0-1.5h14.69l-5.47-5.47a.75.75 0 0 1 0-1.06Z"></path></svg></span></a></div><div class="cCyfoB" data-lp-menu-panel="authenticated"><span class="GfU0bC" id="lp-user-menu-user-name"></span><a class="OP1nBW VznW96" href="https://www.fresha.com/ar/profile" rel="nofollow" data-tracking="Profile">الملف الشخصي</a><a class="OP1nBW VznW96" href="https://www.fresha.com/ar/activity" rel="nofollow" data-tracking="Activity">النشاط</a><a class="OP1nBW VznW96" href="https://www.fresha.com/ar/wallet" rel="nofollow" data-tracking="Wallet">المحفظة</a><a class="OP1nBW VznW96" href="https://www.fresha.com/ar/messages" rel="nofollow" data-tracking="Messages">الرسائل</a><a class="OP1nBW VznW96" href="https://www.fresha.com/ar/favorites" rel="nofollow" data-tracking="Favorites">المفضلة</a><a class="OP1nBW VznW96" href="https://www.fresha.com/ar/buy-fresha-gift-card" rel="nofollow" data-tracking="Send a gift card">إرسال بطاقة هدايا</a><a class="OP1nBW VznW96" href="https://www.fresha.com/ar/consultation-forms" rel="nofollow" data-tracking="Forms">نماذج</a><a class="OP1nBW VznW96" href="https://www.fresha.com/ar/settings" rel="nofollow" data-tracking="Settings">الإعدادات</a><a class="OP1nBW VznW96" href="https://www.fresha.com/ar?modal=logout-confirmation" rel="nofollow" data-tracking="Log out">تسجيل الخروج</a><div class="TDibjD"></div><button type="button" class="Ka0K5G VznW96" data-redirect-url="https://www.fresha.com/app-store-redirect" data-tracking="Download the app">تنزيل التطبيق</button><a class="OP1nBW VznW96" href="https://www.fresha.com/ar/help-center" rel="nofollow" data-tracking="Help and support">المساعدة والدعم</a><div class="TDibjD"></div><a class="OP1nBW VznW96 OFLTnl" href="https://www.fresha.com/ar/for-business" rel="nofollow" data-business-tracking="For business">للأعمال</a></div></div></div></div><script>
+            
+(function () {
+  function openModal(modalId) {
+    var modal = document.getElementById(modalId);
+    if (!modal) {
+      return;
+    }
+    modal.setAttribute('data-open', 'true');
+  }
+
+  function closeModal(modal) {
+    modal.removeAttribute('data-open');
+  }
+
+  document.addEventListener('click', function (event) {
+    var trigger = event.target.closest('[data-modal]');
+    if (trigger) {
+      event.preventDefault();
+      openModal(trigger.getAttribute('data-modal'));
+      return;
+    }
+
+    var exit = event.target.closest('.modal-exit');
+    if (exit) {
+      var modal = exit.closest('[id^="modal-"]');
+      if (modal) {
+        event.preventDefault();
+        closeModal(modal);
+      }
+    }
+  });
+})();
+
+            
+(function () {
+  var nav = document.querySelector('[data-lp-navigation]');
+  if (!nav) {
+    return;
+  }
+
+  if (window.__navigationScrollShadowInit) {
+    return;
+  }
+
+  window.__navigationScrollShadowInit = true;
+
+  var SCROLL_THRESHOLD = 1;
+
+  function updateScrollState() {
+    nav.setAttribute('data-scrolled', window.scrollY > SCROLL_THRESHOLD ? 'true' : 'false');
+  }
+
+  updateScrollState();
+  window.addEventListener('scroll', updateScrollState, { passive: true });
+})();
+
+            
+(function () {
+  var menuRoot = document.getElementById('lp-user-menu');
+  if (!menuRoot) {
+    return;
+  }
+
+  var userNameEl = document.getElementById('lp-user-menu-user-name');
+  var avatarAuthSlot = document.querySelector('[data-lp-avatar-auth]');
+  var triggerLabel = document.getElementById('lp-user-menu-trigger-label');
+  var menuTrigger = document.getElementById('lp-user-menu-trigger');
+  var mobileMenuButton = document.querySelector('[data-lp-mobile-menu-trigger]');
+  var graphqlUrl = (window.location.hostname === 'fresha.com'
+  ? 'https://www.fresha.com/graphql'
+  : new URL('/graphql', window.location.origin).href);
+
+  function renderAvatar(user) {
+    if (!avatarAuthSlot) {
+      return;
+    }
+
+    avatarAuthSlot.textContent = '';
+
+    if (user.avatarThumb && user.avatarThumb.url) {
+      var img = document.createElement('img');
+      img.src = user.avatarThumb.url;
+      img.alt = user.fullName || '';
+      img.width = 40;
+      img.height = 40;
+      img.style.cssText =
+        'width:40px;height:40px;border-radius:999px;object-fit:cover;border:1px solid #f0f0ff;';
+      avatarAuthSlot.appendChild(img);
+      return;
+    }
+
+    var initials = document.createElement('span');
+    initials.style.cssText =
+      'display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:999px;border:1px solid #f0f0ff;background:#f0f0ff;color:#0d0d0d;font-size:14px;letter-spacing:-0.1px;font-weight:600;';
+    initials.textContent = user.initials || '';
+    avatarAuthSlot.appendChild(initials);
+  }
+
+  function applyAuthenticatedState(user) {
+    menuRoot.setAttribute('data-state', 'authenticated');
+
+    if (userNameEl) {
+      userNameEl.textContent = user.fullName || '';
+    }
+
+    renderAvatar(user);
+
+    if (mobileMenuButton) {
+      mobileMenuButton.setAttribute('href', '/menu');
+      mobileMenuButton.removeAttribute('data-modal');
+    }
+  }
+
+  function closeMenuOnOutsideClick() {
+    if (!menuTrigger) {
+      return;
+    }
+
+    window.addEventListener('click', function (event) {
+      if (!menuRoot.contains(event.target) && menuTrigger.checked) {
+        menuTrigger.checked = false;
+      }
+    });
+  }
+
+  closeMenuOnOutsideClick();
+
+  if (triggerLabel && menuTrigger) {
+    triggerLabel.addEventListener('click', function (event) {
+      if (
+        menuRoot.getAttribute('data-state') === 'authenticated' &&
+        window.matchMedia('(max-width: 1023px)').matches
+      ) {
+        event.preventDefault();
+        window.location.href = '/menu';
+      }
+    });
+  }
+
+  fetch(graphqlUrl, {
+    method: 'POST',
+    credentials: 'include',
+    headers: {
+      'Content-Type': 'application/json',
+      'accept-language': document.documentElement.lang || 'en',
+    },
+    body: JSON.stringify({ query: " query LibViewer_BasicProfile_Query { profile: user { id firstName lastName fullName initials avatarThumb: avatar(transformer: THUMB) { url } } } " }),
+  })
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (payload) {
+      var user = payload && payload.data && payload.data.profile;
+      if (!user || !user.id) {
+        return;
+      }
+      applyAuthenticatedState(user);
+    })
+    .catch(function () {
+      // Keep guest menu when profile cannot be loaded.
+    });
+})();
+
+            
+(function () {
+  try {
+    var params = new URLSearchParams(window.location.search);
+    if (params.get('explore') === '1') {
+      document.documentElement.setAttribute('data-lp-explore', '1');
+    }
+  } catch (e) {}
+
+  if (window.__lpExploreMenuInit) {
+    return;
+  }
+  window.__lpExploreMenuInit = true;
+
+  var HOSTS = '[data-lp-explore-root], [data-lp-explore-item]';
+  var VIEWPORT_MARGIN = 8;
+  var DEFAULT_PANEL_OFFSET = -24;
+  var scheduled = false;
+
+  function closestExplore(el, selector) {
+    return el && el.closest ? el.closest(selector) : null;
+  }
+
+  function getPanel(host) {
+    var children = host.children;
+    for (var i = 0; i < children.length; i++) {
+      if (children[i].hasAttribute && children[i].hasAttribute('data-lp-explore-panel')) {
+        return children[i];
+      }
+    }
+    return null;
+  }
+
+  function getToggle(host) {
+    var children = host.children;
+    for (var i = 0; i < children.length; i++) {
+      var child = children[i];
+      if (!child || !child.getAttribute) {
+        continue;
+      }
+      if (
+        child.getAttribute('data-lp-explore-trigger') !== null
+        || child.getAttribute('data-lp-explore-toggle') !== null
+      ) {
+        return child;
+      }
+      var nested = child.querySelector
+        ? child.querySelector('[data-lp-explore-trigger], [data-lp-explore-toggle]')
+        : null;
+      if (nested) {
+        return nested;
+      }
+    }
+    return host.querySelector('[data-lp-explore-trigger], [data-lp-explore-toggle]');
+  }
+
+  function positionPanel(host) {
+    var panel = getPanel(host);
+    if (!panel) {
+      return;
+    }
+
+    host.style.removeProperty('--lp-explore-panel-offset');
+    host.style.removeProperty('--lp-explore-panel-top-adjustment');
+    var rect = panel.getBoundingClientRect();
+    var adjustment = 0;
+    var topAdjustment = 0;
+    var isRtl = window.getComputedStyle(host).direction === 'rtl';
+
+    if (rect.right > window.innerWidth - VIEWPORT_MARGIN) {
+      var endOverflow = rect.right - (window.innerWidth - VIEWPORT_MARGIN);
+      adjustment = isRtl
+        ? -endOverflow
+        : endOverflow;
+    } else if (rect.left < VIEWPORT_MARGIN) {
+      var startOverflow = VIEWPORT_MARGIN - rect.left;
+      adjustment = isRtl
+        ? startOverflow
+        : -startOverflow;
+    }
+
+    if (adjustment !== 0) {
+      host.style.setProperty(
+        '--lp-explore-panel-offset',
+        String(DEFAULT_PANEL_OFFSET + adjustment) + 'px',
+      );
+    }
+
+    if (rect.bottom > window.innerHeight - VIEWPORT_MARGIN) {
+      topAdjustment = window.innerHeight - VIEWPORT_MARGIN - rect.bottom;
+    } else if (rect.top < VIEWPORT_MARGIN) {
+      topAdjustment = VIEWPORT_MARGIN - rect.top;
+    }
+
+    if (topAdjustment !== 0) {
+      host.style.setProperty(
+        '--lp-explore-panel-top-adjustment',
+        String(topAdjustment) + 'px',
+      );
+    }
+  }
+
+  function positionAllPanels() {
+    document.querySelectorAll(HOSTS).forEach(positionPanel);
+  }
+
+  function schedulePositioning() {
+    if (scheduled) {
+      return;
+    }
+    scheduled = true;
+    window.requestAnimationFrame(function () {
+      scheduled = false;
+      positionAllPanels();
+    });
+  }
+
+  function setOpen(el, open) {
+    if (!el) {
+      return;
+    }
+    if (open) {
+      el.setAttribute('data-open', 'true');
+    } else {
+      el.removeAttribute('data-open');
+    }
+    var toggle = getToggle(el);
+    if (toggle) {
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    }
+  }
+
+  function closeAll(except) {
+    document.querySelectorAll('[data-lp-explore-root][data-open="true"], [data-lp-explore-item][data-open="true"]').forEach(function (el) {
+      if (except && (el === except || el.contains(except) || (except.contains && except.contains(el)))) {
+        return;
+      }
+      setOpen(el, false);
+    });
+  }
+
+  function getFocusTargetAfterEscape() {
+    var openHosts = document.querySelectorAll(
+      '[data-lp-explore-root][data-open="true"], [data-lp-explore-item][data-open="true"]',
+    );
+    if (!openHosts.length) {
+      var host = closestExplore(document.activeElement, HOSTS);
+      return host ? getToggle(host) : null;
+    }
+
+    var innermost = openHosts[0];
+    for (var i = 1; i < openHosts.length; i++) {
+      if (innermost.contains(openHosts[i])) {
+        innermost = openHosts[i];
+      }
+    }
+    return getToggle(innermost);
+  }
+
+  document.addEventListener('click', function (event) {
+    var control = closestExplore(event.target, '[data-lp-explore-toggle]')
+      || closestExplore(event.target, '[data-lp-explore-trigger]');
+
+    if (control) {
+      event.preventDefault();
+      event.stopPropagation();
+      var host = closestExplore(control, HOSTS);
+      if (!host) {
+        return;
+      }
+      if (host.getAttribute('data-open') === 'true') {
+        setOpen(host, false);
+        return;
+      }
+      closeAll(host);
+      setOpen(host, true);
+      positionAllPanels();
+      return;
+    }
+
+    if (!closestExplore(event.target, '[data-lp-explore-root]')) {
+      closeAll();
+    }
+  });
+
+  document.addEventListener('keydown', function (event) {
+    if (event.key !== 'Escape') {
+      return;
+    }
+    var focusTarget = getFocusTargetAfterEscape();
+    closeAll();
+    if (focusTarget && typeof focusTarget.focus === 'function') {
+      focusTarget.focus();
+    }
+  });
+
+  document.addEventListener('mouseover', function (event) {
+    if (closestExplore(event.target, '[data-lp-explore-root]')) {
+      schedulePositioning();
+    }
+  });
+
+  document.addEventListener('focusin', function (event) {
+    if (closestExplore(event.target, '[data-lp-explore-root]')) {
+      schedulePositioning();
+    }
+  });
+
+  window.addEventListener('resize', schedulePositioning);
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', positionAllPanels);
+  } else {
+    positionAllPanels();
+  }
+})();
+
+            
+(function () {
+  if (window.__redirectButtonInit) {
+    return;
+  }
+
+  window.__redirectButtonInit = true;
+
+  document.addEventListener('click', function (event) {
+    var target = event.target;
+    var button = target && target.closest ? target.closest('[data-redirect-url]') : null;
+    var url = button && button.getAttribute('data-redirect-url');
+
+    if (url) {
+      window.location.assign(url);
+    }
+  });
+})();
+
+            </script></nav></div><main><div class="zs_ttC"><p class="LkYmOG"><a class="OP1nBW uUQ4ck ut_xFw" href="https://www.fresha.com/ar">الصفحة الرئيسية</a><span class="sNl9cF" aria-hidden="true">•</span><a class="OP1nBW uUQ4ck ut_xFw" href="https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي">لياقة بدنية وتعافي</a><span class="sNl9cF" aria-hidden="true">•</span><a class="OP1nBW uUQ4ck ut_xFw" href="https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/كندا">كندا</a><span class="sNl9cF" aria-hidden="true">•</span><a class="OP1nBW uUQ4ck ut_xFw" href="https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ca-تورونتو">تورونتو</a><span class="sNl9cF" aria-hidden="true">•</span><span class="uUQ4ck cAZuqV">Ellesmere</span></p></div><div class="Rzlv_b SAsCgI"><div><h1 class="axDOAG N7z9vs yPqIKn">أفضل لياقة بدنية وتعافي بالقرب مني في Ellesmere, تورونتو</h1><div class="axDOAG C3RXjX o3HUQR zk7Hpq"><p>‎لياقة بدنية وتعافي في Ellesmere، تورونتو <a class="OP1nBW" href="https://www.fresha.com/ar/search?center=43.767081%2C-79.284682&amp;distance=0.766&amp;business-type-id=9&amp;sort=recommended#map" rel="nofollow">عرض الخريطة</a></p></div></div></div><div class="EqASg6"><section class="Rzlv_b" data-qa="litelocations-grid"><ul class="LRAjDL"><li class="OwChdp" data-id="lite-location-card-6628328"><div data-qa="location-card-Physical Elite" class="e02Wz5"><a href="https://www.fresha.com/ar/lvp/goal-crusher-by-coach-nicko-progress-avenue-toronto-eXoV5a" class="iZ_Jua" aria-label="Physical Elite"></a><div class="HdNCnr"><img src="https://images.fresha.com/lead-images/placeholders/gym-and-fitness-3.jpg?class=width-small" class="afSlte ZvLHng" alt="صورة المدربون الشخصيون خاصة بـ Physical Elite" loading="lazy"/></div><div class="ABjWcU"><div class="lJcJhG"><div class="cnqJzJ"><p class="axDOAG C3RXjX eGBYyp RYhd_E T2Ht61" title="Physical Elite">Physical Elite</p><p class="axDOAG FkLavb o3HUQR T2Ht61 fTV3EB" title="21 Progress Ave Unit 7, Scarborough, ON M1P 4S7, Canada">21 Progress Ave Unit 7, Scarborough, ON M1P 4S7, Canada</p></div><p class="axDOAG TE8kwS DbgFmO T2Ht61 WXSovK"><button type="button" data-show-phone="show-phone" data-lead-id="6628328" class="pCIKui"><p class="axDOAG TE8kwS tv4uDl tpRZTm">إظهار الرقم</p></button></p><a class="OP1nBW tpRZTm QPjIt4 WXSovK dmJvlT" href="tel:+1 647-502-4199" data-desktop-number-revealed="desktop-show-number-revealed" data-lead-id="6628328">+1 647-502-4199</a><a class="OP1nBW tpRZTm QPjIt4 WXSovK Wyhe7t" href="tel:+1 647-502-4199" data-number-revealed="show-number-revealed" data-lead-id="6628328">+1 647-502-4199</a><a class="OP1nBW iSiUSy hQb42p kNK6vJ wIiwwv hqkplt" href="tel:+1 647-502-4199" data-phone-call="phone-call-button" data-lead-id="6628328">الاتصال للحجز</a><button data-desktop-show-phone="desktop-show-phone" data-lead-id="6628328" class="wIiwwv NxhrXa">إظهار الرقم</button></div><hr class="uc7fiG"/><div class="_Ya9oo"><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">التدريب الشخصي</p></div></div></div></li><li class="OwChdp" data-id="lite-location-card-6657736"><div data-qa="location-card-Fit4Less" class="e02Wz5"><a href="https://www.fresha.com/ar/lvp/fit4less-kennedy-road-toronto-Ev15W9" class="iZ_Jua" aria-label="Fit4Less"></a><div class="HdNCnr"><img src="https://images.fresha.com/lead-images/placeholders/gym-and-fitness-20.jpg?class=width-small" class="afSlte ZvLHng" alt="صورة صالونات المساج والتدليك خاصة بـ Fit4Less" loading="lazy"/></div><div class="ABjWcU"><div class="lJcJhG"><div class="cnqJzJ"><p class="axDOAG C3RXjX eGBYyp RYhd_E T2Ht61" title="Fit4Less">Fit4Less</p><p class="axDOAG FkLavb o3HUQR T2Ht61 fTV3EB" title="1911 Kennedy Rd, Scarborough, ON M1P 2L9, Canada">1911 Kennedy Rd, Scarborough, ON M1P 2L9, Canada</p></div><p class="axDOAG TE8kwS DbgFmO T2Ht61 WXSovK"><button type="button" data-show-phone="show-phone" data-lead-id="6657736" class="pCIKui"><p class="axDOAG TE8kwS tv4uDl tpRZTm">إظهار الرقم</p></button></p><a class="OP1nBW tpRZTm QPjIt4 WXSovK dmJvlT" href="tel:+1 416-297-7846" data-desktop-number-revealed="desktop-show-number-revealed" data-lead-id="6657736">+1 416-297-7846</a><a class="OP1nBW tpRZTm QPjIt4 WXSovK Wyhe7t" href="tel:+1 416-297-7846" data-number-revealed="show-number-revealed" data-lead-id="6657736">+1 416-297-7846</a><a class="OP1nBW iSiUSy hQb42p kNK6vJ wIiwwv hqkplt" href="tel:+1 416-297-7846" data-phone-call="phone-call-button" data-lead-id="6657736">الاتصال للحجز</a><button data-desktop-show-phone="desktop-show-phone" data-lead-id="6657736" class="wIiwwv NxhrXa">إظهار الرقم</button></div><hr class="uc7fiG"/><div class="_Ya9oo"><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">مساج رياضي</p><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">مساج وتدليك للاسترخاء</p></div></div></div></li><li class="OwChdp" data-id="lite-location-card-6651373"><div data-qa="location-card-Lu Strength &amp; Therapy - Physiotherapy Services, Sports Massage Therapy &amp; Chiropractic Services" class="e02Wz5"><a href="https://www.fresha.com/ar/lvp/lu-strength-therapy-physiotherapy-services-sports-massage-therapy-chiropractic-JQYND6" class="iZ_Jua" aria-label="Lu Strength &amp; Therapy - Physiotherapy Services, Sports Massage Therapy &amp; Chiropractic Services"></a><div class="HdNCnr"><img src="https://images.fresha.com/lead-images/placeholders/therapy-center-13.jpg?class=width-small" class="afSlte ZvLHng" alt="صورة علاج طبيعي خاصة بـ Lu Strength &amp; Therapy - Physiotherapy Services, Sports Massage Therapy &amp; Chiropractic Services" loading="lazy"/></div><div class="ABjWcU"><div class="lJcJhG"><div class="cnqJzJ"><p class="axDOAG C3RXjX eGBYyp RYhd_E T2Ht61" title="Lu Strength &amp; Therapy - Physiotherapy Services, Sports Massage Therapy &amp; Chiropractic Services">Lu Strength &amp; Therapy - Physiotherapy Services, Sports Massage Therapy &amp; Chiropractic Services</p><p class="axDOAG FkLavb o3HUQR T2Ht61 fTV3EB" title="1149 Bellamy Rd N Unit 1, Scarborough, ON M1H 1H7, Canada">1149 Bellamy Rd N Unit 1, Scarborough, ON M1H 1H7, Canada</p></div><p class="axDOAG TE8kwS DbgFmO T2Ht61 WXSovK"><button type="button" data-show-phone="show-phone" data-lead-id="6651373" class="pCIKui"><p class="axDOAG TE8kwS tv4uDl tpRZTm">إظهار الرقم</p></button></p><a class="OP1nBW tpRZTm QPjIt4 WXSovK dmJvlT" href="tel:+1 437-888-3888" data-desktop-number-revealed="desktop-show-number-revealed" data-lead-id="6651373">+1 437-888-3888</a><a class="OP1nBW tpRZTm QPjIt4 WXSovK Wyhe7t" href="tel:+1 437-888-3888" data-number-revealed="show-number-revealed" data-lead-id="6651373">+1 437-888-3888</a><a class="OP1nBW iSiUSy hQb42p kNK6vJ wIiwwv hqkplt" href="tel:+1 437-888-3888" data-phone-call="phone-call-button" data-lead-id="6651373">الاتصال للحجز</a><button data-desktop-show-phone="desktop-show-phone" data-lead-id="6651373" class="wIiwwv NxhrXa">إظهار الرقم</button></div><hr class="uc7fiG"/><div class="_Ya9oo"><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">علاج طبيعي</p><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">علاج تقويم العمود الفقري</p><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">وخز جاف بالإبر</p></div></div></div></li><li class="OwChdp" data-id="lite-location-card-6655928"><div data-qa="location-card-GoodLife Fitness North York Victoria Terrace" class="e02Wz5"><a href="https://www.fresha.com/ar/lvp/goodlife-fitness-north-york-victoria-terrace-lawrence-avenue-east-toronto-eXgB0e" class="iZ_Jua" aria-label="GoodLife Fitness North York Victoria Terrace"></a><div class="HdNCnr"><img src="https://images.fresha.com/lead-images/placeholders/gym-and-fitness-19.jpg?class=width-small" class="afSlte ZvLHng" alt="صورة منتجعات صحية وساونا خاصة بـ GoodLife Fitness North York Victoria Terrace" loading="lazy"/></div><div class="ABjWcU"><div class="lJcJhG"><div class="cnqJzJ"><p class="axDOAG C3RXjX eGBYyp RYhd_E T2Ht61" title="GoodLife Fitness North York Victoria Terrace">GoodLife Fitness North York Victoria Terrace</p><p class="axDOAG FkLavb o3HUQR T2Ht61 fTV3EB" title="1448 Lawrence Ave E, North York, ON M4A 2V6, Canada">1448 Lawrence Ave E, North York, ON M4A 2V6, Canada</p></div><p class="axDOAG TE8kwS DbgFmO T2Ht61 WXSovK"><button type="button" data-show-phone="show-phone" data-lead-id="6655928" class="pCIKui"><p class="axDOAG TE8kwS tv4uDl tpRZTm">إظهار الرقم</p></button></p><a class="OP1nBW tpRZTm QPjIt4 WXSovK dmJvlT" href="tel:+1 416-615-1185" data-desktop-number-revealed="desktop-show-number-revealed" data-lead-id="6655928">+1 416-615-1185</a><a class="OP1nBW tpRZTm QPjIt4 WXSovK Wyhe7t" href="tel:+1 416-615-1185" data-number-revealed="show-number-revealed" data-lead-id="6655928">+1 416-615-1185</a><a class="OP1nBW iSiUSy hQb42p kNK6vJ wIiwwv hqkplt" href="tel:+1 416-615-1185" data-phone-call="phone-call-button" data-lead-id="6655928">الاتصال للحجز</a><button data-desktop-show-phone="desktop-show-phone" data-lead-id="6655928" class="wIiwwv NxhrXa">إظهار الرقم</button></div><hr class="uc7fiG"/><div class="_Ya9oo"><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">حمامات ساونا</p></div></div></div></li><li class="OwChdp" data-id="lite-location-card-6679587"><div data-qa="location-card-Pro Trainer Live Gym" class="e02Wz5"><a href="https://www.fresha.com/ar/lvp/pro-trainer-live-gym-sheppard-avenue-east-toronto-NoJ0Mq" class="iZ_Jua" aria-label="Pro Trainer Live Gym"></a><div class="HdNCnr"><img src="https://images.fresha.com/lead-images/placeholders/personal-trainer-25.jpg?class=width-small" class="afSlte ZvLHng" alt="صورة المدربون الشخصيون خاصة بـ Pro Trainer Live Gym" loading="lazy"/></div><div class="ABjWcU"><div class="lJcJhG"><div class="cnqJzJ"><p class="axDOAG C3RXjX eGBYyp RYhd_E T2Ht61" title="Pro Trainer Live Gym">Pro Trainer Live Gym</p><p class="axDOAG FkLavb o3HUQR T2Ht61 fTV3EB" title="2054 Sheppard Ave E, North York, ON M2J 4W6, Canada">2054 Sheppard Ave E, North York, ON M2J 4W6, Canada</p></div><p class="axDOAG TE8kwS DbgFmO T2Ht61 WXSovK"><button type="button" data-show-phone="show-phone" data-lead-id="6679587" class="pCIKui"><p class="axDOAG TE8kwS tv4uDl tpRZTm">إظهار الرقم</p></button></p><a class="OP1nBW tpRZTm QPjIt4 WXSovK dmJvlT" href="tel:+1 416-890-4168" data-desktop-number-revealed="desktop-show-number-revealed" data-lead-id="6679587">+1 416-890-4168</a><a class="OP1nBW tpRZTm QPjIt4 WXSovK Wyhe7t" href="tel:+1 416-890-4168" data-number-revealed="show-number-revealed" data-lead-id="6679587">+1 416-890-4168</a><a class="OP1nBW iSiUSy hQb42p kNK6vJ wIiwwv hqkplt" href="tel:+1 416-890-4168" data-phone-call="phone-call-button" data-lead-id="6679587">الاتصال للحجز</a><button data-desktop-show-phone="desktop-show-phone" data-lead-id="6679587" class="wIiwwv NxhrXa">إظهار الرقم</button></div><hr class="uc7fiG"/><div class="_Ya9oo"><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">التدريب الشخصي</p></div></div></div></li><li class="OwChdp" data-id="lite-location-card-6664994"><div data-qa="location-card-Band of Barbells" class="e02Wz5"><a href="https://www.fresha.com/ar/lvp/band-of-barbells-kennedy-road-toronto-loYw98" class="iZ_Jua" aria-label="Band of Barbells"></a><div class="HdNCnr"><img src="https://images.fresha.com/lead-images/placeholders/gym-and-fitness-20.jpg?class=width-small" class="afSlte ZvLHng" alt="صورة المدربون الشخصيون خاصة بـ Band of Barbells" loading="lazy"/></div><div class="ABjWcU"><div class="lJcJhG"><div class="cnqJzJ"><p class="axDOAG C3RXjX eGBYyp RYhd_E T2Ht61" title="Band of Barbells">Band of Barbells</p><p class="axDOAG FkLavb o3HUQR T2Ht61 fTV3EB" title="1125 Kennedy Rd Unit 1, Scarborough, ON M1P 2K8, Canada">1125 Kennedy Rd Unit 1, Scarborough, ON M1P 2K8, Canada</p></div><p class="axDOAG TE8kwS DbgFmO T2Ht61 WXSovK"><button type="button" data-show-phone="show-phone" data-lead-id="6664994" class="pCIKui"><p class="axDOAG TE8kwS tv4uDl tpRZTm">إظهار الرقم</p></button></p><a class="OP1nBW tpRZTm QPjIt4 WXSovK dmJvlT" href="tel:+1 416-930-8113" data-desktop-number-revealed="desktop-show-number-revealed" data-lead-id="6664994">+1 416-930-8113</a><a class="OP1nBW tpRZTm QPjIt4 WXSovK Wyhe7t" href="tel:+1 416-930-8113" data-number-revealed="show-number-revealed" data-lead-id="6664994">+1 416-930-8113</a><a class="OP1nBW iSiUSy hQb42p kNK6vJ wIiwwv hqkplt" href="tel:+1 416-930-8113" data-phone-call="phone-call-button" data-lead-id="6664994">الاتصال للحجز</a><button data-desktop-show-phone="desktop-show-phone" data-lead-id="6664994" class="wIiwwv NxhrXa">إظهار الرقم</button></div><hr class="uc7fiG"/><div class="_Ya9oo"><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">التدريب الشخصي</p></div></div></div></li><li class="OwChdp" data-id="lite-location-card-6607842"><div data-qa="location-card-Raeden Fitness" class="e02Wz5"><a href="https://www.fresha.com/ar/lvp/raeden-fitness-midland-avenue-toronto-X41bEM" class="iZ_Jua" aria-label="Raeden Fitness"></a><div class="HdNCnr"><img src="https://images.fresha.com/lead-images/placeholders/gym-and-fitness-1.jpg?class=width-small" class="afSlte ZvLHng" alt="صورة المدربون الشخصيون خاصة بـ Raeden Fitness" loading="lazy"/></div><div class="ABjWcU"><div class="lJcJhG"><div class="cnqJzJ"><p class="axDOAG C3RXjX eGBYyp RYhd_E T2Ht61" title="Raeden Fitness">Raeden Fitness</p><p class="axDOAG FkLavb o3HUQR T2Ht61 fTV3EB" title="2115 Midland Ave Unit 5, Scarborough, ON M1P 3E4, Canada">2115 Midland Ave Unit 5, Scarborough, ON M1P 3E4, Canada</p></div><p class="axDOAG TE8kwS DbgFmO T2Ht61 WXSovK"><button type="button" data-show-phone="show-phone" data-lead-id="6607842" class="pCIKui"><p class="axDOAG TE8kwS tv4uDl tpRZTm">إظهار الرقم</p></button></p><a class="OP1nBW tpRZTm QPjIt4 WXSovK dmJvlT" href="tel:+1 416-412-1936" data-desktop-number-revealed="desktop-show-number-revealed" data-lead-id="6607842">+1 416-412-1936</a><a class="OP1nBW tpRZTm QPjIt4 WXSovK Wyhe7t" href="tel:+1 416-412-1936" data-number-revealed="show-number-revealed" data-lead-id="6607842">+1 416-412-1936</a><a class="OP1nBW iSiUSy hQb42p kNK6vJ wIiwwv hqkplt" href="tel:+1 416-412-1936" data-phone-call="phone-call-button" data-lead-id="6607842">الاتصال للحجز</a><button data-desktop-show-phone="desktop-show-phone" data-lead-id="6607842" class="wIiwwv NxhrXa">إظهار الرقم</button></div><hr class="uc7fiG"/><div class="_Ya9oo"><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">التدريب الشخصي</p></div></div></div></li><li class="OwChdp" data-id="lite-location-card-6612000"><div data-qa="location-card-Yogasalai" class="e02Wz5"><a href="https://www.fresha.com/ar/lvp/yogasalai-silver-star-boulevard-toronto-ovB6GQ" class="iZ_Jua" aria-label="Yogasalai"></a><div class="HdNCnr"><img src="https://images.fresha.com/lead-images/placeholders/gym-and-fitness-28.jpg?class=width-small" class="afSlte ZvLHng" alt="صورة وشم وثقب خاصة بـ Yogasalai" loading="lazy"/></div><div class="ABjWcU"><div class="lJcJhG"><div class="cnqJzJ"><p class="axDOAG C3RXjX eGBYyp RYhd_E T2Ht61" title="Yogasalai">Yogasalai</p><p class="axDOAG FkLavb o3HUQR T2Ht61 fTV3EB" title="210 Silver Star Blvd #850, Scarborough, ON M1V 5J9, Canada">210 Silver Star Blvd #850, Scarborough, ON M1V 5J9, Canada</p></div><p class="axDOAG TE8kwS DbgFmO T2Ht61 WXSovK"><button type="button" data-show-phone="show-phone" data-lead-id="6612000" class="pCIKui"><p class="axDOAG TE8kwS tv4uDl tpRZTm">إظهار الرقم</p></button></p><a class="OP1nBW tpRZTm QPjIt4 WXSovK dmJvlT" href="tel:+1 647-760-8156" data-desktop-number-revealed="desktop-show-number-revealed" data-lead-id="6612000">+1 647-760-8156</a><a class="OP1nBW tpRZTm QPjIt4 WXSovK Wyhe7t" href="tel:+1 647-760-8156" data-number-revealed="show-number-revealed" data-lead-id="6612000">+1 647-760-8156</a><a class="OP1nBW iSiUSy hQb42p kNK6vJ wIiwwv hqkplt" href="tel:+1 647-760-8156" data-phone-call="phone-call-button" data-lead-id="6612000">الاتصال للحجز</a><button data-desktop-show-phone="desktop-show-phone" data-lead-id="6612000" class="wIiwwv NxhrXa">إظهار الرقم</button></div><hr class="uc7fiG"/><div class="_Ya9oo"><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">ثقب الأذن</p></div></div></div></li><li class="OwChdp" data-id="lite-location-card-6647057"><div data-qa="location-card-Bamboo Kung Fu - Scarborough" class="e02Wz5"><a href="https://www.fresha.com/ar/lvp/bamboo-kung-fu-scarborough-sheppard-avenue-east-toronto-7rlrqD" class="iZ_Jua" aria-label="Bamboo Kung Fu - Scarborough"></a><div class="HdNCnr"><img src="https://images.fresha.com/lead-images/placeholders/personal-trainer-24.jpg?class=width-small" class="afSlte ZvLHng" alt="صورة المدربون الشخصيون خاصة بـ Bamboo Kung Fu - Scarborough" loading="lazy"/></div><div class="ABjWcU"><div class="lJcJhG"><div class="cnqJzJ"><p class="axDOAG C3RXjX eGBYyp RYhd_E T2Ht61" title="Bamboo Kung Fu - Scarborough">Bamboo Kung Fu - Scarborough</p><p class="axDOAG FkLavb o3HUQR T2Ht61 fTV3EB" title="4385 Sheppard Ave E Unit 13, Scarborough, ON M1S 1T9, Canada">4385 Sheppard Ave E Unit 13, Scarborough, ON M1S 1T9, Canada</p></div><p class="axDOAG TE8kwS DbgFmO T2Ht61 WXSovK"><button type="button" data-show-phone="show-phone" data-lead-id="6647057" class="pCIKui"><p class="axDOAG TE8kwS tv4uDl tpRZTm">إظهار الرقم</p></button></p><a class="OP1nBW tpRZTm QPjIt4 WXSovK dmJvlT" href="tel:+1 416-412-3930" data-desktop-number-revealed="desktop-show-number-revealed" data-lead-id="6647057">+1 416-412-3930</a><a class="OP1nBW tpRZTm QPjIt4 WXSovK Wyhe7t" href="tel:+1 416-412-3930" data-number-revealed="show-number-revealed" data-lead-id="6647057">+1 416-412-3930</a><a class="OP1nBW iSiUSy hQb42p kNK6vJ wIiwwv hqkplt" href="tel:+1 416-412-3930" data-phone-call="phone-call-button" data-lead-id="6647057">الاتصال للحجز</a><button data-desktop-show-phone="desktop-show-phone" data-lead-id="6647057" class="wIiwwv NxhrXa">إظهار الرقم</button></div><hr class="uc7fiG"/><div class="_Ya9oo"><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">التدريب الشخصي</p></div></div></div></li><li class="OwChdp" data-id="lite-location-card-3893394"><div data-qa="location-card-Body Form" class="e02Wz5"><a href="https://www.fresha.com/ar/lvp/body-form-grangeway-avenue-toronto-looZ1w" class="iZ_Jua" aria-label="Body Form"></a><div class="HdNCnr"><img src="https://images.fresha.com/lead-images/placeholders/gym-and-fitness-18.jpg?class=width-small" class="afSlte ZvLHng" alt="صورة المدربون الشخصيون خاصة بـ Body Form" loading="lazy"/></div><div class="ABjWcU"><div class="lJcJhG"><div class="cnqJzJ"><p class="axDOAG C3RXjX eGBYyp RYhd_E T2Ht61" title="Body Form">Body Form</p><p class="axDOAG FkLavb o3HUQR T2Ht61 fTV3EB" title="111 Grangeway Ave #403, Scarborough, ON M1H 3E9, Canada">111 Grangeway Ave #403, Scarborough, ON M1H 3E9, Canada</p></div><p class="axDOAG TE8kwS DbgFmO T2Ht61 WXSovK"><button type="button" data-show-phone="show-phone" data-lead-id="3893394" class="pCIKui"><p class="axDOAG TE8kwS tv4uDl tpRZTm">إظهار الرقم</p></button></p><a class="OP1nBW tpRZTm QPjIt4 WXSovK dmJvlT" href="tel:+1 416-289-6738" data-desktop-number-revealed="desktop-show-number-revealed" data-lead-id="3893394">+1 416-289-6738</a><a class="OP1nBW tpRZTm QPjIt4 WXSovK Wyhe7t" href="tel:+1 416-289-6738" data-number-revealed="show-number-revealed" data-lead-id="3893394">+1 416-289-6738</a><a class="OP1nBW iSiUSy hQb42p kNK6vJ wIiwwv hqkplt" href="tel:+1 416-289-6738" data-phone-call="phone-call-button" data-lead-id="3893394">الاتصال للحجز</a><button data-desktop-show-phone="desktop-show-phone" data-lead-id="3893394" class="wIiwwv NxhrXa">إظهار الرقم</button></div><hr class="uc7fiG"/><div class="_Ya9oo"><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">التدريب الشخصي</p></div></div></div></li><li class="OwChdp" data-id="lite-location-card-6652241"><div data-qa="location-card-MyQuest" class="e02Wz5"><a href="https://www.fresha.com/ar/lvp/myquest-fitness-progress-avenue-toronto-a2DVjY" class="iZ_Jua" aria-label="MyQuest"></a><div class="HdNCnr"><img src="https://images.fresha.com/lead-images/placeholders/personal-trainer-23.jpg?class=width-small" class="afSlte ZvLHng" alt="صورة المدربون الشخصيون خاصة بـ MyQuest" loading="lazy"/></div><div class="ABjWcU"><div class="lJcJhG"><div class="cnqJzJ"><p class="axDOAG C3RXjX eGBYyp RYhd_E T2Ht61" title="MyQuest">MyQuest</p><p class="axDOAG FkLavb o3HUQR T2Ht61 fTV3EB" title="285 Progress Ave Unit 11, Scarborough, ON M1P 2Z3, Canada">285 Progress Ave Unit 11, Scarborough, ON M1P 2Z3, Canada</p></div><p class="axDOAG TE8kwS DbgFmO T2Ht61 WXSovK"><button type="button" data-show-phone="show-phone" data-lead-id="6652241" class="pCIKui"><p class="axDOAG TE8kwS tv4uDl tpRZTm">إظهار الرقم</p></button></p><a class="OP1nBW tpRZTm QPjIt4 WXSovK dmJvlT" href="tel:+1 647-581-3566" data-desktop-number-revealed="desktop-show-number-revealed" data-lead-id="6652241">+1 647-581-3566</a><a class="OP1nBW tpRZTm QPjIt4 WXSovK Wyhe7t" href="tel:+1 647-581-3566" data-number-revealed="show-number-revealed" data-lead-id="6652241">+1 647-581-3566</a><a class="OP1nBW iSiUSy hQb42p kNK6vJ wIiwwv hqkplt" href="tel:+1 647-581-3566" data-phone-call="phone-call-button" data-lead-id="6652241">الاتصال للحجز</a><button data-desktop-show-phone="desktop-show-phone" data-lead-id="6652241" class="wIiwwv NxhrXa">إظهار الرقم</button></div><hr class="uc7fiG"/><div class="_Ya9oo"><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">التدريب الشخصي</p></div></div></div></li><li class="OwChdp" data-id="lite-location-card-6596587"><div data-qa="location-card-K*nect Pilates Studio" class="e02Wz5"><a href="https://www.fresha.com/ar/lvp/k-nect-pilates-studio-honey-drive-toronto-NoBk8k" class="iZ_Jua" aria-label="K*nect Pilates Studio"></a><div class="HdNCnr"><img src="https://images.fresha.com/lead-images/placeholders/gym-and-fitness-20.jpg?class=width-small" class="afSlte ZvLHng" alt="صورة المدربون الشخصيون خاصة بـ K*nect Pilates Studio" loading="lazy"/></div><div class="ABjWcU"><div class="lJcJhG"><div class="cnqJzJ"><p class="axDOAG C3RXjX eGBYyp RYhd_E T2Ht61" title="K*nect Pilates Studio">K*nect Pilates Studio</p><p class="axDOAG FkLavb o3HUQR T2Ht61 fTV3EB" title="102 Crockford Blvd Unit 3, Scarborough, ON M1R 3C3, Canada">102 Crockford Blvd Unit 3, Scarborough, ON M1R 3C3, Canada</p></div><p class="axDOAG TE8kwS DbgFmO T2Ht61 WXSovK"><button type="button" data-show-phone="show-phone" data-lead-id="6596587" class="pCIKui"><p class="axDOAG TE8kwS tv4uDl tpRZTm">إظهار الرقم</p></button></p><a class="OP1nBW tpRZTm QPjIt4 WXSovK dmJvlT" href="tel:+1 437-383-8221" data-desktop-number-revealed="desktop-show-number-revealed" data-lead-id="6596587">+1 437-383-8221</a><a class="OP1nBW tpRZTm QPjIt4 WXSovK Wyhe7t" href="tel:+1 437-383-8221" data-number-revealed="show-number-revealed" data-lead-id="6596587">+1 437-383-8221</a><a class="OP1nBW iSiUSy hQb42p kNK6vJ wIiwwv hqkplt" href="tel:+1 437-383-8221" data-phone-call="phone-call-button" data-lead-id="6596587">الاتصال للحجز</a><button data-desktop-show-phone="desktop-show-phone" data-lead-id="6596587" class="wIiwwv NxhrXa">إظهار الرقم</button></div><hr class="uc7fiG"/><div class="_Ya9oo"><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">التدريب الشخصي</p></div></div></div></li><li class="OwChdp" data-id="lite-location-card-6638252"><div data-qa="location-card-GoodLife Fitness Scarborough Kennedy and Lawrence" class="e02Wz5"><a href="https://www.fresha.com/ar/lvp/goodlife-fitness-scarborough-kennedy-and-lawrence-kennedy-road-toronto-jb54Zy" class="iZ_Jua" aria-label="GoodLife Fitness Scarborough Kennedy and Lawrence"></a><div class="HdNCnr"><img src="https://images.fresha.com/lead-images/placeholders/gym-and-fitness-19.jpg?class=width-small" class="afSlte ZvLHng" alt="صورة صالونات المساج والتدليك خاصة بـ GoodLife Fitness Scarborough Kennedy and Lawrence" loading="lazy"/></div><div class="ABjWcU"><div class="lJcJhG"><div class="cnqJzJ"><p class="axDOAG C3RXjX eGBYyp RYhd_E T2Ht61" title="GoodLife Fitness Scarborough Kennedy and Lawrence">GoodLife Fitness Scarborough Kennedy and Lawrence</p><p class="axDOAG FkLavb o3HUQR T2Ht61 fTV3EB" title="1141 Kennedy Rd, Scarborough, ON M1P 2K8, Canada">1141 Kennedy Rd, Scarborough, ON M1P 2K8, Canada</p></div><p class="axDOAG TE8kwS DbgFmO T2Ht61 WXSovK"><button type="button" data-show-phone="show-phone" data-lead-id="6638252" class="pCIKui"><p class="axDOAG TE8kwS tv4uDl tpRZTm">إظهار الرقم</p></button></p><a class="OP1nBW tpRZTm QPjIt4 WXSovK dmJvlT" href="tel:+1 416-750-7892" data-desktop-number-revealed="desktop-show-number-revealed" data-lead-id="6638252">+1 416-750-7892</a><a class="OP1nBW tpRZTm QPjIt4 WXSovK Wyhe7t" href="tel:+1 416-750-7892" data-number-revealed="show-number-revealed" data-lead-id="6638252">+1 416-750-7892</a><a class="OP1nBW iSiUSy hQb42p kNK6vJ wIiwwv hqkplt" href="tel:+1 416-750-7892" data-phone-call="phone-call-button" data-lead-id="6638252">الاتصال للحجز</a><button data-desktop-show-phone="desktop-show-phone" data-lead-id="6638252" class="wIiwwv NxhrXa">إظهار الرقم</button></div><hr class="uc7fiG"/><div class="_Ya9oo"><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">مساج رياضي</p><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">مساج وتدليك للاسترخاء</p><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">مساج علاجي</p><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">تدليك الأنسجة العميقة</p></div></div></div></li><li class="OwChdp" data-id="lite-location-card-6593405"><div data-qa="location-card-Combative Concepts Academy of Martial Arts" class="e02Wz5"><a href="https://www.fresha.com/ar/lvp/combative-concepts-academy-of-martial-arts-kennedy-road-toronto-58X2A7" class="iZ_Jua" aria-label="Combative Concepts Academy of Martial Arts"></a><div class="HdNCnr"><img src="https://images.fresha.com/lead-images/placeholders/personal-trainer-12.jpg?class=width-small" class="afSlte ZvLHng" alt="صورة المدربون الشخصيون خاصة بـ Combative Concepts Academy of Martial Arts" loading="lazy"/></div><div class="ABjWcU"><div class="lJcJhG"><div class="cnqJzJ"><p class="axDOAG C3RXjX eGBYyp RYhd_E T2Ht61" title="Combative Concepts Academy of Martial Arts">Combative Concepts Academy of Martial Arts</p><p class="axDOAG FkLavb o3HUQR T2Ht61 fTV3EB" title="1211 Kennedy Rd 2nd Floor, Scarborough, ON M1N 3P4, Canada">1211 Kennedy Rd 2nd Floor, Scarborough, ON M1N 3P4, Canada</p></div><p class="axDOAG TE8kwS DbgFmO T2Ht61 WXSovK"><button type="button" data-show-phone="show-phone" data-lead-id="6593405" class="pCIKui"><p class="axDOAG TE8kwS tv4uDl tpRZTm">إظهار الرقم</p></button></p><a class="OP1nBW tpRZTm QPjIt4 WXSovK dmJvlT" href="tel:+1 647-868-9104" data-desktop-number-revealed="desktop-show-number-revealed" data-lead-id="6593405">+1 647-868-9104</a><a class="OP1nBW tpRZTm QPjIt4 WXSovK Wyhe7t" href="tel:+1 647-868-9104" data-number-revealed="show-number-revealed" data-lead-id="6593405">+1 647-868-9104</a><a class="OP1nBW iSiUSy hQb42p kNK6vJ wIiwwv hqkplt" href="tel:+1 647-868-9104" data-phone-call="phone-call-button" data-lead-id="6593405">الاتصال للحجز</a><button data-desktop-show-phone="desktop-show-phone" data-lead-id="6593405" class="wIiwwv NxhrXa">إظهار الرقم</button></div><hr class="uc7fiG"/><div class="_Ya9oo"><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">التدريب الشخصي</p></div></div></div></li><li class="OwChdp" data-id="lite-location-card-6656897"><div data-qa="location-card-Nithyananda Meditation Academy" class="e02Wz5"><a href="https://www.fresha.com/ar/lvp/nithyananda-meditation-academy-ellesmere-road-toronto-znWDgo" class="iZ_Jua" aria-label="Nithyananda Meditation Academy"></a><div class="HdNCnr"><img src="https://images.fresha.com/lead-images/placeholders/gym-and-fitness-8.jpg?class=width-small" class="afSlte ZvLHng" alt="صورة المدربون الشخصيون خاصة بـ Nithyananda Meditation Academy" loading="lazy"/></div><div class="ABjWcU"><div class="lJcJhG"><div class="cnqJzJ"><p class="axDOAG C3RXjX eGBYyp RYhd_E T2Ht61" title="Nithyananda Meditation Academy">Nithyananda Meditation Academy</p><p class="axDOAG FkLavb o3HUQR T2Ht61 fTV3EB" title="1960 Ellesmere Rd, Scarborough, ON M1H 2V9, Canada">1960 Ellesmere Rd, Scarborough, ON M1H 2V9, Canada</p></div><p class="axDOAG TE8kwS DbgFmO T2Ht61 WXSovK"><button type="button" data-show-phone="show-phone" data-lead-id="6656897" class="pCIKui"><p class="axDOAG TE8kwS tv4uDl tpRZTm">إظهار الرقم</p></button></p><a class="OP1nBW tpRZTm QPjIt4 WXSovK dmJvlT" href="tel:+1 416-439-2089" data-desktop-number-revealed="desktop-show-number-revealed" data-lead-id="6656897">+1 416-439-2089</a><a class="OP1nBW tpRZTm QPjIt4 WXSovK Wyhe7t" href="tel:+1 416-439-2089" data-number-revealed="show-number-revealed" data-lead-id="6656897">+1 416-439-2089</a><a class="OP1nBW iSiUSy hQb42p kNK6vJ wIiwwv hqkplt" href="tel:+1 416-439-2089" data-phone-call="phone-call-button" data-lead-id="6656897">الاتصال للحجز</a><button data-desktop-show-phone="desktop-show-phone" data-lead-id="6656897" class="wIiwwv NxhrXa">إظهار الرقم</button></div><hr class="uc7fiG"/><div class="_Ya9oo"><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">التدريب الشخصي</p></div></div></div></li><li class="OwChdp" data-id="lite-location-card-6672561"><div data-qa="location-card-Fuzion Fitness and Yoga Studio" class="e02Wz5"><a href="https://www.fresha.com/ar/lvp/fuzion-fitness-and-yoga-studio-gloxinia-crescent-toronto-kq63bw" class="iZ_Jua" aria-label="Fuzion Fitness and Yoga Studio"></a><div class="HdNCnr"><img src="https://images.fresha.com/lead-images/placeholders/gym-and-fitness-6.jpg?class=width-small" class="afSlte ZvLHng" alt="صورة المدربون الشخصيون خاصة بـ Fuzion Fitness and Yoga Studio" loading="lazy"/></div><div class="ABjWcU"><div class="lJcJhG"><div class="cnqJzJ"><p class="axDOAG C3RXjX eGBYyp RYhd_E T2Ht61" title="Fuzion Fitness and Yoga Studio">Fuzion Fitness and Yoga Studio</p><p class="axDOAG FkLavb o3HUQR T2Ht61 fTV3EB" title="49 Gloxinia Crescent, Scarborough, ON M1W 2C5, Canada">49 Gloxinia Crescent, Scarborough, ON M1W 2C5, Canada</p></div><p class="axDOAG TE8kwS DbgFmO T2Ht61 WXSovK"><button type="button" data-show-phone="show-phone" data-lead-id="6672561" class="pCIKui"><p class="axDOAG TE8kwS tv4uDl tpRZTm">إظهار الرقم</p></button></p><a class="OP1nBW tpRZTm QPjIt4 WXSovK dmJvlT" href="tel:+1 647-856-2422" data-desktop-number-revealed="desktop-show-number-revealed" data-lead-id="6672561">+1 647-856-2422</a><a class="OP1nBW tpRZTm QPjIt4 WXSovK Wyhe7t" href="tel:+1 647-856-2422" data-number-revealed="show-number-revealed" data-lead-id="6672561">+1 647-856-2422</a><a class="OP1nBW iSiUSy hQb42p kNK6vJ wIiwwv hqkplt" href="tel:+1 647-856-2422" data-phone-call="phone-call-button" data-lead-id="6672561">الاتصال للحجز</a><button data-desktop-show-phone="desktop-show-phone" data-lead-id="6672561" class="wIiwwv NxhrXa">إظهار الرقم</button></div><hr class="uc7fiG"/><div class="_Ya9oo"><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">التدريب الشخصي</p></div></div></div></li><li class="OwChdp" data-id="lite-location-card-6645918"><div data-qa="location-card-Krudar Muay Thai: Don Mills" class="e02Wz5"><a href="https://www.fresha.com/ar/lvp/krudar-muay-thai-don-mills-lawrence-avenue-east-toronto-gn1620" class="iZ_Jua" aria-label="Krudar Muay Thai: Don Mills"></a><div class="HdNCnr"><img src="https://images.fresha.com/lead-images/placeholders/personal-trainer-8.jpg?class=width-small" class="afSlte ZvLHng" alt="صورة المدربون الشخصيون خاصة بـ Krudar Muay Thai: Don Mills" loading="lazy"/></div><div class="ABjWcU"><div class="lJcJhG"><div class="cnqJzJ"><p class="axDOAG C3RXjX eGBYyp RYhd_E T2Ht61" title="Krudar Muay Thai: Don Mills">Krudar Muay Thai: Don Mills</p><p class="axDOAG FkLavb o3HUQR T2Ht61 fTV3EB" title="1335 Lawrence Ave E, North York, ON M3A 1C6, Canada">1335 Lawrence Ave E, North York, ON M3A 1C6, Canada</p></div><p class="axDOAG TE8kwS DbgFmO T2Ht61 WXSovK"><button type="button" data-show-phone="show-phone" data-lead-id="6645918" class="pCIKui"><p class="axDOAG TE8kwS tv4uDl tpRZTm">إظهار الرقم</p></button></p><a class="OP1nBW tpRZTm QPjIt4 WXSovK dmJvlT" href="tel:+1 416-444-5633" data-desktop-number-revealed="desktop-show-number-revealed" data-lead-id="6645918">+1 416-444-5633</a><a class="OP1nBW tpRZTm QPjIt4 WXSovK Wyhe7t" href="tel:+1 416-444-5633" data-number-revealed="show-number-revealed" data-lead-id="6645918">+1 416-444-5633</a><a class="OP1nBW iSiUSy hQb42p kNK6vJ wIiwwv hqkplt" href="tel:+1 416-444-5633" data-phone-call="phone-call-button" data-lead-id="6645918">الاتصال للحجز</a><button data-desktop-show-phone="desktop-show-phone" data-lead-id="6645918" class="wIiwwv NxhrXa">إظهار الرقم</button></div><hr class="uc7fiG"/><div class="_Ya9oo"><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">التدريب الشخصي</p></div></div></div></li><li class="OwChdp" data-id="lite-location-card-6610234"><div data-qa="location-card-Modo Yoga Scarborough" class="e02Wz5"><a href="https://www.fresha.com/ar/lvp/modo-yoga-scarborough-milner-avenue-toronto-30Xl9l" class="iZ_Jua" aria-label="Modo Yoga Scarborough"></a><div class="HdNCnr"><img src="https://images.fresha.com/lead-images/placeholders/gym-and-fitness-15.jpg?class=width-small" class="afSlte ZvLHng" alt="صورة المدربون الشخصيون خاصة بـ Modo Yoga Scarborough" loading="lazy"/></div><div class="ABjWcU"><div class="lJcJhG"><div class="cnqJzJ"><p class="axDOAG C3RXjX eGBYyp RYhd_E T2Ht61" title="Modo Yoga Scarborough">Modo Yoga Scarborough</p><p class="axDOAG FkLavb o3HUQR T2Ht61 fTV3EB" title="45 Milner Ave, Scarborough, ON M1S 3P6, Canada">45 Milner Ave, Scarborough, ON M1S 3P6, Canada</p></div><p class="axDOAG TE8kwS DbgFmO T2Ht61 WXSovK"><button type="button" data-show-phone="show-phone" data-lead-id="6610234" class="pCIKui"><p class="axDOAG TE8kwS tv4uDl tpRZTm">إظهار الرقم</p></button></p><a class="OP1nBW tpRZTm QPjIt4 WXSovK dmJvlT" href="tel:+1 416-291-1999" data-desktop-number-revealed="desktop-show-number-revealed" data-lead-id="6610234">+1 416-291-1999</a><a class="OP1nBW tpRZTm QPjIt4 WXSovK Wyhe7t" href="tel:+1 416-291-1999" data-number-revealed="show-number-revealed" data-lead-id="6610234">+1 416-291-1999</a><a class="OP1nBW iSiUSy hQb42p kNK6vJ wIiwwv hqkplt" href="tel:+1 416-291-1999" data-phone-call="phone-call-button" data-lead-id="6610234">الاتصال للحجز</a><button data-desktop-show-phone="desktop-show-phone" data-lead-id="6610234" class="wIiwwv NxhrXa">إظهار الرقم</button></div><hr class="uc7fiG"/><div class="_Ya9oo"><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">التدريب الشخصي</p></div></div></div></li><li class="OwChdp" data-id="lite-location-card-6672272"><div data-qa="location-card-Lawrence Victoria Park Physiotherapy &amp; Rehabilitation" class="e02Wz5"><a href="https://www.fresha.com/ar/lvp/lawrence-victoria-park-physiotherapy-rehabilitation-lawrence-avenue-east-toronto-eXgQJn" class="iZ_Jua" aria-label="Lawrence Victoria Park Physiotherapy &amp; Rehabilitation"></a><div class="HdNCnr"><img src="https://images.fresha.com/lead-images/placeholders/therapy-center-29.jpg?class=width-small" class="afSlte ZvLHng" alt="صورة علاج طبيعي خاصة بـ Lawrence Victoria Park Physiotherapy &amp; Rehabilitation" loading="lazy"/></div><div class="ABjWcU"><div class="lJcJhG"><div class="cnqJzJ"><p class="axDOAG C3RXjX eGBYyp RYhd_E T2Ht61" title="Lawrence Victoria Park Physiotherapy &amp; Rehabilitation">Lawrence Victoria Park Physiotherapy &amp; Rehabilitation</p><p class="axDOAG FkLavb o3HUQR T2Ht61 fTV3EB" title="1721 Lawrence Ave E, Scarborough, ON M1R 2X7, Canada">1721 Lawrence Ave E, Scarborough, ON M1R 2X7, Canada</p></div><p class="axDOAG TE8kwS DbgFmO T2Ht61 WXSovK"><button type="button" data-show-phone="show-phone" data-lead-id="6672272" class="pCIKui"><p class="axDOAG TE8kwS tv4uDl tpRZTm">إظهار الرقم</p></button></p><a class="OP1nBW tpRZTm QPjIt4 WXSovK dmJvlT" href="tel:+1 647-341-5877" data-desktop-number-revealed="desktop-show-number-revealed" data-lead-id="6672272">+1 647-341-5877</a><a class="OP1nBW tpRZTm QPjIt4 WXSovK Wyhe7t" href="tel:+1 647-341-5877" data-number-revealed="show-number-revealed" data-lead-id="6672272">+1 647-341-5877</a><a class="OP1nBW iSiUSy hQb42p kNK6vJ wIiwwv hqkplt" href="tel:+1 647-341-5877" data-phone-call="phone-call-button" data-lead-id="6672272">الاتصال للحجز</a><button data-desktop-show-phone="desktop-show-phone" data-lead-id="6672272" class="wIiwwv NxhrXa">إظهار الرقم</button></div><hr class="uc7fiG"/><div class="_Ya9oo"><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">وخز جاف بالإبر</p><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">علاج طبيعي</p><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">علاج تقويم العمود الفقري</p><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">الوخز بالإبر</p></div></div></div></li><li class="OwChdp" data-id="lite-location-card-6644271"><div data-qa="location-card-Toronto Basketball Training Centre - House of Legends" class="e02Wz5"><a href="https://www.fresha.com/ar/lvp/toronto-basketball-training-centre-house-of-legends-bertrand-avenue-toronto-xZVYPE" class="iZ_Jua" aria-label="Toronto Basketball Training Centre - House of Legends"></a><div class="HdNCnr"><img src="https://images.fresha.com/lead-images/placeholders/gym-and-fitness-23.jpg?class=width-small" class="afSlte ZvLHng" alt="صورة المدربون الشخصيون خاصة بـ Toronto Basketball Training Centre - House of Legends" loading="lazy"/></div><div class="ABjWcU"><div class="lJcJhG"><div class="cnqJzJ"><p class="axDOAG C3RXjX eGBYyp RYhd_E T2Ht61" title="Toronto Basketball Training Centre - House of Legends">Toronto Basketball Training Centre - House of Legends</p><p class="axDOAG FkLavb o3HUQR T2Ht61 fTV3EB" title="14 Scotswood Rd, Toronto, ON M1R 3N2, Canada">14 Scotswood Rd, Toronto, ON M1R 3N2, Canada</p></div><p class="axDOAG TE8kwS DbgFmO T2Ht61 WXSovK"><button type="button" data-show-phone="show-phone" data-lead-id="6644271" class="pCIKui"><p class="axDOAG TE8kwS tv4uDl tpRZTm">إظهار الرقم</p></button></p><a class="OP1nBW tpRZTm QPjIt4 WXSovK dmJvlT" href="tel:+1 647-718-4095" data-desktop-number-revealed="desktop-show-number-revealed" data-lead-id="6644271">+1 647-718-4095</a><a class="OP1nBW tpRZTm QPjIt4 WXSovK Wyhe7t" href="tel:+1 647-718-4095" data-number-revealed="show-number-revealed" data-lead-id="6644271">+1 647-718-4095</a><a class="OP1nBW iSiUSy hQb42p kNK6vJ wIiwwv hqkplt" href="tel:+1 647-718-4095" data-phone-call="phone-call-button" data-lead-id="6644271">الاتصال للحجز</a><button data-desktop-show-phone="desktop-show-phone" data-lead-id="6644271" class="wIiwwv NxhrXa">إظهار الرقم</button></div><hr class="uc7fiG"/><div class="_Ya9oo"><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">التدريب الشخصي</p></div></div></div></li><li class="OwChdp" data-id="lite-location-card-6658496"><div data-qa="location-card-World Gym" class="e02Wz5"><a href="https://www.fresha.com/ar/lvp/world-gym-mccowan-road-toronto-jb9rG7" class="iZ_Jua" aria-label="World Gym"></a><div class="HdNCnr"><img src="https://images.fresha.com/lead-images/placeholders/gym-and-fitness-12.jpg?class=width-small" class="afSlte ZvLHng" alt="صورة صالونات المساج والتدليك خاصة بـ World Gym" loading="lazy"/></div><div class="ABjWcU"><div class="lJcJhG"><div class="cnqJzJ"><p class="axDOAG C3RXjX eGBYyp RYhd_E T2Ht61" title="World Gym">World Gym</p><p class="axDOAG FkLavb o3HUQR T2Ht61 fTV3EB" title="1455 McCowan Rd, Scarborough, ON M1S 5K7, Canada">1455 McCowan Rd, Scarborough, ON M1S 5K7, Canada</p></div><p class="axDOAG TE8kwS DbgFmO T2Ht61 WXSovK"><button type="button" data-show-phone="show-phone" data-lead-id="6658496" class="pCIKui"><p class="axDOAG TE8kwS tv4uDl tpRZTm">إظهار الرقم</p></button></p><a class="OP1nBW tpRZTm QPjIt4 WXSovK dmJvlT" href="tel:+1 416-754-9777" data-desktop-number-revealed="desktop-show-number-revealed" data-lead-id="6658496">+1 416-754-9777</a><a class="OP1nBW tpRZTm QPjIt4 WXSovK Wyhe7t" href="tel:+1 416-754-9777" data-number-revealed="show-number-revealed" data-lead-id="6658496">+1 416-754-9777</a><a class="OP1nBW iSiUSy hQb42p kNK6vJ wIiwwv hqkplt" href="tel:+1 416-754-9777" data-phone-call="phone-call-button" data-lead-id="6658496">الاتصال للحجز</a><button data-desktop-show-phone="desktop-show-phone" data-lead-id="6658496" class="wIiwwv NxhrXa">إظهار الرقم</button></div><hr class="uc7fiG"/><div class="_Ya9oo"><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">مساج رياضي</p><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">مساج سويدي</p><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">مساج للأزواج</p><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">الحجامة</p></div></div></div></li><li class="OwChdp" data-id="lite-location-card-6592375"><div data-qa="location-card-GoodLife Fitness North York Sheppard and Consumers" class="e02Wz5"><a href="https://www.fresha.com/ar/lvp/goodlife-fitness-north-york-sheppard-and-consumers-sheppard-avenue-east-toronto-q8ZJXk" class="iZ_Jua" aria-label="GoodLife Fitness North York Sheppard and Consumers"></a><div class="HdNCnr"><img src="https://images.fresha.com/lead-images/placeholders/gym-and-fitness-14.jpg?class=width-small" class="afSlte ZvLHng" alt="صورة منتجعات صحية وساونا خاصة بـ GoodLife Fitness North York Sheppard and Consumers" loading="lazy"/></div><div class="ABjWcU"><div class="lJcJhG"><div class="cnqJzJ"><p class="axDOAG C3RXjX eGBYyp RYhd_E T2Ht61" title="GoodLife Fitness North York Sheppard and Consumers">GoodLife Fitness North York Sheppard and Consumers</p><p class="axDOAG FkLavb o3HUQR T2Ht61 fTV3EB" title="2235 Sheppard Ave E, North York, ON M2J 5B5, Canada">2235 Sheppard Ave E, North York, ON M2J 5B5, Canada</p></div><p class="axDOAG TE8kwS DbgFmO T2Ht61 WXSovK"><button type="button" data-show-phone="show-phone" data-lead-id="6592375" class="pCIKui"><p class="axDOAG TE8kwS tv4uDl tpRZTm">إظهار الرقم</p></button></p><a class="OP1nBW tpRZTm QPjIt4 WXSovK dmJvlT" href="tel:+1 416-491-5830" data-desktop-number-revealed="desktop-show-number-revealed" data-lead-id="6592375">+1 416-491-5830</a><a class="OP1nBW tpRZTm QPjIt4 WXSovK Wyhe7t" href="tel:+1 416-491-5830" data-number-revealed="show-number-revealed" data-lead-id="6592375">+1 416-491-5830</a><a class="OP1nBW iSiUSy hQb42p kNK6vJ wIiwwv hqkplt" href="tel:+1 416-491-5830" data-phone-call="phone-call-button" data-lead-id="6592375">الاتصال للحجز</a><button data-desktop-show-phone="desktop-show-phone" data-lead-id="6592375" class="wIiwwv NxhrXa">إظهار الرقم</button></div><hr class="uc7fiG"/><div class="_Ya9oo"><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">حمامات ساونا</p></div></div></div></li><li class="OwChdp" data-id="lite-location-card-6593092"><div data-qa="location-card-Fit4Less" class="e02Wz5"><a href="https://www.fresha.com/ar/lvp/fit4less-warden-avenue-toronto-rwNeYv" class="iZ_Jua" aria-label="Fit4Less"></a><div class="HdNCnr"><img src="https://images.fresha.com/lead-images/placeholders/gym-and-fitness-11.jpg?class=width-small" class="afSlte ZvLHng" alt="صورة صالونات المساج والتدليك خاصة بـ Fit4Less" loading="lazy"/></div><div class="ABjWcU"><div class="lJcJhG"><div class="cnqJzJ"><p class="axDOAG C3RXjX eGBYyp RYhd_E T2Ht61" title="Fit4Less">Fit4Less</p><p class="axDOAG FkLavb o3HUQR T2Ht61 fTV3EB" title="2900 Warden Ave., Scarborough, ON M1W 2S8, Canada">2900 Warden Ave., Scarborough, ON M1W 2S8, Canada</p></div><p class="axDOAG TE8kwS DbgFmO T2Ht61 WXSovK"><button type="button" data-show-phone="show-phone" data-lead-id="6593092" class="pCIKui"><p class="axDOAG TE8kwS tv4uDl tpRZTm">إظهار الرقم</p></button></p><a class="OP1nBW tpRZTm QPjIt4 WXSovK dmJvlT" href="tel:+1 416-491-3276" data-desktop-number-revealed="desktop-show-number-revealed" data-lead-id="6593092">+1 416-491-3276</a><a class="OP1nBW tpRZTm QPjIt4 WXSovK Wyhe7t" href="tel:+1 416-491-3276" data-number-revealed="show-number-revealed" data-lead-id="6593092">+1 416-491-3276</a><a class="OP1nBW iSiUSy hQb42p kNK6vJ wIiwwv hqkplt" href="tel:+1 416-491-3276" data-phone-call="phone-call-button" data-lead-id="6593092">الاتصال للحجز</a><button data-desktop-show-phone="desktop-show-phone" data-lead-id="6593092" class="wIiwwv NxhrXa">إظهار الرقم</button></div><hr class="uc7fiG"/><div class="_Ya9oo"><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">الحجامة</p><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">مساج للأزواج</p><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">مساج علاجي</p><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">تدليك الأنسجة العميقة</p></div></div></div></li><li class="OwChdp" data-id="lite-location-card-6637240"><div data-qa="location-card-Fit4Less" class="e02Wz5"><a href="https://www.fresha.com/ar/lvp/fit4less-eglinton-avenue-east-toronto-KzLP9q" class="iZ_Jua" aria-label="Fit4Less"></a><div class="HdNCnr"><img src="https://images.fresha.com/lead-images/placeholders/gym-and-fitness-16.jpg?class=width-small" class="afSlte ZvLHng" alt="صورة صالونات المساج والتدليك خاصة بـ Fit4Less" loading="lazy"/></div><div class="ABjWcU"><div class="lJcJhG"><div class="cnqJzJ"><p class="axDOAG C3RXjX eGBYyp RYhd_E T2Ht61" title="Fit4Less">Fit4Less</p><p class="axDOAG FkLavb o3HUQR T2Ht61 fTV3EB" title="1880 Eglinton Ave E, Scarborough, ON M1L 2L9, Canada">1880 Eglinton Ave E, Scarborough, ON M1L 2L9, Canada</p></div><p class="axDOAG TE8kwS DbgFmO T2Ht61 WXSovK"><button type="button" data-show-phone="show-phone" data-lead-id="6637240" class="pCIKui"><p class="axDOAG TE8kwS tv4uDl tpRZTm">إظهار الرقم</p></button></p><a class="OP1nBW tpRZTm QPjIt4 WXSovK dmJvlT" href="tel:+1 416-750-9120" data-desktop-number-revealed="desktop-show-number-revealed" data-lead-id="6637240">+1 416-750-9120</a><a class="OP1nBW tpRZTm QPjIt4 WXSovK Wyhe7t" href="tel:+1 416-750-9120" data-number-revealed="show-number-revealed" data-lead-id="6637240">+1 416-750-9120</a><a class="OP1nBW iSiUSy hQb42p kNK6vJ wIiwwv hqkplt" href="tel:+1 416-750-9120" data-phone-call="phone-call-button" data-lead-id="6637240">الاتصال للحجز</a><button data-desktop-show-phone="desktop-show-phone" data-lead-id="6637240" class="wIiwwv NxhrXa">إظهار الرقم</button></div><hr class="uc7fiG"/><div class="_Ya9oo"><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">مساج علاجي</p><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">مساج رياضي</p><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">مساج وتدليك للاسترخاء</p></div></div></div></li><li class="OwChdp" data-id="lite-location-card-6666955"><div data-qa="location-card-GoodLife Fitness Scarborough Town Centre For Women" class="e02Wz5"><a href="https://www.fresha.com/ar/lvp/goodlife-fitness-scarborough-town-centre-womens-only-brimley-road-toronto-Qv4gYA" class="iZ_Jua" aria-label="GoodLife Fitness Scarborough Town Centre For Women"></a><div class="HdNCnr"><img src="https://images.fresha.com/lead-images/placeholders/gym-and-fitness-24.jpg?class=width-small" class="afSlte ZvLHng" alt="صورة منتجعات صحية وساونا خاصة بـ GoodLife Fitness Scarborough Town Centre For Women" loading="lazy"/></div><div class="ABjWcU"><div class="lJcJhG"><div class="cnqJzJ"><p class="axDOAG C3RXjX eGBYyp RYhd_E T2Ht61" title="GoodLife Fitness Scarborough Town Centre For Women">GoodLife Fitness Scarborough Town Centre For Women</p><p class="axDOAG FkLavb o3HUQR T2Ht61 fTV3EB" title="1755 Brimley Rd, Scarborough, ON M1P 0A3, Canada">1755 Brimley Rd, Scarborough, ON M1P 0A3, Canada</p></div><p class="axDOAG TE8kwS DbgFmO T2Ht61 WXSovK"><button type="button" data-show-phone="show-phone" data-lead-id="6666955" class="pCIKui"><p class="axDOAG TE8kwS tv4uDl tpRZTm">إظهار الرقم</p></button></p><a class="OP1nBW tpRZTm QPjIt4 WXSovK dmJvlT" href="tel:+1 416-296-1276" data-desktop-number-revealed="desktop-show-number-revealed" data-lead-id="6666955">+1 416-296-1276</a><a class="OP1nBW tpRZTm QPjIt4 WXSovK Wyhe7t" href="tel:+1 416-296-1276" data-number-revealed="show-number-revealed" data-lead-id="6666955">+1 416-296-1276</a><a class="OP1nBW iSiUSy hQb42p kNK6vJ wIiwwv hqkplt" href="tel:+1 416-296-1276" data-phone-call="phone-call-button" data-lead-id="6666955">الاتصال للحجز</a><button data-desktop-show-phone="desktop-show-phone" data-lead-id="6666955" class="wIiwwv NxhrXa">إظهار الرقم</button></div><hr class="uc7fiG"/><div class="_Ya9oo"><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">حمامات ساونا</p></div></div></div></li><li class="OwChdp" data-id="lite-location-card-6601789"><div data-qa="location-card-Scarborough YMCA" class="e02Wz5"><a href="https://www.fresha.com/ar/lvp/scarborough-ymca-town-centre-court-toronto-PVZj86" class="iZ_Jua" aria-label="Scarborough YMCA"></a><div class="HdNCnr"><img src="https://images.fresha.com/lead-images/placeholders/gym-and-fitness-26.jpg?class=width-small" class="afSlte ZvLHng" alt="صورة المدربون الشخصيون خاصة بـ Scarborough YMCA" loading="lazy"/></div><div class="ABjWcU"><div class="lJcJhG"><div class="cnqJzJ"><p class="axDOAG C3RXjX eGBYyp RYhd_E T2Ht61" title="Scarborough YMCA">Scarborough YMCA</p><p class="axDOAG FkLavb o3HUQR T2Ht61 fTV3EB" title="230 Town Centre Court, Scarborough, ON M1P 4Y7, Canada">230 Town Centre Court, Scarborough, ON M1P 4Y7, Canada</p></div><p class="axDOAG TE8kwS DbgFmO T2Ht61 WXSovK"><button type="button" data-show-phone="show-phone" data-lead-id="6601789" class="pCIKui"><p class="axDOAG TE8kwS tv4uDl tpRZTm">إظهار الرقم</p></button></p><a class="OP1nBW tpRZTm QPjIt4 WXSovK dmJvlT" href="tel:+1 416-296-9622" data-desktop-number-revealed="desktop-show-number-revealed" data-lead-id="6601789">+1 416-296-9622</a><a class="OP1nBW tpRZTm QPjIt4 WXSovK Wyhe7t" href="tel:+1 416-296-9622" data-number-revealed="show-number-revealed" data-lead-id="6601789">+1 416-296-9622</a><a class="OP1nBW iSiUSy hQb42p kNK6vJ wIiwwv hqkplt" href="tel:+1 416-296-9622" data-phone-call="phone-call-button" data-lead-id="6601789">الاتصال للحجز</a><button data-desktop-show-phone="desktop-show-phone" data-lead-id="6601789" class="wIiwwv NxhrXa">إظهار الرقم</button></div><hr class="uc7fiG"/><div class="_Ya9oo"><p class="axDOAG FkLavb qLhAks RYhd_E NU9uQk">التدريب الشخصي</p></div></div></div></li></ul></section><script>
+          const pushToDataLayer = properties => {
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push(properties);
+          };
+
+          function getCookieStr(cookieName) {
+            let cookie = {};
+            document.cookie.split(';').forEach(function(el) {
+              let [key,value] = el.split('=');
+              cookie[key.trim()] = value;
+            })
+            return cookieName + "=" + cookie[cookieName];
+          }
+
+          function getSessionData() {
+            const gaIdCookie = getCookieStr("_ga_SMQNG7NE8C");
+            const pattern = /_ga_SMQNG7NE8C=GS\d\.\d\.(.+?)(?:;|$)/;
+            const match = gaIdCookie.match(pattern);
+            const parts = match?.[1].split(".");
+          
+            return {
+              ga_session_id: parts?.shift(),
+              ga_session_number: parts?.shift(),
+            };
+          }
+
+          const gaSessionData = getSessionData();
+
+        (function(){
+  
+        const desktopShowPhoneArr = document.querySelectorAll('[data-desktop-show-phone]');
+        const showPhoneArr = document.querySelectorAll('[data-show-phone]');
+        const numberRevealedArr = document.querySelectorAll('[data-number-revealed]');
+        const numberDesktopRevealedArr = document.querySelectorAll('[data-desktop-number-revealed]');
+        const phoneCallArr = document.querySelectorAll('[data-phone-call]');
+        
+        desktopShowPhoneArr.forEach((element, index) => element.addEventListener('click', function (e) {
+          const leadId = element.dataset.leadId;
+          element.classList.add("WXSovK");
+          numberDesktopRevealedArr[index].classList.remove("WXSovK")
+          
+          const eventData = {
+            "event_type": "lead_click",
+            "properties": {
+              "lead_id": leadId,
+              "action": "Show number",
+              "page_url": window.location.href,
+              "google_analytics_session_id": gaSessionData.ga_session_id
+            }
+          }
+
+          fetch("https://analytics-api.fresha.com/analytics", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(eventData),
+          }).catch(() => {});
+
+            pushToDataLayer({
+              event: 'fresha.contact_call_click',
+              section: 'b2c web',
+              interaction_value: 'Show number',
+            });
+        }));
+
+        showPhoneArr.forEach((element, index) => element.addEventListener('click', function (e) {
+          const leadId = element.dataset.leadId;
+          element.parentElement.classList.add("WXSovK");
+          numberRevealedArr[index].classList.remove("WXSovK")
+          
+          const eventData = {
+            "event_type": "lead_click",
+            "properties": {
+              "lead_id": leadId,
+              "action": "Show number",
+              "page_url": window.location.href,
+              "google_analytics_session_id": gaSessionData.ga_session_id
+            }
+          }
+
+          fetch("https://analytics-api.fresha.com/analytics", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(eventData),
+          }).catch(() => {});
+
+            pushToDataLayer({
+              event: 'fresha.contact_call_click',
+              section: 'b2c web',
+              interaction_value: 'Show number',
+            });
+        }));
+
+        numberDesktopRevealedArr.forEach((element, index) => element.addEventListener('click', function (e) {
+          const leadId = element.dataset.leadId;
+          
+          const eventData = {
+            "event_type": "lead_click",
+            "properties": {
+              "lead_id": leadId,
+              "action": "Phone Number",
+              "page_url": window.location.href,
+              "google_analytics_session_id": gaSessionData.ga_session_id
+            }
+          }
+
+          fetch("https://analytics-api.fresha.com/analytics", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(eventData),
+          }).catch(() => {});
+
+            pushToDataLayer({
+              event: 'fresha.contact_call_click',
+              section: 'b2c web',
+              interaction_value: 'Phone Number',
+            });
+        }));
+
+        numberRevealedArr.forEach((element, index) => element.addEventListener('click', function (e) {
+          const leadId = element.dataset.leadId;
+          
+          const eventData = {
+            "event_type": "lead_click",
+            "properties": {
+              "lead_id": leadId,
+              "action": "Phone Number",
+              "page_url": window.location.href,
+              "google_analytics_session_id": gaSessionData.ga_session_id
+            }
+          }
+
+          fetch("https://analytics-api.fresha.com/analytics", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(eventData),
+          }).catch(() => {});
+
+            pushToDataLayer({
+              event: 'fresha.contact_call_click',
+              section: 'b2c web',
+              interaction_value: 'Phone Number',
+            });
+        }));
+
+      
+        phoneCallArr.forEach((element, index) => element.addEventListener('click', function (e) {
+          const leadId = element.dataset.leadId;
+          const eventData = {
+            "event_type": "lead_click",
+            "properties": {
+              "lead_id": leadId,
+              "action": "Call to book",
+              "page_url": window.location.href,
+              "google_analytics_session_id": gaSessionData.ga_session_id
+            }
+          }
+
+          fetch("https://analytics-api.fresha.com/analytics", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(eventData),
+          }).catch(() => {});
+
+          pushToDataLayer({
+              event: 'fresha.contact_call_click',
+              section: 'b2c web',
+              interaction_value: 'Call to book',
+          })
+        }));
+
+      })();
+        </script></div><div class="zm8xFb"><section class="Rzlv_b kfXiA3" data-qa="faqs-list"><h2 class="axDOAG HER_75 jpItlx">الأسئلة الشائعة حول لياقة بدنية وتعافي</h2></section><section class="Rzlv_b"><div class="OxEddX"><input type="checkbox" id="faq0" aria-hidden="true"/><h3 class="Dbazkw"><label for="faq0" class="nnN8I2"><span class="poivFd">أين يمكنني العثور على صف دراجة ثابتة أو سبينينغ بالقرب مني في Ellesmere؟</span><span class="oRzb_C"><span class="v_Dfni vSYAhk veiqTU"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.22 8.345a.75.75 0 0 1 1.06 0l5.72 5.72 5.72-5.72a.75.75 0 1 1 1.06 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0l-6.25-6.25a.75.75 0 0 1 0-1.06Z"></path></svg></span></span></label></h3><label for="faq0" class="rRQbs6"><div class="Ubojno"><p>تتوفر دروس السبين وركوب الدراجة الثابتة في العديد من استوديوهات اللياقة البدنية في Ellesmere. تصفح واحجز أفضل دروس السبين بالقرب منك في Ellesmere.</p></div></label></div><div class="OxEddX"><input type="checkbox" id="faq1" aria-hidden="true"/><h3 class="Dbazkw"><label for="faq1" class="nnN8I2"><span class="poivFd">أين أجد دروس يوغا بالقرب مني في Ellesmere؟</span><span class="oRzb_C"><span class="v_Dfni vSYAhk veiqTU"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.22 8.345a.75.75 0 0 1 1.06 0l5.72 5.72 5.72-5.72a.75.75 0 1 1 1.06 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0l-6.25-6.25a.75.75 0 0 1 0-1.06Z"></path></svg></span></span></label></h3><label for="faq1" class="rRQbs6"><div class="Ubojno"><p>تضم Ellesmere مجموعة واسعة من استوديوهات اليوغا والدروس، بدءًا من الجلسات المناسبة للمبتدئين وحتى اليوغا الساخنة والتدريبات المتقدمة. تصفح واحجز أفضل استوديوهات اليوغا القريبة منك في Ellesmere.</p></div></label></div><div class="OxEddX"><input type="checkbox" id="faq2" aria-hidden="true"/><h3 class="Dbazkw"><label for="faq2" class="nnN8I2"><span class="poivFd">ما هي أفضل الصالات الرياضية ومراكز اللياقة البدنية تقييمًا في Ellesmere؟</span><span class="oRzb_C"><span class="v_Dfni vSYAhk veiqTU"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.22 8.345a.75.75 0 0 1 1.06 0l5.72 5.72 5.72-5.72a.75.75 0 1 1 1.06 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0l-6.25-6.25a.75.75 0 0 1 0-1.06Z"></path></svg></span></span></label></h3><label for="faq2" class="rRQbs6"><div class="Ubojno"><p>تقدم Fresha قائمة واسعة من النوادي الرياضية، الاستوديوهات، ومراكز اللياقة البدنية في Ellesmere، جميعها مزودة بتقييمات موثوقة من العملاء. قم بفرز النتائج حسب التقييم لتجد أفضل أماكن اللياقة القريبة منك قبل الحجز.</p></div></label></div><div class="OxEddX"><input type="checkbox" id="faq3" aria-hidden="true"/><h3 class="Dbazkw"><label for="faq3" class="nnN8I2"><span class="poivFd">ما هي الصالات الرياضية أو استوديوهات اللياقة البدنية المفتوحة الآن بالقرب مني في Ellesmere؟</span><span class="oRzb_C"><span class="v_Dfni vSYAhk veiqTU"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.22 8.345a.75.75 0 0 1 1.06 0l5.72 5.72 5.72-5.72a.75.75 0 1 1 1.06 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0l-6.25-6.25a.75.75 0 0 1 0-1.06Z"></path></svg></span></span></label></h3><label for="faq3" class="rRQbs6"><div class="Ubojno"><p>استخدم Fresha للعثور على صالات الرياضة واستوديوهات اللياقة في Ellesmere المفتوحة الآن. قم بتصفية النتائج حسب تاريخ ووقت اليوم لرؤية التوفر الفوري وحجز موعدك مباشرة.</p></div></label></div><div class="OxEddX"><input type="checkbox" id="faq4" aria-hidden="true"/><h3 class="Dbazkw"><label for="faq4" class="nnN8I2"><span class="poivFd">هل توجد صالات رياضية أو دروس لياقة بدنية متاحة يوم السبت في Ellesmere?</span><span class="oRzb_C"><span class="v_Dfni vSYAhk veiqTU"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.22 8.345a.75.75 0 0 1 1.06 0l5.72 5.72 5.72-5.72a.75.75 0 1 1 1.06 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0l-6.25-6.25a.75.75 0 0 1 0-1.06Z"></path></svg></span></span></label></h3><label for="faq4" class="rRQbs6"><div class="Ubojno"><p>نعم، معظم صالات الرياضة واستوديوهات اللياقة في Ellesmere تفتح أبوابها يوم السبت، وغالبًا ما تقدم جدول حصص كامل. استخدم Fresha للتحقق من التوافر الفوري يوم السبت وحجز حصتك أو جلستك مسبقًا.</p></div></label></div><div class="OxEddX"><input type="checkbox" id="faq5" aria-hidden="true"/><h3 class="Dbazkw"><label for="faq5" class="nnN8I2"><span class="poivFd">أين أجد صالات ملاكمة قريبة مني في Ellesmere؟</span><span class="oRzb_C"><span class="v_Dfni vSYAhk veiqTU"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.22 8.345a.75.75 0 0 1 1.06 0l5.72 5.72 5.72-5.72a.75.75 0 1 1 1.06 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0l-6.25-6.25a.75.75 0 0 1 0-1.06Z"></path></svg></span></span></label></h3><label for="faq5" class="rRQbs6"><div class="Ubojno"><p>تضم Ellesmere مجموعة واسعة من صالات الملاكمة التي تقدم تدريبات اللياقة البدنية، والملاكمة التنافسية، وبرامج التدريب المتخصصة. تصفح واحجز أفضل صالات الملاكمة القريبة منك في Ellesmere.</p></div></label></div><div class="OxEddX"><input type="checkbox" id="faq6" aria-hidden="true"/><h3 class="Dbazkw"><label for="faq6" class="nnN8I2"><span class="poivFd">أين يمكنني العثور على دروس بيلاتس بالقرب مني في Ellesmere؟</span><span class="oRzb_C"><span class="v_Dfni vSYAhk veiqTU"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.22 8.345a.75.75 0 0 1 1.06 0l5.72 5.72 5.72-5.72a.75.75 0 1 1 1.06 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0l-6.25-6.25a.75.75 0 0 1 0-1.06Z"></path></svg></span></span></label></h3><label for="faq6" class="rRQbs6"><div class="Ubojno"><p>تتميز Ellesmere بمشهد نابض بالحياة لرياضة البيلاتس، حيث تقدم الاستوديوهات جلسات بيلاتس على جهاز الريفورمر، والبيلاتس على الحصيرة، والبيلاتس العلاجي. تصفح واحجز أفضل استوديوهات البيلاتس بالقرب منك في Ellesmere.</p></div></label></div></section></div><section class="vwFB4q"><div class="YKJYnf"><h2 class="axDOAG N7z9vs EnvOJp">‎متاح أيضًا في Ellesmere</h2></div><section class="ZnEpfB kM_f0H" data-qa="business-types-pills" data-scrollable-pills="true" data-overflow="false"><div class="pIEL1R"><div class="n9k_wr"><div class="DrZt9r" aria-hidden="true"></div><nav class="c8sLsP" data-pills-scroll="true" aria-label="أنواع الأعمال"><a class="OP1nBW QoUCns sW7gEB" href="https://www.fresha.com/lp/ar/bt/صالونات-التجميل/ca-تورونتو/ellesmere" data-qa="bt-صالون تجميل"><span class="DpJCAG">صالون تجميل</span></a><a class="OP1nBW QoUCns sW7gEB" href="https://www.fresha.com/lp/ar/bt/منتجعات-صحية-طبية/ca-تورونتو/ellesmere" data-qa="bt-منتجع صحي طبي"><span class="DpJCAG">منتجع صحي طبي</span></a><a class="OP1nBW QoUCns sW7gEB" href="https://www.fresha.com/lp/ar/bt/صالونات-تصفيف-الشعر/ca-تورونتو/ellesmere" data-qa="bt-صالون تصفيف الشعر"><span class="DpJCAG">صالون تصفيف الشعر</span></a><a class="OP1nBW QoUCns sW7gEB" href="https://www.fresha.com/lp/ar/bt/الحواجب-والرموش/ca-تورونتو/ellesmere" data-qa="bt-الحواجب والرموش"><span class="DpJCAG">الحواجب والرموش</span></a><a class="OP1nBW QoUCns sW7gEB" href="https://www.fresha.com/lp/ar/bt/صالونات-إزالة-الشعر-بالشمع/ca-تورونتو/ellesmere" data-qa="bt-صالون إزالة الشعر بالشمع"><span class="DpJCAG">صالون إزالة الشعر بالشمع</span></a><a class="OP1nBW QoUCns sW7gEB" href="https://www.fresha.com/lp/ar/bt/حلاقون/ca-تورونتو/ellesmere" data-qa="bt-حلاق"><span class="DpJCAG">حلاق</span></a><a class="OP1nBW QoUCns sW7gEB" href="https://www.fresha.com/lp/ar/bt/أظافر/ca-تورونتو/ellesmere" data-qa="bt-أظافر"><span class="DpJCAG">أظافر</span></a><a class="OP1nBW QoUCns sW7gEB" href="https://www.fresha.com/lp/ar/bt/منتجعات-صحية-وساونا/ca-تورونتو/ellesmere" data-qa="bt-منتجع صحي وساونا"><span class="DpJCAG">منتجع صحي وساونا</span></a><a class="OP1nBW QoUCns sW7gEB" href="https://www.fresha.com/lp/ar/bt/مساج-وتدليك/ca-تورونتو/ellesmere" data-qa="bt-مساج وتدليك"><span class="DpJCAG">مساج وتدليك</span></a><a class="OP1nBW QoUCns sW7gEB" href="https://www.fresha.com/lp/ar/bt/علاج-طبيعي/ca-تورونتو/ellesmere" data-qa="bt-علاج طبيعي"><span class="DpJCAG">علاج طبيعي</span></a></nav><div class="uJhaAb"><details class="MUyBs8" data-scrollable-pills-overflow="true"><summary class="ltDb4C" aria-label="عرض جميع أنواع الأعمال"><span class="v_Dfni CpPDl7 veiqTU"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+  <circle cx="3" cy="5" r="1.25"/>
+  <circle cx="3" cy="10" r="1.25"/>
+  <circle cx="3" cy="15" r="1.25"/>
+  <rect x="6" y="4.25" width="11" height="1.5" rx="0.75"/>
+  <rect x="6" y="9.25" width="11" height="1.5" rx="0.75"/>
+  <rect x="6" y="14.25" width="11" height="1.5" rx="0.75"/>
+</svg>
+</span></summary><div class="yaMXdw"><div class="aJGVna" data-scrollable-pills-backdrop="true" aria-hidden="true"></div><div class="Tk6pcB" role="menu"><button type="button" class="OEF7eH" data-scrollable-pills-close="true" aria-label="إغلاق"><span class="v_Dfni CpPDl7 veiqTU"><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M4.293 4.293a1 1 0 011.414 0L12 10.585l6.293-6.292a1 1 0 011.32-.083l.094.083a1 1 0 010 1.414L13.415 12l6.292 6.293a1 1 0 01.083 1.32l-.083.094a1 1 0 01-1.414 0L12 13.415l-6.293 6.292a1 1 0 01-1.32.083l-.094-.083a1 1 0 010-1.414L10.585 12 4.293 5.707a1 1 0 01-.083-1.32z" />
+                  </svg></span></button><div><a class="OP1nBW AFFsFk" href="https://www.fresha.com/lp/ar/bt/صالونات-التجميل/ca-تورونتو/ellesmere" data-qa="bt-overflow-صالون تجميل">صالون تجميل</a><a class="OP1nBW AFFsFk" href="https://www.fresha.com/lp/ar/bt/منتجعات-صحية-طبية/ca-تورونتو/ellesmere" data-qa="bt-overflow-منتجع صحي طبي">منتجع صحي طبي</a><a class="OP1nBW AFFsFk" href="https://www.fresha.com/lp/ar/bt/صالونات-تصفيف-الشعر/ca-تورونتو/ellesmere" data-qa="bt-overflow-صالون تصفيف الشعر">صالون تصفيف الشعر</a><a class="OP1nBW AFFsFk" href="https://www.fresha.com/lp/ar/bt/الحواجب-والرموش/ca-تورونتو/ellesmere" data-qa="bt-overflow-الحواجب والرموش">الحواجب والرموش</a><a class="OP1nBW AFFsFk" href="https://www.fresha.com/lp/ar/bt/صالونات-إزالة-الشعر-بالشمع/ca-تورونتو/ellesmere" data-qa="bt-overflow-صالون إزالة الشعر بالشمع">صالون إزالة الشعر بالشمع</a><a class="OP1nBW AFFsFk" href="https://www.fresha.com/lp/ar/bt/حلاقون/ca-تورونتو/ellesmere" data-qa="bt-overflow-حلاق">حلاق</a><a class="OP1nBW AFFsFk" href="https://www.fresha.com/lp/ar/bt/أظافر/ca-تورونتو/ellesmere" data-qa="bt-overflow-أظافر">أظافر</a><a class="OP1nBW AFFsFk" href="https://www.fresha.com/lp/ar/bt/منتجعات-صحية-وساونا/ca-تورونتو/ellesmere" data-qa="bt-overflow-منتجع صحي وساونا">منتجع صحي وساونا</a><a class="OP1nBW AFFsFk" href="https://www.fresha.com/lp/ar/bt/مساج-وتدليك/ca-تورونتو/ellesmere" data-qa="bt-overflow-مساج وتدليك">مساج وتدليك</a><a class="OP1nBW AFFsFk" href="https://www.fresha.com/lp/ar/bt/علاج-طبيعي/ca-تورونتو/ellesmere" data-qa="bt-overflow-علاج طبيعي">علاج طبيعي</a></div></div></div></details></div></div></div><script>
+(function () {
+  var MOBILE_SHEET_MEDIA = '(max-width: 767px)';
+
+  function isMobileSheetViewport() {
+    return window.matchMedia(MOBILE_SHEET_MEDIA).matches;
+  }
+
+  function updateBodyScrollLock() {
+    var hasOpenSheet = isMobileSheetViewport()
+      && document.querySelector('[data-scrollable-pills-overflow][open]');
+    document.body.style.overflow = hasOpenSheet ? 'hidden' : '';
+  }
+
+  function updateScrollablePills(resetScroll) {
+    document.querySelectorAll('[data-scrollable-pills]').forEach(function (root) {
+      var scroll = root.querySelector('[data-pills-scroll]');
+      if (!scroll) {
+        return;
+      }
+
+      var overflows = scroll.scrollWidth > scroll.clientWidth + 1;
+      root.setAttribute('data-overflow', overflows ? 'true' : 'false');
+
+      if (resetScroll) {
+        scroll.scrollLeft = 0;
+      }
+    });
+  }
+
+  updateScrollablePills(true);
+
+  if (window.__scrollablePillsOverflowInit) {
+    return;
+  }
+
+  window.__scrollablePillsOverflowInit = true;
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function () {
+      updateScrollablePills(true);
+    });
+  }
+
+  window.addEventListener('load', function () {
+    updateScrollablePills(true);
+  });
+  window.addEventListener('resize', function () {
+    updateScrollablePills(false);
+    updateBodyScrollLock();
+  });
+
+  document.addEventListener('toggle', function (event) {
+    var details = event.target;
+    if (!(details instanceof HTMLDetailsElement)) {
+      return;
+    }
+
+    if (!details.matches('[data-scrollable-pills-overflow]')) {
+      return;
+    }
+
+    updateBodyScrollLock();
+  }, true);
+
+  document.addEventListener('click', function (event) {
+    document.querySelectorAll('[data-scrollable-pills-overflow]').forEach(function (details) {
+      if (!(details instanceof HTMLDetailsElement) || !details.open) {
+        return;
+      }
+
+      var target = event.target;
+      if (
+        target instanceof Element
+        && details.contains(target)
+        && target.closest('[data-scrollable-pills-close]')
+      ) {
+        details.open = false;
+        updateBodyScrollLock();
+        return;
+      }
+
+      if (
+        target instanceof Element
+        && target.closest('[data-scrollable-pills-backdrop]')
+      ) {
+        details.open = false;
+        updateBodyScrollLock();
+        return;
+      }
+
+      if (!details.contains(target)) {
+        details.open = false;
+        updateBodyScrollLock();
+      }
+    });
+  });
+
+  document.addEventListener('keydown', function (event) {
+    if (event.key !== 'Escape') {
+      return;
+    }
+
+    document.querySelectorAll('[data-scrollable-pills-overflow][open]').forEach(function (details) {
+      if (details instanceof HTMLDetailsElement) {
+        details.open = false;
+      }
+    });
+    updateBodyScrollLock();
+  });
+})();
+</script></section></section><section class="Rzlv_b I_D4Gr" data-qa="mobile-apps"><div class="yubTpO" data-qa="app-card"><div class="YzswRx"><img src="/lp/assets/29cca8f59ebf28b19ef8.webp" alt="" class="JFo4SK" aria-hidden="true"/><div class="uGH0VU"><h2 class="axDOAG N7z9vs eGBYyp RYhd_E uHhv4Z">تطبيق حجوزات للعملاء</h2><p class="axDOAG FkLavb RYhd_E lWlygP">احجزوا الآن تجارب ممتعة للتجميل وتحسين الصجة بالقرب منكم</p></div><div class="rh_B0i"><a class="OP1nBW pD3gej QWIzyR" href="https://apps.apple.com/app/fresha-for-customers/id1297230801" target="_blank" rel="noopener noreferrer"><img src="/lp/assets/27b35cba37648e74203b.png" alt="تنزيل من App Store" class="fYobCL"/></a><a class="OP1nBW pD3gej tfxTRN" href="https://play.google.com/store/apps/details?id=com.fresha.Fresha" target="_blank" rel="noopener noreferrer"><img src="/lp/assets/7ff297abde57431f1abe.png" alt="احصل عليه من جوجل بلاي" class="fYobCL"/></a></div></div><div class="MQswXO"><div class="XHTEUp"><img src="/lp/assets/8f84caaac13c9e0ac018.webp" alt="تطبيق فريشا للعملاء" class="A4hGLZ" loading="lazy"/></div></div></div><div class="yubTpO W9sYUt" data-qa="app-card"><div class="YzswRx"><img src="/lp/assets/3e5dbe843af4ec105879.webp" alt="" class="JFo4SK" aria-hidden="true"/><div class="uGH0VU"><h2 class="axDOAG N7z9vs eGBYyp RYhd_E uHhv4Z">تطبيق أعمال للمحترفين</h2><p class="axDOAG FkLavb RYhd_E lWlygP">برنامج بسيط ومرن وقوي لإدارة أعمالكم في أي وقت ومن أي مكان</p></div><div class="rh_B0i"><a class="OP1nBW pD3gej QWIzyR" href="https://apps.apple.com/app/fresha-for-business/id1455346253" target="_blank" rel="noopener noreferrer"><img src="/lp/assets/27b35cba37648e74203b.png" alt="تنزيل من App Store" class="fYobCL"/></a><a class="OP1nBW pD3gej tfxTRN" href="https://play.google.com/store/apps/details?id=com.fresha.Business" target="_blank" rel="noopener noreferrer"><img src="/lp/assets/7ff297abde57431f1abe.png" alt="احصل عليه من جوجل بلاي" class="fYobCL"/></a></div></div><div class="MQswXO"><div class="XHTEUp"><img src="/lp/assets/65c75697dfaee63bb95f.webp" alt="تطبيق فريشا للأعمال" class="A4hGLZ" loading="lazy"/></div></div></div></section><div class="X7yP66" data-qa="bottom-linking-modules"><section class="rAR5ei" data-qa="linking-module-لياقة بدنية وتعافي بالقرب من هنا"><div class="MGTbc5"><h2 class="axDOAG N7z9vs eGBYyp RYhd_E YtxWRz">لياقة بدنية وتعافي بالقرب من هنا</h2><input id="lm-lm-0-tab-0" class="RCRLUv" type="radio" name="lm-lm-0" checked="" value=" "/><div class="wQ76ph"><button type="button" class="KVkAfz r8lrQu K7cXTj" id="lm-lm-0-arrow-prev" aria-label="تمرير الروابط لليسار"><span class="v_Dfni vSYAhk veiqTU"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.03 4.72a.75.75 0 0 1 0 1.06l-5.47 5.47h14.69a.75.75 0 0 1 0 1.5H5.56l5.47 5.47a.75.75 0 1 1-1.06 1.06l-6.75-6.75a.75.75 0 0 1 0-1.06l6.75-6.75a.75.75 0 0 1 1.06 0Z"></path></svg></span></button><button type="button" class="KVkAfz e8ZKEt" id="lm-lm-0-arrow-next" aria-label="تمرير الروابط لليمين"><span class="v_Dfni vSYAhk veiqTU"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.97 4.72a.75.75 0 0 1 1.06 0l6.75 6.75a.75.75 0 0 1 0 1.06l-6.75 6.75a.75.75 0 1 1-1.06-1.06l5.47-5.47H3.75a.75.75 0 0 1 0-1.5h14.69l-5.47-5.47a.75.75 0 0 1 0-1.06Z"></path></svg></span></button><div class="ZNqZn5" id="lm-lm-0-scroll"><div class="xcTGz1" data-qa="tab-content-0"><div class="zqBUTg"><a class="OP1nBW VIvLa_" title="‎لياقة بدنية وتعافي في Henry Farm" href="https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ca-تورونتو/henry-farm" data-qa="lm-link-https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ca-تورونتو/henry-farm">‎لياقة بدنية وتعافي في Henry Farm</a><a class="OP1nBW VIvLa_" title="‎لياقة بدنية وتعافي في St.Andrew-Windfields" href="https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ca-تورونتو/st.andrew-windfields" data-qa="lm-link-https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ca-تورونتو/st.andrew-windfields">‎لياقة بدنية وتعافي في St.Andrew-Windfields</a><a class="OP1nBW VIvLa_" title="‎لياقة بدنية وتعافي في Flemingdon Park" href="https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ca-تورونتو/flemingdon-park" data-qa="lm-link-https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ca-تورونتو/flemingdon-park">‎لياقة بدنية وتعافي في Flemingdon Park</a><a class="OP1nBW VIvLa_" title="‎لياقة بدنية وتعافي في Markham" href="https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ca-تورونتو/markham" data-qa="lm-link-https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ca-تورونتو/markham">‎لياقة بدنية وتعافي في Markham</a><a class="OP1nBW VIvLa_" title="‎لياقة بدنية وتعافي في Maryvale" href="https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ca-تورونتو/maryvale" data-qa="lm-link-https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ca-تورونتو/maryvale">‎لياقة بدنية وتعافي في Maryvale</a><a class="OP1nBW VIvLa_" title="‎لياقة بدنية وتعافي في Milliken" href="https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ca-تورونتو/milliken" data-qa="lm-link-https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ca-تورونتو/milliken">‎لياقة بدنية وتعافي في Milliken</a></div></div></div></div><script>
+(function () {
+  var scrollContainer = document.getElementById("lm-lm-0-scroll");
+  var nextButton = document.getElementById("lm-lm-0-arrow-next");
+  var prevButton = document.getElementById("lm-lm-0-arrow-prev");
+
+  if (!scrollContainer || !nextButton || !prevButton) {
+    return;
+  }
+
+  var isRtl =
+    document.documentElement.dir === 'rtl' ||
+    getComputedStyle(document.documentElement).direction === 'rtl';
+
+  var SCROLL_THRESHOLD = 10;
+
+  function getMaxScroll() {
+    return scrollContainer.scrollWidth - scrollContainer.clientWidth;
+  }
+
+  function isAtStart() {
+    if (isRtl) {
+      return Math.abs(scrollContainer.scrollLeft) < SCROLL_THRESHOLD;
+    }
+    return scrollContainer.scrollLeft < SCROLL_THRESHOLD;
+  }
+
+  function isAtEnd() {
+    var maxScroll = getMaxScroll();
+    if (isRtl) {
+      return Math.abs(scrollContainer.scrollLeft) >= maxScroll - SCROLL_THRESHOLD;
+    }
+    return scrollContainer.scrollLeft >= maxScroll - SCROLL_THRESHOLD;
+  }
+
+  function hideNextArrow() {
+    if (scrollContainer.scrollWidth <= scrollContainer.clientWidth + 1) {
+      nextButton.classList.add("K7cXTj");
+      return;
+    }
+
+    if (isAtEnd()) {
+      nextButton.classList.add("K7cXTj");
+    } else {
+      nextButton.classList.remove("K7cXTj");
+    }
+  }
+
+  function hidePrevArrow() {
+    if (scrollContainer.scrollWidth <= scrollContainer.clientWidth + 1) {
+      prevButton.classList.add("K7cXTj");
+      return;
+    }
+
+    if (isAtStart()) {
+      prevButton.classList.add("K7cXTj");
+    } else {
+      prevButton.classList.remove("K7cXTj");
+    }
+  }
+
+  function updateArrows() {
+    hideNextArrow();
+    hidePrevArrow();
+  }
+
+  nextButton.addEventListener('click', function () {
+    var scrollAmount = scrollContainer.clientWidth;
+
+    if (isRtl) {
+      scrollContainer.scrollLeft -= scrollAmount;
+    } else {
+      scrollContainer.scrollLeft += scrollAmount;
+    }
+  });
+
+  prevButton.addEventListener('click', function () {
+    var scrollAmount = scrollContainer.clientWidth;
+
+    if (isRtl) {
+      scrollContainer.scrollLeft += scrollAmount;
+    } else {
+      scrollContainer.scrollLeft -= scrollAmount;
+    }
+  });
+
+  updateArrows();
+  scrollContainer.scrollLeft = 0;
+
+  var ticking = false;
+  scrollContainer.addEventListener('scroll', function () {
+    if (!ticking) {
+      window.requestAnimationFrame(function () {
+        updateArrows();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+
+  window.addEventListener('resize', updateArrows);
+})();
+</script></div></section></div></main><footer class="w8zCxJ"><div class="U4rfen"><div class="z0xID_ ftabih"><a class="OP1nBW QdYpnI ba5vfs" href="https://www.fresha.com/ar" data-qa="logo" aria-label="Fresha"><span class="v_Dfni veiqTU xUeY0V"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81.8 24"><path d="M51.5 2.1h3.9v8.1c1.3-1.9 4-2.5 6.2-1.6 2.2.9 2.9 2.5 3 2.7.2.5.4 1 .5 1.5.6 3.6-.6 7.2.5 10.7h-3.8c-1-2.5-.4-5.3-.4-7.9 0-.7 0-1.5-.4-2.2-.5-.9-1.5-1.6-2.5-1.6-1.1 0-2.1.6-2.6 1.5-.4.8-.4 1.8-.4 2.7v7.5h-3.9l-.1-21.4zM36 15.7c.1-4.3-2.6-7.5-6.8-7.5-2.8 0-5.2 1.4-6.5 3.8-1.4 2.6-1.3 6.3.4 8.8 2.5 3.4 7.6 4.2 12.5 1.9l-1.2-3.1c-4.1 1.8-8.5 1.3-8.8-2.4H36v-1.5zm-10.3-1.5c.3-.8.7-1.4 1.3-1.9 1.2-.9 3.3-1 4.4-.1.5.4.9 1.1 1.2 1.9h-6.9zM13.1 13.9s0-2.3-1.9-2.3H6.9v12.1H3V11.6H0V8.3h3V5.7C3 3.4 5.1 0 9.7 0s6.4 3.9 6.4 3.9l-3 2.1s-.8-2.5-3.3-2.5C8.7 3.5 7 4.4 7 6.2v2h6.1c2.7 0 3.4 2 3.4 2 1-2.4 4.6-2.1 5.3-2v3.1c-2.5-.2-4.8 1.2-4.8 4.1v8h-3.9v-9.5zM48.9 16.2c-1.2-1.2-4.3-1.6-6.3-2-1-.2-1.8-.4-1.8-1.4 0-1.2 1.2-1.5 2.4-1.5s2.4.5 3.1 1.5l3-1.6c-1.7-3-6.2-3.6-9.1-2.4-.9.4-1.6 1-2.1 1.7-1.1 1.5-1 4.1.3 5.3.7.7 1.9 1.2 3.4 1.5l2.8.5c1 .2 1.9.4 1.9 1.5 0 1.3-1.4 1.6-2.6 1.6-3.2 0-3.8-3-3.8-3L36.4 19c.2 1 1.5 5 7.4 5 3.3 0 6.2-1.3 6.3-4.8-.1-1.3-.5-2.3-1.2-3zM81.2 20.8c-.7 0-1.3-.4-1.3-1.4 0-.5-.1-2.2-.1-2.6 0-2.6.1-5.1-1.7-6.9-2-2-6.6-2.2-9-.6-.9.5-1.7 1.2-2.3 2.1l2.3 2.4c.9-1.5 2.2-2.2 3.7-2.2 1.4-.1 2.6.6 3.1 2-3.1.8-7.1 1.1-8.8 4.3-.8 1.5-.6 3.4.6 4.7.9 1 2.4 1.3 3.8 1.3 2.2 0 4.3-.5 5.6-2.5.7 1.7 2.2 2.5 4 2.5.3 0 .6-.1.8-.2v-3c-.2.1-.4.1-.7.1zm-5.3-3.1c.1 2.2-1.7 3.4-3.7 3.4-1.1 0-1.8-.5-1.8-1.6 0-1.2 1-1.6 2.1-1.9l3.4-1v1.1z"/></svg>
+</span></a><button type="button" class="Ka0K5G amlED7" data-redirect-url="https://www.fresha.com/app-store-redirect"><p class="axDOAG C3RXjX eGBYyp RYhd_E">تنزيل التطبيق</p><span class="cQa_Uv"><span class="v_Dfni vSYAhk veiqTU"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.026 8.163c-.094.058-2.318 1.293-2.318 4.03.105 3.121 2.807 4.216 2.853 4.216-.046.058-.408 1.491-1.479 2.993C18.232 20.696 17.29 22 15.856 22c-1.363 0-1.852-.862-3.425-.862-1.688 0-2.166.862-3.459.862-1.433 0-2.446-1.374-3.343-2.656-1.164-1.677-2.154-4.31-2.189-6.837-.023-1.339.233-2.655.885-3.774.92-1.56 2.562-2.62 4.356-2.655 1.374-.047 2.597.943 3.436.943.804 0 2.306-.943 4.006-.943.734 0 2.691.221 3.903 2.085ZM12 5.81c-.245-1.223.43-2.446 1.06-3.226C13.864 1.64 15.133 1 16.227 1a4.56 4.56 0 0 1-1.164 3.296C14.354 5.24 13.13 5.95 12 5.81Z" /></svg></span><span class="v_Dfni vSYAhk veiqTU"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12.003 2.4C6.7 2.4 2.4 6.698 2.4 12s4.3 9.6 9.603 9.6c8.008 0 9.812-7.434 9.061-11.2H12v3.2h6.19A6.398 6.398 0 0 1 12 18.4a6.4 6.4 0 0 1 0-12.8c1.607 0 3.071.597 4.195 1.575l2.274-2.272A9.568 9.568 0 0 0 12.003 2.4Z" /></svg>
+</span></span></button></div><div class="z0xID_"><p class="axDOAG C3RXjX eGBYyp RYhd_E FKYmNB">عن فريشا</p><a class="OP1nBW cRHsF7" href="https://www.fresha.com/ar/careers">فرص عمل</a><a class="OP1nBW cRHsF7" href="https://www.fresha.com/ar/help-center">دعم العملاء</a><a class="OP1nBW cRHsF7" href="https://www.fresha.com/blog">المدونة</a><a class="OP1nBW cRHsF7" href="https://www.fresha.com/ar/sitemap">خريطة الموقع</a></div><div class="z0xID_"><p class="axDOAG C3RXjX eGBYyp RYhd_E FKYmNB">للأعمال</p><a class="OP1nBW cRHsF7" href="https://www.fresha.com/ar/for-business">للشركاء</a><a class="OP1nBW cRHsF7" href="https://www.fresha.com/ar/pricing">التسعير</a><a class="OP1nBW cRHsF7" href="https://www.fresha.com/ar/for-business/features/payments">أجهزة مسح البطاقات</a><a class="OP1nBW cRHsF7" href="https://www.fresha.com/help-center">مساعدة</a><a class="OP1nBW cRHsF7" href="https://www.freshastatus.com">الحالة</a></div><div class="z0xID_"><p class="axDOAG C3RXjX eGBYyp RYhd_E FKYmNB">قانوني</p><a class="OP1nBW cRHsF7" href="https://terms.fresha.com/privacy-policy">سياسة الخصوصية</a><a class="OP1nBW cRHsF7" href="https://terms.fresha.com/terms-service">شروط الخدمة</a><a class="OP1nBW cRHsF7" href="https://terms.fresha.com/terms-use">شروط الاستخدام</a></div><div class="z0xID_"><p class="axDOAG C3RXjX eGBYyp RYhd_E FKYmNB">تابعونا على مواقع التواصل الاجتماعي</p><a class="OP1nBW yCOZ7e" href="https://www.facebook.com/Fresha-1504479806470099" data-qa="https://www.facebook.com/Fresha-1504479806470099" target="_blank" rel="noopener noreferrer"><span class="v_Dfni VqDAZf veiqTU IgRW3w"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none">
+  <path
+    fill-rule="evenodd"
+    clip-rule="evenodd"
+    d="M6.25 5C6.25 4.65482 6.52982 4.375 6.875 4.375H15C15.3452 4.375 15.625 4.65482 15.625 5V13.125C15.625 13.4702 15.3452 13.75 15 13.75C14.6548 13.75 14.375 13.4702 14.375 13.125V6.50888L5.44194 15.4419C5.19786 15.686 4.80214 15.686 4.55806 15.4419C4.31398 15.1979 4.31398 14.8021 4.55806 14.5581L13.4911 5.625H6.875C6.52982 5.625 6.25 5.34518 6.25 5Z"
+  />
+</svg>
+</span><span>Facebook</span></a><a class="OP1nBW yCOZ7e" href="https://www.linkedin.com/company/shedul/" data-qa="https://www.linkedin.com/company/shedul/" target="_blank" rel="noopener noreferrer"><span class="v_Dfni VqDAZf veiqTU IgRW3w"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none">
+  <path
+    fill-rule="evenodd"
+    clip-rule="evenodd"
+    d="M6.25 5C6.25 4.65482 6.52982 4.375 6.875 4.375H15C15.3452 4.375 15.625 4.65482 15.625 5V13.125C15.625 13.4702 15.3452 13.75 15 13.75C14.6548 13.75 14.375 13.4702 14.375 13.125V6.50888L5.44194 15.4419C5.19786 15.686 4.80214 15.686 4.55806 15.4419C4.31398 15.1979 4.31398 14.8021 4.55806 14.5581L13.4911 5.625H6.875C6.52982 5.625 6.25 5.34518 6.25 5Z"
+  />
+</svg>
+</span><span>LinkedIn</span></a><a class="OP1nBW yCOZ7e" href="https://www.instagram.com/fresha" data-qa="https://www.instagram.com/fresha" target="_blank" rel="noopener noreferrer"><span class="v_Dfni VqDAZf veiqTU IgRW3w"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none">
+  <path
+    fill-rule="evenodd"
+    clip-rule="evenodd"
+    d="M6.25 5C6.25 4.65482 6.52982 4.375 6.875 4.375H15C15.3452 4.375 15.625 4.65482 15.625 5V13.125C15.625 13.4702 15.3452 13.75 15 13.75C14.6548 13.75 14.375 13.4702 14.375 13.125V6.50888L5.44194 15.4419C5.19786 15.686 4.80214 15.686 4.55806 15.4419C4.31398 15.1979 4.31398 14.8021 4.55806 14.5581L13.4911 5.625H6.875C6.52982 5.625 6.25 5.34518 6.25 5Z"
+  />
+</svg>
+</span><span>Instagram</span></a></div></div></footer><div class="s5PSu4"><div id="lang-switch-section" class="p_WF82"><form class="KgsEom"><select id="language-select" name="url" aria-label="العربية"><option value="https://www.fresha.com/lp/ar/bt/لياقة-بدنية-وتعافي/ca-تورونتو/ellesmere" selected="">العربية</option><option value="https://www.fresha.com/lp/en/bt/gym-and-fitness/in/ca-toronto/ellesmere">English</option><option value="https://www.fresha.com/lp/es/bt/gimnasio-y-fitness/ca-toronto/ellesmere">español</option><option value="https://www.fresha.com/lp/fr/bt/salle-de-sport/ca-toronto/ellesmere">français</option><option value="https://www.fresha.com/lp/it/bt/palestra-e-fitness/ca-toronto/ellesmere">italiano</option><option value="https://www.fresha.com/lp/zh-CN/bt/健身康复/ca-多伦多/ellesmere">中文（中国）</option><option value="https://www.fresha.com/lp/zh-HK/bt/健身及復康/ca-多倫多/ellesmere">中文（中国香港特别行政区）</option></select><span class="A3eh8z" aria-hidden="true"><span class="v_Dfni CpPDl7 HP7xLd OmxmkZ"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.25 16.25">
+  <path
+    fill-rule="evenodd"
+    clip-rule="evenodd"
+    d="M10.2678 0.285536C13.7154 1.2257 16.25 4.37936 16.25 8.125C16.25 9.3889 15.9614 10.5854 15.4465 11.6522C15.4324 11.6908 15.4142 11.7286 15.3918 11.765L15.3879 11.7713C14.0853 14.3606 11.4388 16.1577 8.36407 16.2466C8.32958 16.2503 8.29445 16.2511 8.25898 16.2489C8.21441 16.2496 8.16974 16.25 8.125 16.25C3.63769 16.25 0 12.6123 0 8.125C0 3.63769 3.63769 0 8.125 0C8.81544 0 9.48576 0.0861194 10.1258 0.248202C10.1744 0.255058 10.2221 0.267603 10.2678 0.285536ZM1.25 8.125C1.25 7.00855 1.51613 5.95425 1.9884 5.02208L2.80368 7.19142C2.87469 7.38908 2.99467 7.56554 3.15245 7.70428C3.31204 7.84461 3.50496 7.94165 3.71276 7.98612L5.38406 8.34537L5.67894 8.95842L5.68438 8.96945C5.78859 9.17561 5.94723 9.34932 6.14313 9.47175C6.33902 9.59418 6.56468 9.66067 6.79566 9.664L6.89754 9.66406L6.29693 11.01C6.19676 11.2327 6.16405 11.48 6.20286 11.7212C6.24175 11.9628 6.35072 12.1878 6.51626 12.368L7.98656 13.9581L7.78466 14.9917C4.1458 14.8143 1.25 11.8078 1.25 8.125ZM3.07694 4.36533L3.72276 2.84406C4.91535 1.84884 6.45024 1.25 8.125 1.25C8.64119 1.25 9.14409 1.30689 9.62778 1.41474L10.2173 2.48319L8.12008 4.37996L7.15077 4.91406L5.49217 4.91405C5.24736 4.9153 5.00506 4.98797 4.80095 5.12313C4.59683 5.25829 4.43657 5.45007 4.33986 5.67496L3.9325 6.64185L3.07694 4.36533ZM5.64387 7.12267L5.13263 7.01278L5.49502 6.16406C5.49502 6.16406 6.99183 6.16361 7.18081 6.16384C7.36979 6.16406 7.57703 6.10685 7.75385 6.01304L8.72383 5.47689C8.81059 5.42907 8.89101 5.37059 8.96323 5.30281L11.0662 3.40297C11.2707 3.21285 11.406 2.96012 11.451 2.68461C11.4843 2.48077 11.4667 2.27301 11.4013 2.07938C13.5448 3.24347 15 5.5143 15 8.125C15 8.96929 14.8478 9.77804 14.5694 10.5253L10.949 8.29844C10.7989 8.20323 10.6294 8.14294 10.4528 8.12201L8.67191 7.88093C8.40247 7.8429 8.12798 7.89496 7.89115 8.02907C7.7236 8.12395 7.58157 8.25611 7.47528 8.41406L6.80562 8.41175L6.5099 7.80227C6.42766 7.62974 6.30567 7.47693 6.15508 7.35921C6.00517 7.242 5.83021 7.16106 5.64387 7.12267ZM14.0242 11.6575C12.9763 13.4038 11.175 14.6463 9.06976 14.9356L9.21489 14.1989C9.2501 14.0072 9.24201 13.8021 9.18847 13.6147C9.13493 13.4273 9.03884 13.2548 8.90767 13.1106L7.43698 11.5226L8.50901 9.12028L10.2916 9.36158L14.0242 11.6575Z"
+  />
+</svg>
+</span><p class="axDOAG FkLavb qLhAks Yy8KVI">العربية</p></span></form><script>document.querySelector("#language-select").onchange=function(){
+            var newUrl = new FormData(this.form).get("url");
+            document.location.replace(newUrl);
+          };</script><p class="axDOAG FkLavb o3HUQR PqUVna">© 2026 Fresha.com SV Ltd</p></div></div></div>
+        
+  <script>
+    (function () {
+      const pushToDataLayer = properties => {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push(properties);
+      };
+      
+      const B2C_SECTION = 'b2c web';
+      const defaultTrackingData = { section: B2C_SECTION };
+
+      const onPageView = pathname => {
+        let loginSource = undefined;
+        let uid = undefined;
+    
+        try {
+          const trackingStorage = JSON.parse(localStorage.getItem('trackingStorage'));
+          loginSource = trackingStorage.loginSource;
+          uid = trackingStorage.uid;
+        } catch (e) {}
+    
+        const eventData = {
+          page_location: pathname,
+          page_referrer: window.document.referrer,
+          page_title: window.document.title,
+          user_id: uid,
+          content_group: 'venues',
+          authorization_type: loginSource,
+          section: B2C_SECTION,
+        };
+        pushToDataLayer({ event: 'fresha.page_view', ...eventData });
+      };
+    
+      onPageView(window.location.pathname);
+
+      document.querySelectorAll('[data-tracking]').forEach(element => element.addEventListener('click', function (e) {
+        pushToDataLayer({
+          event: 'fresha.user_navigation_clicked',
+          interaction_value: e.target.dataset.tracking,
+          ...defaultTrackingData,
+        });
+      }));
+
+      document.querySelectorAll('[data-business-tracking]').forEach(element => element.addEventListener('click', function (e) {
+        pushToDataLayer({
+          event: 'fresha.for_business_navigation_click',
+          interaction_value: e.target.dataset.tracking,
+          ...defaultTrackingData,
+        });
+      }));
+      
+    })();
+  </script>
+  
+        
+  <script>
+    (function () {
+      var SESSION_COOKIE = 'fsid';
+      var SESSION_TTL_MS = 30 * 60 * 1000;
+      var CONTAINER_KEY = 'fresha.mt.container_id';
+      var UUID_V7 = /^[0-9a-f]{8}-[0-9a-f]{4}-7[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
+
+      function uuidv7() {
+        var bytes = new Uint8Array(16);
+        crypto.getRandomValues(bytes);
+        var ts = Date.now();
+        bytes[0] = Math.floor(ts / 0x10000000000) & 255;
+        bytes[1] = Math.floor(ts / 0x100000000) & 255;
+        bytes[2] = Math.floor(ts / 0x1000000) & 255;
+        bytes[3] = Math.floor(ts / 0x10000) & 255;
+        bytes[4] = Math.floor(ts / 0x100) & 255;
+        bytes[5] = ts & 255;
+        bytes[6] = (bytes[6] & 0x0f) | 0x70;
+        bytes[8] = (bytes[8] & 0x3f) | 0x80;
+        var hex = '';
+        for (var i = 0; i < 16; i++) {
+          hex += (bytes[i] + 0x100).toString(16).slice(1);
+        }
+        return (
+          hex.slice(0, 8) + '-' + hex.slice(8, 12) + '-' + hex.slice(12, 16) + '-' +
+          hex.slice(16, 20) + '-' + hex.slice(20)
+        );
+      }
+
+      function readCookie(name) {
+        var parts = document.cookie.split(';');
+        for (var i = 0; i < parts.length; i++) {
+          var kv = parts[i].split('=');
+          if (kv[0].trim() === name) {
+            return kv.slice(1).join('=');
+          }
+        }
+        return null;
+      }
+
+      function cookieDomain() {
+        var hostname = window.location.hostname;
+        if (/(^|\.)fresha\.com$/.test(hostname)) return '.fresha.com';
+        if (/\.fresha\.io$/.test(hostname)) return '.fresha.io';
+        return '';
+      }
+
+      function ensureSession() {
+        var existing = readCookie(SESSION_COOKIE);
+        var id = existing && UUID_V7.test(existing) ? existing : uuidv7();
+        var domain = cookieDomain();
+        document.cookie =
+          SESSION_COOKIE + '=' + id + '; path=/' +
+          (domain ? '; domain=' + domain : '') +
+          '; expires=' + new Date(Date.now() + SESSION_TTL_MS).toUTCString();
+      }
+
+      function getContainerId() {
+        try {
+          var stored = window.sessionStorage.getItem(CONTAINER_KEY);
+          if (stored && UUID_V7.test(stored)) return stored;
+          var minted = uuidv7();
+          window.sessionStorage.setItem(CONTAINER_KEY, minted);
+          return minted;
+        } catch (e) {
+          return uuidv7();
+        }
+      }
+
+      try {
+        ensureSession();
+
+        fetch((window.location.hostname === 'fresha.com'
+  ? 'https://www.fresha.com/graphql'
+  : new URL('/graphql', window.location.origin).href), {
+          method: 'POST',
+          credentials: 'include',
+          keepalive: true,
+          headers: {
+            'Content-Type': 'application/json',
+            'x-client-platform': 'web',
+          },
+          body: JSON.stringify({
+            query: " mutation LandingPages_RecordMarketplaceTrackingEvents_Mutation( $events: [MarketplaceTrackingEvent!]! ) { recordMarketplaceTrackingEvents(events: $events) { accepted rejected { eventId reason } } } ",
+            variables: {
+              events: [
+                {
+                  eventId: uuidv7(),
+                  containerId: getContainerId(),
+                  eventDetails: {
+                    pageView: {
+                      url: window.location.href,
+                      referrerUrl: document.referrer || null,
+                    },
+                  },
+                },
+              ],
+            },
+          }),
+        }).catch(function () {});
+      } catch (e) {
+        // Tracking must never break the page.
+      }
+    })();
+  </script>
+
+      </body>
+      </html>
