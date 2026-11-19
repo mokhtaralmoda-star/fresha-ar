@@ -1,4 +1,4 @@
-﻿/ar/a/classy-nails-doha-sabah-al-ahmad-corridor-f8dv3bak/ /ar/a/classy-nails-doha-sabah-al-ahmad-corridor-street-k5fpii5h/ 301!
+/ar/a/classy-nails-doha-sabah-al-ahmad-corridor-f8dv3bak/ /ar/a/classy-nails-doha-sabah-al-ahmad-corridor-street-k5fpii5h/ 301!
 /ar/a/al-mohamadyah-30-degrees-riyadh-rmks-lnkhyl-near-baskin-robbins-imam-saud-bin-abdulaziz-bin-mohammed-road-exdwfk7g/ /ar/a/al-mohamadyah-30-degrees-riyadh-imam-saud-bin-abdulaziz-bin-mohammed-road-z8d72mt6/ 301!
 /ar/a/fomo-barbershop-casablanca-92-rue-ibn-jaljal-immeuble-mytika-lc4-angle-rue-ibn-jaljal-rue-abou-marouane-abdelmalek-ozo6wzhs/ /ar/a/fomo-barbershop-casablanca-92-rue-ibn-jaljal-angle-rue-abou-marouane-abdelmalek-ceo35kuf/ 301!
 /ar/a/hair-more-riyadh-hair-and-more-slwn-hyr-wkthr-slwn-hyr-nd-mwr-al-olaya-al-takhassousi-gvua33eb/ /ar/a/faden-more-riyadh-hair-and-more-slwn-hyr-wkthr-slwn-hyr-nd-mwr-al-olaya-al-takhassousi-cfy2cpme/ 301!
@@ -10,3 +10,10 @@
 /_icons/*        https://www.fresha.com/_icons/:splat        200
 /lp/assets/*     https://www.fresha.com/lp/assets/:splat     200
 /img/*           https://images.fresha.com/:splat            200
+/lp/ar/bt/%D8%B9%D9%84%D8%A7%D8%AC-%D8%B7%D8%A8%D9%8A%D8%B9%D9%8A/ae-%D8%A7%D9%84%D8%B4%D8%A7%D8%B1%D9%82%D8%A9/ /lp/ar/bt/%D8%B5%D8%A7%D9%84%D9%88%D9%86%D8%A7%D8%AA-%D8%A7%D9%84%D8%AA%D8%AC%D9%85%D9%8A%D9%84/ae-%D8%A7%D9%84%D8%B4%D8%A7%D8%B1%D9%82%D8%A9/ 301!
+/lp/ar/bt/%D9%88%D8%B4%D9%85-%D9%88%D8%AB%D9%82%D8%A8/ae-%D8%A7%D9%84%D8%B4%D8%A7%D8%B1%D9%82%D8%A9/ /lp/ar/bt/%D8%B5%D8%A7%D9%84%D9%88%D9%86%D8%A7%D8%AA-%D8%A7%D9%84%D8%AA%D8%AC%D9%85%D9%8A%D9%84/ae-%D8%A7%D9%84%D8%B4%D8%A7%D8%B1%D9%82%D8%A9/ 301!
+/ar/a/viyana-nails-spa-lryd-shraa-jbr-bn-aabdllh-e5jb1fkv/ /ar/a/viyana-nails-spa-home-service-massage-lryd-shraa-jbr-bn-aabdllh-qqa3fjl2/ 301!
+/ar/a/:slug/booking/*  https://www.fresha.com/ar/a/:slug/booking/:splat  301!
+/ar/a/:slug/booking  https://www.fresha.com/ar/a/:slug/booking  301!
+/ar/a/:slug/booking/  https://www.fresha.com/ar/a/:slug/booking  301!
+/ar/a/*  https://www.fresha.com/ar/a/:splat  302

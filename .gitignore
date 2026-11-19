@@ -10,3 +10,9 @@ _fill.log
 _long.log
 _night.log
 _batch.txt
+
+!assets/_next/static/media/
+!assets/_next/static/media/**
+
+# Local Netlify folder
+.netlify
