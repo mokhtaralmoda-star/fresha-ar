@@ -1,3 +1,7 @@
+/proxy      https://www.fresha.com/proxy          200
+/proxy/*    https://www.fresha.com/proxy/:splat   200
+/graphql    https://www.fresha.com/graphql        200
+/graphql/*  https://www.fresha.com/graphql/:splat 200
 /ar/a/classy-nails-doha-sabah-al-ahmad-corridor-f8dv3bak/ /ar/a/classy-nails-doha-sabah-al-ahmad-corridor-street-k5fpii5h/ 301!
 /ar/a/al-mohamadyah-30-degrees-riyadh-rmks-lnkhyl-near-baskin-robbins-imam-saud-bin-abdulaziz-bin-mohammed-road-exdwfk7g/ /ar/a/al-mohamadyah-30-degrees-riyadh-imam-saud-bin-abdulaziz-bin-mohammed-road-z8d72mt6/ 301!
 /ar/a/fomo-barbershop-casablanca-92-rue-ibn-jaljal-immeuble-mytika-lc4-angle-rue-ibn-jaljal-rue-abou-marouane-abdelmalek-ozo6wzhs/ /ar/a/fomo-barbershop-casablanca-92-rue-ibn-jaljal-angle-rue-abou-marouane-abdelmalek-ceo35kuf/ 301!
